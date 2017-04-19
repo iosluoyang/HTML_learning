@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style type="text/css">
-        h1 {color: red}
-        p {color: black}
+    <style>
+        #header {
+            background-color:black;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        #nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:300px;
+            width:100px;
+            float:left;
+            padding:5px;
+        }
+        #section {
+            width:350px;
+            float:left;
+            padding:10px;
+            background-color: white;
+        }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
     </style>
-    <!--<link rel="stylesheet" type="text/css" href="/html/csstext1.css">-->
+    <style>
+        table.lamp {
+            width:80%;
+            border:1px solid #d4d4d4;
+        }
+        table.lamp th, td {
+            padding:10px;
+        }
+        table.lamp td {
+            width:40px;
+        }
+    </style>
+    <style>
+        .city {
+            float: left;
+            margin: 5px;
+            padding: 15px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+    <style>
+        /*定义.cities这种块级元素的样式*/
+        .cities{
+            background-color: yellowgreen;
+            color: aquamarine;
+            margin: 20px;
+            padding: 20px;
+        }
+        /*定义.book这种内联级元素的样式*/
+        span.book{
+            color: blue;
+        }
+    </style>
     <meta charset="UTF-8" http-equiv="content-type" content="text/html" />
     <meta http-equiv="content-language" content="zh-cn" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <title>世界上最帅的人</title>
 </head>
 <body style="background-color: PowderBlue;font-family: 'Apple Symbols';>
 
-		<h1 style="font-family: Verdana;color: red;text-align: center">我的第一个红色标题</h1>
+		<h1 style="font-family: Verdana;color: red ;text-align: center">我的第一个红色标题</h1>
         <p  style="font-family: Times;color: green;background-color: yellow">我的第一个绿色文字黄色背景段落<br/> 我是新的一行<br/>我是最后一行</p>
         <hr />
         <a href="#tips">点击直接跳转至世界上最帅的人的名字</a><!--这里是为了下面的锚所做的准备-->
@@ -171,6 +232,174 @@
                 </td>
         </tr>
 </table>
+
+<br />
+<p>以下是列表的练习</p>
+<p>没有顺序的列表</p>
+<ul type="square">
+        <li>科比</li>
+        <li>周杰伦</li>
+        <li>毛泽东</li>
+</ul>
+<p>有顺序的列表,默认从1开始,如果加入type的话则从type开始</p>
+<ol type="A">
+        <li>科比</li>
+        <li>周杰伦</li>
+        <li>毛泽东</li>
+</ol>
+<p>从第500开始</p>
+<ol type="i">
+        <li>科比</li>
+        <li>周杰伦</li>
+        <li>毛泽东</li>
+</ol>
+<p>自定义列表项 以dl开头,dt代表每一个自定义列表项 dd代表每一个自定义列表项的定义</p>
+<dl>
+        <dt>科比</dt>
+        <dd>美职篮洛杉矶湖人球队后卫,在NBA联盟效力20年,于2016年4月14日退役</dd>
+        <dt>周杰伦</dt>
+        <dd>华语乐坛领军人物</dd>
+</dl>
+<p>列表的嵌套</p>
+<ul>
+        <li>运动员</li>
+        <li>歌手
+                <!--<dl>-->
+                        <!--<dt>周杰伦</dt>-->
+                        <!--<dd>华语乐坛领军人物,中国风传遍大江南北</dd>-->
+                        <!--<dt>五月天</dt>-->
+                        <!--<dd>台湾省著名摇滚乐团,以倔强,突然好想你而著名</dd>-->
+                <!--</dl>-->
+                <ul>
+                        <li>周杰伦</li>
+                        <li>五月天</li>
+                </ul>
+
+        </li>
+        <li>商人</li>
+</ul>
+<div class="cities">
+    <h2>谁是世界上最帅的人?</h2>
+    <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
+        人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
+        而我的梦想，很厉害，真的很厉害，一个是美食，一个是睡觉
+    </p>
+</div>
+<div class="cities">
+    <h2>谁是世界上最帅的人2?</h2>
+    <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
+        人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
+        而我的梦想，很厉害，真的很厉害，一个是美食，一个是睡觉
+    </p>
+</div>
+
+<div class="cities">
+    <h2>谁是世界上<span class="book">最帅的人</span>3?</h2>
+    <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
+        人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
+        而我的梦想，很厉害，真的很厉害，一个是美食，一个是睡觉
+    </p>
+</div>
+
+<p>布局(使用div标签进行布局)</p>
+<div id="header">
+    <h1 style="color: white;background-color: black">City Callery</h1>
+</div>
+<div id="nav">
+    <ul type="square">
+        <li><span class="book">London</span></li>
+        <li>Paris</li>
+        <li>Tokyo</li>
+    </ul>
+</div>
+<div id="section">
+    <h1>London</h1>
+    <p>
+        London is the capital city of England. It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.
+    </p>
+    <p>
+        Standing on the River Thames, London has been a major settlement for two millennia,
+        its history going back to its founding by the Romans, who named it Londinium.
+    </p>
+</div>
+<div id="footer">
+    <p style="background-color: black;color: white">
+        Copyright W3School.com.cn
+    </p>
+</div>
+
+<p>使用table的HTML布局</p>
+<table class="lamp">
+    <tr>
+        <th>
+            <img src="cuteegg.gif" alt="Note" style="height: 32px;width: 32px">
+        </th>
+        <td>
+            The table element was not designed to be a layout tool.
+        </td>
+    </tr>
+</table>
+
+<h1>W3School Demo</h1>
+<h2>Resize this responsive page!</h2>
+<br>
+
+<div class="city">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+        and the most populous metropolitan area in the world.</p>
+</div>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1> The End of W3School Demo</h1>
+        <p> The End of Resize this responsive page!</p>
+    </div>
+</div>
+
+
+<p>使用bootscrapCSS样式的布局</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+            <p>It is the most populous city in the United Kingdom,
+                with a metropolitan area of over 13 million inhabitants.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Paris</h2>
+            <p>Paris is the capital and most populous city of France.</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+                and the most populous metropolitan area in the world.</p>
+        </div>
+    </div>
+</div>
+
+<p>iframe标签用于网页内显示网页</p>
+<iframe src="http://www.baidu.com" width="600" height="500" frameborder="0"></iframe>
+<br />
+<iframe src="sky.jpg" name="baiduhtml" width="600" height="500"></iframe>
+<br />
+<p><a href="http://www.beijing.com" target="baiduhtml">点击将上述图片网页跳转至北京官网</a></p>
+<p>如果浏览器不支持iframe的话,则iframe不显示出来</p>
+
 
 
 
