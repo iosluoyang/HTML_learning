@@ -451,18 +451,31 @@
         <input type="submit" name="点击提交信息" value="点击提交">
     </form>
     <br /><br /><br />
-    <form>
+    <form action="XHTML_01_属性定义等.html">
         <fieldset>
             <legend>填写关于用户个人信息的东西</legend>
             请输入您的姓名:<br />
             <input type="text" name="姓名" value="狂拽炫酷屌炸天的我">
+            <br /> 请输入密码:<br />
+            <input type="password" name="密码">
+            <br /> <br /><br />
+            请选择您的性别:
             <br />
+
             <input type="radio" name="性别" value="male" checked>男
             <br />
             <input type="radio" name="性别" value="female">女
             <br />
+            <br /><br />
+            请选择您的爱好(可多选):
+            <br />
+            <input type="checkbox" name="hobby" value="篮球">篮球<br />
+            <input type="checkbox" name="hobby" value="骑车">骑车<br />
+            <input type="checkbox" name="hobby" value="足球">足球
+
+            <br /><br />
             请输入您的民族:<br />
-            <input type="text" name="民族" value="汉">
+            <input type="text" name="民族" >
             <br /><br />
             <select name ="cars">
                 <option value="1">劳斯莱斯</option>
@@ -475,23 +488,32 @@
                 这里写上你的个人简介吧……
             </textarea>
             <br />
-            <input list="选项">
-            <datalist id="选项">
-                <option value="1">第一个选项</option>
-                <option value="2">第二个选项</option>
-                <option value="3">第三个选项</option>
-                <option value="4">第四个选项</option>
+            <br />
+            可提示选项输入框:
+            <br />
+            <input list="最帅的人">
+            <datalist id="最帅的人">
+                <option value="刘海洋是个大帅哥">乔布斯</option>
+                <option value="刘海洋是宇宙无敌超级帅的">比尔盖茨</option>
             </datalist>
-            <br />
-            <button type="button" onclick="alert('帅哥你好')" style="background-color: aquamarine">点击看看浏览器给你打的招呼</button>
-            <br />
-            <input type="submit" name="点击提交信息" value="点击提交">
+
+            <br /><br />
+
+            <input type="button" onclick="alert('帅哥你好')" style="background-color: cornflowerblue" value="我是按钮,点击我查看浏览器给你留的言">
+            <br /><br /><br />
+
+            <input type="submit" name="Submit" value="点击提交">
+
+            <br /><br /><br />
+
+
 
         </fieldset>
 
-
     </form>
     <br />
+
+
 
 
 

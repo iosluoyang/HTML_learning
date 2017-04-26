@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0467414-4b27-433c-9fa4-a372158a5097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XHTML_01_属性定义等.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTML_01_入门练手.html" afterPath="$PROJECT_DIR$/HTML_01_入门练手.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XHTML_01_属性定义等.html" afterPath="$PROJECT_DIR$/XHTML_01_属性定义等.html" />
     </list>
     <ignored path="HTML_learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +28,15 @@
       <file leaf-file-name="HTML_01_入门练手.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HTML_01_入门练手.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45806453">
-              <caret line="477" column="29" selection-start-line="477" selection-start-column="29" selection-end-line="477" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.46923077">
+              <caret line="490" column="18" selection-start-line="490" selection-start-column="18" selection-end-line="490" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,8 +45,8 @@
       <file leaf-file-name="XHTML_01_属性定义等.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XHTML_01_属性定义等.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state vertical-scroll-proportion="-6.25">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -75,7 +74,10 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -96,9 +98,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="40" />
-    <option name="width" value="1184" />
+    <option name="x" value="221" />
+    <option name="y" value="26" />
+    <option name="width" value="964" />
     <option name="height" value="935" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -126,6 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,7 +150,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,10 +247,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="40" width="1184" height="935" extended-state="0" />
+    <frame x="221" y="26" width="964" height="935" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2170608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2665975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -256,7 +258,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37182447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18937644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -292,8 +294,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -308,8 +309,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -324,8 +324,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -340,8 +339,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -356,8 +354,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -372,8 +369,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -388,8 +384,7 @@
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -411,24 +406,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XHTML_01_属性定义等.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HTML_01_入门练手.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45806453">
-          <caret line="477" column="29" selection-start-line="477" selection-start-column="29" selection-end-line="477" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.46923077">
+          <caret line="490" column="18" selection-start-line="490" selection-start-column="18" selection-end-line="490" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#12;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#select#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#fieldset#0;n#form#1;n#div#12;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
