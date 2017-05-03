@@ -437,58 +437,49 @@
 <div style="background-color: antiquewhite">
     <br />
     <h1 align="center">表单练习</h1>
-    <form>
-        请输入您的姓名:<br />
-        <input type="text" name="姓名" value="狂拽炫酷屌炸天的我">
-        <br />
-        <input type="radio" name="性别" value="male" checked>男
-        <br />
-        <input type="radio" name="性别" value="female">女
-        <br />
-        请输入您的民族:<br />
-        <input type="text" name="民族" value="汉">
-        <br /><br /><br />
-        <input type="submit" name="点击提交信息" value="点击提交">
-    </form>
     <br /><br /><br />
-    <form action="XHTML_01_属性定义等.html">
+    <form action="XHTML_01_属性定义等.html" autocomplete="on">
         <fieldset>
             <legend>填写关于用户个人信息的东西</legend>
-            请输入您的姓名:<br />
-            <input type="text" name="姓名" value="狂拽炫酷屌炸天的我">
-            <br /> 请输入密码:<br />
-            <input type="password" name="密码">
-            <br /> <br /><br />
-            请选择您的性别:
-            <br />
+            <br /><br />
 
+            请输入您的姓名:<br />
+            <input type="text" name="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autofocus>
+            <br /><br />
+
+            请输入密码:<br />
+            <input type="password" name="密码" autocomplete="off">
+            <br /><br />
+
+            请选择您的性别:<br />
             <input type="radio" name="性别" value="male" checked>男
             <br />
             <input type="radio" name="性别" value="female">女
-            <br />
             <br /><br />
-            请选择您的爱好(可多选):
-            <br />
+
+            请选择您的爱好(可多选):<br />
             <input type="checkbox" name="hobby" value="篮球">篮球<br />
             <input type="checkbox" name="hobby" value="骑车">骑车<br />
             <input type="checkbox" name="hobby" value="足球">足球
-
             <br /><br />
+
             请输入您的民族:<br />
             <input type="text" name="民族" >
             <br /><br />
-            <select name ="cars">
+
+            <select name ="cars"><br />
                 <option value="1">劳斯莱斯</option>
                 <option value="2">宝马</option>
                 <option value="3">奥迪</option>
                 <option value="4" selected>大众</option>
             </select>
-            <br /><br /><br />
-            <textarea name="submitmsg" rows="10" cols="40" >
+            <br /><br />
+
+            <textarea name="submitmsg" rows="10" cols="40">
                 这里写上你的个人简介吧……
             </textarea>
-            <br />
-            <br />
+            <br /><br />
+
             可提示选项输入框:
             <br />
             <input list="最帅的人">
@@ -496,8 +487,62 @@
                 <option value="刘海洋是个大帅哥">乔布斯</option>
                 <option value="刘海洋是宇宙无敌超级帅的">比尔盖茨</option>
             </datalist>
-
             <br /><br />
+
+            <!--Quantity (between 1 and 5)-->
+            输入1到5的数字范围<br />
+            <input type="number" name="quantity" min="1" max="5">
+            <br /><br />
+
+            输入学生的分数:<br />
+            <input type="number" name="points" min="0" max="100" step="10" value="60">
+            <br /><br />
+
+            请选择您的出生年月日:<br />
+            <input type="date" name="birthday">
+            <br /><br />
+
+            请选择您喜欢的颜色:<br />
+            <input type="color" name="likecolor">
+            <br /><br />
+
+            请在一定范围内输入您的结果:<br />
+            <input type="range" name="rangeresult" min="60" max="100">
+            <br /><br />
+
+            请选择年月:<br />
+            <input type="month" name="selectmonth">
+            <br /><br />
+
+            请选择周和年:<br />
+            <input type="week" name="selectweek">
+            <br /><br />
+
+            请选择时间:<br />
+            <input type="time" name="selecttime">
+            <br /><br />
+
+            请选择日期和时间:<br />
+            <input type="datetime" name="selectdatetime">
+            <br /><br />
+
+            请输入电子邮件:<br />
+            <input type="email" name="email">
+            <br /><br />
+
+            请输入搜索文本:<br />
+            <input type="search" name="searchresult">
+            <br /><br />
+
+            请输入搜索文本:<br />
+            <br /><br />
+
+            请输入url链接:<br />
+            <input type="url" name="myurl">
+            <br /><br />
+
+
+
 
             <input type="button" onclick="alert('帅哥你好')" style="background-color: cornflowerblue" value="我是按钮,点击我查看浏览器给你留的言">
             <br /><br /><br />
@@ -509,18 +554,29 @@
 
 
         </fieldset>
-
     </form>
     <br />
 
-
-
-
-
-
-
 </div>
 
+<h3>H5新语意元素的练习:</h3>
+<br />
+<section>
+    <h1>世界上最帅的人</h1>
+    <p>www.shijieshangzuishuaideren.com</p>
+</section>
+<section>
+    <h1>世界上第二帅的人</h1>
+    <p>www.shijieshangdiershuaideren.com</p>
+</section>
+<article>
+    <header>
+        <h1>世界上第三帅的人</h1>
+        <p>www.shijieshangdisanshuaideren</p>
+    </header>
+    <p>不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人,
+        不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人</p>
+</article>
 
 
 
