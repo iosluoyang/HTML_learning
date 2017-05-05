@@ -1,8 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <!--meta属性标识了创作者和编辑软件-->
-    <meta charset="UTF-8" http-equiv="content-type" content="text/html" />
+    <!--下面是HTML4的声明样式-->
+    <!--<meta charset="UTF-8" http-equiv="content-type" content="text/html" />-->
+    <!--这是HTML5的声明样式-->
+    <meta charset="utf-8">
+    <title>世界上最帅的人</title>
+
+
+    <!--
+    所有现代浏览器都支持 HTML5 语义元素。
+    此外，您可以“教授”老式浏览器如何处理“未知元素”。
+    为 Internet Explorer 支持而添加的 shiv：
+    -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <meta name="author" content="我是作者,对,就是我,最帅的我">
     <meta name="revised" content="LiuHaiyang 17/4/23 17:00">
     <meta name="generator" content="westorm">
@@ -17,10 +32,8 @@
 
     <!--一般用于外部样式表-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <title>世界上最帅的人</title>
     <!--基类设置,将默认打开方式设置为在新窗口中打开-->
     <base target="_blank" />
-
 
 
     <style>
@@ -83,15 +96,17 @@
             padding: 20px;
         }
         /*定义.book这种内联级元素的样式*/
+
         span.book{
             color: blue;
         }
     </style>
 
 </head>
-<body style="background-color: PowderBlue;font-family: 'Apple Symbols';>
+<body style="background-color: PowderBlue;font-family: 'Apple Symbols'">
 
-		<h1 style="font-family: Verdana;color: red ;text-align: center">我的第一个红色标题</h1>
+        <h1 style="color: red ; font-family: 'Adobe Hebrew'">我的第一个红色标题</h1>
+
         <p  style="font-family: Times;color: green;background-color: yellow">我的第一个绿色文字黄色背景段落<br/> 我是新的一行<br/>我是最后一行</p>
         <hr />
         <a href="#tips">点击直接跳转至世界上最帅的人的名字</a><!--这里是为了下面的锚所做的准备-->
@@ -444,7 +459,7 @@
             <br /><br />
 
             请输入您的姓名:<br />
-            <input type="text" name="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autofocus>
+            <input type="text" name="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20">
             <br /><br />
 
             请输入密码:<br />
@@ -577,10 +592,187 @@
     <p>不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人,
         不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人</p>
 </article>
+<p>今年我终于参加了一场五月天的演唱会</p>
+<aside>
+    <h4>后来的我们</h4>
+    <p>只期待后来的你更快乐,那就是后来的我最想的</p>
+</aside>
+<figure>
+    <img src="sky.jpg" width="100" height="100">
+    <figcaption>我的天空</figcaption>
+</figure>
+
+<nav>
+    <ul>
+        <li>音乐</li>
+        <li>运动</li>
+        <li>娱乐</li>
+    </ul>
+</nav>
+
+
+<section style="background-color: bisque">
+    <br />
+    <h1 align="center">画布练习</h1>
+    <canvas id="canvas1" width="200" height="500" style="background-color: aliceblue"></canvas>
+
+    <script type="text/javascript">
+        var c = document.getElementById("canvas1")
+        var cxt=c.getContext("2d");
+        cxt.fillStyle = "#FF0000"
+        cxt.fillRect(20,10,150,75)
+    </script>
+
+    <canvas id="canvas2" width="200" height="500" style="border:1px solid #c3c3c3"></canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("canvas2")
+        var cxt = c.getContext("2d")
+        cxt.moveTo(10,10)
+        cxt.lineTo(150,50)
+        cxt.lineTo(10,50)
+        cxt.stroke()
+    </script>
+    <script type="text/javascript">
+        var c=document.getElementById("canvas2");
+        var cxt=c.getContext("2d")
+        cxt.fillStyle="#FF0000";
+        cxt.beginPath();
+        cxt.arc(70,100,30,0,Math.PI*2,true);
+        cxt.closePath();
+        cxt.fill();
+    </script>
+    <script type="text/javascript">
+        var c= document.getElementById("canvas2")
+        var cxt = c.getContext("2d")
+        var grd=cxt.createLinearGradient(15,140,170,50);
+        grd.addColorStop(0,"#FF0000");
+        grd.addColorStop(1,"#00FF00");
+        cxt.fillStyle=grd;
+        cxt.fillRect(15,140,170,50);
+    </script>
+
+    <canvas id="canvas3" width="200" height="500" style="border:1px solid #ff3b30"></canvas>
+    <script type="text/javascript">
+        var c= document.getElementById("canvas3")
+        var cxt= c.getContext("2d")
+        var img = new Image()
+        img.src = "sky.jpg"
+        cxt.drawImage(img,0,0)
+    </script>
+
+</section>
+
+<section style="background-color: beige">
+    <br />
+    <h1 align="center">SVG练习</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 style="fill:lime;stroke:red;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+</section>
+
+        <section style="background-color: burlywood">
+            <br />
+            <h1 align="center">媒体播放练习</h1>
+            <br />
+            <h2 align="center">音频播放</h2>
+            <!--<object width="428" height="360"-->
+                    <!--classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"-->
+                    <!--codebase="http://www.apple.com/qtactivex/qtplugin.cab">-->
+                <!--<param name="src" value="bird.wav" />-->
+                <!--<param name="controller" value="true">-->
+            <!--</object>-->
+
+            <!--<object width="420" height="360" style="background-color: #ff3b30"-->
+                    <!--classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"-->
+                    <!--codebase="http://www.apple.com/qtactivex/qtplugin.cab">-->
+                <!--<param name="src" value="beautifulXXL.mp4" />-->
+                <!--<param name="controller" value="true" />-->
+            <!--</object>-->
+            <embed height="100" width="100" src="MayDay-miss%20you%20in%20a%20second.mp3" />
+            <object height="100" width="100" data="MayDay-miss%20you%20in%20a%20second.mp3"></object>
+            <audio controls="controls" height="100" width="100">
+                <source src="MayDay-miss%20you%20in%20a%20second.mp3" type="MayDay-miss%20you%20in%20a%20second/mp3">
+                <source src="MayDay-miss%20you%20in%20a%20second.ogg" type="MayDay-miss%20you%20in%20a%20second/ogg">
+                <!--
+                上面的例子使用了两个不同的音频格式。HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。
+                如果失败，代码将回退尝试 <embed> 元素。
+                -->
+                <embed src="MayDay-miss%20you%20in%20a%20second.mp3" />
+            </audio>
+
+            <h2 align="center">视频播放</h2>
+            <video width="320" height="240" controls="controls">
+                <source src="beautifulXXL.mp4" type="video/mp4" />
+                <source src="beautifulXXL.ogg" type="video/ogg" />
+                <source src="beautifulXXL.webm" type="video/webm" />
+                <object data="beautifulXXL.mp4" width="320" height="240">
+                    <embed src="beautifulXXL.mp4" width="320" height="240" />
+                </object>
+            </video>
+            <h2 align="center">使用雅虎播放器来播放音频</h2>
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">突然好想你</a><br />
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">你会在哪里</a><br />
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">过的快乐或委屈</a><br />
+
+            <script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+
+            <h2 align="center">使用优酷来播放视频</h2>
+            <embed src="http://m.youku.com/video/id_XMjc0MjA4NzEyNA==.html"
+                   width="480" height="400"
+                   type="application/x-shockwave-flash">
+            </embed>
+
+        </section>
+
+        <section style="background-color: azure">
+            <br />
+            <h2 align="center">地理定位练习</h2>
+            <p id="getlocation">点击下面这个按钮,获取用户的定位信息:</p>
+            <button onclick="getlocation()">获取定位</button>
+            <div id="showmap" style="background-color: cadetblue"></div>
+            <script>
+                var c = document.getElementById("getlocation")
+                function getlocation()
+                {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition,showError)
+                    }
+                    else{
+                        c.innerHTML= "未开启定位权限"
+                    }
+                }
+                function showPosition(position)
+                {
+                    c.innerHTML= "经度:" + position.coords.latitude + "<br />纬度:" + position.coords.longitude
+                    var maplocation = position.coords.latitude + ","+position.coords.longitude;
+                    var url="http://maps.googleapis.com/maps/api/staticmap?center="
+                            +maplocation+"&zoom=14&size=400x300&sensor=false";
+                    document.getElementById("showmap").innerHTML= "<img src='"+url+"' />"
+                }
+                function showError(error)
+                {
+                    var showmsg
+                    switch (error.code){
+                        case error.PERMISSION_DENIED:
+                            showmsg = "您关闭了定位权限"
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            showmsg = "您的定位功能坏了"
+                            break;
+                        case error.UNKNOWN_ERR:
+                            showmsg = "我也不知道你发生了什么错误"
+                            break;
+                    }
+                    c.innerHTML = showmsg
+                }
+            </script>
+        </section>
 
 
 
 
 
+<input type="text"  name="tempfoucs" placeholder="我是临时聚焦的" autofocus>
 </body>
 </html>
