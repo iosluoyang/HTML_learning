@@ -730,7 +730,10 @@
             <h2 align="center">地理定位练习</h2>
             <p id="getlocation">点击下面这个按钮,获取用户的定位信息:</p>
             <button onclick="getlocation()">获取定位</button>
-            <div id="showmap" style="background-color: cadetblue"></div>
+            <!--<div id="showmapimg" style="background-color: cadetblue"></div>-->
+            <div id="showmap" style="background-color: azure"></div>
+            <!--显示静态地图图片以及显示动态可交互地图-->
+            <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
             <script>
                 var c = document.getElementById("getlocation")
                 function getlocation()
@@ -744,11 +747,29 @@
                 }
                 function showPosition(position)
                 {
+//                    显示静态地图图片
                     c.innerHTML= "经度:" + position.coords.latitude + "<br />纬度:" + position.coords.longitude
-                    var maplocation = position.coords.latitude + ","+position.coords.longitude;
-                    var url="http://maps.googleapis.com/maps/api/staticmap?center="
-                            +maplocation+"&zoom=14&size=400x300&sensor=false";
-                    document.getElementById("showmap").innerHTML= "<img src='"+url+"' />"
+//                    var maplocation = position.coords.latitude + ","+position.coords.longitude;
+//                    var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+//                            +maplocation+"&zoom=14&size=400x300&sensor=false";
+//                    document.getElementById("showmapimg").innerHTML="<img src='"+img_url+"' />";
+
+//                    显示动态可交互地图控件
+                    lat=position.coords.latitude;
+                    lon=position.coords.longitude;
+                    latlon=new google.maps.LatLng(lat, lon)
+                    mapholder=document.getElementById('showmap')
+                    mapholder.style.height='250px';
+                    mapholder.style.width='500px';
+
+                    var myOptions={
+                        center:latlon,zoom:14,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP,
+                        mapTypeControl:false,
+                        navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                    };
+                    var map=new google.maps.Map(document.getElementById("showmap"),myOptions);
+                    var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
                 }
                 function showError(error)
                 {
@@ -767,6 +788,9 @@
                     c.innerHTML = showmsg
                 }
             </script>
+
+
+
         </section>
 
 
