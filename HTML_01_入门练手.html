@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" manifest="HTML_01_入门练手.appcache">
 <head>
     <!--meta属性标识了创作者和编辑软件-->
     <!--下面是HTML4的声明样式-->
@@ -101,11 +101,12 @@
             color: blue;
         }
     </style>
+    <script src="html_01_countDemo.js"></script>
 
 </head>
 <body style="background-color: PowderBlue;font-family: 'Apple Symbols'">
 
-        <h1 style="color: red ; font-family: 'Adobe Hebrew'">我的第一个红色标题</h1>
+        <h1 align="center" style="color: red ; font-family: 'Adobe Hebrew'">我的第一个红色标题</h1>
 
         <p  style="font-family: Times;color: green;background-color: yellow">我的第一个绿色文字黄色背景段落<br/> 我是新的一行<br/>我是最后一行</p>
         <hr />
@@ -192,9 +193,9 @@
         <p>图像在<img src="cuteegg.gif" alt="我是图像" align="top">文字当中,顶部对齐</p>
         <p><img src="cuteegg.gif" align="right">我是段落的内容,我就是段落的内容</p>
         <p>将图像当做一个链接</p>
-<a href="http://www.baidu.com"><img src="cuteegg.gif" alt="点击我跳转至百度"></a>
-<br />
-<table border="6">
+        <a href="http://www.baidu.com"><img src="cuteegg.gif" alt="点击我跳转至百度"></a>
+        <br />
+        <table border="6">
         <caption>我是标题</caption>
         <thead>我是表头</thead>
         <br />
@@ -215,10 +216,10 @@
                 <td>&nbsp;</td>
                 <td>2,0</td>
         </tr>
-</table>
-<br />
-<h4>横跨两行的单元格</h4>
-<table border="1">
+        </table>
+        <br />
+        <h4>横跨两行的单元格</h4>
+        <table border="1">
         <tr>
                 <th>姓名</th>
                 <th colspan="2">电话</th>
@@ -228,9 +229,9 @@
                 <td>18818881888</td>
                 <td>03988888888</td>
         </tr>
-</table>
-<p>下面来一个风格迥异的表格</p>
-<table border="1" cellpadding="10" bgcolor="#ffe4c4" background = blackbg.jpg width="400" frame="box">
+        </table>
+        <p>下面来一个风格迥异的表格</p>
+        <table border="1" cellpadding="10" bgcolor="#ffe4c4" background = blackbg.jpg width="400" frame="box">
         <caption>我是奇特的表格</caption>
         <tr>
                 <td bgcolor="#ffe4c4">
@@ -264,37 +265,37 @@
                         HELLO,Phil_Liu
                 </td>
         </tr>
-</table>
+        </table>
 
-<br />
-<p>以下是列表的练习</p>
-<p>没有顺序的列表</p>
-<ul type="square">
+        <br />
+        <p>以下是列表的练习</p>
+        <p>没有顺序的列表</p>
+        <ul type="square">
         <li>科比</li>
         <li>周杰伦</li>
         <li>毛泽东</li>
-</ul>
-<p>有顺序的列表,默认从1开始,如果加入type的话则从type开始</p>
-<ol type="A">
+        </ul>
+        <p>有顺序的列表,默认从1开始,如果加入type的话则从type开始</p>
+        <ol type="A">
         <li>科比</li>
         <li>周杰伦</li>
         <li>毛泽东</li>
-</ol>
-<p>从第500开始</p>
-<ol type="i">
+        </ol>
+        <p>从第500开始</p>
+        <ol type="i">
         <li>科比</li>
         <li>周杰伦</li>
         <li>毛泽东</li>
-</ol>
-<p>自定义列表项 以dl开头,dt代表每一个自定义列表项 dd代表每一个自定义列表项的定义</p>
-<dl>
+        </ol>
+        <p>自定义列表项 以dl开头,dt代表每一个自定义列表项 dd代表每一个自定义列表项的定义</p>
+        <dl>
         <dt>科比</dt>
         <dd>美职篮洛杉矶湖人球队后卫,在NBA联盟效力20年,于2016年4月14日退役</dd>
         <dt>周杰伦</dt>
         <dd>华语乐坛领军人物</dd>
 </dl>
-<p>列表的嵌套</p>
-<ul>
+        <p>列表的嵌套</p>
+        <ul>
         <li>运动员</li>
         <li>歌手
                 <!--<dl>-->
@@ -311,22 +312,21 @@
         </li>
         <li>商人</li>
 </ul>
-<div class="cities">
+        <div class="cities">
     <h2>谁是世界上最帅的人?</h2>
     <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
         人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
         而我的梦想，很厉害，真的很厉害，一个是美食，一个是睡觉
     </p>
 </div>
-<div class="cities">
+        <div class="cities">
     <h2>谁是世界上最帅的人2?</h2>
     <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
         人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
         而我的梦想，很厉害，真的很厉害，一个是美食，一个是睡觉
     </p>
 </div>
-
-<div class="cities">
+        <div class="cities">
     <h2>谁是世界上<span class="book">最帅的人</span>3?</h2>
     <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
         人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
@@ -334,18 +334,18 @@
     </p>
 </div>
 
-<p>布局(使用div标签进行布局)</p>
-<div id="header">
+        <p>布局(使用div标签进行布局)</p>
+        <div id="header">
     <h1 style="color: white;background-color: black">City Callery</h1>
 </div>
-<div id="nav">
+        <div id="nav">
     <ul type="square">
         <li><span class="book">London</span></li>
         <li>Paris</li>
         <li>Tokyo</li>
     </ul>
 </div>
-<div id="section">
+        <div id="section">
     <h1>London</h1>
     <p>
         London is the capital city of England. It is the most populous city in the United Kingdom,
@@ -356,14 +356,14 @@
         its history going back to its founding by the Romans, who named it Londinium.
     </p>
 </div>
-<div id="footer">
+        <div id="footer">
     <p style="background-color: black;color: white">
         Copyright W3School.com.cn
     </p>
 </div>
 
-<p>使用table的HTML布局</p>
-<table class="lamp">
+        <p>使用table的HTML布局</p>
+        <table class="lamp">
     <tr>
         <th>
             <img src="cuteegg.gif" alt="Note" style="height: 32px;width: 32px">
@@ -374,29 +374,29 @@
     </tr>
 </table>
 
-<h1>W3School Demo</h1>
-<h2>Resize this responsive page!</h2>
-<br>
+        <h1>W3School Demo</h1>
+        <h2>Resize this responsive page!</h2>
+        <br>
 
-<div class="city">
+        <div class="city">
     <h2>London</h2>
     <p>London is the capital city of England.</p>
     <p>It is the most populous city in the United Kingdom,
         with a metropolitan area of over 13 million inhabitants.</p>
 </div>
 
-<div class="city">
+        <div class="city">
     <h2>Paris</h2>
     <p>Paris is the capital and most populous city of France.</p>
 </div>
 
-<div class="city">
+        <div class="city">
     <h2>Tokyo</h2>
     <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
         and the most populous metropolitan area in the world.</p>
 </div>
 
-<div class="container">
+        <div class="container">
     <div class="jumbotron">
         <h1> The End of W3School Demo</h1>
         <p> The End of Resize this responsive page!</p>
@@ -404,8 +404,8 @@
 </div>
 
 
-<p>使用bootscrapCSS样式的布局</p>
-<div class="container">
+        <p>使用bootscrapCSS样式的布局</p>
+        <div class="container">
     <div class="row">
         <div class="col-md-4">
             <h2>London</h2>
@@ -425,31 +425,31 @@
     </div>
 </div>
 
-<p>iframe标签用于网页内显示网页</p>
-<iframe src="http://www.baidu.com" width="600" height="500" frameborder="0"></iframe>
-<br />
-<iframe src="sky.jpg" name="baiduhtml" width="600" height="500"></iframe>
-<br />
-<p><a href="http://www.beijing.com" target="baiduhtml">点击将上述图片网页跳转至北京官网</a></p>
-<p>如果浏览器不支持iframe的话,则iframe不显示出来</p>
+        <p>iframe标签用于网页内显示网页</p>
+        <iframe src="http://www.baidu.com" width="600" height="500" frameborder="0"></iframe>
+        <br />
+        <iframe src="sky.jpg" name="baiduhtml" width="600" height="500"></iframe>
+        <br />
+        <p><a href="http://www.beijing.com" target="baiduhtml">点击将上述图片网页跳转至北京官网</a></p>
+        <p>如果浏览器不支持iframe的话,则iframe不显示出来</p>
 
 
-<p>脚本</p>
-<script type="text/javascript">
+        <p>脚本</p>
+        <script type="text/javascript">
     <!--
     document.write('<h1>你好,宇宙无敌帅海洋大哥</h1>')
     //-->
 </script>
-<noscript>当浏览器不支持脚本的时候就显示我啦</noscript>
+        <noscript>当浏览器不支持脚本的时候就显示我啦</noscript>
 
-<p>基类的使用,在header中设置</p>
-<a href="http://www.baidu.com">我这里虽然没有设置target,但是因为基类设置了,所以我就不用再在这里进行设置</a>
+        <p>基类的使用,在header中设置</p>
+        <a href="http://www.baidu.com">我这里虽然没有设置target,但是因为基类设置了,所以我就不用再在这里进行设置</a>
 
-<h2>字符实体</h2>
-<p>&copy</p>
-<p>&#60</p>
-<br />
-<div style="background-color: antiquewhite">
+        <h2>字符实体</h2>
+        <p>&copy</p>
+        <p>&#60</p>
+        <br />
+        <div style="background-color: antiquewhite">
     <br />
     <h1 align="center">表单练习</h1>
     <br /><br /><br />
@@ -574,17 +574,17 @@
 
 </div>
 
-<h3>H5新语意元素的练习:</h3>
-<br />
-<section>
+        <h3>H5新语意元素的练习:</h3>
+        <br />
+        <section>
     <h1>世界上最帅的人</h1>
     <p>www.shijieshangzuishuaideren.com</p>
 </section>
-<section>
+        <section>
     <h1>世界上第二帅的人</h1>
     <p>www.shijieshangdiershuaideren.com</p>
 </section>
-<article>
+        <article>
     <header>
         <h1>世界上第三帅的人</h1>
         <p>www.shijieshangdisanshuaideren</p>
@@ -592,17 +592,17 @@
     <p>不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人,
         不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人</p>
 </article>
-<p>今年我终于参加了一场五月天的演唱会</p>
-<aside>
+        <p>今年我终于参加了一场五月天的演唱会</p>
+        <aside>
     <h4>后来的我们</h4>
     <p>只期待后来的你更快乐,那就是后来的我最想的</p>
 </aside>
-<figure>
+        <figure>
     <img src="sky.jpg" width="100" height="100">
     <figcaption>我的天空</figcaption>
 </figure>
 
-<nav>
+        <nav>
     <ul>
         <li>音乐</li>
         <li>运动</li>
@@ -611,7 +611,7 @@
 </nav>
 
 
-<section style="background-color: bisque">
+        <section style="background-color: bisque">
     <br />
     <h1 align="center">画布练习</h1>
     <canvas id="canvas1" width="200" height="500" style="background-color: aliceblue"></canvas>
@@ -662,7 +662,7 @@
 
 </section>
 
-<section style="background-color: beige">
+        <section style="background-color: beige">
     <br />
     <h1 align="center">SVG练习</h1>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
@@ -670,7 +670,6 @@
                  style="fill:lime;stroke:red;stroke-width:5;fill-rule:evenodd;" />
     </svg>
 </section>
-
         <section style="background-color: burlywood">
             <br />
             <h1 align="center">媒体播放练习</h1>
@@ -749,9 +748,10 @@
 //                    显示静态地图图片
                     c.innerHTML= "经度:" + position.coords.latitude + "<br />纬度:" + position.coords.longitude
                     var maplocation = position.coords.latitude + ","+position.coords.longitude;
-                    var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
-                            +maplocation+"&zoom=14&size=400x300&sensor=false";
+                    var img_url="http://maps.googleapis.com/maps/api/staticmap?center="+
+                            maplocation+"&zoom=14&size=400x300&sensor=false";
                     document.getElementById("showmapimg").innerHTML="<img src='"+img_url+"' />";
+
 
                 }
                 function showError(error)
@@ -774,10 +774,10 @@
 
             <br />
             <p id="getgooglelocation">点击下面这个按钮,展示谷歌地图:</p>
-            <button onclick="getlocation2()">加载谷歌地图</button>
+            <button onclick="getgogleLocation()">加载谷歌地图</button>
             <!--显示可交互的谷歌地图控件-->
             <div id="showgooglemap" style="background-color: red"></div>
-            <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+            <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAmP8euGUWx2OXDLWwk6SrFaSO7YTUjv94&sensor=SET_TO_TRUE_OR_FALSE"></script>
             <script>
                 var d =document.getElementById("getgooglelocation");
                 function getgogleLocation()
@@ -785,7 +785,7 @@
                     if (navigator.geolocation)
                     {
                         navigator.geolocation.getCurrentPosition(showgooglePosition,showgoogleError);
-//                        navigator.geolocation.watchPosition(watchgooglePosition,showgoogleError);
+                        navigator.geolocation.watchPosition(watchgooglePosition,showgoogleError);
                     }
                    else{d.innerHTML="不支持定位";}
                 }
@@ -849,7 +849,7 @@
 
             <br />
             <p id="getbaidulocation">点击下面这个按钮,展示百度地图:</p>
-            <button onclick="getbaidulocation()">加载百度地图</button>
+            <button onclick="getbaiduLocation()">加载百度地图</button>
             <!--显示可交互的百度地图控件-->
             <div id="showbaidumap" style="background-color: green"></div>
             <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
@@ -944,13 +944,137 @@
 
 
 
+        </section>
+        <section style="background-color: floralwhite">
+            <br />
+            <h2 align="center">拖放操作</h2>
+            <script type="text/javascript">
+                //开始拖动时选择要拖动的数据类型
+                function drag(event){
+                event.dataTransfer.setData("Text",event.target.id);
+                }
+//                即将结束拖动的时候要阻止系统默认的方法去打开拖动数据
+                function allowDrop(event) {
+                    event.preventDefault();
+                }
+//                拖放操作，根据拖放数据获取到元素并且放置到相应的位置
+                function drop(event) {
+                    event.preventDefault();
+                    var data = event.dataTransfer.getData("Text");
+                    event.target.appendChild(document.getElementById(data))
+                }
+            </script>
+            <div id="div1" style="float: left;width: 100px;height: 66px;margin: 10px;padding: 10px;border: 1px;solid-color: '#aaaaaa';background-color: #ff3b30"
+                 ondragover="allowDrop(event)" ondrop="drop(event)">
+                <img id="drag1" src="cuteegg.gif" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="div2" style="float: left;width: 100px;height: 66px;margin: 10px;padding: 10px;border: 1px;solid-color: '#aaaaaa';background-color: #ff3b30"
+                 ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        </section>
+        <section style="background-color: lightyellow">
+            <br />
+            <h2 align="center">本地存储</h2>
+            <div id="localstorage"></div>
+            <script>
+                if (typeof(Storage) !== "undefined"){
+                    //当本地存储使用正常的时候
+                    localStorage.setItem("myname","刘海洋")
+                }
+                else{
+                    //浏览器不支持本地存储的时候
+                    document.getElementById("localstorage").innerHTML = "您的浏览器太low了，不支持本地存储";
+                }
 
+                var msg = "世界上最帅的人是:" + localStorage.getItem("myname");
+                document.getElementById("localstorage").innerHTML = msg;
+                //移除本地存储的数据
+                localStorage.removeItem("myname")
+            </script>
+
+            <script>
+                function clickcounter() {
+                    if (typeof(Storage) !== "undefined"){
+                        if (localStorage.clickcount){
+                            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                        }
+                        else{
+                            localStorage.clickcount = 1;
+                        }
+                        document.getElementById("clickcountresult").innerHTML = "您前前后后总共点击了这个按钮" + localStorage.clickcount + "次,不烦吗你";
+                    }
+                    else{
+                        document.getElementById("clickcountresult").innerHTML = "您的浏览器太Low了，不支持本地存储";
+                    }
+                }
+                function clicksessioncounter() {
+                    if (typeof(Storage) !== "undefined"){
+                        if (sessionStorage.clickcount){
+                            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                        }
+                        else{
+                            sessionStorage.clickcount = 1 ;
+                        }
+                        document.getElementById("clickcountsessionresult").innerHTML = "您本次总共点击了上面这个按钮" + sessionStorage.clickcount + "次";
+                    }
+                    else{
+                        document.getElementById("clickcountsessionresult").innerHTML = "您的浏览器太Low了，不支持本地存储";
+                    }
+                }
+            </script>
+            <button onclick="clickcounter()" type="button">点我点我</button>
+            <br /><br />
+            <p id="clickcountresult"></p>
+            <p>请点击上面按钮开始计数,你可以试试，关闭标签页或者浏览器再来,依旧会记录您的点击次数</p>
+            <button onclick="clicksessioncounter()" type="button">别点上面,点我</button>
+            <p id="clickcountsessionresult"></p>
+            <p>请点击上面按钮开始计数,你可以试试，关闭标签页或者浏览器再来,任性到不会记录您的点击次数</p>
+            <br /><br />
+        </section>
+        <section style="background-color: antiquewhite">
+            <br />
+            <h2 align="center">webworker使用</h2>
+            <p>计数结果为:<output id="outputcountresult"></output> </p>
+            <button onclick="startcount()">开始计数</button>
+            <button onclick="stopcount()">停止计数</button>
+            <script>
+                var w;
+                function startcount() {
+                    if (typeof (Worker) !== "undefined"){
+                        if (typeof (w) == "undefined"){
+                            w = new Worker("html_01_countDemo.js")
+                        }
+                        w.onmessage = function (event) {
+                            document.getElementById("outputcountresult").innerHTML = event.data;
+                        }
+                    }
+                    else{
+                        document.getElementById("outputcountresult").innerHTML = "Web Workers 不可用";
+                    }
+                }
+                function stopcount() {
+                    w.terminate();
+                }
+            </script>
+        </section>
+        <section style="background-color: #ff3b30">
+            <br />
+            <h2 align="center">Server-Sent事件(从服务器获取更新数据)</h2>
+            <div id="showservierdate"></div>
+            <script>
+                if (typeof (EventSource) !== "undefined"){
+                    var source = new EventSource("/HTML_01_入门练手_serverupdate.php");
+//                    因php文件暂时有误，所以展示不出来实时更新的服务器时间
+                    source.onmessage = function (event) {
+                        document.getElementById("showserverdate").innerHTML += event.data + "<br />";
+                    }
+                }
+                else{
+                    document.getElementById("showserverdate").innerHTML = "您的浏览器太low了，不支持serverevent";
+                }
+            </script>
         </section>
 
-
-
-
-
-<input type="text"  name="tempfoucs" placeholder="我是临时聚焦的" autofocus>
+        <br /><br /><br />
+        <input type="text"  name="tempfoucs" placeholder="我是临时聚焦的" autofocus>
 </body>
 </html>
