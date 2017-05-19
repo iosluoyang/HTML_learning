@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的名字叫做H5</title>
+    <style type="text/css">
+        #div1 {width:198px; height:66px;padding:10px;border:1px solid #aaaaaa;}
+        #div2 {width:198px; height:66px;padding:10px;border:1px solid #ff3b30;}
+    </style>
+</head>
+<body>
+    <div style="text-align: center">
+        <button onclick="playorpause()">播放/暂停</button>
+        <button onclick="makebig()">大屏</button>
+        <button onclick="makemiddle()">中屏</button>
+        <button onclick="makesmall()">小屏</button>
+        <br />
+        <video id="kobevideo" width="420" height="300" style="margin-top: 15px;">
+            <source src="kobe.mp4" type="video/mp4" />
+            <source src="kobe.ogg" type="video/ogg" />
+        </video>
+        <br />
+        <audio src="MayDay-miss%20you%20in%20a%20second.mp3" controls="controls" preload="metadata">我是一个音频</audio>
+        <div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="img1" src="cuteegg.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+        </div>
+        <div id="div2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    </div> //矩形
+    //        cxt.fillStyle = "#ff3b30";
+    //        cxt.fillRect(10,20,100,50);
+    //        //线条
+    //        cxt.moveTo(130,20);
+    //        cxt.lineTo(160,40);
+    //        cxt.lineTo(130,40);
+    //        cxt.stroke();
+    //        //圆
+    //        cxt.beginPath();
+    //        cxt.arc(200,40,20,0,Math.PI*2,true)
+    //        cxt.closePath();
+    //        cxt.fill()
+    //        //渐变颜色
+    //        var grd=cxt.createLinearGradient(10,100,175,50);
+    //        grd.addColorStop(0,"#FF0000");
+    //        grd.addColorStop(1,"#00FF00");
+    //        cxt.fillStyle=grd;
+    //        cxt.fillRect(10,100,175,50);
+    <script type="text/javascript">
+        var myvideo = document.getElementById("kobevideo");
+        function playorpause() {
+            if (myvideo.paused){
+                myvideo.play();
+            }
+            else{
+                myvideo.pause();
+            }
+        }
+        function makebig() {
+            myvideo.width = 560;
+            myvideo.height = 400;
+        }
+        function makemiddle() {
+            myvideo.width = 420;
+            myvideo.height = 300;
+        }
+        function makesmall() {
+            myvideo.width = 300;
+            myvideo.height = 200;
+        }
+
+
+        //拖动什么 - ondragstart 和 setData()
+        //ondragstart 属性调用了一个函数，drag(event)，它规定了被拖动的数据。
+        //dataTransfer.setData() 方法设置被拖数据的数据类型和值：
+        function drag(event) {
+            event.dataTransfer.setData("Text",event.target.id);
+        }
+        //放到何处 - ondragover  默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        //进行放置 - ondrop 当放置被拖数据时，会发生 drop 事件。
+        function drop(event) {
+            //调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+            event.preventDefault();
+            //通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+            var data = event.dataTransfer.getData("Text");
+            //把被拖元素追加到放置元素（目标元素）中
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <canvas id="mycanvas" width="500" height="300" style="background-color: antiquewhite;"></canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("mycanvas");
+        var cxt = c.getContext("2d");
+        //矩形
+        cxt.fillStyle = "#ff3b30";
+        cxt.fillRect(10,20,100,50);
+        //线条
+        cxt.moveTo(130,20);
+        cxt.lineTo(160,40);
+        cxt.lineTo(130,40);
+        cxt.stroke();
+        //圆
+        cxt.beginPath();
+        cxt.arc(200,40,20,0,Math.PI*2,true)
+        cxt.closePath();
+        cxt.fill()
+        //渐变颜色
+        var grd=cxt.createLinearGradient(10,100,175,50);
+        grd.addColorStop(0,"#FF0000");
+        grd.addColorStop(1,"#00FF00");
+        cxt.fillStyle=grd;
+        cxt.fillRect(10,100,175,50);
+        //图片
+        var img = new Image();
+        img.src = "sky.png";
+        cxt.drawImage(img,0,0);
+    </script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+
+    <section style="background-color: azure">
+        <br />
+        <h2 align="center">地理定位练习</h2>
+
+        <p id="getlocation">点击下面这个按钮,获取用户的定位信息:</p>
+        <button onclick="getlocation()">获取定位</button>
+        <div id="showmapimg" style="background-color: cadetblue"></div>
+        <!--显示静态地图图片-->
+        <script>
+            var c = document.getElementById("getlocation")
+            function getlocation()
+            {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition,showError)
+                }
+                else{
+                    c.innerHTML= "未开启定位权限"
+                }
+            }
+            function showPosition(position)
+            {
+//                    显示静态地图图片
+                c.innerHTML= "经度:" + position.coords.latitude + "<br />纬度:" + position.coords.longitude
+                var maplocation = position.coords.latitude + ","+position.coords.longitude;
+                var img_url="http://maps.googleapis.com/maps/api/staticmap?center="+
+                    maplocation+"&zoom=14&size=400x300&sensor=false";
+                document.getElementById("showmapimg").innerHTML="<img src='"+img_url+"' />";
+
+
+            }
+            function showError(error)
+            {
+                var showmsg
+                switch (error.code){
+                    case error.PERMISSION_DENIED:
+                        showmsg = "您关闭了定位权限"
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        showmsg = "您的定位功能坏了"
+                        break;
+                    case error.UNKNOWN_ERR:
+                        showmsg = "我也不知道你发生了什么错误"
+                        break;
+                }
+                c.innerHTML = showmsg
+            }
+        </script>
+
+        <br />
+        <p id="getgooglelocation">点击下面这个按钮,展示谷歌地图:</p>
+        <button onclick="getgogleLocation()">加载谷歌地图</button>
+        <!--显示可交互的谷歌地图控件-->
+        <div id="showgooglemap" style="background-color: red"></div>
+        <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAmP8euGUWx2OXDLWwk6SrFaSO7YTUjv94&sensor=SET_TO_TRUE_OR_FALSE"></script>
+        <script>
+            var d =document.getElementById("getgooglelocation");
+            function getgogleLocation()
+            {
+                if (navigator.geolocation)
+                {
+                    navigator.geolocation.getCurrentPosition(showgooglePosition,showgoogleError);
+//                        navigator.geolocation.watchPosition(watchgooglePosition,showgoogleError);
+                }
+                else{d.innerHTML="不支持定位";}
+            }
+
+            function showgooglePosition(position)
+            {
+                lat=position.coords.latitude;
+                lon=position.coords.longitude;
+                d.innerHTML= "经度:" + lat + "<br />纬度:" + lon;
+                latlon=new google.maps.LatLng(lat, lon)
+                mapholder=document.getElementById('showgooglemap')
+                mapholder.style.height='250px';
+                mapholder.style.width='500px';
+
+                var myOptions={
+                    center:latlon,zoom:14,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl:false,
+                    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                };
+                var map=new google.maps.Map(document.getElementById("showgooglemap"),myOptions);
+                var marker=new google.maps.Marker({position:latlon,map:map,title:"google告诉我你丫在这儿呢!"});
+            }
+            function watchPosition(position)
+            {
+                lat=position.coords.latitude;
+                lon=position.coords.longitude;
+                d.innerHTML= "经度:" + lat + "<br />纬度:" + lon;
+                latlon=new google.maps.LatLng(lat, lon)
+                mapholder=document.getElementById('showgooglemap')
+                mapholder.style.height='250px';
+                mapholder.style.width='500px';
+
+                var myOptions={
+                    center:latlon,zoom:14,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl:false,
+                    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                };
+                var map=new google.maps.Map(document.getElementById("showgooglemap"),myOptions);
+                var marker=new google.maps.Marker({position:latlon,map:map,title:"谷歌告诉我你此时此刻的位置在这里!"});
+            }
+
+            function showgoogleError(error)
+            {
+                var showmsg
+                switch (error.code){
+                    case error.PERMISSION_DENIED:
+                        showmsg = "您关闭了定位权限"
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        showmsg = "您的定位功能坏了"
+                        break;
+                    case error.UNKNOWN_ERR:
+                        showmsg = "我也不知道你发生了什么错误"
+                        break;
+                }
+                d.innerHTML = showmsg
+            }
+        </script>
+
+        <br />
+        <p id="getbaidulocation">点击下面这个按钮,展示百度地图:</p>
+        <button onclick="getbaiduLocation()">加载百度地图</button>
+        <!--显示可交互的百度地图控件-->
+        <div id="showbaidumap" style="background-color: green"></div>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xwk3sTWh1KQrAHz6ijQLgprndN2CLOs0"></script>
+        <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+        <script type="text/javascript">
+            var map;
+            var gpsPoint;
+            var baiduPoint;
+            var gpsAddress;
+            var baiduAddress;
+
+            function getbaiduLocation() {
+                //根据IP获取城市
+                var myCity = new BMap.LocalCity();
+                myCity.get(getCityByIP);
+
+                //获取GPS坐标
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showbaiduMap, handleError, { enableHighAccuracy: true, maximumAge: 1000 });
+                } else {
+                    alert("您的浏览器不支持使用HTML 5来获取地理位置服务");
+                }
+            }
+
+            function showbaiduMap(value) {
+                var longitude = value.coords.longitude;
+                var latitude = value.coords.latitude;
+                map = new BMap.Map("showbaidumap");
+                //alert("坐标经度为：" + latitude + "， 纬度为：" + longitude );
+                gpsPoint = new BMap.Point(longitude, latitude);    // 创建点坐标
+                map.centerAndZoom(gpsPoint, 15);
+
+                //根据坐标逆解析地址
+                var geoc = new BMap.Geocoder();
+                geoc.getLocation(gpsPoint, getCityByCoordinate);
+
+                BMap.Convertor.translate(gpsPoint, 0, translateCallback);
+            }
+
+            translateCallback = function (point) {
+                baiduPoint = point;
+                var geoc = new BMap.Geocoder();
+                geoc.getLocation(baiduPoint, getCityByBaiduCoordinate);
+            }
+
+            function getCityByCoordinate(rs) {
+                gpsAddress = rs.addressComponents;
+                var address = "GPS标注：" + gpsAddress.province + "," + gpsAddress.city + "," + gpsAddress.district + "," + gpsAddress.street + "," + gpsAddress.streetNumber;
+                var marker = new BMap.Marker(gpsPoint);  // 创建标注
+                map.addOverlay(marker);              // 将标注添加到地图中
+                var labelgps = new BMap.Label(address, { offset: new BMap.Size(20, -10) });
+                marker.setLabel(labelgps); //添加GPS标注
+            }
+
+            function getCityByBaiduCoordinate(rs) {
+                baiduAddress = rs.addressComponents;
+                var address = "百度标注：" + baiduAddress.province + "," + baiduAddress.city + "," + baiduAddress.district + "," + baiduAddress.street + "," + baiduAddress.streetNumber;
+                var marker = new BMap.Marker(baiduPoint);  // 创建标注
+                map.addOverlay(marker);              // 将标注添加到地图中
+                var labelbaidu = new BMap.Label(address, { offset: new BMap.Size(20, -10) });
+                marker.setLabel(labelbaidu); //添加百度标注
+            }
+
+            //根据IP获取城市
+            function getCityByIP(rs) {
+                var cityName = rs.name;
+                alert("根据IP定位您所在的城市为:" + cityName);
+            }
+
+            function handleError(value) {
+                switch (value.code) {
+                    case 1:
+                        alert("位置服务被拒绝");
+                        break;
+                    case 2:
+                        alert("暂时获取不到位置信息");
+                        break;
+                    case 3:
+                        alert("获取信息超时");
+                        break;
+                    case 4:
+                        alert("未知错误");
+                        break;
+                }
+            }
+
+
+        </script>
+
+    </section>
+
+</body>
+</html>
