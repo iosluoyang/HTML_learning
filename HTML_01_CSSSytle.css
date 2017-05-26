@@ -1,0 +1,132 @@
+/*设置HTMLbody的CSS样式*/
+body{
+    background-size: cover;
+    background-image: url("bgimg.jpg");
+    padding: 100px;
+}
+div{
+    outline:deepskyblue dotted thick;
+}
+h1{
+
+    color: black;
+    letter-spacing: 10px;
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: 60px;
+
+}
+h2{
+    color: black;
+    font-family: Helvetica;
+    font-weight: 300;
+    font-size: 20px;
+    text-align:center;
+}
+p{
+    /*首行缩进5em*/
+    text-indent: 2em;
+    color: darkgray;
+    font-size: 20px;
+    font-weight: 300;
+}
+a{
+    text-decoration: none;
+
+}
+a:link{
+    color: lightblue;
+}
+a:visited{
+    color: darkgray;
+}
+a:hover{
+    color: coral;
+}
+a:active{
+    color: #ff3b30;
+}
+pre{
+    color: black;
+    font-size: 16px;
+    font-weight: 200;
+}
+/*设置作为链接的图片的大小*/
+a img{
+    width: 100px;
+    height: 100px;
+}
+/*设置无序列表样式*/
+ul.imgmark{
+    list-style: url("cuteegg.gif") inside;
+}
+ul.square{
+    list-style: square inside;
+}
+ul.circle{
+    list-style: circle inside;
+}
+
+table ,td ,th{
+    border: 1px solid lightblue;
+}
+/*设置某些id绑定CSS样式*/
+#header {
+    background-color:coral;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+    background-color: white;
+}
+#footer {
+    background-color:coral;
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+/*设置某些类绑定CSS样式*/
+table.lamp {
+      width:80%;
+      border:1px solid #d4d4d4;
+}
+/*类中的派生CSS样式*/
+table.lamp th, td {
+    padding:10px;
+}
+table.lamp td {
+    width:100px;
+}
+/*指定id元素的样式*/
+.city {
+      float: left;
+      margin: 5px;
+      padding: 15px;
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+  }
+.cities{
+      background-color: yellowgreen;
+      color: aquamarine;
+      margin: 20px;
+      padding: 20px;
+}
+
+span.book{
+    color: blue;
+}
