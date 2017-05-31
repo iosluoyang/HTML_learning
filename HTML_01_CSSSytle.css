@@ -2,10 +2,12 @@
 body{
     background-size: cover;
     background-image: url("bgimg.jpg");
-    padding: 100px;
+    padding: 30px 400px 30px 400px;
 }
 div{
     outline:deepskyblue dotted thick;
+    /*设置超过范围内的内容自动滚动机制*/
+    overflow: scroll;
 }
 h1{
 
@@ -24,14 +26,20 @@ h2{
     text-align:center;
 }
 p{
-    /*首行缩进5em*/
+    /*首行缩进2em*/
     text-indent: 2em;
-    color: darkgray;
+    color: black;
     font-size: 20px;
     font-weight: 300;
 }
 a{
     text-decoration: none;
+}
+
+a.sourceaddress{
+    position: relative;
+    left: 5px;
+    top: 10px;
 
 }
 a:link{
