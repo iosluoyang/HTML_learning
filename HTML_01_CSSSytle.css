@@ -2,7 +2,9 @@
 body{
     background-size: cover;
     background-image: url("bgimg.jpg");
-    padding: 30px 400px 30px 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 div{
     outline:deepskyblue dotted thick;
@@ -35,13 +37,6 @@ p{
 a{
     text-decoration: none;
 }
-
-a.sourceaddress{
-    position: relative;
-    left: 5px;
-    top: 10px;
-
-}
 a:link{
     color: lightblue;
 }
@@ -54,6 +49,44 @@ a:hover{
 a:active{
     color: #ff3b30;
 }
+table ,td ,th{
+    border: 1px solid lightblue;
+}
+
+/*首页导航栏样式*/
+ul.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li.nav{
+    float: right;
+    width: 25%;
+    height: 80px;
+}
+a.nav:link,a.nav:visited {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    color:black;
+    background-color: coral;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.nav:hover,a.nav:active{
+    background-color: dodgerblue;
+}
+
+a.sourceaddress{
+    position: relative;
+    left: 5px;
+    top: 10px;
+
+}
+
 pre{
     color: black;
     font-size: 16px;
@@ -75,9 +108,7 @@ ul.circle{
     list-style: circle inside;
 }
 
-table ,td ,th{
-    border: 1px solid lightblue;
-}
+
 /*设置某些id绑定CSS样式*/
 #header {
     background-color:coral;
