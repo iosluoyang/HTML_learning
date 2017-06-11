@@ -1,3 +1,71 @@
+/*规定字体昵称以及来源*/
+@font-face {
+    font-family: myownfont;
+    src: url('media/myownfont');/*暂时还没有该字体文件,之后有的话直接拖入media文件中即可*/
+}
+/*规定CSS3动画过渡昵称以及动画要素 因仅为练习所用,故下方的适配其他浏览器动画没有写旋转动画*/
+@keyframes myfirstanimation
+{
+    0%   {
+        background: red;
+        transform:rotate(0deg);
+        -moz-transform:rotate(0deg); /* Firefox 4 */
+        -webkit-transform:rotate(0deg); /* Safari and Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+    }
+    25%  {
+        background: yellow;
+        transform:rotate(90deg);
+        -moz-transform:rotate(90deg); /* Firefox 4 */
+        -webkit-transform:rotate(90deg); /* Safari and Chrome */
+        -o-transform:rotate(90deg); /* Opera */
+    }
+    50%  {
+        background: blue;
+        transform:rotate(180deg);
+        -moz-transform:rotate(180deg); /* Firefox 4 */
+        -webkit-transform:rotate(180deg); /* Safari and Chrome */
+        -o-transform:rotate(180deg); /* Opera */
+    }
+    75%  {
+        background: green;
+        transform:rotate(270deg);
+        -moz-transform:rotate(270deg); /* Firefox 4 */
+        -webkit-transform:rotate(270deg); /* Safari and Chrome */
+        -o-transform:rotate(270deg); /* Opera */
+    }
+    100% {
+        background: red;
+        transform:rotate(360deg);
+        -moz-transform:rotate(360deg); /* Firefox 4 */
+        -webkit-transform:rotate(360deg); /* Safari and Chrome */
+        -o-transform:rotate(360deg); /* Opera */
+    }
+}
+@-moz-keyframes myfirstanimation /* Firefox */
+{
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+}
+@-webkit-keyframes myfirstanimation /* Safari 和 Chrome */
+{
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+}
+@-o-keyframes myfirstanimation /* Opera */
+{
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    75%  {background: green;}
+    100% {background: red;}
+}
 /*设置HTMLbody的CSS样式*/
 body{
     background-size: cover;
@@ -5,6 +73,65 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+}
+/*设置小海哥浮标的样式*/
+div.drogue{
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    background-color: #ff3b30;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+    /*设置div文本分割为三列*/
+    column-count:3;
+    -moz-column-count:3; 	/* Firefox */
+    -webkit-column-count:3; /* Safari 和 Chrome */
+
+    /*规定每列文本中的文字相隔10px*/
+    column-gap:10px;
+    -moz-column-gap:10px;		/* Firefox */
+    -webkit-column-gap:10px;	/* Safari 和 Chrome */
+
+    /*规定列之间的宽度样式和颜色*/
+    /*
+    column-rule:3px outset Black;
+    -moz-column-rule:3px outset Black;	!* Firefox *!
+    -webkit-column-rule:3px outset Black;	!* Safari and Chrome *!
+    */
+
+    /*过渡动画的规定,前者为监控的属性变换,后者为过渡时间*/
+    transition: width 1s;
+    -moz-transition: width 1s;	/* Firefox 4 */
+    -webkit-transition: width 1s;	/* Safari 和 Chrome */
+    -o-transition: width 1s;	/* Opera */
+
+    /*增加动画*/
+    animation: myfirstanimation 5s;
+    -moz-animation: myfirstanimation 5s;	/* Firefox */
+    -webkit-animation: myfirstanimation 5s;	/* Safari 和 Chrome */
+    -o-animation: myfirstanimation 5s;	/* Opera */
+    /*动画播放次数 无数次*/
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
+
+    /*是否正反逆向播放动画*/
+   /* animation-direction:alternate;
+    -webkit-animation-direction:alternate; !* Safari 和 Chrome *!*/
+
+}
+div.drogue:hover{
+    width: 200px;
+    border-radius: 0px;
+    background-color: orangered;
+
+    /*设置div文本分割为三列*/
+    column-count:3;
+    -moz-column-count:3; 	/* Firefox */
+    -webkit-column-count:3; /* Safari 和 Chrome */
 }
 /*设置h1的CSS样式*/
 h1{
@@ -58,11 +185,21 @@ ul.nav{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    border-radius: 10px;
 }
 li.nav{
     float: left;
     width: 25%;
     height: 100px;
+
+    /*过渡动画的规定,前者为监控的属性变换,后者为过渡时间*/
+    transition: width 1s;
+    -moz-transition: width 1s;	/* Firefox 4 */
+    -webkit-transition: width 1s;	/* Safari 和 Chrome */
+    -o-transition: width 1s;	/* Opera */
+}
+li.nav:hover{
+    width: 20%;
 }
 a.nav:link,a.nav:visited {
     display: block;
@@ -100,6 +237,16 @@ span.firstletter{
 div.imgbg{
     background: url("media/bgimg.jpg");
     overflow: hidden;
+    width: 100%;
+    height: 350px;
+    border-radius: 25px;
+    box-shadow:10px 10px 5px #888888;
+    -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -moz-background-size: 100%;/* 老版本的 Firefox */
+    background-origin: content-box;/*将背景图片放置在content区域中*/
+    -webkit-background-origin:content-box; /* Safari */
 }
 /*设置有透明度的样式*/
 p.withopacity{
@@ -108,11 +255,14 @@ p.withopacity{
     color: black;
     font-size: 16px;
     font-weight: 300;
-    line-height: 60px;
+    line-height: 50px;
     font-family:"Apple Chancery";
     opacity: 0.6;
-    background-color: #ffffff;
     margin: 30px 30px 30px 30px;
+    border-radius: 25px;
+    text-shadow: 5px 5px 5px #888888;
+    word-wrap: break-word;/*允许对长单词进行拆分，并换行到下一行*/
+    text-overflow: ellipsis;/*超过显示为省略号*/
 }
 /*设置放置img的div样式*/
 div.img{
@@ -123,6 +273,39 @@ div.img{
     float: left;
     text-align: center;
     overflow: hidden;
+    transform: rotate(30deg);/*顺时针旋转30度*/
+    -ms-transform: rotate(30deg);		/* IE 9 */
+    -webkit-transform: rotate(30deg);	/* Safari and Chrome */
+    -o-transform: rotate(30deg);		/* Opera */
+    -moz-transform: rotate(30deg);		/* Firefox */
+
+    transform: scale(0.8,0.8);/*根据给定的宽度和高度相应的增加或者减小尺寸*/
+    -ms-transform: scale(0.8,0.8);	/* IE 9 */
+    -webkit-transform: scale(0.8,0.8);	/* Safari 和 Chrome */
+    -o-transform: scale(0.8,0.8);	/* Opera */
+    -moz-transform: scale(0.8,0.8);	/* Firefox */
+
+    transform: skew(10deg,10deg);/*元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数*/
+    -ms-transform: skew(10deg,10deg);	/* IE 9 */
+    -webkit-transform: skew(10deg,10deg);	/* Safari and Chrome */
+    -o-transform: skew(10deg,10deg);	/* Opera */
+    -moz-transform: skew(10deg,10deg);	/* Firefox */
+
+    /*matrix() 方法把所有 2D 转换方法组合在一起。matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。*/
+    transform:matrix(0.866,0.5,-0.5,0.866,0,0);/*顺时针旋转30度*/
+    -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
+    -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
+    -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
+    -o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+
+    transform: rotateX(30deg);/*沿X轴旋转30度*/
+    -webkit-transform: rotateX(30deg);	/* Safari 和 Chrome */
+    -moz-transform: rotateX(30deg);	/* Firefox */
+
+    transform: rotateY(30deg);/*沿Y轴旋转30度*/
+    -webkit-transform: rotateY(30deg);	/* Safari 和 Chrome */
+    -moz-transform: rotateY(30deg);	/* Firefox */
+
 }
 /*设置放置在div中的img样式*/
 div.img img{
