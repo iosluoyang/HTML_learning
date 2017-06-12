@@ -7,35 +7,35 @@
 @keyframes myfirstanimation
 {
     0%   {
-        background: red;
+        background: coral;
         transform:rotate(0deg);
         -moz-transform:rotate(0deg); /* Firefox 4 */
         -webkit-transform:rotate(0deg); /* Safari and Chrome */
         -o-transform:rotate(0deg); /* Opera */
     }
     25%  {
-        background: yellow;
+        background: coral;
         transform:rotate(90deg);
         -moz-transform:rotate(90deg); /* Firefox 4 */
         -webkit-transform:rotate(90deg); /* Safari and Chrome */
         -o-transform:rotate(90deg); /* Opera */
     }
     50%  {
-        background: blue;
+        background: coral;
         transform:rotate(180deg);
         -moz-transform:rotate(180deg); /* Firefox 4 */
         -webkit-transform:rotate(180deg); /* Safari and Chrome */
         -o-transform:rotate(180deg); /* Opera */
     }
     75%  {
-        background: green;
+        background: coral;
         transform:rotate(270deg);
         -moz-transform:rotate(270deg); /* Firefox 4 */
         -webkit-transform:rotate(270deg); /* Safari and Chrome */
         -o-transform:rotate(270deg); /* Opera */
     }
     100% {
-        background: red;
+        background: coral;
         transform:rotate(360deg);
         -moz-transform:rotate(360deg); /* Firefox 4 */
         -webkit-transform:rotate(360deg); /* Safari and Chrome */
@@ -44,27 +44,117 @@
 }
 @-moz-keyframes myfirstanimation /* Firefox */
 {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    75%  {background: green;}
-    100% {background: red;}
+    0%   {
+        background: coral;
+        transform:rotate(0deg);
+        -moz-transform:rotate(0deg); /* Firefox 4 */
+        -webkit-transform:rotate(0deg); /* Safari and Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+    }
+    25%  {
+        background: coral;
+        transform:rotate(90deg);
+        -moz-transform:rotate(90deg); /* Firefox 4 */
+        -webkit-transform:rotate(90deg); /* Safari and Chrome */
+        -o-transform:rotate(90deg); /* Opera */
+    }
+    50%  {
+        background: coral;
+        transform:rotate(180deg);
+        -moz-transform:rotate(180deg); /* Firefox 4 */
+        -webkit-transform:rotate(180deg); /* Safari and Chrome */
+        -o-transform:rotate(180deg); /* Opera */
+    }
+    75%  {
+        background: coral;
+        transform:rotate(270deg);
+        -moz-transform:rotate(270deg); /* Firefox 4 */
+        -webkit-transform:rotate(270deg); /* Safari and Chrome */
+        -o-transform:rotate(270deg); /* Opera */
+    }
+    100% {
+        background: coral;
+        transform:rotate(360deg);
+        -moz-transform:rotate(360deg); /* Firefox 4 */
+        -webkit-transform:rotate(360deg); /* Safari and Chrome */
+        -o-transform:rotate(360deg); /* Opera */
+    }
 }
 @-webkit-keyframes myfirstanimation /* Safari 和 Chrome */
 {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    75%  {background: green;}
-    100% {background: red;}
+    0%   {
+        background: coral;
+        transform:rotate(0deg);
+        -moz-transform:rotate(0deg); /* Firefox 4 */
+        -webkit-transform:rotate(0deg); /* Safari and Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+    }
+    25%  {
+        background: coral;
+        transform:rotate(90deg);
+        -moz-transform:rotate(90deg); /* Firefox 4 */
+        -webkit-transform:rotate(90deg); /* Safari and Chrome */
+        -o-transform:rotate(90deg); /* Opera */
+    }
+    50%  {
+        background: coral;
+        transform:rotate(180deg);
+        -moz-transform:rotate(180deg); /* Firefox 4 */
+        -webkit-transform:rotate(180deg); /* Safari and Chrome */
+        -o-transform:rotate(180deg); /* Opera */
+    }
+    75%  {
+        background: coral;
+        transform:rotate(270deg);
+        -moz-transform:rotate(270deg); /* Firefox 4 */
+        -webkit-transform:rotate(270deg); /* Safari and Chrome */
+        -o-transform:rotate(270deg); /* Opera */
+    }
+    100% {
+        background: coral;
+        transform:rotate(360deg);
+        -moz-transform:rotate(360deg); /* Firefox 4 */
+        -webkit-transform:rotate(360deg); /* Safari and Chrome */
+        -o-transform:rotate(360deg); /* Opera */
+    }
 }
 @-o-keyframes myfirstanimation /* Opera */
 {
-    0%   {background: red;}
-    25%  {background: yellow;}
-    50%  {background: blue;}
-    75%  {background: green;}
-    100% {background: red;}
+    0%   {
+        background: coral;
+        transform:rotate(0deg);
+        -moz-transform:rotate(0deg); /* Firefox 4 */
+        -webkit-transform:rotate(0deg); /* Safari and Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+    }
+    25%  {
+        background: coral;
+        transform:rotate(90deg);
+        -moz-transform:rotate(90deg); /* Firefox 4 */
+        -webkit-transform:rotate(90deg); /* Safari and Chrome */
+        -o-transform:rotate(90deg); /* Opera */
+    }
+    50%  {
+        background: coral;
+        transform:rotate(180deg);
+        -moz-transform:rotate(180deg); /* Firefox 4 */
+        -webkit-transform:rotate(180deg); /* Safari and Chrome */
+        -o-transform:rotate(180deg); /* Opera */
+    }
+    75%  {
+        background: coral;
+        transform:rotate(270deg);
+        -moz-transform:rotate(270deg); /* Firefox 4 */
+        -webkit-transform:rotate(270deg); /* Safari and Chrome */
+        -o-transform:rotate(270deg); /* Opera */
+    }
+    100% {
+        background: coral;
+        transform:rotate(360deg);
+        -moz-transform:rotate(360deg); /* Firefox 4 */
+        -webkit-transform:rotate(360deg); /* Safari and Chrome */
+        -o-transform:rotate(360deg); /* Opera */
+    }
 }
 /*设置HTMLbody的CSS样式*/
 body{
@@ -78,42 +168,27 @@ body{
 div.drogue{
     position: fixed;
     left: 0px;
-    top: 50%;
-    background-color: #ff3b30;
+    bottom: 20%;
     width: 100px;
     height: 100px;
+    color: black;
+    font-family: AppleGothic;
     line-height: 100px;
     border-radius: 50px;
     text-align: center;
     overflow: hidden;
-    /*设置div文本分割为三列*/
-    column-count:3;
-    -moz-column-count:3; 	/* Firefox */
-    -webkit-column-count:3; /* Safari 和 Chrome */
-
-    /*规定每列文本中的文字相隔10px*/
-    column-gap:10px;
-    -moz-column-gap:10px;		/* Firefox */
-    -webkit-column-gap:10px;	/* Safari 和 Chrome */
-
-    /*规定列之间的宽度样式和颜色*/
-    /*
-    column-rule:3px outset Black;
-    -moz-column-rule:3px outset Black;	!* Firefox *!
-    -webkit-column-rule:3px outset Black;	!* Safari and Chrome *!
-    */
 
     /*过渡动画的规定,前者为监控的属性变换,后者为过渡时间*/
-    transition: width 1s;
-    -moz-transition: width 1s;	/* Firefox 4 */
-    -webkit-transition: width 1s;	/* Safari 和 Chrome */
-    -o-transition: width 1s;	/* Opera */
+    transition: width 1s,height 1s,border-radius 1s,line-height 1s;
+    -moz-transition: width 1s,height 1s,border-radius 1s,line-height 1s;	/* Firefox 4 */
+    -webkit-transition: width 1s,height 1s,border-radius 1s,line-height 1s;	/* Safari 和 Chrome */
+    -o-transition: width 1s,height 1s,border-radius 1s,line-height 1s;	/* Opera */
 
     /*增加动画*/
-    animation: myfirstanimation 5s;
-    -moz-animation: myfirstanimation 5s;	/* Firefox */
-    -webkit-animation: myfirstanimation 5s;	/* Safari 和 Chrome */
-    -o-animation: myfirstanimation 5s;	/* Opera */
+    animation: myfirstanimation 5s linear;
+    -moz-animation: myfirstanimation 5s linear;	/* Firefox */
+    -webkit-animation: myfirstanimation 5s linear;	/* Safari 和 Chrome */
+    -o-animation: myfirstanimation 5s linear;	/* Opera */
     /*动画播放次数 无数次*/
     animation-iteration-count:infinite;
     -webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
@@ -125,13 +200,10 @@ div.drogue{
 }
 div.drogue:hover{
     width: 200px;
-    border-radius: 0px;
+    height: 200px;
+    border-radius: 100px;
+    line-height: 200px;
     background-color: orangered;
-
-    /*设置div文本分割为三列*/
-    column-count:3;
-    -moz-column-count:3; 	/* Firefox */
-    -webkit-column-count:3; /* Safari 和 Chrome */
 }
 /*设置h1的CSS样式*/
 h1{
@@ -215,7 +287,7 @@ a.nav:link,a.nav:visited {
     text-transform: uppercase;
 }
 a.nav:hover,a.nav:active{
-    background-color: dodgerblue;
+    background-color: lightyellow;
 }
 /*首页文本来源链接a的样式*/
 a.sourceaddress{
