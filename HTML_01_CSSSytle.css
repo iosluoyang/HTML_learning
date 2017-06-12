@@ -165,7 +165,7 @@ body{
     width: 60%;
 }
 /*设置小海哥浮标的样式*/
-div.drogue{
+div#drogue{
     position: fixed;
     left: 0px;
     bottom: 20%;
@@ -198,11 +198,11 @@ div.drogue{
     -webkit-animation-direction:alternate; !* Safari 和 Chrome *!*/
 
 }
-div.drogue:hover{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    line-height: 200px;
+div#drogue:hover{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    line-height: 150px;
     background-color: orangered;
 }
 /*设置h1的CSS样式*/
@@ -304,6 +304,12 @@ span.firstletter{
     font-family:"Apple Symbols";
     line-height: 80%;
     padding: 20px;
+}
+/*设置a中的img尺寸为100*100*/
+a img{
+    width: 300px;
+    height: 400px;
+    float: right;
 }
 /*设置背景为图片的div*/
 div.imgbg{
