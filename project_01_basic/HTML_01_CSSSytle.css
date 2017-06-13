@@ -1,7 +1,7 @@
 /*规定字体昵称以及来源*/
 @font-face {
     font-family: myownfont;
-    src: url('media/myownfont');/*暂时还没有该字体文件,之后有的话直接拖入media文件中即可*/
+    src: url('project_01_basic/media/myownfont');/*暂时还没有该字体文件,之后有的话直接拖入media文件中即可*/
 }
 /*规定CSS3动画过渡昵称以及动画要素 因仅为练习所用,故下方的适配其他浏览器动画没有写旋转动画*/
 @keyframes myfirstanimation
@@ -313,10 +313,10 @@ a img{
 }
 /*设置背景为图片的div*/
 div.imgbg{
-    background: url("media/bgimg.jpg");
+    background: url("media/sky.png");
     overflow: hidden;
     width: 100%;
-    height: 350px;
+    height: 280px;
     border-radius: 25px;
     box-shadow:10px 10px 5px #888888;
     -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
@@ -331,10 +331,11 @@ p.withopacity{
     /*首行不缩进*/
     text-indent: 0em;
     color: black;
+    background-color: white;
     font-size: 16px;
     font-weight: 300;
     line-height: 50px;
-    font-family:"Apple Chancery";
+    font-family:"Hannotate SC";
     opacity: 0.6;
     margin: 30px 30px 30px 30px;
     border-radius: 25px;
@@ -344,7 +345,7 @@ p.withopacity{
 }
 /*设置放置img的div样式*/
 div.img{
-    margin: 0px;
+    margin: 30px 0px 30px 0px;
     border: 0px solid #ff3b30;
     height: auto;
     width: 25%;
@@ -369,20 +370,20 @@ div.img{
     -o-transform: skew(10deg,10deg);	/* Opera */
     -moz-transform: skew(10deg,10deg);	/* Firefox */
 
-    /*matrix() 方法把所有 2D 转换方法组合在一起。matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。*/
-    transform:matrix(0.866,0.5,-0.5,0.866,0,0);/*顺时针旋转30度*/
-    -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
-    -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
-    -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
-    -o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+   /* !*matrix() 方法把所有 2D 转换方法组合在一起。matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。*!
+    transform:matrix(0.866,0.5,-0.5,0.866,0,0);!*顺时针旋转30度*!
+    -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		!* IE 9 *!
+    -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	!* Firefox *!
+    -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	!* Safari and Chrome *!
+    -o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		!* Opera *!*/
 
-    transform: rotateX(30deg);/*沿X轴旋转30度*/
-    -webkit-transform: rotateX(30deg);	/* Safari 和 Chrome */
-    -moz-transform: rotateX(30deg);	/* Firefox */
+  /*  transform: rotateX(30deg);!*沿X轴旋转30度*!
+    -webkit-transform: rotateX(30deg);	!* Safari 和 Chrome *!
+    -moz-transform: rotateX(30deg);	!* Firefox *!
 
-    transform: rotateY(30deg);/*沿Y轴旋转30度*/
-    -webkit-transform: rotateY(30deg);	/* Safari 和 Chrome */
-    -moz-transform: rotateY(30deg);	/* Firefox */
+    transform: rotateY(30deg);!*沿Y轴旋转30度*!
+    -webkit-transform: rotateY(30deg);	!* Safari 和 Chrome *!
+    -moz-transform: rotateY(30deg);	!* Firefox *!*/
 
 }
 /*设置放置在div中的img样式*/
@@ -400,15 +401,14 @@ div.img a:hover img{
 div.desc{
     text-align: center;
     font-weight: normal;
-    width: 150px;
+    width: 100%;
     font-size: 22px;
-    margin: 10px 5px 10px 5px;
-    overflow: hidden;
-
 }
 /*设置有透明度的图片*/
 img.opacity{
     opacity: 0.4;
+    width: 100px;
+    height: 100px;
 }
 img.opacity:hover{
     opacity: 1.0;

@@ -45,9 +45,12 @@
                 var x = document.getElementById("drogue")
                 if (x.innerHTML.match('小海哥')){
                     x.innerHTML = "小海妹";
+                    x.style.color = "#ff0000";
                 }
                 else{
                     x.innerHTML = "小海哥";
+                    x.style.color = "#ededed";
+
                 }
             }
         </script>
@@ -115,12 +118,7 @@
             <div class="desc">LA</div>
         </div>
 
-        <address>
-            written by<a href="ioslhy@163.com">炫酷屌炸天的刘海洋</a>
-            <br />
-            发表日期:<time>2017.4.15</time>
-        </address>
-        <abbr title="刘海洋">鼠标放在我上面，看看谁是世界上最帅的人</abbr>
+<!--        <abbr title="刘海洋">鼠标放在我上面，看看谁是世界上最帅的人</abbr>
         <br />
         <acronym title="还是刘海洋">鼠标放我身上，看看谁是世界上第二帅的人</acronym>
         <br />
@@ -153,11 +151,11 @@
             数学变量实例:<var>E = m c<sup>2</sup></var>
         </p>
 
-        <!--条件注释-->
-        <!--[if IE8]>
+        &lt;!&ndash;条件注释&ndash;&gt;
+        &lt;!&ndash;[if IE8]>
         ……………………
-        <![endif]-->
-        <!--此处应该使用%20来代替空格，这样邮件题目能正确显示-->
+        <![endif]&ndash;&gt;
+        &lt;!&ndash;此处应该使用%20来代替空格，这样邮件题目能正确显示&ndash;&gt;
         <a href="mailto:ioslhy@163.com?cc=891508172@qq.com&bcc=3029068348@qq.com&subject=Hello%20World&body=你好，我们诚挚邀请您出席联合国第8大牛逼人物访谈">点击发送邮件</a>
         <br />
         <img src="sky1.jpg" width="100" height="90" alt="这里有张图片我故意没让它显示出来"/>
@@ -233,7 +231,6 @@
                 <td>2,0</td>
             </tr>
         </table>
-
         <h4>横跨两行的单元格</h4>
         <table>
         <tr>
@@ -368,10 +365,10 @@
 
 
         <h2>脚本</h2>
-        <script type="text/javascript">
-            <!--
+        <script>
+            &lt;!&ndash;
                 document.write('<h2>你好,宇宙无敌帅海洋大哥</h2>')
-            //-->
+            //&ndash;&gt;
         </script>
         <noscript>当浏览器不支持脚本的时候就显示我啦</noscript>
 
@@ -381,22 +378,49 @@
         <h2>字符实体</h2>
         <p>&copy</p>
         <p>&#60</p>
-        <br />
-        <div style="background-color: antiquewhite">
-        <br />
-        <h2>表单练习</h2>
+        <br />-->
+
+        <h2>~~黑曼巴之问~~</h2>
+        <div id="mambaask" style="background-color: antiquewhite">
         <br /><br /><br />
-        <form action="XHTML_01_属性定义等.html" autocomplete="on">
+        <form action="XHTML_01.html" autocomplete="on">
             <fieldset>
-            <legend>填写关于用户个人信息的东西</legend>
+            <legend>测测你是否是真球迷</legend>
             <br /><br />
 
-            请输入您的姓名:<br />
-            <input type="text" name="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20">
+            输入一个你喜欢的昵称:<br />
+            <input type="text" id="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autocomplete="on">
+            <script>
+                function checknickname() {
+                    var value = document.getElementById("姓名").value;
+                    var warningstr = "恭喜,'" + value + "'这么屌炸天的昵称还没有人用过呢~~"
+                    alert(warningstr)
+                }
+            </script>
+            <button type="button" onclick="checknickname()">昵称是否可用?</button>
             <br /><br />
 
-            请输入密码:<br />
-            <input type="password" name="密码" autocomplete="off">
+            来，偷偷把手机号告诉我:<br />
+            <input type="text" id="手机号码" placeholder="是手机号，不是你的BB机号码，OK？" size="50" maxlength="11" autocomplete="on">
+                <script>
+                    function checkphonenumber() {
+                        var value = document.getElementById("手机号码").value;
+
+                        if(value ==""||isNaN(x))
+                        {
+                            alert("都说了不是你BB机号，再好好检查一下~");
+                        }
+                        else{
+                            var alertstr = value + ',这个手机号的机主绝对是最牛逼的~'
+                            alert(alertstr)
+                        }
+                    }
+                </script>
+                <button type="button" onclick="checkphonenumber()">赶紧先提交一下手机号~</button>
+            <br /><br />
+
+            随便想一个密码填进去:<br />
+            <input type="password" name="密码" placeholder="忘了别怪小海哥哦~~" autocomplete="off">
             <br /><br />
 
             请选择您的性别:<br />
@@ -405,56 +429,65 @@
             <input type="radio" name="性别" value="female">女
             <br /><br />
 
-            请选择您的爱好(可多选):<br />
-            <input type="checkbox" name="hobby" value="篮球">篮球<br />
-            <input type="checkbox" name="hobby" value="骑车">骑车<br />
-            <input type="checkbox" name="hobby" value="足球">足球
-            <br /><br />
-
-            请输入您的民族:<br />
-            <input type="text" name="民族" >
-            <br /><br />
-
-            <select name ="cars"><br />
-                <option value="1">劳斯莱斯</option>
-                <option value="2">宝马</option>
-                <option value="3">奥迪</option>
-                <option value="4" selected>大众</option>
-            </select>
-            <br /><br />
-
-            <textarea name="submitmsg" rows="10" cols="40">
-                这里写上你的个人简介吧……
-            </textarea>
-            <br /><br />
-
-            可提示选项输入框:
-            <br />
-            <input list="最帅的人">
-            <datalist id="最帅的人">
-                <option value="刘海洋是个大帅哥">乔布斯</option>
-                <option value="刘海洋是宇宙无敌超级帅的">比尔盖茨</option>
-            </datalist>
-            <br /><br />
-
-            <!--Quantity (between 1 and 5)-->
-            输入1到5的数字范围<br />
-            <input type="number" name="quantity" min="1" max="5">
-            <br /><br />
-
-            输入学生的分数:<br />
-            <input type="number" name="points" min="0" max="100" step="10" value="60">
-            <br /><br />
-
             请选择您的出生年月日:<br />
             <input type="date" name="birthday">
             <br /><br />
 
-            请选择您喜欢的颜色:<br />
-            <input type="color" name="likecolor">
+            下列哪些是指科比?(可多选):<br />
+            <input type="checkbox" name="hobby" value="黑曼巴">黑曼巴<br />
+            <input type="checkbox" name="hobby" value="闪电侠">闪电侠<br />
+            <input type="checkbox" name="hobby" value="老大">老大<br />
+            <input type="checkbox" name="hobby" value="得分机器">得分机器
             <br /><br />
 
-            请在一定范围内输入您的结果:<br />
+            你是从什么时候开始看NBA的?<br />
+            <select name ="timetowatchNBA"><br />
+                <option value="1">在娘胎中</option>
+                <option value="2">小学</option>
+                <option value="3">初中</option>
+                <option value="4" selected>高中</option>
+                <option value="5">大学</option>
+                <option value="6">工作之后</option>
+            </select>
+            <br /><br />
+
+            说说你是怎么看待科比退役的?<br />
+            <textarea name="beizhu" rows="10" cols="40">
+                #一日紫金，终身湖人
+            </textarea>
+            <br /><br />
+
+            你管科比叫什么？:
+            <br />
+            <input list="kobename">
+            <datalist id="kobename">
+                <option value="老大">老大</option>
+                <option value="黑曼巴">黑曼巴</option>
+                <option value="科比">科比</option>
+                <option value="蜗壳">蜗壳</option>
+            </datalist>
+            <br /><br />
+
+            <!--Quantity (between 1 and 5)-->
+            满分10分,你给科比打几分?<br />
+            <input type="number" name="kobescore" min="0" max="10" step="0.1" value="9.8">
+            <br /><br />
+
+
+            蜗壳最喜欢什么颜色?(选择有惊喜)<br />
+            <input type="color" id="likecolor" onsubmit="changebgcolor()">
+            <script>
+                function changebgcolor() {
+                    var color = document.getElementById('likecolor').value;
+                    /*获取表单元素*/
+                    var x = document.getElementById('mambaask');
+                    x.style.backgroundColor = color;
+                }
+            </script>
+            <button type="button" onclick="changebgcolor()">就是它了,巴拉巴拉小魔仙，变！~</button>
+            <br /><br />
+
+            <!--请在一定范围内输入您的结果:<br />
             <input type="range" name="rangeresult" min="60" max="100">
             <br /><br />
 
@@ -487,27 +520,28 @@
 
             请输入url链接:<br />
             <input type="url" name="myurl">
-            <br /><br />
+            <br /><br />-->
 
 
-
-
-            <input type="button" onclick="alert('帅哥你好')" style="background-color: cornflowerblue" value="我是按钮,点击我查看浏览器给你留的言">
+            <input type="button" onclick="presentforyou()" style="background-color: orange" value="送你的一份小礼物">
+            <script>
+                    function presentforyou() {
+                        var presentstr = '知道你舍不得科比退役，知道你看到老大在最后一场比赛拿了60分泪流满脸，知道你看的不仅仅是球，更是你的青春，那些篮球场上挥汗如雨的瞬间，' +
+                                '那些无忧无虑，只要踏上篮球场就可以肆无忌惮的时光~~~可是，当蜗壳说出那句Mamba Out的时候，我想你也一定是心怀祝福，勇敢前行吧。少年，无论如何,'+
+                                '收拾起你的行囊，带着勇气，继续往前走吧，少年路，莫回头！';
+                        alert(presentstr)
+                    }
+                </script>
             <br /><br /><br />
 
             <input type="submit" name="Submit" value="点击提交">
 
             <br /><br /><br />
 
-
-
             </fieldset>
         </form>
-        <br />
-
-    </div>
-
-        <h2>H5新语意元素的练习:</h2>
+        </div>
+<!--        <h2>H5新语意元素的练习:</h2>
         <br />
         <section>
             <h2>世界上最帅的人</h2>
@@ -515,7 +549,6 @@
         <section>
         <h2>世界上第二帅的人</h2>
         </section>
-
         <article>
         <header>
         <h2>世界上第三帅的人</h2>
@@ -523,12 +556,10 @@
         <p>不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人,
         不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人</p>
         </article>
-
         <aside>
             <h4>后来的我们</h4>
             <p>只期待后来的你更快乐,那就是后来的我最想的</p>
-</aside>
-
+        </aside>
         <figure>
         <img src="media/sky.jpg" width="100" height="100">
         <figcaption>我的天空</figcaption>
@@ -540,14 +571,12 @@
         <li>运动</li>
         <li>娱乐</li>
         </ul>
-    </nav>
+        </nav>
 
         <section style="background-color: bisque">
-
-         <br />
         <h2>画布练习</h2>
         <canvas id="canvas1" width="200" height="500" style="background-color: aliceblue"></canvas>
-        <script type="text/javascript">
+        <script>
         var c = document.getElementById("canvas1")
         var cxt=c.getContext("2d");
         cxt.fillStyle = "#FF0000"
@@ -555,7 +584,7 @@
         </script>
 
         <canvas id="canvas2" width="200" height="500" style="border:1px solid #c3c3c3"></canvas>
-        <script type="text/javascript">
+        <script>
         var c = document.getElementById("canvas2")
         var cxt = c.getContext("2d")
         cxt.moveTo(10,10)
@@ -563,7 +592,7 @@
         cxt.lineTo(10,50)
         cxt.stroke()
         </script>
-        <script type="text/javascript">
+        <script>
         var c=document.getElementById("canvas2");
         var cxt=c.getContext("2d")
         cxt.fillStyle="#FF0000";
@@ -572,7 +601,7 @@
         cxt.closePath();
         cxt.fill();
         </script>
-        <script type="text/javascript">
+        <script>
         var c= document.getElementById("canvas2")
         var cxt = c.getContext("2d")
         var grd=cxt.createLinearGradient(15,140,170,50);
@@ -583,7 +612,7 @@
         </script>
 
         <canvas id="canvas3" width="200" height="500" style="border:1px solid #ff3b30"></canvas>
-        <script type="text/javascript">
+        <script>
         var c= document.getElementById("canvas3")
         var cxt= c.getContext("2d")
         var img = new Image()
@@ -605,28 +634,28 @@
             <h2>媒体播放练习</h2>
             <br />
             <h2>音频播放</h2>
-            <!--<object width="428" height="360"-->
-                    <!--classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"-->
-                    <!--codebase="http://www.apple.com/qtactivex/qtplugin.cab">-->
-                <!--<param name="src" value="bird.wav" />-->
-                <!--<param name="controller" value="true">-->
-            <!--</object>-->
+            &lt;!&ndash;<object width="428" height="360"&ndash;&gt;
+                    &lt;!&ndash;classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"&ndash;&gt;
+                    &lt;!&ndash;codebase="http://www.apple.com/qtactivex/qtplugin.cab">&ndash;&gt;
+                &lt;!&ndash;<param name="src" value="bird.wav" />&ndash;&gt;
+                &lt;!&ndash;<param name="controller" value="true">&ndash;&gt;
+            &lt;!&ndash;</object>&ndash;&gt;
 
-            <!--<object width="420" height="360" style="background-color: #ff3b30"-->
-                    <!--classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"-->
-                    <!--codebase="http://www.apple.com/qtactivex/qtplugin.cab">-->
-                <!--<param name="src" value="beautifulXXL.mp4" />-->
-                <!--<param name="controller" value="true" />-->
-            <!--</object>-->
+            &lt;!&ndash;<object width="420" height="360" style="background-color: #ff3b30"&ndash;&gt;
+                    &lt;!&ndash;classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"&ndash;&gt;
+                    &lt;!&ndash;codebase="http://www.apple.com/qtactivex/qtplugin.cab">&ndash;&gt;
+                &lt;!&ndash;<param name="src" value="beautifulXXL.mp4" />&ndash;&gt;
+                &lt;!&ndash;<param name="controller" value="true" />&ndash;&gt;
+            &lt;!&ndash;</object>&ndash;&gt;
             <embed height="100" width="100" src="MayDay-miss%20you%20in%20a%20second.mp3" />
             <object height="100" width="100" data="MayDay-miss%20you%20in%20a%20second.mp3"></object>
             <audio controls="controls" height="100" width="100">
                 <source src="MayDay-miss%20you%20in%20a%20second.mp3" type="MayDay-miss%20you%20in%20a%20second/mp3">
                 <source src="MayDay-miss%20you%20in%20a%20second.ogg" type="MayDay-miss%20you%20in%20a%20second/ogg">
-                <!--
+                &lt;!&ndash;
                 上面的例子使用了两个不同的音频格式。HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。
                 如果失败，代码将回退尝试 <embed> 元素。
-                -->
+                &ndash;&gt;
                 <embed src="MayDay-miss%20you%20in%20a%20second.mp3" />
             </audio>
 
@@ -644,7 +673,7 @@
             <a href="MayDay-miss%20you%20in%20a%20second.mp3">你会在哪里</a><br />
             <a href="MayDay-miss%20you%20in%20a%20second.mp3">过的快乐或委屈</a><br />
 
-            <script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+            <script src="http://mediaplayer.yahoo.com/js"></script>
 
             <h2>使用优酷来播放视频</h2>
             <embed src="http://m.youku.com/video/id_XMjc0MjA4NzEyNA==.html"
@@ -659,7 +688,7 @@
             <p id="getlocation">点击下面这个按钮,获取用户的定位信息:</p>
             <button onclick="getlocation()">获取定位</button>
             <div id="showmapimg" style="background-color: cadetblue"></div>
-            <!--显示静态地图图片-->
+            &lt;!&ndash;显示静态地图图片&ndash;&gt;
             <script>
                 var c = document.getElementById("getlocation")
                 function getlocation()
@@ -703,7 +732,7 @@
             <br />
             <p id="getgooglelocation">点击下面这个按钮,展示谷歌地图:</p>
             <button onclick="getgogleLocation()">加载谷歌地图</button>
-            <!--显示可交互的谷歌地图控件-->
+            &lt;!&ndash;显示可交互的谷歌地图控件&ndash;&gt;
             <div id="showgooglemap" style="background-color: red"></div>
             <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAmP8euGUWx2OXDLWwk6SrFaSO7YTUjv94&sensor=SET_TO_TRUE_OR_FALSE"></script>
             <script>
@@ -778,11 +807,11 @@
             <br />
             <p id="getbaidulocation">点击下面这个按钮,展示百度地图:</p>
             <button onclick="getbaiduLocation()">加载百度地图</button>
-            <!--显示可交互的百度地图控件-->
+            &lt;!&ndash;显示可交互的百度地图控件&ndash;&gt;
             <div id="showbaidumap" style="background-color: green"></div>
-            <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xwk3sTWh1KQrAHz6ijQLgprndN2CLOs0"></script>
-            <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
-            <script type="text/javascript">
+            <script src="http://api.map.baidu.com/api?v=2.0&ak=xwk3sTWh1KQrAHz6ijQLgprndN2CLOs0"></script>
+            <script src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+            <script>
                 var map;
                 var gpsPoint;
                 var baiduPoint;
@@ -871,7 +900,7 @@
         <section style="background-color: floralwhite">
             <br />
             <h2>拖放操作</h2>
-            <script type="text/javascript">
+            <script>
                 //开始拖动时选择要拖动的数据类型
                 function drag(event){
                 event.dataTransfer.setData("Text",event.target.id);
@@ -996,6 +1025,6 @@
                 }
             </script>
         </section>
-        <br /><br /><br />
+        <br /><br /><br />-->
 </body>
 </html>
