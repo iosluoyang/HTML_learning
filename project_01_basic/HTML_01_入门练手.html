@@ -33,27 +33,16 @@
     <!--一般用于外部样式表-->
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="HTML_01_CSSSytle.css">
+
     <!--基类设置,将默认打开方式设置为在新窗口中打开-->
     <base target="_blank" />
-
+    <!--引入外部JS文件-->
     <script src="html_01_countDemo.js"></script>
+    <script src="HTML_01_JS.js"></script>
 
 </head>
-<body>
-        <script>
-            function helloxiaohaige() {
-                var x = document.getElementById("drogue")
-                if (x.innerHTML.match('小海哥')){
-                    x.innerHTML = "小海妹";
-                    x.style.color = "#ff0000";
-                }
-                else{
-                    x.innerHTML = "小海哥";
-                    x.style.color = "#ededed";
+<body id="mybody" onload="startTime()">
 
-                }
-            }
-        </script>
         <div id="drogue" onclick="helloxiaohaige()">小海哥</div>
         <ul class="nav">
             <li class="nav"><a class="nav" href="media/kobe.jpg">小站</a> </li>
@@ -67,7 +56,7 @@
         <br />
         <a class="sourceaddress" href="http://www.jianshu.com/p/7beebfa1b463" target="_blank">资料参考源传送门</a>
         <br />
-        <p >
+        <p  id="articles" >
             <a href="http://baike.baidu.com/link?url=xTxZ7Lghd5Gv2b6FbaCYcsmZ88cWhFQ70_a7lM3a5qPuYUtIe4CWDLYXezhYKAe6WNv3UMiQMwEX20wVkqRlYXLef0b_U6-sOwevhGyQAQx7mmG_cHX9ICCJ9UooMHmZkNAWscDVKdvOy7K2N5ADHumMAksVDL6Uz3xKkufI_NDKmAuxyo9aX_9BvlakmmoEQ4wUthtIcCjyiKeTeQKc4_" target="_blank"><img src="media/kobe.jpg" alt="有本事点我"></a>
             <span class="firstletter">北</span>
             京时间公元2016年4月14日13点03分，随着裁判一声哨响，2015-2016赛季NBA联盟洛杉矶湖人队最后一个主场迎战犹他爵士的这场比赛正式结束。
@@ -390,33 +379,12 @@
 
             输入一个你喜欢的昵称:<br />
             <input type="text" id="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autocomplete="on">
-            <script>
-                function checknickname() {
-                    var value = document.getElementById("姓名").value;
-                    var warningstr = "恭喜,'" + value + "'这么屌炸天的昵称还没有人用过呢~~"
-                    alert(warningstr)
-                }
-            </script>
             <button type="button" onclick="checknickname()">昵称是否可用?</button>
             <br /><br />
 
             来，偷偷把手机号告诉我:<br />
             <input type="text" id="手机号码" placeholder="是手机号，不是你的BB机号码，OK？" size="50" maxlength="11" autocomplete="on">
-                <script>
-                    function checkphonenumber() {
-                        var value = document.getElementById("手机号码").value;
-
-                        if(value ==""||isNaN(x))
-                        {
-                            alert("都说了不是你BB机号，再好好检查一下~");
-                        }
-                        else{
-                            var alertstr = value + ',这个手机号的机主绝对是最牛逼的~'
-                            alert(alertstr)
-                        }
-                    }
-                </script>
-                <button type="button" onclick="checkphonenumber()">赶紧先提交一下手机号~</button>
+            <button type="button" onclick="checkphonenumber()">赶紧先提交一下手机号~</button>
             <br /><br />
 
             随便想一个密码填进去:<br />
@@ -476,14 +444,6 @@
 
             蜗壳最喜欢什么颜色?(选择有惊喜)<br />
             <input type="color" id="likecolor" onsubmit="changebgcolor()">
-            <script>
-                function changebgcolor() {
-                    var color = document.getElementById('likecolor').value;
-                    /*获取表单元素*/
-                    var x = document.getElementById('mambaask');
-                    x.style.backgroundColor = color;
-                }
-            </script>
             <button type="button" onclick="changebgcolor()">就是它了,巴拉巴拉小魔仙，变！~</button>
             <br /><br />
 
@@ -524,14 +484,6 @@
 
 
             <input type="button" onclick="presentforyou()" style="background-color: orange" value="送你的一份小礼物">
-            <script>
-                    function presentforyou() {
-                        var presentstr = '知道你舍不得科比退役，知道你看到老大在最后一场比赛拿了60分泪流满脸，知道你看的不仅仅是球，更是你的青春，那些篮球场上挥汗如雨的瞬间，' +
-                                '那些无忧无虑，只要踏上篮球场就可以肆无忌惮的时光~~~可是，当蜗壳说出那句Mamba Out的时候，我想你也一定是心怀祝福，勇敢前行吧。少年，无论如何,'+
-                                '收拾起你的行囊，带着勇气，继续往前走吧，少年路，莫回头！';
-                        alert(presentstr)
-                    }
-                </script>
             <br /><br /><br />
 
             <input type="submit" name="Submit" value="点击提交">
@@ -1026,5 +978,11 @@
             </script>
         </section>
         <br /><br /><br />-->
+        <!--使用JS追加元素-->
+        <script>
+            addelementswithJS();
+        </script>
+        <p id="currenttime"></p>
+        <button  type="button" onclick="removePelement(this)">不喜欢看文字？点击删除掉</button>
 </body>
 </html>
