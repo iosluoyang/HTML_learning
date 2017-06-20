@@ -37,14 +37,14 @@
     <!--基类设置,将默认打开方式设置为在新窗口中打开-->
     <base target="_blank" />
     <!--引入外部JS文件-->
-    <script src="html_01_countDemo.js"></script>
     <script src="HTML_01_JS.js"></script>
-    <script src="jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="my_jquery_functions.js"></script>
 
 </head>
-<body id="mybody" onload="startTime(),checkcookies()">
+<body id="mybody" onload="startTime()/*,checkcookies() 暂时先不检查缓存*/">
 
-        <div id="drogue" onclick="helloxiaohaige()">小海哥</div>
+        <div id="drogue">小海哥</div>
         <ul class="nav">
             <li class="nav"><a class="nav" href="media/kobe.jpg">小站</a> </li>
             <li class="nav"><a class="nav" href="media/kobe.jpg">每日一句</a> </li>
@@ -72,15 +72,14 @@
             这位未满18岁以高中生身份进入NBA洛杉矶湖人队的男孩，从矜矜业业的替补球员到洛杉矶湖人队绝对主力再到当家球星，科比在洛杉矶这座城市一呆就是20年。
             从1996年至今20年里，科比在洛杉矶这座城市成家立业结婚生子。如今他走了，他为这座城市和他的球队带来了无数奖项记录，供后来者追赶.﻿
         </p>
+        <button type="button" class="loadallarticles">点击展开</button>
         <!--这是我的注释,浏览器是看不懂的，不过我觉得，你应该能看的到-->
         <br />
         <div class="imgbg">
             <p class="withopacity">
                 NBA总冠军奖杯5个常规赛MVP奖杯1个、总决赛MVP奖杯2个、NBA全明星赛MVP奖杯4个、NBA得分王2次、扣篮大赛冠军1次、
                 单场81分NBA历史第二高,无数个NBA赛场历史上，和单赛季单场单节得分助攻篮板抢断盖帽失误甚至打铁相关的记录保持者，
-                以及很多个最年轻记录保持者My name is KobeBryant , and I will play the basketball for veryveryveryveryvery
-                veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery
-                very long time !
+                以及很多个最年轻记录保持者 !
             </p>
         </div>
         <div class="img">
@@ -379,13 +378,15 @@
             <br /><br />
 
             输入一个你喜欢的昵称:<br />
-            <input type="text" id="姓名" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autocomplete="on">
-            <button type="button" onclick="checknickname()">昵称是否可用?</button>
+            <input type="text" id="name" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autocomplete="on">
+            <button type="button" class="checknicknamebtn">昵称是否可用?</button>
+            <b id="shownickname"></b>
             <br /><br />
 
             来，偷偷把手机号告诉我:<br />
-            <input type="text" id="手机号码" placeholder="是手机号，不是你的BB机号码，OK？" size="50" maxlength="11" autocomplete="on">
-            <button type="button" onclick="checkphonenumber()">赶紧先提交一下手机号~</button>
+            <input type="text" id="phonenum" placeholder="是手机号，不是你的BB机号码，OK？" size="50" maxlength="11" autocomplete="on">
+            <button type="button" class="checkphonenumbtn">赶紧先提交一下手机号~</button>
+            <b id="showphonenum"></b>
             <br /><br />
 
             随便想一个密码填进去:<br />
@@ -445,7 +446,7 @@
 
             蜗壳最喜欢什么颜色?(选择有惊喜)<br />
             <input type="color" id="likecolor" onsubmit="changebgcolor()">
-            <button type="button" onclick="changebgcolor()">就是它了,巴拉巴拉小魔仙，变！~</button>
+            <button type="button" id="changebgcolor">就是它了,巴拉巴拉小魔仙，变！~</button>
             <br /><br />
 
             <!--请在一定范围内输入您的结果:<br />
@@ -483,9 +484,6 @@
             <input type="url" name="myurl">
             <br /><br />-->
 
-
-            <input type="button" onclick="presentforyou()" style="background-color: orange" value="送你的一份小礼物">
-            <br /><br /><br />
 
             <input type="submit" name="Submit" value="点击提交">
 
@@ -935,32 +933,6 @@
             <p>请点击上面按钮开始计数,你可以试试，关闭标签页或者浏览器再来,任性到不会记录您的点击次数</p>
             <br /><br />
         </section>
-        <section style="background-color: antiquewhite">
-            <br />
-            <h2>webworker使用</h2>
-            <p>计数结果为:<output id="outputcountresult"></output> </p>
-            <button onclick="startcount()">开始计数</button>
-            <button onclick="stopcount()">停止计数</button>
-            <script>
-                var w;
-                function startcount() {
-                    if (typeof (Worker) !== "undefined"){
-                        if (typeof (w) == "undefined"){
-                            w = new Worker("html_01_countDemo.js")
-                        }
-                        w.onmessage = function (event) {
-                            document.getElementById("outputcountresult").innerHTML = event.data;
-                        }
-                    }
-                    else{
-                        document.getElementById("outputcountresult").innerHTML = "Web Workers 不可用";
-                    }
-                }
-                function stopcount() {
-                    w.terminate();
-                }
-            </script>
-        </section>
         <section style="background-color: yellowgreen">
             <br />
             <h2>Server-Sent事件(从服务器获取更新数据)</h2>
@@ -985,5 +957,6 @@
         </script>
         <p id="currenttime"></p>
         <button  type="button" onclick="removePelement(this)">不喜欢看文字？点击删除掉</button>
+
 </body>
 </html>
