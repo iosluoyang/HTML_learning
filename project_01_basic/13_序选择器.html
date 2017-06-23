@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>序选择器</title>
+    <style type="text/css">
+        /*p:first-child{ //选中同级别的第一个并且为P标签的那个标签
+            color: red;
+        }
+        p:last-child{   //选中同级别的最后一个并且为P标签的那个标签
+            color: blue;
+        }*/
+        p:first-of-type{//选中同级别中同类型的第一个并且为P标签的那个标签
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        序选择器
+        CSS3中新增的，最具代表性的就是序选择器
+        1.同级别的第几个 不区分类型
+        2.同类型的第几个 区分类型
+
+    -->
+    <p>我是段落1</p>
+    <p>我是段落2</p>
+    <div>
+        <p>我是段落3</p>
+        <p>我是段落4</p>
+        <p>我是段落5</p>
+    </div>
+
+</body>
+</html>

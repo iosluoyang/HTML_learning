@@ -1,8 +1,8 @@
 /*规定字体昵称以及来源*/
-@font-face {
+/*@font-face {
     font-family: myownfont;
-    src: url('project_01_basic/media/myownfont');/*暂时还没有该字体文件,之后有的话直接拖入media文件中即可*/
-}
+    src: url('project_01_basic/media/myownfont');!*暂时还没有该字体文件,之后有的话直接拖入media文件中即可*!
+}*/
 /*规定CSS3动画过渡昵称以及动画要素 因仅为练习所用,故下方的适配其他浏览器动画没有写旋转动画*/
 @keyframes myfirstanimation
 {
@@ -154,7 +154,7 @@
 /*设置HTMLbody的CSS样式*/
 body{
     background-size: cover;
-    background-image: url("media/bgimg.jpg");
+    background-image: url("../media/bgimg.jpg");
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -316,7 +316,7 @@ a img{
 }
 /*设置背景为图片的div*/
 div.imgbg{
-    background: url("media/sky.png");
+    background: url("../media/sky.png");
     overflow: hidden;
     width: 100%;
     height: 210px;
@@ -421,7 +421,7 @@ img.opacity:hover{
 
 /*设置无序列表样式*/
 ul.imgmark{
-    list-style: url("media/cuteegg.gif") inside;
+    list-style: url("../media/cuteegg.gif") inside;
 }
 ul.square{
     list-style: square inside;

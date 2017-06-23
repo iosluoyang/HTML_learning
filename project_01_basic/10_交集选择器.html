@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交集选择器</title>
+    <style type="text/css">
+        p.para#myid{
+            color: #ff3b30;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        给所有选择器选中的标签中，相交的那部分标签设置属性
+        格式:
+        选择器1选择器2{ //注意，中间没有任何的连接符(空格也没有)
+                属性:值;
+            }
+    -->
+    <p>段落1</p>
+    <p class="para" id="myid">段落2</p>
+    <p>段落3</p>
+    <p class="para">段落4</p>
+    <p>段落5</p>
+
+</body>
+</html>

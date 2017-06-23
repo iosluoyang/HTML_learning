@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datalist标签</title>
+</head>
+<body>
+<!--
+    给输入框添加一个list属性，设置一个datalist 其id和输入框list绑定即可
+-->
+    <form>
+        <label for="cars">请输入您的车型</label>
+        <input type="text" list="cars">
+        <datalist id="cars">
+            <option>奔驰</option>
+            <option>宝马</option>
+            <option>劳斯莱斯</option>
+            <option>奥迪</option>
+            <option>路虎</option>
+        </datalist>
+    </form>
+</body>
+</html>

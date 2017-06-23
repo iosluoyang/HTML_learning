@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素选择器</title>
+    <style type="text/css">
+        div>p{
+            color: red;
+        }
+        div>ul>li>p{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        子元素选择器，找到指定标签中所有特定的直接子元素，然后设置属性（只找直接子元素，不能找孙子及后代）
+        格式:
+        标签名称1 > 标签名称2{
+                属性:值;
+            }
+        先找到名称叫做"标签名称1"的标签，然后在这个标签中查找所有直接子元素名称叫做"标签名称2"的元素
+    -->
+    <div>
+        <p>
+            我是段落
+        </p>
+        <p>
+            我是段落
+        </p>
+        <ul>
+            <li><p>我是段落</p></li>
+        </ul>
+    </div>
+
+</body>
+</html>

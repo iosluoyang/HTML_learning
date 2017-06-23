@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<!--
+    格式:
+    <table>//代表整个标签
+    <tr>//代表每一行
+        <td>//代表每一行中的每一个单元格
+
+        </td>
+    </tr>
+*表格标签有一个边框属性，决定了table边框的宽度，默认情况下是0，所以在无数据时看不到表格
+ 默认情况下单元格和单元格之间的间距是2 cellspacing
+ 默认情况下单元格内容的文字和每一个单元格之间的间距是1 ，叫做内边距
+
+
+ 细线表格的制作方式是通过将table的背景颜色和每一个单元格的背景颜色不同，再设置外边距的宽度设置的
+
+
+-->
+<table border="1" align="center" width="500px" height="500px" cellspacing="1" bgcolor="black">
+    <tr bgcolor="white">
+        <td>
+            A1
+        </td>
+        <td>
+            A2
+        </td>
+        <td>
+            A3
+        </td>
+    </tr>
+    <tr align="center" bgcolor="white">
+        <td>
+            B1
+        </td>
+        <td>
+            B2
+        </td>
+        <td align="right">
+            B2
+        </td>
+    </tr>
+</table>
+</body>
+</html>
