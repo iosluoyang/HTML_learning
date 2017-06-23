@@ -89,4 +89,61 @@ $(document).ready(function () {
         $('div#mambaask').css('background-color',selectcolor);
     })
 
+    /*点击添加或删除元素*/
+    $('button#addordeleteelement').click(function () {
+
+        //首先判断添加的P标签的个数
+        var addparr = $('p.addp');
+        //如果数量等于1个则进行删除，否则进行添加
+        if (addparr.length == 1 ){
+            //删除元素
+            $('p.addp').remove();
+            //删除完之后再进行一次判断，如果数量 == 0 则变按钮标题
+            var addparr1 = $('p.addp');
+            if (addparr1.length == 0){
+                $('button#addordeleteelement').text('点击发现更多惊喜');
+            }
+        }
+        else {
+            //在黑曼巴之问内的最后面添加新的元素（P标签）
+            /*$('div#mambaask').append('<p class="addp">哈哈，惊喜吧，我是用JS追加的元素哦</p>')*/
+
+            //在黑曼巴之问元素后面添加新的元素（P标签）
+            $('div#mambaask').after('<p class="addp">哈哈，惊喜吧，我是用JQ追加的元素哦</p>')
+
+            //添加完之后再进行一次判断，如果数量 == 1 则变按钮标题
+            var addparr2 = $('p.addp');
+            if (addparr2.length == 1){
+                $('button#addordeleteelement').text('点击隐藏惊喜');
+            }
+        }
+
+
+
+
+
+
+    })
+
+    /*点击删除页面内的P标签元素*/
+    $('button#deletePelement').click(function () {
+
+        var r = confirm("万水千山总是情，给点活路行不行?" + '\n' + "你确定要把我给删了?")
+        if (r == true){
+            //删除P标签
+            $('p').remove();
+        }
+        else{
+            //点击了取消
+            var name = prompt("大侠可否告知我你的名字?","炫酷屌炸天的我~~")
+            if (name != null && name != ""){
+                alert("多谢" + name +"手下留情" + '\n' + "我们萍水相逢!")
+            }
+            else{
+                alert("多谢无名大侠手下留情" + '\n' + "我们萍水相逢!")
+            }
+
+        }
+    })
+
 })

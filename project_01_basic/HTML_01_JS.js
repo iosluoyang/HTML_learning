@@ -11,8 +11,8 @@ function startTime() {
     var hour = d.getHours();
     var minute = d.getMinutes();
     var second = d.getSeconds();
-    //var timestr = '当前时间为:' + year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second ;
-    var timestr = '当前时间为:' + hour + ':' + minute + ':' + second ;
+    //var timestr = '北京时间: ' + year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second ;
+    var timestr = '北京时间: ' + hour + ':' + minute + ':' + second ;
     var timep = document.getElementById('currenttime');
     timep.innerHTML = timestr;
     t = setTimeout('startTime()',500) //1000毫秒代表1秒
@@ -66,48 +66,4 @@ function checkcookies() {
     }
 }
 
-//使用JS追加元素
-function addelementswithJS() {
-    var p  = document.createElement("p");
-    var pstr = document.createTextNode("哈哈，惊喜吧，我是用JS追加的元素哦");
-    p.appendChild(pstr);
-    var bodyelement = document.getElementById("mybody");
-    bodyelement.appendChild(p);
-    var addstr = '永远的黑曼巴';
-    document.write('<p> 使用js增加一个橘色的文字:'+ addstr.replace(/黑曼巴/,'科比布莱恩特').fontcolor('orange') + ' </p>');
-
-    var d =  new Date();
-    document.write('<p> 当前距1970年1月1日相隔了:' + d.getTime() + '毫秒</p>');
-    d.setFullYear(1993,6,1);//因为月份是从0~11，所以要表示7月1日，需要传入6
-    document.write('<p> 更改当前日期为:' + d.toUTCString() + '</p>');
-}
-//倒叙移除所有的P标签(增加二次确认)
-function removePelement(obj) {
-    var r = confirm("万水千山总是情，给点活路行不行?" + '\n' + "你确定要把我给删了?")
-    if (r == true){
-        //删除P标签
-        //如果P标签仅剩3个的话，则直接移除删除按钮本身
-        var childelements = document.getElementsByTagName('p');
-        var Pcount = childelements.length;
-        if (Pcount == 2){
-            obj.innerHTML = '给P标签留点活路吧，就删到这里了~';
-        }
-        //倒叙移除P标签
-        else{
-            var lastp = childelements[childelements.length - 1 ];
-            lastp.parentNode.removeChild(lastp);
-        }
-    }
-    else{
-        //点击了取消
-        var name = prompt("大侠可否告知我你的名字?","炫酷屌炸天的我~~")
-        if (name != null && name != ""){
-            alert("多谢" + name +"手下留情" + '\n' + "我们萍水相逢!")
-        }
-        else{
-            alert("多谢无名大侠手下留情" + '\n' + "我们萍水相逢!")
-        }
-
-    }
-}
 

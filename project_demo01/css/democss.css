@@ -1,0 +1,29 @@
+/*全部外边距和内边距都清0*/
+*{  margin: 0;padding: 0;  }
+/*清除所有的列表样式*/
+li{
+    list-style: none;
+}
+/*清浮动*/
+.clearfix:after{content:"";display: block;clear: both}
+/*头部视图*/
+header{
+    padding: 0 13.5%;
+    border-bottom: 2px #e5e5e5 solid;
+}
+/*头部中的div样式*/
+header div{
+    float: left;
+    color: #999999;
+    line-height: 62px;
+}
+header div span{
+    color: red;
+    text-decoration: underline;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    float: right;
+}
