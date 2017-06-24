@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS继承性</title>
+    <style type="text/css">
+        div{
+            color:red;
+            font-size: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    1.CSS具有后代可以继承祖先的属性
+    2.但并不是所有属性都可以进行继承,只有 font/color-/text-/line 等开头的属性才可以继承
+    3.a标签的文字颜色和下划线是不能继承的
+    4.h标签文字大小是不能继承的
+    -->
+    <div>
+        <ul>
+            <li>
+                <p>我是一个段落,我没有设置属性但是我继承了div的属性</p>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <a href="#">我是一个继承自div的链接</a>
+    </div>
+
+    <div>
+        <h1>我是大标题</h1>
+    </div>
+</body>
+</html>

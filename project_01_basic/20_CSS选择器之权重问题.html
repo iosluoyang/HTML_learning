@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器之权重问题</title>
+    <style type="text/css">
+        #idone .classtwo{
+            color: red;
+        }
+        .classone .classtwo{
+            color: green;
+        }
+        div ul li p{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    仅当为直接选中的时候才涉及到计算权重问题
+    当多个选择器混合在一起使用时,我们可以通过计算权重来判断谁的优先级最高
+    计算规则
+    1.id最多的权重最高
+    2.如果id个数一样,类名最多的权重最高
+    3.如果id和类名个数一样,标签个数最多的权重最高
+    4.如果id/类名/标签个数一样,则谁写在后面听谁的
+
+
+
+    -->
+
+    <div id="idone" class="classone">
+        <ul>
+            <li>
+                <p id="idtwo" class="classtwo">我是段落</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

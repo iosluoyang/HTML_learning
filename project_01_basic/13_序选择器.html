@@ -4,15 +4,48 @@
     <meta charset="UTF-8">
     <title>序选择器</title>
     <style type="text/css">
-        /*p:first-child{ //选中同级别的第一个并且为P标签的那个标签
+        /*同级别看标签个数*/
+       /* p:first-child{ !*选中同级别的第一个并且为P标签的那个标签*!
             color: red;
-        }
-        p:last-child{   //选中同级别的最后一个并且为P标签的那个标签
+        }*/
+       /* p:last-child{   !*选中同级别的最后一个并且为P标签的那个标签*!
             color: blue;
         }*/
-        p:first-of-type{//选中同级别中同类型的第一个并且为P标签的那个标签
-            color:red;
-        }
+
+       /* p:nth-child(3){ !*选中同级别类型中的第3个并且为P标签的那个标签*!
+            color: red;
+        }*/
+
+        /*p:nth-last-child(2){!*选中同级别中的倒数第2个标签*!
+            color: red;
+        }*/
+
+       /* p:only-child{   !*选中只有一个子元素的那个子元素并且该子元素还是P标签*!
+            color: purple;
+        }*/
+
+
+
+
+        /*同级别看标签类型个数*/
+       /* p:first-of-type{  !*选中同级别中同类型的第一个并且为P标签的那个标签*!
+           color:red;
+       }*/
+       /*p:last-of-type{ !*选中同级别同类型中的最后一个并且为P标签的那个标签*!
+           color: red;
+       }*/
+       /*p:nth-of-type(3){
+           color: red;!*选中同级别第3种类型中的并且为P标签的那个标签*!
+       }*/
+
+       /*p:nth-last-of-type(2){!*同级别同类型中的倒数第2个*!
+           color: red;
+       }*/
+       /*p:only-of-type{
+           color: purple;!*选中只有一个类型的子元素并且该子元素还是P标签*!
+       }*/
+
+
     </style>
 </head>
 <body>
@@ -23,12 +56,23 @@
         2.同类型的第几个 区分类型
 
     -->
-    <p>我是段落1</p>
+
+    <!--<p>我是段落1</p>
     <p>我是段落2</p>
+    <p>我是段落2.5</p>
     <div>
         <p>我是段落3</p>
         <p>我是段落4</p>
         <p>我是段落5</p>
+        <p>我是段落6</p>
+        <p>我是段落7</p>
+        <p>我是段落8</p>
+    </div>-->
+
+    <p>我是段落1</p>
+    <div>
+        <p>我是段落2</p>
+        <h1>我是一个标题</h1>
     </div>
 
 </body>

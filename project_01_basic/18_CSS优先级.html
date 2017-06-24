@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS优先级</title>
+    <style type="text/css">
+        *{
+            color: pink;
+        }
+        li{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        优先级的判断三种方式
+        1.是否是直接选中 (如果是间接选中,谁离的近则谁起作用)
+        2.相同类型选择器 谁写在后面谁起作用
+        3.不同类型选择器,则按照优先级来层叠
+        id>类class>标签>通配符>继承>浏览器默认
+    -->
+
+    <div>
+        <ul>
+            <li>
+                <p id="my_p" class="thisisp">我是段落</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>

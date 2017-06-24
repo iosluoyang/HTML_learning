@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS优先级之important</title>
+    <style type="text/css">
+        ul{
+            color:red;
+        }
+        p{
+            color: green;
+        }
+        *{
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        用于提升某个直接选中的选择器的属性优先级升级到最高级
+        1.只能用于直接选中的标签,不能用于间接选中
+        2.通配符选中的标签页是直接选中的
+    -->
+    <div>
+        <ul>
+            <li>
+                <p>我是段落</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

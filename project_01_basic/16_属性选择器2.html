@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器2</title>
+    <style type="text/css">
+        [alt^="abc"]{    /*^= 开头*/
+            color: red;
+        }
+        [alt$="abc"]{   /*$= 结尾*/
+            color: blue;
+        }
+        [alt*="qq"]{
+            color:green;
+        ;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        属性的取值是以什么开头的?
+        [attribute^=value]
+        属性的取值是以什么结尾的?
+        [attribute$=value]
+        属性的取值是否包含某个特定取值的?
+        [attribute*=value]
+
+    -->
+    <img src="" alt="abcdef">
+    <img src="" alt="abc-www">
+    <img src="" alt="abc ppp">
+    <img src="" alt="defabc">
+    <img src="" alt="ppp abc">
+    <img src="" alt="www-abc">
+    <img src="" alt="qq">
+    <img src="" alt="yy">
+</body>
+</html>
