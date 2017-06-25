@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型中的宽高 + box-sizing</title>
+    <style>
+        .content{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        .aside{
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .article{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: right;
+/*
+            border: 20px solid #000;
+*/
+            padding: 20px;
+            box-sizing: border-box; /*box-sizing 属性为border-box时，元素的宽高恒等于设置的width ,  可以保证给一个盒子新增padding 或者border之后元素本身的宽高不发生变化 */
+        }
+        .bigbox{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            /*让小盒子居中的方式一*/
+           /* padding: 150px;
+            box-sizing: border-box;*/
+            border: 5px solid #000;
+        }
+        .smallbox{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /*
+                注意点:
+                如果两个盒子是嵌套关系，那么设置了里面一个盒子的顶部的外边距，则外面一个盒子也会被顶下来
+                如果外面的盒子不想被一起顶下来的话可以给外面的盒子添加一个边框属性即可
+                在企业开发中如果需要控制嵌套关系盒子之间的距离，应该首先考虑padding 其次再考虑margin,因为margin主要是描述兄弟元素
+                margin -  0 auto 则里面的盒子可以在外面盒子中水平居中，但是不能反着来设置垂直居中
+            */
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+    内容的宽高:
+    就是通过CSS属性设置的width 和 height的数值
+    元素的宽高:
+    边框+内边距+内容宽高
+    元素空间的宽高
+    外边距+边框+内边距+内容宽高
+-->
+<!--<div class="content">
+    <div class="aside"></div>
+    <div class="article"></div>
+</div>-->
+
+
+
+<!--盒子模型练习-->
+<div class="bigbox">
+    <div class="smallbox"></div>
+</div>
+
+
+
+</body>
+
+</html>

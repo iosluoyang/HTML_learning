@@ -6,31 +6,102 @@
     <style>
         .header{
             height: 200px;
-            background-color: red;
         }
         .content{
-            height: 200px;
-            background-color: blue;
+            height: 250px;
         }
         .footer{
             height: 200px;
-            background-color: green;
         }
+        div{
+            text-align: center;
+        }
+        .logodiv{
+            height: 110px;
+        }
+        .nav{
+            height: 20px;
+        }
+        input[type=text]{
+            width: 400px;
+            height: 30px;
+        }
+        input[type=submit]{
+            width: 100px;
+            height: 50px;
+        }
+        .search{
+            height: 60px;
+        }
+        .baidke{
+            height: 120px;
+        }
+        .anquan{
+            height: 40px;
+        }
+        .tuiguang{
+            height: 40px;
+        }
+        body{
+            font-size:14px;
+            color: #666;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="" alt="">
-        <a href="#">新闻</a>
-        <a href="#">新闻</a>
-        <a href="#">新闻</a>
-        <a href="#">新闻</a>
-        <a href="#">新闻</a>
-        <a href="#">新闻</a>
-
+        <div class="logodiv">
+            <img src="media/baidulogo.png" alt="">
+        </div>
+        <div class="nav">
+            <a href="#">新闻</a>
+            <strong>网页</strong>
+            <a href="#">贴吧</a>
+            <a href="#">知道</a>
+            <a href="#">音乐</a>
+            <a href="#">图片</a>
+            <a href="#">视频</a>
+            <a href="#">地图</a>
+        </div>
     </div>
-    <div class="content"></div>
-    <div class="footer"></div>
+    <div class="content">
+        <div class="search">
+            <form action="#">
+                <input type="text" name="" id="">
+                <input type="submit" value="百度一下">
+            </form>
+        </div>
+
+        <div class="baidke">
+           <a href="#">百科</a>
+           <a href="#">文库</a>
+           <a href="#">hao123</a>
+           |
+           <a href="#">更多</a>
+        </div>
+
+        <div>
+            <img src="media/cuteegg.gif" alt="">
+            <a href="#">百度地图带你吃喝玩乐，全心全意为人民服务</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="anquan">
+            <a href="#">把百度设为主页</a>
+            <a href="#">安装百度卫士</a>
+        </div>
+        <div class="tuiguang">
+            <a href="#">加入百度推广</a>
+            |
+            <a href="#">搜索风云榜</a>
+            |
+            <a href="#">关于百度</a>
+            |
+            <a href="#">About Baidu</a>
+        </div>
+        <div>@2016 Baidu 使用百度前必读.京ICP证666号</div>
+    </div>
 </body>
 </html>
