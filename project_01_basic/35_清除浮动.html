@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .box1{
+            background-color: red;
+            overflow: hidden;
+        }
+        .box1 p{
+            background-color: blue;
+            width: 100px;
+        }
+        .box2{
+            background-color: green;
+        }
+        .box2 p{
+            background-color: yellow;
+            width: 120px;
+        }
+        p{
+            float: left;
+        }
+        /*使用伪元素选择器来进行类似于内墙法的清除浮动*/
+       /* .box1::after{
+            !*设置添加的子元素内容为空*!
+            content: '';
+            display: block;
+            !*设置添加的子元素高度为0*!
+            height: 0;
+            !*设置添加的子元素看不见*!
+            visibility: hidden;
+            !*清除添加的子元素的浮动*!
+            clear: both;
+        }*/
+        /*.wall{
+            clear: both;
+            background-color: skyblue;
+            height: 20px;
+
+        }*/
+    </style>
+</head>
+<body>
+
+<!--
+    之所以将p标签设置为左浮动之后所有的p都排列为一排是因为 浮动之后div的高度根据当前剩余的标准流中的元素的总高度来决定(参考浮动流排序规律)
+
+    清除浮动的方式:
+    1.给前面一个元素设置一个高度(企业开发不经常使用这种方法)
+    2.clear
+    3.隔墙法:
+
+           外墙法:
+                在两个盒子中间添加一个额外的块级元素，给这个额外的块级元素设置clear : both属性
+                注意点:可以让第二个盒子使用margin-top属性，但是不能让第一个盒子使用margin-bottom属性 所以一般直接设置额外的块级元素的高度
+           内墙法:
+                在两个盒子中给第一个盒子的最后一个元素添加一个额外的块级元素，给该额外的块级元素添加一个clear:both属性即可
+                注意点:可以让第二个盒子使用margin-top属性，也可以让第一个盒子使用margin-bottom属性 也可以直接设置额外的块级元素的高度
+    4.CSS伪元素选择器方法(本质上为一个内墙法)
+    5.overflow = hidden方法 (推荐使用,和内墙法差不多) 同时可以让里面的盒子设置margin-top之后外面盒子不会被顶下来
+
+
+
+    注意点:
+    当我们给某个元素添加clear属性之后，该元素的margin属性就会失效
+    外墙法不能撑起盒子的高度，内墙法可以撑起盒子的高度
+    一般企业开发中不常用隔墙法来清除浮动
+    -->
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+<!--
+    <div class="wall"></div>
+-->
+</div>
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+</body>
+</html>

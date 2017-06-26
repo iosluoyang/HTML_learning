@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0467414-4b27-433c-9fa4-a372158a5097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/media/baidulogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/22_背景定位.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/23_CSS精灵图.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/24_边框属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/25_外边距合并现象.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/26_盒子模型.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/27_盒子宽高_boxsizing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/28_盒子居中和内容居中.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/media/Zuckerberg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/30_网页布局.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/31_浮动元素贴靠现象.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/32_浮动元素的自围现象.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/33_浮动练习.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/34_浮动元素的高度问题.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/35_清除浮动.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_01_basic/36_伪元素选择器.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_01_basic/21_百度首页练习.html" afterPath="$PROJECT_DIR$/project_01_basic/21_百度首页练习.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" afterPath="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" />
     </list>
     <ignored path="HTML_learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="29_文字界面的实际应用.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html">
+      <file leaf-file-name="35_清除浮动.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project_01_basic/35_清除浮动.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="287">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,13 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HTML5_01.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/XHTML_01.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/my_jquery_functions.js" />
-        <option value="$PROJECT_DIR$/project_01_basic/HTML_01_JS.js" />
-        <option value="$PROJECT_DIR$/project_01_basic/HTML_01_CSSSytle.css" />
-        <option value="$PROJECT_DIR$/project_01_basic/present_for_lover.html" />
-        <option value="$PROJECT_DIR$/project_demo01/css/demo_css.css" />
         <option value="$PROJECT_DIR$/project_demo01/index.html" />
         <option value="$PROJECT_DIR$/project_demo01/index1.html" />
         <option value="$PROJECT_DIR$/project_demo01/css/democss.css" />
@@ -145,6 +137,13 @@
         <option value="$PROJECT_DIR$/project_01_basic/27_盒子宽高_boxsizing.html" />
         <option value="$PROJECT_DIR$/project_01_basic/28_盒子居中和内容居中.html" />
         <option value="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/30_网页布局.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/31_浮动元素贴靠现象.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/32_浮动元素的自围现象.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/33_浮动练习.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/34_浮动元素的高度问题.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/36_伪元素选择器.html" />
+        <option value="$PROJECT_DIR$/project_01_basic/35_清除浮动.html" />
       </list>
     </option>
   </component>
@@ -155,8 +154,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="190" />
-    <option name="y" value="50" />
+    <option name="x" value="193" />
+    <option name="y" value="35" />
     <option name="width" value="1623" />
     <option name="height" value="986" />
   </component>
@@ -178,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,7 +206,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -240,20 +239,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.29_文字界面的实际应用.html">
-    <configuration default="false" name="25_外边距合并现象.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/25_外边距合并现象.html">
+  <component name="RunManager" selected="JavaScript Debug.35_清除浮动.html">
+    <configuration default="false" name="32_浮动元素的自围现象.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/32_浮动元素的自围现象.html">
       <method />
     </configuration>
-    <configuration default="false" name="26_盒子模型.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/26_盒子模型.html">
+    <configuration default="false" name="33_浮动练习.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/33_浮动练习.html">
       <method />
     </configuration>
-    <configuration default="false" name="27_盒子宽高_boxsizing.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/27_盒子宽高_boxsizing.html">
+    <configuration default="false" name="34_浮动元素的高度问题.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/34_浮动元素的高度问题.html">
       <method />
     </configuration>
-    <configuration default="false" name="28_盒子居中和内容居中.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/28_盒子居中和内容居中.html">
+    <configuration default="false" name="35_清除浮动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/35_清除浮动.html">
       <method />
     </configuration>
-    <configuration default="false" name="29_文字界面的实际应用.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/29_文字界面的实际应用.html">
+    <configuration default="false" name="36_伪元素选择器.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/36_伪元素选择器.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -323,19 +322,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.25_外边距合并现象.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.26_盒子模型.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.27_盒子宽高_boxsizing.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.28_盒子居中和内容居中.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.29_文字界面的实际应用.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.32_浮动元素的自围现象.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.33_浮动练习.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.34_浮动元素的高度问题.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.35_清除浮动.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.36_伪元素选择器.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.29_文字界面的实际应用.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.28_盒子居中和内容居中.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.27_盒子宽高_boxsizing.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.26_盒子模型.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.25_外边距合并现象.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.35_清除浮动.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.36_伪元素选择器.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.34_浮动元素的高度问题.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.33_浮动练习.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.32_浮动元素的自围现象.html" />
       </list>
     </recent_temporary>
   </component>
@@ -376,11 +375,13 @@
       <workItem from="1498186737592" duration="6482000" />
       <workItem from="1498194867259" duration="12325000" />
       <workItem from="1498353810505" duration="16427000" />
+      <workItem from="1498441065643" duration="2852000" />
+      <workItem from="1498456524307" duration="13276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171069000" />
+    <option name="totallyTimeSpent" value="187197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,13 +393,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="190" y="50" width="1623" height="986" extended-state="0" />
+    <frame x="193" y="35" width="1623" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17478152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24913694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -410,6 +410,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -486,43 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/js/all_async_search_fe8bb51.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/media/sky.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/media/cuteegg.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/media/sky.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/media/kobe.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/media/bgimg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -666,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,11 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,6 +735,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/25_外边距合并现象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/24_边框属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/23_CSS精灵图.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/21_百度首页练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="106" column="7" lean-forward="true" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/22_背景定位.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -794,62 +791,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/25_外边距合并现象.html">
+    <entry file="file://$PROJECT_DIR$/project_01_basic/32_浮动元素的自围现象.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/31_浮动元素贴靠现象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/30_网页布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="136" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="7" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/33_浮动练习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/24_边框属性.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/23_CSS精灵图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/22_背景定位.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/21_百度首页练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="106" column="7" lean-forward="true" selection-start-line="106" selection-start-column="7" selection-end-line="106" selection-end-column="7" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html">
+    <entry file="file://$PROJECT_DIR$/project_01_basic/34_浮动元素的高度问题.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="360">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/36_伪元素选择器.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/35_清除浮动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>

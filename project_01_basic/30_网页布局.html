@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页布局</title>
+    <style>
+        /*标准开发中用以下代码清空边距(或者如同上面引入外部CSS样式的方法也可)*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            float: left;
+
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+        }
+        .box3{
+            height: 150px;
+            width: 150px;
+            background-color: yellow;
+            float: left;
+        }
+        .box4{
+            height: 200px;
+            width: 200px;
+            background-color: tomato;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        什么是网页的布局方式？
+        就是指浏览器是如何对网页的元素进行排版，有三种方式
+
+        1、标准流(文档流/普通流)排版方式
+            浏览器默认的排版方式就是标准流排版方式
+        2、浮动流排版方式（半脱离标准流）
+            浮动流只有一种排版方式，那就是水平排版它只能设置某个元素左对齐或者右对齐
+            注意点:
+            1.浮动流中没有居中对齐，也就是没有center这个取值
+            2.在浮动流中是不可以使用margin： 0 auto; 这个水平居中属性的
+
+            注意点:
+            在浮动流中不区分块级，行内，行内块级
+            在浮动流中无论块级、行内还是行内块级都可以设置宽高
+
+
+                1.浮动元素脱标准：
+                当某一个元素浮动之后，那么这个元素看上去就像被从标准流中删除了一样，这个就是浮动元素的脱标
+                2.如果前面一个元素浮动了，而后面一个元素没有浮动，那么这个时候前面的一个元素就会盖住后面的一个元素
+
+
+
+           浮动元素的排序规则:
+           1.相同方向上的浮动元素，先浮动的元素会显示在前面，后浮动的元素会显示在后面
+           2.不同方向上的浮动元素，左浮动会找左浮动，右浮动会找右浮动
+           3.浮动元素浮动之后的位置，由浮动元素浮动之前在标准流中的位置来确定
+
+
+        3、定位流排版方式
+    -->
+
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+</body>
+</html>
