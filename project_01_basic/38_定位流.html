@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位流</title>
+    <style>
+        *{margin: 0;padding:0;}
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: green;
+            position: absolute;
+
+        }
+        .box3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        定位流分类
+            相对定位
+                相对定位是不脱离标准流的，依旧会占据标准流中的一份空间
+                需要结合top right bottom left属性一起使用 相对于自己以前在标准流中的位置进行移动
+                注意：同一个方向上的定位属性只能使用一个
+                     由于相对定位是不脱离标准流的，所以给定位的元素添加margin 或者 padding 会给定位之前的那个盒子增加margin和padding属性
+                     相对定位的企业应用场景:
+                        用于对元素进行的微调  配合绝对定位来使用
+
+            绝对定位
+                绝对定位是脱离标准流的，不会占据标准流中的空间 不区分块级。行内或者是行内块级元素
+                就是相对于body的定位
+            固定定位
+            静态定位
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

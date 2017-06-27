@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位_子绝父相</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 800px;
+            height: 50px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: red;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            line-height: 50px;
+            text-align: center;
+        }
+        ul li:nth-of-type(4){
+            background-color: yellow;
+            position: relative;
+        }
+        ul li img{
+            /*
+            相对定位的弊端:
+                相对定位不会脱离标准流，会继续在标准流中占用空间，不利于布局界面  所以一般不单独使用相对定位
+            */
+           /* position: relative;*/
+            /*
+             绝对定位的弊端:
+             默认情况下绝对定位的元素会以body作为参考点,所以会随着浏览器的宽度高度的变化而变化 所以一般不单独使用绝对定位
+            */
+           /* position: absolute;*/
+
+            /*
+             子绝父相:
+                子元素使用决定定位，父元素使用相对定位
+            */
+
+            /*
+            让一个绝对定位的元素水平居中，只需要设置两个参数，一个是 left为 50% 一个是margin-left 为负的该元素的宽度一半
+            */
+            position: absolute;
+            left: 50%;
+            margin-left: -16px;
+            top: -20px;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>服装城</li>
+    <li>美妆馆</li>
+    <li>京东超市</li>
+    <li>
+        全球购
+        <img src="media/milk_cow.ico" alt="">
+    </li>
+    <li>闪购</li>
+    <li>团购</li>
+    <li>拍卖</li>
+    <li>金融</li>
+</ul>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<p>我是文字</p>
+</body>
+</html>

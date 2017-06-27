@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易注册页面</title>
+    <style>
+        /*标准开发中用以下代码清空边距(或者如同上面引入外部CSS样式的方法也可)*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+        body{
+            background-color: #efefef;}
+        .header{
+            width: 1000px;
+            height: 130px;
+            background-color: transparent;
+            margin: 0 auto;
+        }
+        .header .logo{
+            width: 174px;
+            height: 80px;
+            background:  url(media/EaseNetSprite.png) -50px 18px no-repeat;
+            float: left;
+        }
+        .header .loginlinks{
+            line-height: 130px;
+            font-size: 18px;
+            float: right;
+        }
+        .header .loginlinks a{
+            color: #ca526b;
+        }
+        .content{
+            width: 1000px;
+            background-color: white;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0px  2px 5px  #d0cece;
+            border-radius: 5px;
+        }
+        .content .zhuce{
+            margin-left: 70px;
+            margin-top: 50px;
+            color: #ca526b;
+            font-size: 25px;
+
+        }
+
+        .content .inputdiv{
+            margin-top: 30px;
+        }
+
+        .content .inputdiv1{
+            margin-top: 60px;
+        }
+        .content .inputdiv2{
+            margin-top: 0px;
+        }
+
+        .content label{
+            float: left;
+            width: 340px;
+            height: 45px;
+            line-height: 45px;
+            text-align: right;
+            color: #333;
+            margin-right: 10px;
+
+        }
+
+        .content input{
+            width: 320px;
+            height: 45px;
+            font-size: 16px;
+            color: #c1c2c1;
+            border: 1px solid #dddddd;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        .content .inputdiv .yanzhengma{
+            width: 320px;
+            height: 45px;
+            font-size: 14px;
+            line-height: 45px;
+            color: #c1c2c1;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .content .inputdiv .textdiv{
+            display: inline;
+        }
+        .content .inputdiv .textdiv p{
+            text-align: left;
+            font-size: 13px;
+            line-height: 13px;
+            color: #c1c2c1;
+            height: 30px;
+        }
+        .content .inputdiv .textdiv :first-of-type{
+            color: #91d8ff;
+        }
+        .content .inputdiv #messageyanzhengma{
+            width: 192px;
+            height: 45px;
+        }
+        .content .inputdiv #getmessageyanzhengma{
+            display: inline;
+            width: 120px;
+            height: 45px;
+            background-color: #c7e3fa;
+            color: white;
+            margin-left: 10px;
+            border-style:none;
+        }
+        .content .inputdiv #zhucebtn{
+            display: inline;
+            width: 322px;
+            height: 45px;
+            background-color: #df9797;
+            color: white;
+            border-style:none;
+        }
+        .content .inputdiv .yonghuxieyi input{
+            width: 15px;
+            height: 15px;
+
+        }
+        .content .inputdiv .yonghuxieyi{
+            color: #bbbec0;
+            display: inline-block;
+            font-size: 12px;
+            height: 45px;
+            width: 322px;
+
+        }
+        .content img{
+            width: 901px;
+            height: 104px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+
+
+
+        .footer{
+            width: 1000px;
+            height: 105px;
+            background-color: transparent;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .footer p{
+            font-size: 11px;
+            color: #b5b5b1;
+            text-align: center;
+            width: 1000px;
+        }
+        .footer .authmsg{
+            margin-top: 25px;
+        }
+        .footer .copyright{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="loginlinks">已有账号?去<a>登录</a></div>
+</div>
+<div class="content">
+    <div class="zhuce">注册账号</div>
+    <div class="inputdiv inputdiv1"><label for="zhanghao">账号:</label><input type="text" id="zhanghao" placeholder="网易邮箱/手机号/其他邮箱"></div>
+    <div class="inputdiv"><label for="pwd">密码:</label><input type="pwd" id="pwd" placeholder="6~16位密码,区分大小写"></div>
+    <div class="inputdiv"><label for="confirmpwd">确认密码:</label><input type="pwd" id="confirmpwd" placeholder="再次输入密码"></div>
+    <div class="inputdiv"><label>验证码:</label>
+        <div class="yanzhengma">
+            >>>>>>请依次点击"刘""海""洋"完成验证<<<<<<<
+        </div>
+    </div>
+    <div class="inputdiv"><label for="phonenum">手机号码:</label><input type="text" id="phonenum" placeholder="11位手机号"></div>
+    <div class="inputdiv"><label></label><div class="textdiv"><p class="changephonenum">切换到国际手机</p><p>忘记密码时,可通过手机快速找回密码</p></div></div>
+    <div class="inputdiv inputdiv2">
+        <label for="messageyanzhengma">短信验证码:</label>
+        <input type="text" id="messageyanzhengma" placeholder="输入短信验证码">
+        <button id="getmessageyanzhengma" onclick="">获取验证码</button>
+    </div>
+    <div class="inputdiv"><label></label><button id="zhucebtn" onclick="">注册</button></div>
+    <div class="inputdiv"><label></label><p class="yonghuxieyi"><input type="checkbox" checked>用户勾选即代表同意《服务条款》和《网络游戏用户隐私保护和个人信息利用政策》</p></div>
+    <img src="media/NeteaseAD.png" alt="此处为广告logo">
+
+</div>
+<div class="footer">
+    <p class="authmsg">About NetEase-公司简介-联系方式-OAuth2.0认证-招聘信息-客户服务-相关法律-网络营销</p>
+    <p class="copyright">网易公司版权所有 ©1997-2017</p>
+</div>
+</body>
+</html>
