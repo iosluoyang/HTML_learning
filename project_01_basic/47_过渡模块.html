@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/*
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            !*告诉系统哪个属性需要过渡效果*!
+            transition-property: width,background-color;
+            !*告诉系统该过渡效果需要持续多长时间*!
+            transition-duration: 2s,5s;
+            !*告诉系统延迟多久之后才开始执行过渡动画*!
+            transition-delay: 2s,3s;
+        }
+        div:hover{
+            width: 300px;
+            background-color: blue;
+        }
+*/
+        /*ul{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+
+        ul li{
+            width: 100px;
+            height: 50px;
+            list-style: none;
+            margin-top: 50px;
+            background-color: blue;
+            transition-property: margin-left;
+            transition-duration: 10s;
+        }
+
+        ul:hover li{
+            margin-left: 700px;
+        }
+        !*
+            transition-timing-function属性告诉系统过渡动画的运动速度
+        *!
+        ul li:nth-child(1){
+            !*匀速动画*!
+            transition-timing-function: linear;
+
+        }
+        ul li:nth-child(2){
+            transition-timing-function:ease ;
+
+        }
+        ul li:nth-child(3){
+            transition-timing-function: ease-in;
+
+        }
+        ul li:nth-child(4){
+            transition-timing-function:ease-out ;
+
+        }
+        ul li:nth-child(5){
+            !*慢_快_慢*!
+            transition-timing-function: ease-in-out;
+
+        }*/
+
+        div{
+            background-color: red;
+            margin-top: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        div span{
+            font-size: 80px;
+        }
+        div:hover span{
+            margin: 0 50px;
+        }
+        div span{
+            transition: margin 3s;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    过渡效果三要素
+    1.必须要有某个属性发生了变化
+    2.告诉系统哪个属性发生了变化
+    3.告诉系统过渡时长
+
+    当需要多个过渡动画一起实现时，只需要在后面添加逗号一一对应即可
+
+    连写方式:
+        transition: 过渡属性1 过渡时长1 运动速度1 延迟时间1 , 过渡属性2 过渡时长2 运动速度2 延迟时间2
+
+        多个过渡动画连写:
+        直接在后面用,隔开即可
+        transition: all 5s 设置所有的动画都有过渡
+-->
+<!--<div></div>-->
+<!--<ul>
+    <li>linear</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+</ul>-->
+
+<div><span>洋</span><span>哥</span><span>带</span><span>你</span><span>狂</span><span>虐</span><span>H</span><span>5</span></div>
+</body>
+</html>

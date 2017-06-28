@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签的伪类选择器</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 960px;
+            height: 40px;
+            background-color: green;
+            margin: 100px auto;
+        }
+        ul li{
+            list-style: none;
+            width: 120px;
+            float: left;
+            background-color: purple;
+            text-align: center;
+            line-height: 40px;
+        }
+        ul li a{
+            text-decoration: none;
+            width: 120px;
+            height: 40px;
+            display: inline-block;
+        }
+
+        a:link{ /*正常状态*/
+            color: white;
+        }
+        a:visited{  /*访问过之后的状态*/
+            color: green;
+        }
+        a:hover{    /*鼠标悬停状态*/
+            color: red;
+            background-color: #ccc;
+        }
+        a:active{   /*点击状态*/
+            color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--
+如果a标签的伪类选择器同时出现，则必须严格执行一定的顺序，即爱恨原则 love hate ——>  Link Visited Hover Active
+在企业开发中，最好把伪类选择器写在标签选择器的后面，并且和a标签盒子相关的属性(例如显示模式，宽度高度边距等)都写在标签选择器中
+
+
+-->
+
+<ul>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+</ul>
+</body>
+</html>

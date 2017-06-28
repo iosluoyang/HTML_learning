@@ -10,24 +10,40 @@
         }
         .foods{
             width: 294px;
-            height: 312px;
             border: 2px solid #ccc;
             position: fixed;
-            top: 0;
-            left:0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            padding-top: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            padding:10px 15px 25px;
             background-color: white;
         }
         .content{
             width: 100%;
             border-bottom: 1px dotted #000;
             padding-bottom: 13px;
+            margin-bottom: 10px;
             overflow: hidden;
+            position: relative;
+        }
+        .content .icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .content .icon .mianyuyue{
+            background:  url(media/meituanspirt.png) 0 -494px no-repeat;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+
+        }
+        .content .icon .duotaocan{
+            background:  url(media/meituanspirt.png) 0 -452px no-repeat;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
         }
         .storepic{
             width: 100%;
@@ -79,6 +95,24 @@
             line-height: 13px;
             color: #999999;
         }
+        .foods .commentcount{
+            float: right;
+            color: #999999;
+            font-size: 13px;
+            line-height: 14px;
+            margin-left: 10px;
+        }
+        .foods .stargray{
+            float: right;
+            width: 60px;
+            height: 12px;
+            background: url(media/stargray.png) repeat-x;
+        }
+        .foods .starorange{
+            width: 86%;
+            height: 100%;
+            background: url(media/starorange.png) repeat-x;
+        }
 
 
     </style>
@@ -87,6 +121,9 @@
 <div class="foods">
     <div class="content">
         <img class="storepic" src="media/storepic.jpg" alt="">
+        <div class="icon">
+            <span class="duotaocan"></span><span class="mianyuyue"></span>
+        </div>
         <p class="name">[两店通用] 火宴山自助火锅</p>
         <p class="des">自助下午餐/夜宵 2选1 新疆风味美味纯自助下午餐/夜宵 2选1 新疆风味美味纯自助下午餐/夜宵 2选1 新疆风味美味纯自助下午餐/夜宵 2选1 新疆风味美味纯自助下午餐/夜宵 2选1 新疆风味美味纯</p>
         <span class="newprice">¥70</span>
@@ -94,6 +131,8 @@
         <span class="oldprice">¥78</span>
         <span class="sellcount">已售:337877</span>
     </div>
+    <span class="commentcount">35200人评价</span>
+    <div class="stargray"><div class="starorange"></div></div>
 
 
 </div>

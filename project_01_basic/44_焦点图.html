@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 520px;
+            border: 2px solid gold;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        div span{
+            width: 40px;
+            background-color: rgba(0,0,0,0.3);
+            display: inline-block;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+        div .leftarrow{
+            position: absolute;
+            left: 0;
+            top:35%;
+        }
+        div .rightarrow{
+            position: absolute;
+            right: 0;
+            top:35%;
+        }
+        div ol{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        div ol{
+            list-style: none;
+            width: 200px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.7);
+        }
+        div ol li{
+            float: left;
+            width: 40px;
+            border: 1px solid gold;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <img src="media/taobaobedpic.jpg" alt="">
+    <span class="leftarrow">&lt;</span>
+    <span class="rightarrow">&gt;</span>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>
