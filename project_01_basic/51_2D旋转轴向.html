@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D旋转轴向</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            /*
+                透视效果
+                perspective:参数(数值)，距离该物体的距离  近大远小
+                需要要添加到需要展示近大远小效果的元素的父元素(上级也行，但是最好是父元素)上面
+            */
+            perspective: 10px;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        ul li:nth-child(1) img{
+            transform: rotateX(45deg);
+        }
+        ul li:nth-child(2) img{
+            transform: rotateY(10deg);
+        }
+        ul li:nth-child(3) img{
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+    默认情况下所有的元素都是围绕Z轴进行旋转
+-->
+<ul>
+    <li><img src="media/kobe.jpg" alt=""></li>
+    <li><img src="media/sky.jpg" alt=""></li>
+    <li><img src="media/milk_cow.ico" alt=""></li>
+</ul>
+</body>
+</html>

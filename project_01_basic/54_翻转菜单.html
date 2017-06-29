@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 400px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: black;
+        }
+        .nav>li{
+            list-style: none;
+            float: left;
+            width: 120px;
+            height: 40px;
+            background-color: green;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+        }
+        .nav li .sub{
+            position: absolute; /*将子元素(即二级菜单设置为绝对定位，这样定位流会覆盖标准流中的内容，就满足要求了)*/
+            width: 120px;
+            left: 0;
+            top: 40px;
+        }
+        .sub li{
+            list-style: none;
+            background-color: pink;
+            transform: rotateY(180deg);
+            opacity: 0;
+            transition: all 1s;
+        }
+        .nav li:hover .sub li{
+            transform: none;
+            opacity: 1;
+        }
+        .nav li:hover .sub li:nth-child(1){
+            transition-delay: 0ms;
+        }
+        .nav li:hover .sub li:nth-child(2){
+            transition-delay: 200ms;
+        }
+        .nav li:hover .sub li:nth-child(3){
+            transition-delay: 400ms;
+        }
+        .nav li:hover .sub li:nth-child(4){
+            transition-delay: 600ms;
+        }
+        .nav li:hover .sub li:nth-child(5){
+            transition-delay: 800ms;
+        }
+
+
+        .sub li:nth-child(5){
+            transition-delay: 0ms;
+        }
+        .sub li:nth-child(4){
+            transition-delay: 200ms;
+        }
+        .sub li:nth-child(3){
+            transition-delay: 400ms;
+        }
+        .sub li:nth-child(2){
+            transition-delay: 600ms;
+        }
+        .sub li:nth-child(1){
+            transition-delay: 800ms;
+        }
+        div{
+            width: 400px;
+            height: 300px;
+            background-color: red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li>
+        一级菜单1
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+    <li>
+        一级菜单2
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+    <li>
+        一级菜单3
+        <ul class="sub">
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+            <li>二级菜单</li>
+        </ul>
+    </li>
+</ul>
+<div>
+    我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字
+    我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字
+    我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字
+    我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字
+    我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字我是导航栏以下的文字
+
+
+</div>
+</body>
+</html>

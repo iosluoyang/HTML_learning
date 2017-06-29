@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 188px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+        div ul{
+            width: 2000px;
+            height:100%;
+            animation: move 10s linear 0s infinite normal;
+        }
+        div ul:hover{
+            animation-play-state: paused;
+        }
+        div ul:hover li{
+            opacity: 0.5;
+        }
+        div ul li:hover{
+            opacity: 1;
+        }
+        @keyframes move {
+            from{
+                margin-left:0;
+            }
+            to{
+                margin-left: -1200px;
+            }
+        }
+        div ul li{
+            list-style: none;
+            float: left;
+            width: 300px;
+            height: 100%;
+            background-color: black;
+            border: 1px solid goldenrod;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+
+        <!--
+            重点在于最后的两张图片要和最前面展示的两张图片一样即可让用户不感觉到动画的跳转现象
+        -->
+    <li><img src="media/mykobe.jpg" alt=""></li>
+    <li><img src="media/mayday.jpg" alt=""></li>
+    <li><img src="media/jaychou.jpg" alt=""></li>
+    <li><img src="media/mayday.jpg" alt=""></li>
+    <li><img src="media/mykobe.jpg" alt=""></li>
+    <li><img src="media/mayday.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

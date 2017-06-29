@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画模块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            animation-name: lhy;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-play-state: running;
+            animation-fill-mode: both;
+
+            /*
+            动画连写属性
+                动画名称 动画时长 动画运动速度 延迟时间 执行次数
+            */
+            animation:lhy 2s linear 1s 1 alternate
+
+
+        }
+        div:hover{
+            animation-play-state: paused;
+        }
+        @keyframes lhy {
+            0%{
+                transform: rotate(10deg);
+                top: 0;
+                left: 0;
+            }
+            25%{
+                transform: rotate(50deg);
+                top: 0;
+                left: 600px;
+            }
+            50%{
+                transform: rotate(90deg);
+                top: 600px;
+                left: 600px;
+            }
+            75%{
+                transform: rotate(130deg);
+                top: 600px;
+                left: 0;
+            }
+            100%{
+                transform: rotate(170deg);
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
