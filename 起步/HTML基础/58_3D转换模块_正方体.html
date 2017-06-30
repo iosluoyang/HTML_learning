@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D转换模块_正方体</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            margin: 100px auto;
+            position: relative;
+            transform:rotateX(45deg) rotateY(45deg);
+            transform-style: preserve-3d;
+        }
+
+
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            line-height:200px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        /*第一种旋转平移方式，先进行平移，再进行旋转(或不旋转)*/
+
+       /* ul li:nth-child(1){
+            background-color: red;
+            !*构建左边的面  首先往左移动长度的一半，然后再围绕Y轴进行旋转90度即可*!
+            transform: translate(-100px , 0) rotateY(-90deg);
+
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            !*构建右边的面  首先往右移动宽度的一半，然后再围绕Y轴进行旋转-90度即可*!
+            transform: translate(100px , 0) rotateY(90deg);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            !*构建上边的面  首先往上移动高度的一半（Y轴看成定位），然后再绕着X轴旋转90度*!
+            transform: translate(0,-100px) rotateX(90deg);
+        }
+        ul li:nth-child(4){
+            !*构建下边的面  首先往下移动高度的一半，然后再绕着X轴旋转-90度*!
+            transform: translate(0,100px) rotateX(-90deg);
+            background-color: yellow;
+        }
+        ul li:nth-child(5){
+            background-color: purple;
+            !*构建前后面 首先往靠近自己的方向移动长度的一半，然后不用进行旋转*!
+            transform: translateZ(100px);
+        }
+        ul li:nth-child(6){
+            background-color: pink;
+            !*构建前后面 首先往远离自己的方向移动长度的一半，然后绕Y轴旋转180度*!
+            transform: translateZ(-100px) rotateY(180deg);
+        }*/
+
+
+
+        /*此方法为第二种旋转平移方式，是先进行旋转再进行平移，布局顺序为上 后 下 前 左 右 （前四个布局有规律 ， 在X轴方向旋转 90 180 270 360 度 ，然后沿Z轴移动100px即可）*/
+        /*注意如果一个元素旋转之后，它的坐标系是跟随*/
+        ul li:nth-child(1){
+            background-color: red;
+            /*沿X轴旋转90度，沿Z轴移动100px*/
+            transform: rotateX(90deg) translateZ(100px);
+
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            /*沿X轴旋转180度，沿Z轴移动100px*/
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            /*沿X轴旋转270度，沿Z轴移动100px*/
+            transform: rotateX(270deg) translateZ(100px);
+        }
+        ul li:nth-child(4){
+            background-color: yellow;
+            /*沿X轴旋转360度，沿Z轴移动100px*/
+            transform: rotateX(360deg) translateZ(100px);
+        }
+        ul li:nth-child(5){
+            background-color: purple;
+            /*构建左面 先绕着Y轴旋转-90度，然后沿着Z轴平移100px*/
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        ul li:nth-child(6){
+            background-color: pink;
+            /*构建右面 先绕着Y轴旋转90度，然后沿着Z轴平移100px*/
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>

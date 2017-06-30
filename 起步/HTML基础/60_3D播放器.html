@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D播放器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("images/mayday_concert.jpg") no-repeat;
+            background-size:cover;
+            -webkit-background-size:cover;
+            overflow: hidden;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            margin-left: -100px;
+            transform-style: preserve-3D;
+            animation: sport 20s linear 0s infinite normal;
+        }
+        @keyframes sport {
+            /*
+            动画中如果有和默认样式中同名的属性，那么动画中的属性会覆盖掉默认样式中的属性
+            在编写动画的时候，固定不变的值写在前面，需要变化的值写在后面
+
+            */
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform:rotateX(-10deg) rotateY(360deg) ;
+            }
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.5;
+        }
+        ul li img:hover{
+            opacity: 1;
+        }
+        ul li{
+            list-style: none;
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height:200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+        ul li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        .rocket{
+            width: 165px;
+            height: 165px;
+            position: absolute;
+            left: 10%;
+            bottom: 0;
+            animation: moves 5s linear 0s infinite normal;
+
+        }
+        @keyframes moves {
+            0%{
+                bottom: 0;
+                opacity: 0.2;
+
+            }
+            20%{
+                bottom: 20%;
+                opacity: 0.8;
+
+            }
+            40%{
+                bottom: 40%;
+                opacity: 1;
+
+            }
+            60%{
+                bottom: 60%;
+                opacity: 0.6;
+
+            }
+            80%{
+                bottom: 80%;
+                opacity: 1;
+
+            }
+            100%{
+                bottom: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/concert1.png" alt=""></li>
+    <li><img src="images/concert2.jpg" alt=""></li>
+    <li><img src="images/concert3.jpg" alt=""></li>
+    <li><img src="images/concert4.jpg" alt=""></li>
+    <li><img src="images/concert5.jpg" alt=""></li>
+    <li><img src="images/concert7.gif" alt=""></li>
+</ul>
+<img src="images/rocketicon.png" class="rocket" alt="">
+<audio src="images/MayDay-miss%20you%20in%20a%20second.mp3" autoplay loop></audio>
+</body>
+</html>

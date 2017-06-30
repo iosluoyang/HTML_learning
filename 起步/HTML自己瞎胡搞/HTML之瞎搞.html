@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-US" manifest="HTML_01_入门练手.appcache">
+<head>
+    <!--meta属性标识了创作者和编辑软件-->
+    <!--下面是HTML4的声明样式-->
+    <!--<meta charset="UTF-8" http-equiv="content-type" content="text/html" />-->
+    <!--这是HTML5的声明样式-->
+    <meta charset="utf-8">
+    <title>世界上最帅的人</title>
+
+
+    <!--
+    所有现代浏览器都支持 HTML5 语义元素。
+    此外，您可以“教授”老式浏览器如何处理“未知元素”。
+    为 Internet Explorer 支持而添加的 shiv：
+    -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="author" content="我是作者,对,就是我,最帅的我">
+    <meta name="revised" content="LiuHaiyang 17/4/23 17:00">
+    <meta name="generator" content="westorm">
+    <meta http-equiv="content-language" content="zh-cn" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--meta属性用于重定向用户-->
+    <!--<meta http-equiv="Refresh" content="5;url='http://www.baidu.com'" />-->
+    <!--meta属性标识了该网页的关键词-->
+    <meta name="keywords" content="帅,最帅,世界上最帅,不能再帅了">
+    <!--下面的 meta 元素定义页面的描述：-->
+    <meta name="description" content="我是关于这个页面的描述,额……写点啥呢,那就描述成世界上最帅的人吧,你们一搜就搜出来了">
+
+    <!--一般用于外部样式表-->
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="CSS/HTML_01_CSSSytle.css">
+
+    <!--基类设置,将默认打开方式设置为在新窗口中打开-->
+    <base target="_blank" />
+    <!--引入外部JS文件-->
+    <script src="js/HTML_01_JS.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="js/my_jquery_functions.js"></script>
+
+</head>
+<body id="mybody" onload="startTime()/*,checkcookies() 暂时先不检查缓存*/">
+
+        <div id="drogue">小海哥</div>
+        <ul class="nav">
+            <li class="nav"><a class="nav" href="images/kobe.jpg">小站</a> </li>
+            <li class="nav"><a class="nav" href="images/kobe.jpg">每日一句</a> </li>
+            <li class="nav"><a class="nav" href="images/kobe.jpg">创意生活</a> </li>
+            <li class="nav"><a class="nav" href="images/kobe.jpg">周边</a> </li>
+        </ul>
+        <h1 align="center">嘿，那个叫科比的男人</h1>
+        <br />
+        <hr />
+        <br />
+        <a class="sourceaddress" href="http://www.jianshu.com/p/7beebfa1b463" target="_blank">资料参考源传送门</a>
+        <br />
+        <p  id="articles" >
+            <a href="http://baike.baidu.com/link?url=xTxZ7Lghd5Gv2b6FbaCYcsmZ88cWhFQ70_a7lM3a5qPuYUtIe4CWDLYXezhYKAe6WNv3UMiQMwEX20wVkqRlYXLef0b_U6-sOwevhGyQAQx7mmG_cHX9ICCJ9UooMHmZkNAWscDVKdvOy7K2N5ADHumMAksVDL6Uz3xKkufI_NDKmAuxyo9aX_9BvlakmmoEQ4wUthtIcCjyiKeTeQKc4_" target="_blank"><img src="images/kobe.jpg" alt="有本事点我"></a>
+            <span class="firstletter">北</span>
+            京时间公元2016年4月14日13点03分，随着裁判一声哨响，2015-2016赛季NBA联盟洛杉矶湖人队最后一个主场迎战犹他爵士的这场比赛正式结束。
+            对于整个NBA联盟来说，这是他们一年之中1230场常规赛比赛之一，对洛杉矶湖人队来说这是他们又一次没能够进入季后赛，又一次刷新着新的输球场次的记录。
+            但是对于科比，对于我们科密而言，这就是科比带给我们最后的showtime演出。
+            这场比赛科比出场42分钟50投22中狂砍60分，几乎是凭借一己之力最后一次帮助自己的主队逆转比赛拿下胜利。
+            老队友奥尼尔说科比得不到50分，是啊，他是要拿60分，这样才是对60亿球迷最好的回报。
+            相信大家今天都被科比刷屏了，微信朋友圈微博QQ空间，不断的更新着朋友们发出的一条条与科比有关信息，看着自己的偶像被刷屏，心里还是很高兴的，
+            我把看到的每一条与科比相关的信息一一点赞无论他们是我认识的真球迷还是突然出现在我生命里的伪球迷，却不敢评论，我不知道说什么好，我怕说什
+            么都不能表现出我们科密的无奈与不舍，这种感觉比失恋还糟糕，就像刷屏中看到最多的那句话：也许未来的日子里还会有无数个科比出现，但是我们的青春一去不复返。
+            现实就是这样。我们从翘课的年纪看科比到如今请假翘班看科比，甚至怀抱子女看科比。对于科比自己又何尝不是呢，当1996年夏天科比在首轮第13顺位被选中的时候，
+            这位未满18岁以高中生身份进入NBA洛杉矶湖人队的男孩，从矜矜业业的替补球员到洛杉矶湖人队绝对主力再到当家球星，科比在洛杉矶这座城市一呆就是20年。
+            从1996年至今20年里，科比在洛杉矶这座城市成家立业结婚生子。如今他走了，他为这座城市和他的球队带来了无数奖项记录，供后来者追赶.﻿
+        </p>
+        <button type="button" class="loadallarticles">点击展开</button>
+        <!--这是我的注释,浏览器是看不懂的，不过我觉得，你应该能看的到-->
+        <br />
+        <div class="imgbg">
+            <p class="withopacity">
+                NBA总冠军奖杯5个常规赛MVP奖杯1个、总决赛MVP奖杯2个、NBA全明星赛MVP奖杯4个、NBA得分王2次、扣篮大赛冠军1次、
+                单场81分NBA历史第二高,无数个NBA赛场历史上，和单赛季单场单节得分助攻篮板抢断盖帽失误甚至打铁相关的记录保持者，
+                以及很多个最年轻记录保持者 !
+            </p>
+        </div>
+        <div class="img">
+            <a target="_blank" href="images/kobe.jpg">
+                <img class="opacity" src="images/kobe.jpg" alt="科比图片1">
+            </a>
+            <div class="desc">黑曼巴</div>
+        </div>
+        <div class="img">
+            <a target="_blank" href="images/kobe.jpg">
+                <img class="opacity" src="images/kobe.jpg" alt="科比图片2">
+            </a>
+            <div class="desc">科比布莱恩特</div>
+        </div>
+        <div class="img">
+            <a target="_blank" href="images/kobe.jpg">
+                <img class="opacity" src="images/kobe.jpg" alt="科比图片3">
+            </a>
+            <div class="desc">老大</div>
+        </div>
+        <div class="img">
+            <a target="_blank" href="images/kobe.jpg">
+                <img class="opacity" src="images/kobe.jpg" alt="科比图片4">
+            </a>
+            <div class="desc">LA</div>
+        </div>
+
+
+<!--        <abbr title="刘海洋">鼠标放在我上面，看看谁是世界上最帅的人</abbr>
+        <br />
+        <acronym title="还是刘海洋">鼠标放我身上，看看谁是世界上第二帅的人</acronym>
+        <br />
+        <bdo dir="rtl">把我倒过来读，你就能知道世界上最帅的人就是刘海洋</bdo>
+        <br />
+        <blockquote>
+            人一生有很多个梦想，有的images生，有的希望自己是个科学家，有的希望自己能够拥有很多财富，
+            有的则希望自己妻妾成群，而我的梦想，很厉害，真的images个是美食，一个是睡觉
+        </blockquote>
+        <q>唯爱情与美食不可辜负</q>
+        <p>
+       imagesWWF的目标是  <q>构建人与自然和谐共存的世界</q>
+            <br />
+            以下内容印自WWF网站
+     images  <blockquote cite="http://www.worldwildlife.org/who/index.html">
+      images     五十年来，WWF 一直致力于保护自然界的未来。
+                世界领先的环保组织，WWF 工作于 100 个国家，
+                并得到美国一百二十万会员及全球近五百万会员的支持。
+            </blockquote>
+            世界上最帅的人是<del>你</del>    不不不，写错了，不要意思，应该是——><ins>我</ins>
+            <br />
+            <dfn title="刘海洋">世界上最帅的人</dfn>是谁呢？
+            <br />
+            <dfn><abbr title="刘海洋">世界上最帅的人是谁？(鼠标放我身上你就会得到答案)</abbr></dfn>
+            <br />
+            <kbd>键盘输入样式</kbd>
+            <br />
+            我是代码格式样式:<pre><code>var person = { firstName:"Bill", lastName:"Gates", age:50, eyeColor:"blue" }</code></pre>
+            <br />
+            数学变量实例:<var>E = m c<sup>2</sup></var>
+        </p>
+
+        &lt;!&ndash;条件注释&ndash;&gt;
+        &lt;!&ndash;[if IE8]>
+        ……………………
+        <![endif]&ndash;&gt;
+        &lt;!&ndash;此处应该使用%20来代替空格，这样邮件题目能正确显示&ndash;&gt;
+        <a href="mailto:ioslhy@163.com?cc=891508172@qq.com&bcc=3029068348@qq.com&subject=Hello%20World&body=你好，我们诚挚邀请您出席联合国第8大牛逼人物访谈">点击发送邮件</a>
+        <br />
+        <img src="sky1.jpg" width="100" height="90" alt="这里有张图片我故意没让它显示出来"/>
+        <p>图像在<img src="media/cuteegg.gif" alt="我是图像">文字当中,未设置对齐方式</p>
+        <p>图像在<img src="media/cuteegg.gif" alt="我是图像" align="bottom">文字当中,底部对齐</p>
+        <p>图像在<img src="media/cuteegg.gif" alt="我是图像" align="middle">文字当中,中间对齐</p>
+        <p>图像在<img src="media/cuteegg.gif" alt="我是图像" align="top">文字当中,顶部对齐</p>
+        <p><img src="media/cuteegg.gif" align="right">我是段落的内容,我就是段落的内容</p>
+        <br />
+        <h2>以下是列表的练习</h2>
+        <h2>没有顺序的列表(以图片作为标志项)</h2>
+        <ul class="imgmark">
+            <li>科比</li>
+            <li>周杰伦</li>
+            <li>毛泽东</li>
+        </ul>
+        <ol type="A">
+            <li>科比</li>
+            <li>周杰伦</li>
+            <li>毛泽东</li>
+        </ol>
+        <ol type="i">
+            <li>科比</li>
+            <li>周杰伦</li>
+            <li>毛泽东</li>
+        </ol>
+        <h2>自定义列表项 以dl开头,dt代表每一个自定义列表项 dd代表每一个自定义列表项的定义</h2>
+        <dl>
+            <dt>科比</dt>
+            <dd>美职篮洛杉矶湖人球队后卫,在NBA联盟效力20年,于2016年4月14日退役</dd>
+            <dt>周杰伦</dt>
+            <dd>华语乐坛领军人物</dd>
+        </dl>
+        <h2>列表的嵌套</h2>
+        <ul>
+            <li>运动员</li>
+            <li>歌手
+                <dl>
+                <dt>周杰伦</dt>
+                <dd>华语乐坛领军人物,中国风传遍大江南北</dd>
+                <dt>五月天</dt>
+                <dd>台湾省著名摇滚乐团,以倔强,突然好想你而著名</dd>
+                </dl>
+                <ul>
+                    <li>周杰伦</li>
+                    <li>imagesli>
+                </ul>
+
+            </li>
+            <li>商人</li>
+        </ul>
+        <br />
+        <h2>表格</h2>
+        <br />
+        <table >
+            <caption>我是标题</caption>
+            <thead>我是表头</thead>
+            <thead>我是另一个表头</thead>
+            <tr bgcolor="aqua">
+                <td>0,0</td>
+                <td>0,1</td>
+                <td>0,2</td>
+            </tr>
+            <tr>
+                <td>1,0</td>
+                <td>1,2</td>
+                <td>1,3</td>
+                <td>1,4</td>
+                <td>1,5</td>
+            </tr>
+            <tr bgcolor="#ffe4c4">
+                <td>&nbsp;</td>
+                <td>2,0</td>
+            </tr>
+        </table>
+        <h4>横跨两行的单元格</h4>
+        <table>
+        <tr>
+                <th>姓名</th>
+                <th colspan="2">电话</th>
+        </tr>
+        <tr>
+                <td>刘海洋</td>
+                <td>18818881888</td>
+                <td>03988888888</td>
+        </tr>
+        </table>
+
+        <h2>下面来一个风格迥异的表格</h2>
+        <table border="1" cellpadding="10" bgcolor="#ffe4c4" background = blackbg.jpg widtimages0" frame="box">
+        <caption>我是奇特的表格</caption>
+        <tr>
+                <td bgcolor="#ffe4c4">
+                        <p>哈哈,我是一个段落</p>
+                        <p>哈哈,我也是一个段落</p>
+                </td>
+                <td bgcolor="aqua">
+                        <p>我这个单元格厉害了,包含了另外一个单元格</p>
+                <table border="1" frame="hsides">
+                        <tr bgcolor="#7fffd4">
+                                <td>A</td>
+                                <td>B</td>
+                        </tr>
+                        <tr>
+                                <td>C</td>
+                                <td>D</td>
+                        </tr>
+                </table>
+                </td>
+        </tr>
+        <tr>
+                <td bgcolor="#f0ffff">
+                <p>我这个单元格更厉害,包含一个列表</p>
+                <ul>
+                        <li>苹果</li>
+                        <li>香蕉</li>
+                        <li>菠萝</li>
+                </ul>
+                </td>
+                <td bgcolor="#deb887" align="right">
+                        HELLO,Phil_Liu
+                </td>
+        </tr>
+        </table>
+        <br />
+
+        <h2>div练习</h2>
+        <div class="cities">
+            <h2>谁是世界上最帅的人?</h2>
+            <p>毫无疑问啊,这种问题你还需要问我吗?当然是人见人爱,花见花开,帅到爆棚,帅到宇宙都掉渣的刘海洋啊
+                人一生有很多个梦想，有的希望当个医生，有的希望自己是个科学家，有的希望自己能够拥有很多财富， 有的则希望自己妻妾成群
+                而我的梦想，那就比较厉害了，一个是美食，一个是睡觉
+            </p>
+        </div>
+
+        <h2>布局(使用div标签进行布局)</h2>
+        <div id="header">
+            <h2>City Callery</h2>
+        </div>
+        <div id="nav">
+            <ul type="square">
+                <li><span class="book">London</span></li>
+                <li>Paris</li>
+                <li>Tokyo</li>
+            </ul>
+        </div>
+        <div id="section">
+            <h2>London</h2>
+            <p>
+                London is the capital city of England. It is the most populous city in the United Kingdom,
+                with a metropolitan area of over 13 million inhabitants.
+            </p>
+            <p>
+                Standing on the River Thames, London has been a major settlement for two millennia,
+                its history going back to its founding by the Romans, who named it Londinium.
+            </p>
+        </div>
+        <div id="footer">
+            <p style="color: black">
+                Copyright W3School.com.cn
+            </p>
+        </div>
+
+        <h2>使用table的HTML布局</h2>
+        <table class="lamp">
+            <tr>
+                <th>
+                    <img src="media/cuteegg.gif" alt="Note" style="height: 32px;width: 32px">
+                </th>
+            <td>
+                The table element was not designed to be a layout tool.
+            </td>
+            </tr>
+        </table>
+
+        <h2>W3School Demo</h2>
+        <h2>Resize this responsive page!</h2>
+        <br>
+
+        <div class="city">
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.
+        </p>
+        </div>
+
+        <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital and most populous city of France.</p>
+        </div>
+
+        <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+        and the most populous metropolitan area in the world.</p>
+        </div>
+
+        <br />
+
+        <h2>iframe标签用于网页内显示网页</h2>
+        <iframe src="http://www.baidu.com" width="50%" height="500" frameborder="0"></iframe>
+        <br />
+        <iframe src="media/sky.jpg" name="tobaiduhtml" width="80%" height="500"></iframe>
+        <br />
+        <a href="http://www.beijing.com" target="tobaiduhtml">点击我将上述图片网页跳转至北京官网</a>
+
+
+        <h2>脚本</h2>
+        <script>
+            &lt;!&ndash;
+                document.write('<h2>你好,宇宙无敌帅海洋大哥</h2>')
+            //&ndash;&gt;
+        </script>
+        <noscript>当浏览器不支持脚本的时候就显示我啦</noscript>
+
+        <h2>基类的使用,在header中设置</h2>
+        <a href="http://www.baidu.com">我这里虽然没有设置target,但是因为基类设置了,所以我就不用再在这里进行设置</a>
+
+        <h2>字符实体</h2>
+        <p>&copy</p>
+        <p>&#60</p>
+        <br />-->
+
+        <h2>~~黑曼巴之问~~</h2>
+        <div id="mambaask" style="background-color: antiquewhite">
+        <br /><br /><br />
+        <form action="XHTML_01.html" autocomplete="on">
+            <fieldset>
+            <legend>测测你是否是真球迷</legend>
+            <br /><br />
+
+            输入一个你喜欢的昵称:<br />
+            <input type="text" id="name" placeholder="狂拽炫酷屌炸天的我(最多20个字)" size="50" maxlength="20" autocomplete="on">
+            <button type="button" class="checknicknamebtn">昵称是否可用?</button>
+            <b id="shownickname"></b>
+            <br /><br />
+
+            来，偷偷把手机号告诉我:<br />
+            <input type="text" id="phonenum" placeholder="是手机号，不是你的BB机号码，OK？" size="50" maxlength="11" autocomplete="on">
+            <button type="button" class="checkphonenumbtn">赶紧先提交一下手机号~</button>
+            <b id="showphonenum"></b>
+            <br /><br />
+
+            随便想一个密码填进去:<br />
+            <input type="password" name="密码" placeholder="忘了别怪小海哥哦~~" autocomplete="off">
+            <br /><br />
+
+            请选择您的性别:<br />
+            <input type="radio" name="性别" value="male" checked>男
+            <br />
+            <input type="radio" name="性别" value="female">女
+            <br /><br />
+
+            请选择您的出生年月日:<br />
+            <input type="date" name="birthday">
+            <br /><br />
+
+            下列哪些是指科比?(可多选):<br />
+            <input type="checkbox" name="hobby" value="黑曼巴">黑曼巴<br />
+            <input type="checkbox" name="hobby" value="闪电侠">闪电侠<br />
+            <input type="checkbox" name="hobby" value="老大">老大<br />
+            <input type="checkbox" name="hobby" value="得分机器">得分机器
+            <br /><br />
+
+            你是从什么时候开始看NBA的?<br />
+            <select name ="timetowatchNBA"><br />
+                <option value="1">在娘胎中</option>
+                <option value="2">小学</option>
+                <option value="3">初中</option>
+                <option value="4" selected>高中</option>
+                <option value="5">大学</option>
+                <option value="6">工作之后</option>
+            </select>
+            <br /><br />
+
+            说说你是怎么看待科比退役的?<br />
+            <textarea name="beizhu" rows="10" cols="40">
+                #一日紫金，终身湖人
+            </textarea>
+            <br /><br />
+
+            你管科比叫什么？:
+            <br />
+            <input list="kobename">
+            <datalist id="kobename">
+                <option value="老大">老大</option>
+                <option value="黑曼巴">黑曼巴</option>
+                <option value="科比">科比</option>
+                <option value="蜗壳">蜗壳</option>
+            </datalist>
+            <br /><br />
+
+            <!--Quantity (between 1 and 5)-->
+            满分10分,你给科比打几分?<br />
+            <input type="number" name="kobescore" min="0" max="10" step="0.1" value="9.8">
+            <br /><br />
+
+
+            蜗壳最喜欢什么颜色?(选择有惊喜)<br />
+            <input type="color" id="likecolor" onsubmit="changebgcolor()">
+            <button type="button" id="changebgcolor">就是它了,巴拉巴拉小魔仙，变！~</button>
+            <br /><br />
+
+            <!--请在一定范围内输入您的结果:<br />
+            <input type="range" name="rangeresult" min="60" max="100">
+            <br /><br />
+
+            请选择年月:<br />
+            <input type="month" name="selectmonth">
+            <br /><br />
+
+            请选择周和年:<br />
+            <input type="week" name="selectweek">
+            <br /><br />
+
+            请选择时间:<br />
+            <input type="time" name="selecttime">
+            <br /><br />
+
+            请选择日期和时间:<br />
+            <input type="datetime" name="selectdatetime">
+            <br /><br />
+
+            请输入电子邮件:<br />
+            <input type="email" name="email">
+            <br /><br />
+
+            请输入搜索文本:<br />
+            <input type="search" name="searchresult">
+            <br /><br />
+
+            请输入搜索文本:<br />
+            <br /><br />
+
+            请输入url链接:<br />
+            <input type="url" name="myurl">
+            <br /><br />-->
+
+
+            <input type="submit" name="Submit" value="点击提交">
+
+            <br /><br /><br />
+
+            </fieldset>
+        </form>
+        </div>
+<!--        <h2>H5新语意元素的练习:</h2>
+        <br />
+        <section>
+            <h2>世界上最帅的人</h2>
+        </section>
+        <section>
+        <h2>世界上第二帅的人</h2>
+        </section>
+        <article>
+        <header>
+   images<h2>世界上第三帅的人</h2>
+        </header>
+        <p>不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人,
+        不说还真不知道,我还真是最帅的人,不说还真不知道,我还真是最帅的人</p>
+        </article>
+        <aside>
+            <h4>后来imagesh4>
+            <p>只期待后来的你更快乐,那就是后来的我最想的</p>
+        </aside>
+       imagesure>
+        <img simagesedia/sky.jpg" width="100" height="100">
+        <figcaption>我的天空</figcaption>
+        </figure>
+
+        <nav>
+        <ul>
+        <li>音乐</li>
+        <li>运动</li>
+        <li>娱乐</li>
+        </ul>
+        </nav>
+
+        <section style="background-color: bisque">
+        <h2>画布练习</h2>
+        <canvas id="canvas1" width="200" height="500" style="background-color: aliceblue"></canvas>
+        <script>
+        var c = document.getElementById("canvas1")
+        var cxt=c.getContext("2d");
+        cxt.fillStyle = "#FF0000"
+        cxt.fillRect(20,10,150,75)
+        </script>
+
+        <canvas id="canvas2" width="200" height="500" style="border:1px solid #c3c3c3"></canvas>
+        <script>
+        var c = document.getElementById("canvas2")
+        var cxt = c.getContext("2d")
+        cxt.moveTo(10,10)
+        cxt.lineTo(150,50)
+        cxt.lineTo(10,50)
+        cxt.stroke()
+        </script>
+        <script>
+        var c=document.getElementById("canvas2");
+        var cxt=c.getContext("2d")
+        cxt.fillStyle="#FF0000";
+        cxt.beginPath();
+        cxt.arc(70,100,30,0,Math.PI*2,true);
+        cxt.closePath();
+        cxt.fill();
+        </script>
+        <script>
+        var c= document.getElementById("canvas2")
+        var cxt = c.getContext("2d")
+        var grd=cxt.createLinearGradient(15,140,170,50);
+        grd.addColorStop(0,"#FF0000");
+        grd.addColorStop(1,"#00FF00");
+        cxt.fillStyle=grd;
+        cxt.fillRect(15,140,170,50);
+        </script>
+
+        <canvas id="canvas3" width="200" height="500" style="border:1px solid #ff3b30"></canvas>
+        <script>
+        var c= document.getElementById("canvas3")
+        var cxt= c.getContext("2d")
+        var img = new Image()
+        img.src = "sky.jpg"
+        cxt.drawImage(img,0,0)
+        </script>
+
+        </section>
+        <section style="background-color: beige">
+        <br />
+        <h2>SVG练习</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 style="fill:lime;stroke:red;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+        </section>
+        <section style="background-color: burlywood">
+            <br />
+            <h2>媒体播放练习</h2>
+            <br />
+            <h2>音频播放</h2>
+            &lt;!&ndash;<object width="428" height="360"&ndash;&gt;
+                    &lt;!&ndash;classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"&ndash;&gt;
+                    &lt;!&ndash;codebase="http://www.apple.com/qtactivex/qtplugin.cab">&ndash;&gt;
+                &lt;!&ndash;<param name="src" value="bird.wav" />&ndash;&gt;
+                &lt;!&ndash;<param name="controller" value="true">&ndash;&gt;
+            &lt;!&ndash;</object>&ndash;&gt;
+
+            &lt;!&ndash;<object width="420" height="360" style="background-color: #ff3b30"&ndash;&gt;
+                    &lt;!&ndash;classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"&ndash;&gt;
+                    &lt;!&ndash;codebase="http://www.apple.com/qtactivex/qtplugin.cab">&ndash;&gt;
+                &lt;!&ndash;<param name="src" value="beautifulXXL.mp4" />&ndash;&gt;
+                &lt;!&ndash;<param name="controller" value="true" />&ndash;&gt;
+            &lt;!&ndash;</object>&ndash;&gt;
+            <embed height="100" width="100" src="MayDay-miss%20you%20in%20a%20second.mp3" />
+            <object height="100" width="100" data="MayDay-miss%20you%20in%20a%20second.mp3"></object>
+            <audio controls="controls" height="100" width="100">
+                <source src="MayDay-miss%20you%20in%20a%20second.mp3" type="MayDay-miss%20you%20in%20a%20second/mp3">
+                <source src="MayDay-miss%20you%20in%20a%20second.ogg" type="MayDay-miss%20you%20in%20a%20second/ogg">
+                &lt;!&ndash;
+                上面的例子使用了两个不同的音频格式。HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。
+                如果失败，代码将回退尝试 <embed> 元素。
+                &ndash;&gt;
+                <embed src="MayDay-miss%20you%20in%20a%20second.mp3" />
+            </audio>
+
+            <h2>视频播放</h2>
+            <video width="320" height="240" controls="controls">
+                <source src="media/kobe.mp4" type="video/mp4" />
+                <source src="kobe.ogg" type="video/ogg" />
+                <source src="kobe.webm" type="video/webm" />
+                <object data="media/kobe.mp4" width="320" height="240">
+                    <embed src="media/koimages4" width="320" height="240" />
+                </object>
+            </video>
+            <h2 align="center">使用雅虎播放器来播放音频</h2>
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">突然好想你</a><br />
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">你会在哪里</a><br />
+            <a href="MayDay-miss%20you%20in%20a%20second.mp3">过的快乐或委屈</a><br />
+
+            <script src="http://mediaplayer.yahoo.com/js"></script>
+
+            <h2>使用优酷来播放视频</h2>
+            <embed src="http://m.youku.com/video/id_XMjc0MjA4NzEyNA==.html"
+                   width="480" height="400"
+                   type="application/x-shockwave-flash">
+            </embed>
+            </section>
+        <section style="background-color: azure">
+            <br />
+            <h2>地理定位练习</h2>
+
+            <p id="getlocation">点击下面这个按钮,获取用户的定位信息:</p>
+            <button onclick="getlocation()">获取定位</button>
+            <div id="showmapimg" style="background-color: cadetblue"></div>
+            &lt;!&ndash;显示静态地图图片&ndash;&gt;
+            <script>
+                var c = document.getElementById("getlocation")
+                function getlocation()
+                {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition,showError)
+                    }
+                    else{
+                        c.innerHTML= "未开启定位权限"
+                    }
+                }
+                function showPosition(position)
+                {
+//                    显示静态地图图片
+                    c.innerHTML= "经度:" + position.coords.latitude + "<br />纬度:" + position.coords.longitude
+                    var maplocation = position.coords.latitude + ","+position.coords.longitude;
+                    var img_url="http://maps.googleapis.com/maps/api/staticmap?center="+
+                            maplocation+"&zoom=14&size=400x300&sensor=false";
+                    document.getElementById("showmapimg").innerHTML="<img src='"+img_url+"' />";
+
+
+                }
+                function showError(error)
+                {
+                    var showmsg
+                    switch (error.code){
+                        case error.PERMISSION_DENIED:
+                            showmsg = "您关闭了定位权限"
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            showmsg = "您的定位功能坏了"
+                            break;
+                        case error.UNKNOWN_ERR:
+                            showmsg = "我也不知道你发生了什么错误"
+                            break;
+                    }
+                    c.innerHTML = showmsg
+                }
+            </script>
+
+            <br />
+            <p id="getgooglelocation">点击下面这个按钮,展示谷歌地图:</p>
+            <button onclick="getgogleLocation()">加载谷歌地图</button>
+            &lt;!&ndash;显示可交互的谷歌地图控件&ndash;&gt;
+            <div id="showgooglemap" style="background-color: red"></div>
+            <script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAmP8euGUWx2OXDLWwk6SrFaSO7YTUjv94&sensor=SET_TO_TRUE_OR_FALSE"></script>
+            <script>
+                var d =document.getElementById("getgooglelocation");
+                function getgogleLocation()
+                {
+                    if (navigator.geolocation)
+                    {
+                        navigator.geolocation.getCurrentPosition(showgooglePosition,showgoogleError);
+//                        navigator.geolocation.watchPosition(watchgooglePosition,showgoogleError);
+                    }
+                   else{d.innerHTML="不支持定位";}
+                }
+
+                function showgooglePosition(position)
+                {
+                    lat=position.coords.latitude;
+                    lon=position.coords.longitude;
+                    d.innerHTML= "经度:" + lat + "<br />纬度:" + lon;
+                    latlon=new google.maps.LatLng(lat, lon)
+                    mapholder=document.getElementById('showgooglemap')
+                    mapholder.style.height='250px';
+                    mapholder.style.width='500px';
+
+                    var myOptions={
+                        center:latlon,zoom:14,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP,
+                        mapTypeControl:false,
+                        navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                    };
+                    var map=new google.maps.Map(document.getElementById("showgooglemap"),myOptions);
+                    var marker=new google.maps.Marker({position:latlon,map:map,title:"google告诉我你丫在这儿呢!"});
+                }
+                function watchPosition(position)
+                {
+                    lat=position.coords.latitude;
+                    lon=position.coords.longitude;
+                    d.innerHTML= "经度:" + lat + "<br />纬度:" + lon;
+                    latlon=new google.maps.LatLng(lat, lon)
+                    mapholder=document.getElementById('showgooglemap')
+                    mapholder.style.height='250px';
+                    mapholder.style.width='500px';
+
+                    var myOptions={
+                        center:latlon,zoom:14,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP,
+                        mapTypeControl:false,
+                        navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+                    };
+                    var map=new google.maps.Map(document.getElementById("showgooglemap"),myOptions);
+                    var marker=new google.maps.Marker({position:latlon,map:map,title:"谷歌告诉我你此时此刻的位置在这里!"});
+                }
+
+                function showgoogleError(error)
+                {
+                    var showmsg
+                    switch (error.code){
+                        case error.PERMISSION_DENIED:
+                            showmsg = "您关闭了定位权限"
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            showmsg = "您的定位功能坏了"
+                            break;
+                        case error.UNKNOWN_ERR:
+                            showmsg = "我也不知道你发生了什么错误"
+                            break;
+                    }
+                    d.innerHTML = showmsg
+                }
+            </script>
+
+            <br />
+            <p id="getbaidulocation">点击下面这个按钮,展示百度地图:</p>
+            <button onclick="getbaiduLocation()">加载百度地图</button>
+            &lt;!&ndash;显示可交互的百度地图控件&ndash;&gt;
+            <div id="showbaidumap" style="background-color: green"></div>
+            <script src="http://api.map.baidu.com/api?v=2.0&ak=xwk3sTWh1KQrAHz6ijQLgprndN2CLOs0"></script>
+            <script src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+            <script>
+                var map;
+                var gpsPoint;
+                var baiduPoint;
+                var gpsAddress;
+                var baiduAddress;
+
+                function getbaiduLocation() {
+                    //根据IP获取城市
+                    var myCity = new BMap.LocalCity();
+                    myCity.get(getCityByIP);
+
+                    //获取GPS坐标
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showbaiduMap, handleError, { enableHighAccuracy: true, maximumAge: 1000 });
+                    } else {
+                        alert("您的浏览器不支持使用HTML 5来获取地理位置服务");
+                    }
+                }
+
+                function showbaiduMap(value) {
+                    var longitude = value.coords.longitude;
+                    var latitude = value.coords.latitude;
+                    map = new BMap.Map("showbaidumap");
+                    //alert("坐标经度为：" + latitude + "， 纬度为：" + longitude );
+                    gpsPoint = new BMap.Point(longitude, latitude);    // 创建点坐标
+                    map.centerAndZoom(gpsPoint, 15);
+
+                    //根据坐标逆解析地址
+                    var geoc = new BMap.Geocoder();
+                    geoc.getLocation(gpsPoint, getCityByCoordinate);
+
+                    BMap.Convertor.translate(gpsPoint, 0, translateCallback);
+                }
+
+                translateCallback = function (point) {
+                    baiduPoint = point;
+                    var geoc = new BMap.Geocoder();
+                    geoc.getLocation(baiduPoint, getCityByBaiduCoordinate);
+                }
+
+                function getCityByCoordinate(rs) {
+                    gpsAddress = rs.addressComponents;
+                    var address = "GPS标注：" + gpsAddress.province + "," + gpsAddress.city + "," + gpsAddress.district + "," + gpsAddress.street + "," + gpsAddress.streetNumber;
+                    var marker = new BMap.Marker(gpsPoint);  // 创建标注
+                    map.addOverlay(marker);              // 将标注添加到地图中
+                    var labelgps = new BMap.Label(address, { offset: new BMap.Size(20, -10) });
+                    marker.setLabel(labelgps); //添加GPS标注
+                }
+
+                function getCityByBaiduCoordinate(rs) {
+                    baiduAddress = rs.addressComponents;
+                    var address = "百度标注：" + baiduAddress.province + "," + baiduAddress.city + "," + baiduAddress.district + "," + baiduAddress.street + "," + baiduAddress.streetNumber;
+                    var marker = new BMap.Marker(baiduPoint);  // 创建标注
+                    map.addOverlay(marker);              // 将标注添加到地图中
+                    var labelbaidu = new BMap.Label(address, { offset: new BMap.Size(20, -10) });
+                    marker.setLabel(labelbaidu); //添加百度标注
+                }
+
+                //根据IP获取城市
+                function getCityByIP(rs) {
+                    var cityName = rs.name;
+                    alert("根据IP定位您所在的城市为:" + cityName);
+                }
+
+                function handleError(value) {
+                    switch (value.code) {
+                        case 1:
+                            alert("位置服务被拒绝");
+                            break;
+                        case 2:
+                            alert("暂时获取不到位置信息");
+                            break;
+                        case 3:
+                            alert("获取信息超时");
+                            break;
+                        case 4:
+                            alert("未知错误");
+                            break;
+                    }
+                }
+
+
+            </script>
+
+        </section>
+        <section style="background-color: floralwhite">
+            <br />
+            <h2>拖放操作</h2>
+            <script>
+                //开始拖动时选择要拖动的数据类型
+                function drag(event){
+                event.dataTransfer.setData("Text",event.target.id);
+                }
+//                即将结束拖动的时候要阻止系统默认的方法去打开拖动数据
+                function allowDrop(event) {
+                    event.preventDefault();
+                }
+//                拖放操作，根据拖放数据获取到元素并且放置到相应的位置
+                function drop(event) {
+                    event.preventDefault();
+                    var data = event.dataTransfer.getData("Text");
+                    event.target.appendChild(document.getElementById(data))
+                }
+            </script>
+            <div id="div1" style="float: left;width: 100px;height: 66px;margin: 10px;padding: 10px;border: 1px;solid-color: '#aaaaaa';background-color: #ff3b30"
+                 ondragover="allowDrop(event)" ondrop="drop(event)">
+                <img id="drag1" src="media/cuteegg.gif" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="div2" style="float: left;width: 100px;height: 66px;margin: 10px;padding: 10px;border: 1px;solid-color: '#aaaaaa';background-color: #ff3b30"
+                 ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        </section>
+        <section style="background-color: lightyellow">
+            <br />
+            <h2>本地存储</h2>
+            <div id="localstorage"></div>
+            <script>
+                if (typeof(Storage) !== "undefined"){
+                    //当本地存储使用正常的时候
+                    localStorage.setItem("myname","刘海洋")
+                }
+                else{
+                    //浏览器不支持本地存储的时候
+                    document.getElementById("localstorage").innerHTML = "您的浏览器太low了，不支持本地存储";
+                }
+
+                var msg = "世界上最帅的人是:" + localStorage.getItem("myname");
+                document.getElementById("localstorage").innerHTML = msg;
+                //移除本地存储的数据
+                localStorage.removeItem("myname")
+            </script>
+
+            <script>
+                function clickcounter() {
+                    if (typeof(Storage) !== "undefined"){
+                        if (localStorage.clickcount){
+                            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                        }
+                        else{
+                            localStorage.clickcount = 1;
+                        }
+                        document.getElementById("clickcountresult").innerHTML = "您前前后后总共点击了这个按钮" + localStorage.clickcount + "次,不烦吗你";
+                    }
+                    else{
+                        document.getElementById("clickcountresult").innerHTML = "您的浏览器太Low了，不支持本地存储";
+                    }
+                }
+                function clicksessioncounter() {
+                    if (typeof(Storage) !== "undefined"){
+                        if (sessionStorage.clickcount){
+                            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                        }
+                        else{
+                            sessionStorage.clickcount = 1 ;
+                        }
+                        document.getElementById("clickcountsessionresult").innerHTML = "您本次总共点击了上面这个按钮" + sessionStorage.clickcount + "次";
+                    }
+                    else{
+                        document.getElementById("clickcountsessionresult").innerHTML = "您的浏览器太Low了，不支持本地存储";
+                    }
+                }
+            </script>
+            <button onclick="clickcounter()" type="button">点我点我</button>
+            <br /><br />
+            <p id="clickcountresult"></p>
+            <p>请点击上面按钮开始计数,你可以试试，关闭标签页或者浏览器再来,依旧会记录您的点击次数</p>
+            <button onclick="clicksessioncounter()" type="button">别点上面,点我</button>
+            <p id="clickcountsessionresult"></p>
+            <p>请点击上面按钮开始计数,你可以试试，关闭标签页或者浏览器再来,任性到不会记录您的点击次数</p>
+            <br /><br />
+        </section>
+        <section style="background-color: yellowgreen">
+            <br />
+            <h2>Server-Sent事件(从服务器获取更新数据)</h2>
+            <div id="showservierdate"></div>
+            <script>
+                if (typeof (EventSource) !== "undefined"){
+                    var source = new EventSource("HTML_01_入门练手_serverupdate.php");
+//                    因php文件暂时有误，所以展示不出来实时更新的服务器时间
+                    source.onmessage = function (event) {
+                        document.getElementById("showserverdate").innerHTML += event.data + "<br />";
+                    }
+                }
+                else{
+                    document.getElementById("showserverdate").innerHTML = "您的浏览器太low了，不支持serverevent";
+                }
+            </script>
+        </section>
+        <br /><br /><br />-->
+        <!--使用JQ追加元素-->
+        <button id="addordeleteelement" type="button">点击发现更多惊喜</button>
+        <button  type="button" id="deletePelement">删除页面所有P标签</button>
+        <p id="currenttime"></p>
+
+</body>
+</html>

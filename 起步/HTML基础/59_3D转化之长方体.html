@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D转化之长方体</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 500px;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            margin: 200px auto;
+            position: relative;
+            transform:rotateX(45deg) rotateY(45deg);
+            transform-style: preserve-3d;
+            animation:sport 8s 0s linear infinite;
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+
+        }
+
+
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            line-height:200px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        /*此方法为第二种旋转平移方式，是先进行旋转再进行平移，布局顺序为上 后 下 前 左 右 （前四个布局有规律 ， 在X轴方向旋转 90 180 270 360 度 ，然后沿Z轴移动100px即可）*/
+        /*注意如果一个元素旋转之后，它的坐标系是跟随*/
+        ul li:nth-child(1){
+            background-color: red;
+            /*沿X轴旋转90度，沿Z轴移动100px*/
+            transform: rotateX(90deg) translateZ(100px) scale(2,1);
+
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            /*沿X轴旋转180度，沿Z轴移动100px*/
+            transform: rotateX(180deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            /*沿X轴旋转270度，沿Z轴移动100px*/
+            transform: rotateX(270deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(4){
+            background-color: yellow;
+            /*沿X轴旋转360度，沿Z轴移动100px*/
+            transform: rotateX(360deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(5){
+            background-color: purple;
+            /*构建左面 先绕着Y轴旋转-90度，然后沿着Z轴平移100px*/
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            background-color: pink;
+            /*构建右面 先绕着Y轴旋转90度，然后沿着Z轴平移100px*/
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        ul img{
+            width: 100%;
+            height:100%;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    其实长方体和正方体之间的区别就在于将58正方体的上后下前四个面水平方向拉伸2倍，然后将左右两个面往左右两边再移动100px即可
+-->
+<ul>
+    <li><img src="images/mayday.jpg" alt=""></li>
+    <li><img src="images/jaychou.jpg" alt=""></li>
+    <li><img src="images/mykobe.jpg" alt=""></li>
+    <li><img src="images/mayday.jpg" alt=""></li>
+    <li><img src="images/jaychou.jpg" alt=""></li>
+    <li><img src="images/mykobe.jpg" alt=""></li>
+</ul>
+</body>
+</html>

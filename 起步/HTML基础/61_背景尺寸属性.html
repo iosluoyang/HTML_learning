@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景尺寸属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        ul li{
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 30px 30px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 200px;
+
+        }
+        ul li:nth-child(1){
+            background: url(images/cuteegg.gif) no-repeat;
+        }
+        ul li:nth-child(2){
+            background: url(images/cuteegg.gif) no-repeat;
+            -webkit-background-size:100px  100px;
+            background-size: 100px 100px; /*background-size：宽度 高度*/
+        }
+        ul li:nth-child(3){
+            background: url(images/cuteegg.gif) no-repeat;
+            -webkit-background-size:70% 60%;
+            background-size:70% 60%;/*当前元素的宽高的百分比*/
+        }
+        ul li:nth-child(4){
+            background: url(images/mayday.jpg) no-repeat;
+            -webkit-background-size:auto 100px;
+            background-size:auto 100px;/*宽度等比拉伸，将宽度设置为auto即可*/
+        }
+        ul li:nth-child(5){
+            background: url(images/jaychou.jpg) no-repeat;
+            -webkit-background-size:100px auto;
+            background-size:100px auto;/*高度等比拉伸，将高度设置为auto即可*/
+        }
+        ul li:nth-child(6){
+            background: url(images/kobe.jpg) no-repeat;
+            -webkit-background-size:cover;
+            background-size:cover;  /*1.告诉系统这张图片需要等比拉伸 2.告诉系统这张图片需要拉伸到宽度和高度都填满元素*/
+        }
+        ul li:nth-child(7){
+            background: url(images/concert7.gif) no-repeat;
+            -webkit-background-size:contain;
+            background-size:contain;    /*1.告诉系统这张图片需要等比拉伸 2.告诉系统这张图片需要拉伸到宽度或者高度任意一个填满元素即可*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    什么是背景尺寸属性?
+    背景尺寸属性是CSS3中新增的一个属性，专门用于设置背景图片大小
+-->
+<ul>
+    <li>默认(根据图片大小来显示)</li>
+    <li>具体像素(100px,100px)</li>
+    <li>百分比(70%,60%)</li>
+    <li>宽度等比拉伸(高100px)</li>
+    <li>高度等比拉伸(宽100px)</li>
+    <li>cover</li>
+    <li>contain</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多重背景图片</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 200px auto;
+            /*
+            编写多重背景时建议拆开来写，即每个属性的值用逗号分隔，但是每个属性都分开写
+            */
+            background-image: url(images/milk_cow.ico) , url(images/cuteegg.gif) ;
+            background-repeat: no-repeat,no-repeat;
+            background-position: left top , right top;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
