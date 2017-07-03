@@ -1,0 +1,153 @@
+/*顶部区域*/
+.top{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+.top .topin{
+    width: 1200px;
+    margin: 0 auto;
+    height:100%;
+}
+.topin .top_left{
+    float: left;
+    width: 190px;
+    height: 100%;
+
+}
+.top_left>h1{
+    width: 100%;
+    height: 100%;
+}
+.top_left>h1>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/nubia-logo-inverse-x2-cn.png");
+    background-size: cover;
+}
+.topin .top_right{
+    float: right;
+    width: 740px;
+    height:100%;
+
+}
+.top_right .topnav{
+    float: left;
+    width: 550px;
+    height: 100%;
+
+}
+.topnav>li{
+    float: left;
+}
+.topnav>li>a{
+    font-size: 16px;
+    font-weight:bold;
+    color: white;
+    line-height: 60px;
+    margin-left: 40px;
+
+}
+.top ul>li>a:hover{
+    color: #e82c07;
+
+}
+.topnav>li>a:hover{
+    color: #e82c07;
+ }
+.top_right .login{
+    float: right;
+    width: 150px;
+    height: 100%;
+    list-style: none;
+
+}
+.login>li{
+    float: right;
+    line-height: 60px;
+    margin-left: 10px;
+}
+.login>li>a{
+    color: #ccc;
+}
+.login>li>a:hover{
+    color: #e82c07;
+}
+.login>li:nth-child(3){
+    width: 22px;
+    height: 20px;
+    background: url("../images/loginlogo.png");
+    margin-top: 20px;
+
+}
+/*广告区域*/
+.banner{
+    width: 100%;
+    height: 860px;
+    background-color: green;
+}
+.banner .nav{
+    width: 1200px;
+    height:121px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    background-color: whitesmoke;
+}
+.nav>ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding-left:75px;
+    padding-right: 75px;
+    box-sizing: border-box;
+}
+.nav>ul>li{
+    width: 150px;
+    height:100%;
+    float: left;
+    text-align: center;
+
+}
+.nav>ul>li:hover{
+    border-bottom: 3px solid #ff3b30;
+    box-sizing: border-box;
+}
+.nav img{
+    width: 120px;
+    height: 80px;
+    margin-top: 15px;
+}
+.nav>ul>li p{
+    color: #666;
+}
+.nav>ul>li span{
+    color: #ff3b30;
+}
+
+/*轮播图*/
+.banner .figure{
+    width: 100%;
+    height: 600px;
+}
+/*视频区*/
+.banner .video{
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*内容区域*/
+.content{
+    width: 100%;
+    height: 1883px;
+    background-color: blue;
+}
+/*底部区域*/
+.bottom{
+    width: 100%;
+    height: 396px;
+    background-color: yellow;
+}

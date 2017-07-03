@@ -2,122 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0467414-4b27-433c-9fa4-a372158a5097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/concert7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/mayday_concert.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/images/rocketicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/58_3D转换模块_正方体.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/59_3D转化之长方体.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/60_3D播放器.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/61_背景尺寸属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/62_背景图片定位区域属性以及背景内容绘制区域.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML基础/63_多重背景图片.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/明星社长Demo/images/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/明星社长Demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_01_basic/58_3D转换模块_正方体.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_01_basic/HTML5_01.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_01_basic/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/css/democss.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/images/01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/images/border.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/index1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_02_demo/js/jquery-1.12.3.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/01_字符集.html" afterPath="$PROJECT_DIR$/起步/HTML基础/01_字符集.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/02_标签的分类.html" afterPath="$PROJECT_DIR$/起步/HTML基础/02_标签的分类.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/03_定义列表.html" afterPath="$PROJECT_DIR$/起步/HTML基础/03_定义列表.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/04_表格标签.html" afterPath="$PROJECT_DIR$/起步/HTML基础/04_表格标签.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/05_Label标签.html" afterPath="$PROJECT_DIR$/起步/HTML基础/05_Label标签.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/06_datalist标签.html" afterPath="$PROJECT_DIR$/起步/HTML基础/06_datalist标签.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/07_video标签.html" afterPath="$PROJECT_DIR$/起步/HTML基础/07_video标签.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/08_CSS_多个类封装.html" afterPath="$PROJECT_DIR$/起步/HTML基础/08_CSS_多个类封装.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/09_子元素选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/09_子元素选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/10_交集选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/10_交集选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/11_并集选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/11_并集选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/12_兄弟选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/12_兄弟选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/13_序选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/13_序选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/14_序选择器2.html" afterPath="$PROJECT_DIR$/起步/HTML基础/14_序选择器2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/15_属性选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/15_属性选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/16_属性选择器2.html" afterPath="$PROJECT_DIR$/起步/HTML基础/16_属性选择器2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/17_CSS继承性.html" afterPath="$PROJECT_DIR$/起步/HTML基础/17_CSS继承性.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/18_CSS优先级.html" afterPath="$PROJECT_DIR$/起步/HTML基础/18_CSS优先级.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/19_CSS优先级之_important.html" afterPath="$PROJECT_DIR$/起步/HTML基础/19_CSS优先级之_important.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/20_CSS选择器之权重问题.html" afterPath="$PROJECT_DIR$/起步/HTML基础/20_CSS选择器之权重问题.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/21_百度首页练习.html" afterPath="$PROJECT_DIR$/起步/HTML基础/21_百度首页练习.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/22_背景定位.html" afterPath="$PROJECT_DIR$/起步/HTML基础/22_背景定位.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/23_CSS精灵图.html" afterPath="$PROJECT_DIR$/起步/HTML基础/23_CSS精灵图.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/24_边框属性.html" afterPath="$PROJECT_DIR$/起步/HTML基础/24_边框属性.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/25_外边距合并现象.html" afterPath="$PROJECT_DIR$/起步/HTML基础/25_外边距合并现象.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/26_盒子模型.html" afterPath="$PROJECT_DIR$/起步/HTML基础/26_盒子模型.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/27_盒子宽高_boxsizing.html" afterPath="$PROJECT_DIR$/起步/HTML基础/27_盒子宽高_boxsizing.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/28_盒子居中和内容居中.html" afterPath="$PROJECT_DIR$/起步/HTML基础/28_盒子居中和内容居中.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" afterPath="$PROJECT_DIR$/起步/HTML基础/29_文字界面的实际应用.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/30_网页布局.html" afterPath="$PROJECT_DIR$/起步/HTML基础/30_网页布局.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/31_浮动元素贴靠现象.html" afterPath="$PROJECT_DIR$/起步/HTML基础/31_浮动元素贴靠现象.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/32_浮动元素的自围现象.html" afterPath="$PROJECT_DIR$/起步/HTML基础/32_浮动元素的自围现象.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/33_浮动练习.html" afterPath="$PROJECT_DIR$/起步/HTML基础/33_浮动练习.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/34_浮动元素的高度问题.html" afterPath="$PROJECT_DIR$/起步/HTML基础/34_浮动元素的高度问题.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/35_清除浮动.html" afterPath="$PROJECT_DIR$/起步/HTML基础/35_清除浮动.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/36_伪元素选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/36_伪元素选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/37_网易注册页面.html" afterPath="$PROJECT_DIR$/起步/HTML基础/37_网易注册页面.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/38_定位流.html" afterPath="$PROJECT_DIR$/起步/HTML基础/38_定位流.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/39_绝对定位.html" afterPath="$PROJECT_DIR$/起步/HTML基础/39_绝对定位.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/40_绝对定位注意点.html" afterPath="$PROJECT_DIR$/起步/HTML基础/40_绝对定位注意点.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/41_绝对定位_子绝父相.html" afterPath="$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/42_团购界面的练习.html" afterPath="$PROJECT_DIR$/起步/HTML基础/42_团购界面的练习.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/43_水平垂直居中.html" afterPath="$PROJECT_DIR$/起步/HTML基础/43_水平垂直居中.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/44_焦点图.html" afterPath="$PROJECT_DIR$/起步/HTML基础/44_焦点图.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/45_z-index属性.html" afterPath="$PROJECT_DIR$/起步/HTML基础/45_z-index属性.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/46_a标签的伪类选择器.html" afterPath="$PROJECT_DIR$/起步/HTML基础/46_a标签的伪类选择器.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/47_过渡模块.html" afterPath="$PROJECT_DIR$/起步/HTML基础/47_过渡模块.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/48_过渡模块手风琴样式.html" afterPath="$PROJECT_DIR$/起步/HTML基础/48_过渡模块手风琴样式.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/49_2D转换模块.html" afterPath="$PROJECT_DIR$/起步/HTML基础/49_2D转换模块.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/50_2D转换模块_形变中心点.html" afterPath="$PROJECT_DIR$/起步/HTML基础/50_2D转换模块_形变中心点.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/51_2D旋转轴向.html" afterPath="$PROJECT_DIR$/起步/HTML基础/51_2D旋转轴向.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/52_2D转换模块综合练习扑克牌效果.html" afterPath="$PROJECT_DIR$/起步/HTML基础/52_2D转换模块综合练习扑克牌效果.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/53_2D转化照片墙.html" afterPath="$PROJECT_DIR$/起步/HTML基础/53_2D转化照片墙.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/54_翻转菜单.html" afterPath="$PROJECT_DIR$/起步/HTML基础/54_翻转菜单.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/55_动画模块.html" afterPath="$PROJECT_DIR$/起步/HTML基础/55_动画模块.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/56_轮播图.html" afterPath="$PROJECT_DIR$/起步/HTML基础/56_轮播图.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/57_3D转换模块.html" afterPath="$PROJECT_DIR$/起步/HTML基础/57_3D转换模块.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/CSS/HTML_01_CSSSytle.css" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS/HTML_01_CSSSytle.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/HTML_01_入门练手.html" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML之瞎搞.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/XHTML_01.html" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/XHTML_01.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/js/HTML_01_JS.js" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/js/HTML_01_JS.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/js/my_jquery_functions.js" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/js/my_jquery_functions.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/EaseNetSprite.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/EaseNetSprite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/MayDay-miss you in a second.mp3" afterPath="$PROJECT_DIR$/起步/HTML基础/images/MayDay-miss you in a second.mp3" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/NeteaseAD.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/NeteaseAD.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/Zuckerberg.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/Zuckerberg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/baidulogo.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/baidulogo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/bgimg.jpg" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/bgimg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/card.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/card.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/css_jinglingtu.jpeg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/css_jinglingtu.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/cuteegg.gif" afterPath="$PROJECT_DIR$/起步/HTML基础/images/cuteegg.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/jaychou.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/jaychou.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/kobe.jpg" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/kobe.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/kobe.mp4" afterPath="$PROJECT_DIR$/起步/HTML基础/images/kobe.mp4" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/mayday.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/mayday.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/meituanspirt.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/meituanspirt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/milk_cow.ico" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/milk_cow.ico" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/mykobe.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/mykobe.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/sky.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/sky.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/sky.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/sky.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/stargray.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/stargray.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/starorange.png" afterPath="$PROJECT_DIR$/起步/HTML基础/images/starorange.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/storepic.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/storepic.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/project_01_basic/media/taobaobedpic.jpg" afterPath="$PROJECT_DIR$/起步/HTML基础/images/taobaobedpic.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/images/loginlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/images/nubia-logo-inverse-x2-cn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/images/phone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/index.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/起步/实战/明星社长Demo/images/data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/起步/实战/明星社长Demo/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html" afterPath="$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html" />
     </list>
     <ignored path="HTML_learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,15 +33,39 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="48" column="104" lean-forward="false" selection-start-line="48" selection-start-column="104" selection-end-line="48" selection-end-column="104" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -193,9 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project_01_basic/27_盒子宽高_boxsizing.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/28_盒子居中和内容居中.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/29_文字界面的实际应用.html" />
         <option value="$PROJECT_DIR$/project_01_basic/31_浮动元素贴靠现象.html" />
         <option value="$PROJECT_DIR$/project_01_basic/32_浮动元素的自围现象.html" />
         <option value="$PROJECT_DIR$/project_01_basic/33_浮动练习.html" />
@@ -244,6 +160,9 @@
         <option value="$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css" />
         <option value="$PROJECT_DIR$/起步/实战/明星社长Demo/index.html" />
         <option value="$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js" />
+        <option value="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css" />
+        <option value="$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html" />
+        <option value="$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/index.css" />
       </list>
     </option>
   </component>
@@ -254,8 +173,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="154" />
-    <option name="y" value="34" />
+    <option name="x" value="124" />
+    <option name="y" value="46" />
     <option name="width" value="1623" />
     <option name="height" value="986" />
   </component>
@@ -277,82 +196,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="起步" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="明星社长Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="起步" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="明星社长Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML_learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="起步" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="实战" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="明星社长Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="HTML_learning" />
@@ -388,11 +235,61 @@
               <option name="myItemId" value="起步" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="努比亚网站实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="努比亚网站实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,11 +303,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/起步/实战/努比亚网站实战/images" />
       <recent name="$PROJECT_DIR$/起步/实战/明星社长Demo/images" />
       <recent name="$PROJECT_DIR$/起步/实战" />
       <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images" />
       <recent name="$PROJECT_DIR$/project_01_basic/HTML自己瞎胡搞" />
-      <recent name="$PROJECT_DIR$/project_01_basic/HTML基础" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -425,10 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.HTML之瞎搞.html">
-    <configuration default="false" name="62_背景图片定位区域属性以及背景内容绘制区域.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/HTML基础/62_背景图片定位区域属性以及背景内容绘制区域.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="63_多重背景图片.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/project_01_basic/HTML基础/63_多重背景图片.html">
       <method />
     </configuration>
@@ -439,6 +333,9 @@
       <method />
     </configuration>
     <configuration default="false" name="HTML之瞎搞.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/HTML之瞎搞.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/实战/努比亚网站实战/index.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -508,19 +405,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.62_背景图片定位区域属性以及背景内容绘制区域.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.63_多重背景图片.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.21_百度首页练习.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.HTML5_01.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.HTML之瞎搞.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.63_多重背景图片.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.21_百度首页练习.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.HTML5_01.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.HTML之瞎搞.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.HTML之瞎搞.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.HTML5_01.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.21_百度首页练习.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.63_多重背景图片.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.62_背景图片定位区域属性以及背景内容绘制区域.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.HTML之瞎搞.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.HTML5_01.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.21_百度首页练习.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.63_多重背景图片.html" />
       </list>
     </recent_temporary>
   </component>
@@ -570,11 +467,15 @@
       <workItem from="1498741136295" duration="168000" />
       <workItem from="1498787725441" duration="8568000" />
       <workItem from="1498801662865" duration="8896000" />
+      <workItem from="1498876417661" duration="78000" />
+      <workItem from="1498876759674" duration="453000" />
+      <workItem from="1498877378092" duration="4075000" />
+      <workItem from="1499062864877" duration="9303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271281000" />
+    <option name="totallyTimeSpent" value="285190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,12 +487,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="154" y="34" width="1623" height="986" extended-state="0" />
+    <frame x="124" y="46" width="1623" height="986" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30836454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30836454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24913694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -603,6 +504,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -683,38 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/58_3D转换模块_正方体.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="113" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/59_3D转化之长方体.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/48_过渡模块手风琴样式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/56_轮播图.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="11" lean-forward="false" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/concert2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -749,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,23 +640,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_01_basic/64_CSS书写格式.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/project_01_basic/64_CSS书写格式.html" />
     <entry file="file://$PROJECT_DIR$/起步/HTML基础/30_网页布局.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,15 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="112" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,11 +707,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/bgimg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/bgimg.jpg" />
     <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/baidulogo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -880,24 +723,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/kobe.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML5_01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/kobe.jpg" />
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML5_01.html" />
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS/HTML_01_CSSSytle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="483" column="36" lean-forward="true" selection-start-line="483" selection-start-column="36" selection-end-line="483" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,66 +759,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project_02_demo/images/01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_02_demo/images/border.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project_02_demo/images/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/CSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/project_02_demo/images/01.png" />
+    <entry file="file://$PROJECT_DIR$/project_02_demo/images/border.png" />
+    <entry file="file://$PROJECT_DIR$/project_02_demo/images/logo.png" />
+    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/CSS.css" />
     <entry file="file://$USER_HOME$/Downloads/demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/images/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML之瞎搞.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="40" column="89" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,22 +774,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML之瞎搞.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/images/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="65" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1567" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/nubia-logo-inverse-x2-cn.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/phone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/loginlogo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="48" column="104" lean-forward="false" selection-start-line="48" selection-start-column="104" selection-end-line="48" selection-end-column="104" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
           <folding />
         </state>
       </provider>
