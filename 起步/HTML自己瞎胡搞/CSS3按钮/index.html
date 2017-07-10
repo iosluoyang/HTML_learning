@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3按钮练习</title>
+    <style>
+        .button{
+            width: 200px;
+            background-color: #f4511e;
+            color: #ffffff;
+            text-align: center;
+            font-size: 28px;
+            line-height: 28px;
+            padding: 20px;
+            margin: 10px;
+            padding: 10px 30px;
+            position: relative;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            outline: none;
+            box-shadow: 0 9px #999;
+        }
+        .button span{
+            transition: 0.5s;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+        /*使用CSS3 after在span后面追加元素*/
+        .button span:after{
+            content: ">>";
+            position: absolute;
+            top: 0;
+            right: -20px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        /*当鼠标放上去的时候*/
+
+        .button:hover span{
+            padding-right: 40px;
+        }
+        .button:hover span:after{
+            opacity: 1;
+            right: 0;
+        }
+        /*当按压的时候*/
+        .button:active{
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <h2>按钮动画</h2>
+    <button class="button"><span>Hover</span></button>
+</body>
+</html>

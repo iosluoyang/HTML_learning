@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header{
+    border: 1px solid red;
+    padding: 15px;
+
+}
+.menu{
+    width: 25%;
+    float: left;
+    border: 1px solid red;
+    padding: 15px;
+}
+.main{
+    width: 75%;
+    float: left;
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+/*设置所有类名以col-开头的元素的样式*/
+[class*="col-"]{
+    float: left;
+    border: 1px solid red;
+    padding: 15px;
+}
+
+/*增加媒体查询*/
+
+
+    /*优先设计移动端*/
+
+body{
+    background-color: skyblue;
+    background-image: url('../images/img_smallflower.jpg');
+}
+[class *= 'col-']{
+    width: 100%;
+}
+
+
+    /*设计完移动端之后再设计电脑浏览器中的样式*/
+
+    /*当浏览器窗口大于500px的时候背景颜色变为绿色*/
+@media screen and (min-width: 500px) {
+    body{
+        background-color: green;
+    }
+}
+    /*当设备宽度大于400px的时候显示正常图片大小*/
+    /*设置当为横屏的时候背景颜色变为粉色*/
+@media screen and (orientation: landscape) {
+    body{
+        background-color: pink;
+    }
+}
+    /*当设备宽度大于400px的时候使用大的背景图*/
+@media screen  and (min-device-width:400px ){
+    body{
+        background-image: url(../images/img_flowers.jpg);
+    }
+}
+
+    /*当窗口的宽度在768px以上时，即为手机端的时候让内容区的宽度根据不同布局来设定*/
+@media screen and (min-width: 768px){
+
+    /*根据每一个区块内有几个列设置*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+

@@ -316,7 +316,7 @@ a img{
 }
 /*设置背景为图片的div*/
 div.imgbg{
-    background: url("../../HTML基础/images/sky.png");
+    background: url("../../../HTML基础/images/sky.png");
     overflow: hidden;
     width: 100%;
     height: 210px;
@@ -421,7 +421,7 @@ img.opacity:hover{
 
 /*设置无序列表样式*/
 ul.imgmark{
-    list-style: url("../../HTML基础/images/cuteegg.gif") inside;
+    list-style: url("../../../HTML基础/images/cuteegg.gif") inside;
 }
 ul.square{
     list-style: square inside;
@@ -459,6 +459,7 @@ ul.circle{
     padding:5px;
 }
 
+
 /*设置某些类绑定CSS样式*/
 table.lamp {
       width:80%;
@@ -488,4 +489,7 @@ table.lamp td {
 }
 span.book{
     color: blue;
+}
+span{
+
 }

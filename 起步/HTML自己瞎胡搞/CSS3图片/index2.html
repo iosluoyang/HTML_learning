@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片模态框</title>
+    <style>
+        /*正常图片*/
+        #myImg{
+            border-radius: 5px;
+            cursor:pointer;
+            transition: 0.3s;
+        }
+        #myImg:hover{
+            opacity: 0.7;
+        }
+        /*模态视图*/
+        .modal{
+            display: none;/*默认刚开始隐藏*/
+            position: fixed;
+            z-index: 1;/*置顶位置*/
+            padding-top: 100px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        /*模态视图中的图片*/
+        .modal-content{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        /*模态视图中的图片描述*/
+        #caption{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            padding: 10px 0;
+            color: #ccc;
+            height: 150px;
+        }
+
+        /*增加动画*/
+        .modal-content , #caption{
+            animation-name: zoom;
+            animation-duration: 0.6s;
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from{
+                transform: scale(0);
+            }
+            to{
+                transform: scale(1);
+            }
+            
+        }
+        -webkit @keyframes zoom {
+            from{
+                -webkit-transform: scale(0);
+            }
+            to{
+                -webkit-transform: scale(1);
+            }
+            
+                }
+        /*关闭按钮*/
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,.close:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /*做媒体适配*/
+        @media screen and (max-width: 700px) {
+            .modal-content{
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h2>图片模态框</h2>
+    <p>本实例演示了如何结合 CSS 和 JavaScript 来一起渲染图片。</p><p>
+        首先，我们使用 CSS 来创建 modal 窗口 (对话框), 默认是隐藏的。<p>
+    <p>然后，我们使用 JavaScript 来显示模态窗口，当我们点击图片时，图片会在弹出的窗口中显示：</p>
+
+    <img id="myImg" src="images/img_lights.jpg" alt="Northern Lights, Norway"  width="300" height="200">
+
+    <!--模态视图-->
+    <div id="myModal" class="modal">
+        <span class="close">X</span>
+        <img id="img01" class="modal-content">
+        <div id="caption"></div>
+    </div>
+    <script>
+        /*获取模态窗口*/
+        var modal = document.getElementById('myModal');
+        /*获取原视图中的图片image*/
+        var orignalpic = document.getElementById('myImg');
+        /*设置模态视图中的图片源*/
+        var bigpic = document.getElementById('img01');
+        bigpic.src = orignalpic.src;
+        bigpic.alt = orignalpic.alt;
+        /*设置弹出模态视图的图片描述*/
+        var picdes = document.getElementById('caption');
+        picdes.innerHTML = orignalpic.alt;
+        /*点击图片的时候展示大图模式*/
+        orignalpic.onclick = function () {
+            modal.style.display = 'block';
+        }
+        /*点击关闭时候的操作*/
+        var closebtn = document.getElementsByClassName('close')[0];
+        closebtn.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>
