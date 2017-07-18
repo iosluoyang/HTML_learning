@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3提示工具ToolTip</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .tooltip{
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltiptext{
+            visibility: hidden;/*先隐藏*/
+            width: 120px;
+            background-color: black;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -60px;
+
+            z-index: 1;
+        }
+        /*当鼠标放上去的时候让提示文字显示出来*/
+        .tooltip:hover .tooltiptext{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<!--
+   提示工具在鼠标移动到指定元素后触发
+-->
+<div class="tooltip">鼠标移动到这儿
+    <span class="tooltiptext">提示文字</span>
+</div>
+</body>
+</html>

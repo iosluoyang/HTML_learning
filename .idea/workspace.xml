@@ -2,38 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0467414-4b27-433c-9fa4-a372158a5097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/images/img_lights.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/images/pineapple.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/images/img_chania.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/images/img_flowers.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/images/img_smallflower.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/BFC理解/CSS/stylecss.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/BFC理解/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3分页样式/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3按钮/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/baseRegjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/reg_in_js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/BootstrapDemo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/CSS/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/实战/超级社区wap站/Register_login/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS/HTML_01_CSSSytle.css" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/CSS/HTML_01_CSSSytle.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/HTML之瞎搞.html" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/HTML之瞎搞.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/XHTML_01.html" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/XHTML_01.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/bgimg.jpg" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/images/bgimg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/kobe.jpg" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/images/kobe.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/images/milk_cow.ico" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/images/milk_cow.ico" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/js/HTML_01_JS.js" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/js/HTML_01_JS.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/js/my_jquery_functions.js" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/js/my_jquery_functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images/Zuckerberg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images/jaychou.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images/kobe.mp4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images/mayday.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images/sky.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3多媒体查询实例/images/email-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index2_网格系统.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index3_基础排版.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index4_表格(Table).html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index5_表单.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3多媒体查询实例/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3提示工具ToolTip/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/HTML基础/43_水平垂直居中.html" afterPath="$PROJECT_DIR$/起步/HTML基础/43_水平垂直居中.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html" afterPath="$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html" />
     </list>
     <ignored path="HTML_learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,44 +38,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index2.html">
+      <file leaf-file-name="index5_表单.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index5_表单.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1400">
-              <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+            <state relative-caret-position="510">
+              <caret line="91" column="91" lean-forward="false" selection-start-line="91" selection-start-column="91" selection-end-line="91" selection-end-column="91" />
               <folding>
-                <element signature="e#2097#2217#0" expanded="false" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#form#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3按钮/index.html">
+        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="435">
+              <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3分页样式/index.html">
+      <file leaf-file-name="HTML之瞎搞.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/HTML之瞎搞.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="3555">
+              <caret line="237" column="71" lean-forward="false" selection-start-line="237" selection-start-column="61" selection-end-line="237" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html">
+      <file leaf-file-name="39_绝对定位.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML基础/39_绝对定位.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+            <state relative-caret-position="495">
+              <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="40_绝对定位注意点.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML基础/40_绝对定位注意点.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="41_绝对定位_子绝父相.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="05_Label标签.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML基础/05_Label标签.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="37_网易注册页面.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML基础/37_网易注册页面.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="187" column="72" lean-forward="true" selection-start-line="186" selection-start-column="8" selection-end-line="187" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reg_in_js.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/reg_in_js.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseRegjs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/baseRegjs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -154,15 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/project_01_basic/57_3D转换模块.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/49_2D转换模块.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/58_3D转换模块_正方体.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/59_3D转化之长方体.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/61_背景尺寸属性.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/60_3D播放器.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/62_背景图片定位区域属性.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/62_背景图片定位区域属性以及背景内容绘制区域.html" />
-        <option value="$PROJECT_DIR$/project_01_basic/63_多重背景图片.html" />
         <option value="$PROJECT_DIR$/project_01_basic/64_CSS书写格式.html" />
         <option value="$PROJECT_DIR$/project_01_basic/30_网页布局.html" />
         <option value="$PROJECT_DIR$/project_01_basic/努比亚网站实战/CSS/base.css" />
@@ -205,6 +241,15 @@
         <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/CSS3按钮/index.html" />
         <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3分页样式/index.html" />
         <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3多媒体查询实例/index.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3提示框ToolTip/index.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3提示工具ToolTip/index.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index2_网格系统.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index3_基础排版.html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index4_表格(Table).html" />
+        <option value="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index5_表单.html" />
+        <option value="$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html" />
       </list>
     </option>
   </component>
@@ -215,7 +260,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="193" />
+    <option name="x" value="200" />
     <option name="y" value="32" />
     <option name="width" value="1704" />
     <option name="height" value="986" />
@@ -238,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -292,12 +336,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CSS3弹性盒子" />
+              <option name="myItemId" value="JS中的正则" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML自己瞎胡搞" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS中的正则" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,11 +382,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/images" />
+      <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架" />
+      <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3多媒体查询实例/images" />
       <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞" />
       <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/images" />
-      <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3滤镜/images" />
-      <recent name="$PROJECT_DIR$/起步/HTML自己瞎胡搞/响应式Web设计_网格视图/images" />
-      <recent name="$PROJECT_DIR$/起步/实战/超级社区wap站/Register_login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -330,20 +401,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
-    <configuration default="false" name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/CSS3滤镜/index.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="index2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/CSS3图片/index2.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/CSS3图片/CSS3按钮/index.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index5_表单.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/CSS3分页样式/index.html">
       <method />
     </configuration>
     <configuration default="false" name="index.html (3)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html (4)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index4_表格(Table).html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index4_表格(Table).html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index5_表单.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index5_表单.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -413,19 +484,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index2.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index4_表格(Table).html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index5_表单.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index2.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index5_表单.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index4_表格(Table).html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -491,11 +562,26 @@
       <workItem from="1499481209529" duration="8037000" />
       <workItem from="1499651280656" duration="5917000" />
       <workItem from="1499665806625" duration="10518000" />
+      <workItem from="1499735545812" duration="3848000" />
+      <workItem from="1499762698544" duration="531000" />
+      <workItem from="1499822225143" duration="2809000" />
+      <workItem from="1499831365540" duration="146000" />
+      <workItem from="1499837802824" duration="4004000" />
+      <workItem from="1499845695140" duration="1038000" />
+      <workItem from="1499849670282" duration="93000" />
+      <workItem from="1499850511693" duration="798000" />
+      <workItem from="1499907926805" duration="3283000" />
+      <workItem from="1499915321109" duration="1535000" />
+      <workItem from="1499924922914" duration="7000" />
+      <workItem from="1499950501997" duration="49000" />
+      <workItem from="1500012030874" duration="102000" />
+      <workItem from="1500192279889" duration="1578000" />
+      <workItem from="1500257861793" duration="36000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353545000" />
+    <option name="totallyTimeSpent" value="373402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,7 +593,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="193" y="32" width="1704" height="986" extended-state="0" />
+    <frame x="200" y="32" width="1704" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23054071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -605,64 +691,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/index.html" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/CSS/starshezhangcss.css" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/js/starshezhang.js" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/明星社长Demo/images/data.json" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/nubia-logo-inverse-x2-cn.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/phone.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/loginlogo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/lunbo02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/images/lunbo01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/努比亚网站实战/CSS/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/38_定位流.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML基础/37_网易注册页面.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/青海高端盐湖科技公司网站主页/index.html" />
     <entry file="file://$PROJECT_DIR$/起步/HTML基础/52_2D转换模块综合练习扑克牌效果.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -767,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/reg_in_js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/XHTML_01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -785,13 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="54" column="32" lean-forward="true" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/baseRegjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -819,37 +833,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/js/modalpic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="109" column="10" lean-forward="true" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
-          <folding>
-            <element signature="e#2097#2217#0" expanded="false" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/js/modalpic.js" />
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/CSS/HTML_01_CSSSytle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="463" column="2" lean-forward="false" selection-start-line="463" selection-start-column="2" selection-end-line="463" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,38 +845,176 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="82" column="31" lean-forward="true" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3分页样式/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3按钮/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="109" column="10" lean-forward="false" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/images/jaychou.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3提示工具ToolTip/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3多媒体查询实例/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="64" lean-forward="true" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index2_网格系统.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="112" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index3_基础排版.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index4_表格(Table).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="n#thead#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index5_表单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="91" column="91" lean-forward="false" selection-start-line="91" selection-start-column="91" selection-end-line="91" selection-end-column="91" />
+          <folding>
+            <element signature="n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#form#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3图片/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/这真是胡搞的/HTML之瞎搞.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="950" column="17" lean-forward="true" selection-start-line="950" selection-start-column="17" selection-end-line="950" selection-end-column="17" />
+        <state relative-caret-position="3555">
+          <caret line="237" column="71" lean-forward="false" selection-start-line="237" selection-start-column="61" selection-end-line="237" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3按钮/index.html">
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/39_绝对定位.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="495">
+          <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3分页样式/index.html">
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/40_绝对定位注意点.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/CSS3弹性盒子/index.html">
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/41_绝对定位_子绝父相.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="78" column="24" lean-forward="true" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+        <state relative-caret-position="645">
+          <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/05_Label标签.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML基础/37_网易注册页面.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="187" column="72" lean-forward="true" selection-start-line="186" selection-start-column="8" selection-end-line="187" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/reg_in_js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/JS中的正则/js/baseRegjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>

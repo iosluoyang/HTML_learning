@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <!--引入Bootscrap-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!--国内推荐使用cdn-->
+    <title>表单</title>
+</head>
+<body>
+
+<!--垂直或基本表单-->
+<form role="form" class="form-inline">
+    <div class="form-group">
+        <label for="name" class="sr-only">名称</label><!--使用 class .sr-only，您可以隐藏内联表单的标签。-->
+        <input class="form-control" type="text" id="name" placeholder="请输入名称">
+    </div>
+
+    <div class="form-group">
+        <label for="inputfile" class="sr-only">文件输入</label>
+        <input type="file" id="inputfile">
+        <!--<p class="help-block">这里是块级帮助文本的实例</p>-->
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">请打勾
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-default">提交</button>
+</form>
+
+<!--水平表单-->
+<form action="#" role="form" class="form-horizontal">
+    <div class="form-group">
+        <label for="firstname" class="col-sm-2 control-label">名字</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastname" class="col-sm-2 control-label">姓</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">请记住我
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <button class="btn btn-default" type="submit">登录</button>
+        </div>
+    </div>
+</form>
+
+<!--单选框和复选框(默认样式和内联样式)-->
+<div class="container">
+
+    <h2>默认的复选框和单选按钮的按钮</h2>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="1">选项1
+        </label>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="2">选项2
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input type="radio" id="optionsRadios1" name="optionsRadio" value="option1" checked>选项1
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input type="radio" id="optionsRadios2" name="optionsRadio" value="option2">选项2
+        </label>
+    </div>
+</div>
+
+
+</body>
+</html>

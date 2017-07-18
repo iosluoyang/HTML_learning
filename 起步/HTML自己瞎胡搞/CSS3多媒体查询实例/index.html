@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3多媒体查询实例</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #007aff;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 520px) and (max-width: 699px) , (min-width: 1151px) {
+            ul li a{
+                background: url("images/email-icon.png") no-repeat left center;
+                padding-left: 30px;
+            }
+        }
+        @media screen and (min-width: 700px) and (max-width: 1000px) {
+            ul li a:before{
+                content: "联系人:";
+                font-size: 15px;
+                font-weight:inherit;
+                color: #d4d4d4;
+            }
+
+        }
+        @media screen and (min-width: 1001px) {
+            ul li a:after{
+                content: "("attr(data-email)")";
+                font-size: 12px;
+                font-style: italic;
+                color: #666666;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    模拟在不同的浏览器屏幕宽度下样式应该如何显示
+    分为以下几个步骤:
+    1.520 到 699px 宽度 或者大于1151px宽度 - 添加邮箱图标
+    2.700 到 1000px - 添加文本前缀信息
+    3.大于 1001px 宽度 - 添加邮件地址
+-->
+
+<ul>
+    <li><a data-email="mailto:stevenJobs@apple.com" href="mailto:stevenJobs@apple.com">StevenJobs</a></li>
+    <li><a data-email="mailto:BillGates@micsoft.com" href="mailto:BillGates@micsoft.com">BillGates</a></li>
+    <li><a data-email="mailto:PhilLiu@facebook.com" href="mailto:PhilLiu@facebook.com">PhilLiu</a></li>
+</ul>
+</body>
+</html>
