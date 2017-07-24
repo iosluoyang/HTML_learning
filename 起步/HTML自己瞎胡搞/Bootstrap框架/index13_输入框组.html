@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <!--引入Bootscrap-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!--国内推荐使用cdn-->
+    <title>输入框组</title>
+</head>
+<body>
+
+<div style="padding: 100px 100px 10px;">
+    <form action="#" class="bs-example bs-example-form" role="form">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="twitterhandle">
+        </div>
+
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="example">
+            <span class="input-group-addon">@163.com</span>
+        </div>
+    </form>
+</div>
+
+<div style="padding: 100px 100px 100px 10px">
+    <form action="#" class="bs-example bs-example-form" role="form">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">选择国家代码</button>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation">
+                        <a href="#" class="menuitem">中国</a>
+                    </li>
+                     <li role="presentation">
+                        <a href="#" class="menuitem">澳大利亚</a>
+                    </li>
+                     <li role="presentation">
+                        <a href="#" class="menuitem">古巴</a>
+                    </li>
+                </ul>
+            </span>
+            <input type="text" class="form-control" placeholder="手机号码">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox">
+            </span>
+            <input type="text" class="form-control" placeholder="履历">
+        </div>
+
+    </form>
+</div>
+
+
+
+
+<!-- jQuery (Bootstrap 插件需要引入) -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 包含了所有编译插件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <!--引入Bootscrap-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!--国内推荐使用cdn-->
+    <title>按钮下拉菜单</title>
+</head>
+<body>
+
+<div class="btn-group">
+
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        点我<span class="caret"></span>
+        <span class="sr-only">切换下拉菜单</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li role="presentation">
+            <a href="#" class="menuitem">点我干啥</a>
+        </li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞅我看啥</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞪我干啥</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default btn-sm">点我</button>
+    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="sr-only">切换下拉菜单</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li role="presentation">
+            <a href="#" class="menuitem">点我干啥</a>
+        </li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞅我看啥</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞪我干啥</a>
+        </li>
+    </ul>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="btn-group dropup">
+    <button type="button" class="btn btn-default">点我</button>
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="sr-only">切换下拉菜单</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li role="presentation">
+            <a href="#" class="menuitem">点我干啥</a>
+        </li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞅我看啥</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation">
+            <a href="#" class="menuitem">瞪我干啥</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+<!-- jQuery (Bootstrap 插件需要引入) -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 包含了所有编译插件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

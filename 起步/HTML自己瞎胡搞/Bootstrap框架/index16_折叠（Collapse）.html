@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <!--引入Bootscrap-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!--国内推荐使用cdn-->
+    <title>折叠</title>
+</head>
+<body>
+
+<div class="panel-group" id="accordion">
+    <div class="panel-default panel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">点击了解详细活动规则1</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                活动规则就是balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+            </div>
+        </div>
+    </div>
+    <div class="panel-default panel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">点击了解详细活动规则2</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="panel-body">
+                活动规则就是balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+
+            </div>
+        </div>
+    </div>
+    <div class="panel-default panel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">点击了解详细活动规则3</a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse in">
+            <div class="panel-body">
+                活动规则就是balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+                balabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>简化版的折叠Demo</h2>
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">简单的可折叠组件</button>
+<div id="demo" class="collapse">
+    Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+    cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+    vice lomo.
+</div>
+
+<h2>方法的应用</h2>
+<div class="panel-group" id="accordion2">
+
+    <div class="panel-default panel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseOne2" data-toggle="collapse" data-parent="#accordion2">
+                    点击我进行展开，再次点击我进行折叠。第1部分 --hide 方法
+                </a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse in" id="collapseOne2">
+            <div class="panel-body">
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                lomo.
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-success panel">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseTwo2" data-parent="#accordion2" data-toggle="collapse">
+                    点击我进行展开，再次点击我进行折叠。第2部分 --show方法
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo2" class="panel-collapse collapse">
+            <div class="panel-body">
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                lomo.
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseThree2" data-toggle="collapse" data-parent="#accordion2">
+                    点击我进行展开，再次点击我进行折叠。第3部分-- toggle方法
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree2" class="panel-collapse collapse">
+            <div class="panel-body">
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                lomo.
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#collapseFour2" data-toggle="collapse" data-parent="#accordion2">
+                    点击我进行展开，再次点击我进行折叠。第4部分 --options方法
+                </a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse" id="collapseFour2">
+            <div class="panel-body">
+                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                lomo.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#collapseFour2').collapse({
+            toggle:false
+        })});
+    $(function () {
+        $('#collapseTwo2').collapse('show')
+    });
+    $(function () {
+        $('#collapseThree2').collapse('toggle')
+    });
+    $(function () {
+        $('#collapseOne2').collapse('hide');
+    })
+</script>
+
+
+
+<!-- jQuery (Bootstrap 插件需要引入) -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 包含了所有编译插件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

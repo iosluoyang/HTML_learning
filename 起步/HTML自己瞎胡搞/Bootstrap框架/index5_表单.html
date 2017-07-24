@@ -10,15 +10,16 @@
 <body>
 
 <!--垂直或基本表单-->
-<form role="form" class="form-inline">
+<form role="form">
     <div class="form-group">
         <label for="name" class="sr-only">名称</label><!--使用 class .sr-only，您可以隐藏内联表单的标签。-->
-        <input class="form-control" type="text" id="name" placeholder="请输入名称">
+        <input class="form-control input-lg" type="text" id="name" placeholder="请输入名称(使用了input-lg类将该控件变大)">
+        <span class="help-block">输入框帮助文本,可以拓展为多行</span>
     </div>
 
     <div class="form-group">
-        <label for="inputfile" class="sr-only">文件输入</label>
-        <input type="file" id="inputfile">
+        <label for="inputfile">文件输入(使用了input-lg类将该控件变大)</label>
+        <input class="input-lg" type="file" id="inputfile">
         <!--<p class="help-block">这里是块级帮助文本的实例</p>-->
     </div>
 
@@ -30,6 +31,30 @@
 
     <button type="submit" class="btn btn-default">提交</button>
 </form>
+
+
+<!--内联表单    也就多了个class="form-inline"-->
+<form role="form" class="form-inline">
+    <div class="form-group">
+        <label for="name-inline" class="sr-only">名称</label><!--使用 class .sr-only，您可以隐藏内联表单的标签。-->
+        <input class="form-control" type="text" id="name-inline" placeholder="请输入名称">
+    </div>
+
+    <div class="form-group">
+        <label for="inputfile-inline" class="sr-only">文件输入</label>
+        <input type="file" id="inputfile-inline">
+        <!--<p class="help-block">这里是块级帮助文本的实例</p>-->
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">请打勾
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-default">提交</button>
+</form>
+
 
 <!--水平表单-->
 <form action="#" role="form" class="form-horizontal">
@@ -64,6 +89,27 @@
     </div>
 </form>
 
+
+<!--表单元素控件-->
+
+<!--选择框-->
+<div class="container">
+    <div class="row">
+        <form role="form" class="col-sm-3">
+            <div class="form-group">
+                <label for="favstars">选择你最喜欢的球星</label>
+                <select multiple name="stars" id="favstars" class="form-control">
+                    <option value="1">kobe-bryant</option>
+                    <option value="2">Phil liu</option>
+                    <option value="3">james</option>
+                    <option value="4">curry</option>
+                    <option value="5">jodan</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
+
 <!--单选框和复选框(默认样式和内联样式)-->
 <div class="container">
 
@@ -71,7 +117,7 @@
 
     <div class="checkbox">
         <label>
-            <input type="checkbox" value="1">选项1
+            <input  type="checkbox" value="1">选项1
         </label>
     </div>
 
@@ -92,7 +138,49 @@
             <input type="radio" id="optionsRadios2" name="optionsRadio" value="option2">选项2
         </label>
     </div>
+
+
+    <h2>内联样式复选框和单选按钮的按钮</h2>
+
+    <div>
+        <label class="checkbox-inline">
+            <input type="checkbox" value="1">内联选项1
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" value="2">内联选项2
+        </label>
+
+        <label class="radio-inline">
+            <input type="radio" id="opeionsRadions1-inline" name="optionsRadio-inline" value="option1">内联选项1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" id="optionsRadions2-inline" name="optionsRadio-inline" value="option2">内联选项2
+        </label>
+    </div>
 </div>
+
+<!--静态控件-->
+<div class="container">
+    <div class="row">
+        <form role="form" class="col-sm-offset-4 col-sm-4 form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">E-mail:</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">email@emample.com</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label" for="password">密码:</label>
+                <div class="col-sm-8">
+                    <input  class="form-control" type="password" id="password">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
 
 
 </body>
