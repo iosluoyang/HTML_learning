@@ -1,0 +1,39 @@
+.slide-2 {
+  background-color: #5cc2f1; }
+  .slide-2 .item-image {
+    width: 18rem;
+    height: 18rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url("../images/github-2.png"); }
+  .slide-2 .item-text {
+    width: 18rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center; }
+    .slide-2 .item-text span {
+      color: #ff3b30; }
+  .slide-2 .item-text1 {
+    width: 18rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 100;
+    position: absolute;
+    top: 24rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center; }
+

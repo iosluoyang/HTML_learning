@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+
+@import "base/_reset.css";
+@import "base/_base.css";
+@import "base/normalize.css";
+
+
+@import "components/_loading-overlay.css";
+@import "components/_btn-music.css";
+@import "components/_up-arrow.css";
+@import "components/_swiper-container.css";
+@import "components/_swiper-slide.css";
+@import "components/_icon-font.css";
+
+/*引入swiper_CSS文件*/
+@import "swiper/swiper-3.4.2.min.css";
+/*引入动画CSS文件*/
+@import "swiper/animate.min.css";
+
+/*滚动页的样式*/
+@import "_slide-1.css";
+@import "_slide-2.css";
+@import "_slide-3.css";
+@import "_slide-4.css";

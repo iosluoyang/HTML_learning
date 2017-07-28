@@ -1,0 +1,111 @@
+.slide-1 p span {
+  font-size: 2.3rem; }
+.slide-1 .item-text1 {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center; }
+.slide-1 .item-text2 {
+  width: 80%;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  margin: 0 auto;
+  text-align: left;
+  border-bottom: 1px dotted #FFFFFF; }
+.slide-1 .item-text3 {
+  width: 80%;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 18rem;
+  left: 0;
+  margin: 0 auto;
+  text-align: left;
+  border-bottom: 1px dotted #FFFFFF; }
+.slide-1 .item-text4 {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center; }
+.slide-1 .item-text5 {
+  width: 90%;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+.slide-1 .item-text6 {
+  width: 90%;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 11rem;
+  right: 0;
+  margin: 0 auto;
+  text-align: right;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+.slide-1 .item-text7 {
+  width: 90%;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 16rem;
+  left: 0;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+.slide-1 .item-text7_5 {
+  width: 90%;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 100;
+  position: absolute;
+  top: 21rem;
+  right: 0;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+.slide-1 .item-text8 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+  text-align: center; }
+.slide-1 .item-text9 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%; }
+
