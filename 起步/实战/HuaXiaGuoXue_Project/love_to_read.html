@@ -24,12 +24,12 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <!--第一页 数据展示-->
-        <div class="swiper-slide slide-1" style="background-image: url(images/star.gif); background-size: cover">
+<!--        <div class="swiper-slide slide-1" style="background-image: url(images/star.gif); background-size: cover">
             <p class="item-text1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">开始之前,让我们先来看两组数据</p>
             <p class="item-text2 ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="2s" swiper-animate-delay="2s"><span>"</span>经济能力相当，但美国儿童的阅读量却是中国儿童的六倍。<span>"</span></p>
             <p class="item-text3 ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="2s" swiper-animate-delay="5.3s"><span>"</span>2012年我国18~70周岁国民人均纸质图书的阅读量为4.39本，与2011年的4.35本相比基本持平。<span>"</span></p>
         </div>
-        <!--第二页 家长碎碎念-->
+        &lt;!&ndash;第二页 家长碎碎念&ndash;&gt;
         <div class="swiper-slide slide-1" style="background-image: url(images/bg2.jpeg); background-size: cover">
             <p class="item-text4 ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">你是否也曾这样抱怨过?</p>
             <p class="item-text5 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s" swiper-animate-delay="1s">虎妈猫爸:我们都是按照成年人的思维去挑选书籍，根本不知道什么书对孩子来说是最好的，书挑不好，孩子阅读根本没有兴趣</p>
@@ -38,7 +38,7 @@
             <p class="item-text7_5 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2s" swiper-animate-delay="4s">李爸:一直都是让孩子看唐诗三百首,精读一些经典书籍，可是发现反而让孩子更有抗拒感，对读书有了恐惧，真不知道该怎么办？</p>
 
         </div>
-        <!--第三页 我懂你的忧虑-->
+        &lt;!&ndash;第三页 我懂你的忧虑&ndash;&gt;
         <div class="swiper-slide slide-1" style="background-image: url(images/bg3.jpeg); background-size: contain">
             <p class="item-text4 ani" swiper-animate-effect="hinge" swiper-animate-duration="3s" swiper-animate-delay="5.5s" style="color: white">我懂你的忧虑</p>
             <p class="item-text8 ani" swiper-animate-effect="zoomOutUp" swiper-animate-duration="2s" swiper-animate-delay="3s" style="left: 0.5rem;top: 5rem">没有氛围</p>
@@ -53,13 +53,13 @@
             <p class="item-text9 ani" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="8s" style="left: 0rem;top: 11rem">可是……</p>
             <p class="item-text9 ani" swiper-animate-effect="flipInY" swiper-animate-duration="2s" swiper-animate-delay="10s" style="left: 0rem;top: 16rem">因为有了它</p>
         </div>
-        <!--第四页 爱上阅读.共享图书馆-->
+        &lt;!&ndash;第四页 爱上阅读.共享图书馆&ndash;&gt;
         <div class="swiper-slide slide-2">
             <div class="item-image ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
             <p class="item-text ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s"><span>爱上阅读</span>.公益图书馆</p>
             <p class="item-text1 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">做最有趣的儿童共享图书馆</p>
         </div>
-        <!--第五页 共享图书馆的定义-->
+        &lt;!&ndash;第五页 共享图书馆的定义&ndash;&gt;
         <div class="swiper-slide slide-3">
             <p class="item-text ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">什么是共享图书馆?</p>
             <div class="content ani" swiper-animate-effect="rubberBand" swiper-animate-duration="2s" swiper-animate-delay="2s">
@@ -76,7 +76,7 @@
                 <p class="right3">3.我们负责图书的日常管理和维护，当然也会为小朋友们精心推荐好的书籍</p>
                 <p class="guide">还等什么，赶紧把我往上滑开始报名吧！！</p>
             </div>
-        </div>
+        </div>-->
         <!--第六页 报名页-->
         <div class="swiper-slide slide-4">
 
@@ -85,75 +85,46 @@
             -->
 
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        填写以下信息,自动生成会员码:
-                    </h3>
-                </div>
-                <div class="panel-body">
+            <form id="demo" autocomplete="off">
+                <p>
+                    <span class="tip">姓名：</span>
+                    <input type="text" name="username">
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
+                <p>
+                    <span class="tip">手机号码：</span>
+                    <input type="tel" name="tel" class="tel">
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
-                    <div class="form-group">
-                        <span class="input-group-addon">~请输入姓名~*必填</span>
-                        <input type="text" class="form-control" id="name" placeholder="请输入小朋友的全名哦~~">
-                    </div>
-                    <div class="form-group">
-                        <span class="input-group-addon">~请选择性别~*默认为小王子</span>
-                        <select id="gender">
-                            <option value="m" selected>小王子</option>
-                            <option value="f">小公主</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <span class="input-group-addon">~请输入联系电话~*必填</span>
-                        <input type="tel" class="form-control" id="phonenum" placeholder="请输入正确的手机号码">
-                    </div>
+                <p>
+                    <span class="tip">邮箱：</span>
+                    <input type="email" name="email" class="email" placeholder="选填,输入之后可获得消息订阅">
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
-                    <div class="form-group">
-                        <span class="input-group-addon">~请输入邮箱~</span>
-                        <input type="email" class="form-control" id="e-mail" placeholder="请输入邮箱地址">
-                    </div>
+                <p>
+                    <span class="tip">密码：</span>
+                    <input type="password" name="password" id="password">
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
-                    <input class="form-control submit" type="submit">
+                <p>
+                    <span class="tip">确认密码：</span>
+                    <input type="password" name="password2">
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
-                </div>
-            </div>
+                <p>
+                    <span class="tip">性别：</span>
+                    <input type="radio" name="sex" vlaue="m"><span class="radioSpan">男</span>
+                    <input type="radio" name="sex" vlaue="f"><span class="radioSpan">女</span>
+                </p>
+                <p class="prompot"><i class="iconfont"></i></p>
 
-
-            <!--  <div id="page1" data-role="page">
-                  <div data-role="header" class="header">
-                      填写以下信息,系统自动生成会员码
-                  </div>
-
-                  <div data-role="content">
-                      <form method="GET">
-
-                          <div data-role="fieldcontain" class="contain">
-                              <label for="name">姓名:</label>
-                              <input type="text" name="name" id="name" />
-                          </div>
-                          <div data-role="fieldcontain" class="contain">
-                              <label for="gender">选择性别:</label>
-                              <select name="gender" id="gender">
-                                  <option value="m">小王子</option>
-                                  <option value="f">小公主</option>
-                              </select>
-                          </div>
-                          <div data-role="fieldcontain" class="contain">
-                              <label for="tel">家长联系电话:</label>
-                              <input type="tel" name="tel" id="tel">
-                              <span class="tips">注意,手机号码将作为您的账户名称,请务必准确填写</span>
-                          </div>
-                          <div data-role="fieldcontain" class="contain">
-                              <label for="email">邮箱地址:</label>
-                              <input type="email" name="email" id="email">
-                          </div>
-
-                          <input type="submit" data-role="submit" value="提交">
-                      </form>
-                  </div>
-              </div>-->
+                <button>确认</button>
+            </form>
 
 
 
@@ -174,10 +145,14 @@
 
 <!--百度CDN的jQuery库-->
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Bootstrap编译插件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--引入swiper_js文件-->
 <script src="js/swiper/swiper-3.4.2.jquery.min.js"></script>
 <!--引入swiper_animate文件-->
 <script src="js/swiper/swiper.animate1.0.2.min.js"></script>
+<!--引入validate表单验证文件-->
+<script src="js/formvalidate/validate-1.14.0.min.js"></script>
 <!--引入本地js文件-->
 <script src="js/baoming.js"></script>
 
