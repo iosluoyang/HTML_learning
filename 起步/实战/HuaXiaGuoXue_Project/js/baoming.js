@@ -82,6 +82,8 @@ $(document).ready(function () {
     });
 
 
+  /*初始化Bmob*/
+  Bmob.initialize("be8d52852f3156aea9297649d77922e1","bfbf659ca5d82596f7cc5d20dbd86ba2");
 
 
    /*使用vaidate插件来验证表单*/
@@ -167,8 +169,39 @@ $(document).ready(function () {
             }
         },
         submitHandler:function(form){
-            alert("提交事件!");
-            form.submit();
+            /*用户名*/
+            var name = form.username.value;
+            /*手机号*/
+            var tel = form.tel.value;
+            /*邮箱*/
+            var email = form.email.value;
+            /*密码*/
+            var password = form.password.value;
+            /*性别*/
+            var gender = form.sex.value;
+
+
+            /*使用Bmob增加一条记录*/
+            var User = Bmob.Object.extend("User");
+            var myuser = new User();
+            // 添加数据，第一个入口参数是Json数据
+            myuser.save({
+                childname: name,
+                mobilePhoneNumber: "bmob",
+                email: email,
+                password:password,
+                showpassword:password,
+                gender:gender
+            }, {
+                success: function(myuser) {
+                    alert(myuser.childname + '已经报名成功,活动详情会发送到您的手机');
+                    form.submit();
+                },
+                error: function(myuser, error) {
+                    alert("哦哦,发生错误了哦." + error.description);
+                }
+            });
+
         }
     });
 

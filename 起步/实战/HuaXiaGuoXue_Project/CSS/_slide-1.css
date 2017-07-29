@@ -1,9 +1,11 @@
 .slide-1 p span {
-  font-size: 2.3rem; }
+  font-size: 3rem;
+  font-weight:300;
+}
 .slide-1 .item-text1 {
   color: #FFFFFF;
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 2rem;
+  font-weight: 300;
   position: absolute;
   top: 5rem;
   left: 0;
@@ -13,7 +15,7 @@
 .slide-1 .item-text2 {
   width: 80%;
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: 2.2rem;
   font-weight: 100;
   position: absolute;
   top: 10rem;
@@ -24,18 +26,18 @@
 .slide-1 .item-text3 {
   width: 80%;
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: 2.2rem;
   font-weight: 100;
   position: absolute;
-  top: 18rem;
+  bottom: 8rem;
   left: 0;
   margin: 0 auto;
   text-align: left;
   border-bottom: 1px dotted #FFFFFF; }
 .slide-1 .item-text4 {
   color: #000;
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 2rem;
+  font-weight: 200;
   position: absolute;
   top: 2rem;
   left: 0;
@@ -45,7 +47,7 @@
 .slide-1 .item-text5 {
   width: 90%;
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   font-weight: 100;
   position: absolute;
   top: 6rem;
@@ -58,10 +60,10 @@
 .slide-1 .item-text6 {
   width: 90%;
   color: #000000;
-  font-size: 0.8rem;
-  font-weight: 100;
+  font-size: 1.5rem;
+  font-weight: 200;
   position: absolute;
-  top: 11rem;
+  top: 16rem;
   right: 0;
   margin: 0 auto;
   text-align: right;
@@ -71,10 +73,10 @@
 .slide-1 .item-text7 {
   width: 90%;
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   font-weight: 100;
   position: absolute;
-  top: 16rem;
+  top: 26rem;
   left: 0;
   margin: 0 auto;
   text-align: left;
@@ -84,10 +86,10 @@
 .slide-1 .item-text7_5 {
   width: 90%;
   color: #000000;
-  font-size: 0.8rem;
-  font-weight: 100;
+  font-size: 1.5rem;
+  font-weight: 200;
   position: absolute;
-  top: 21rem;
+  top: 36rem;
   right: 0;
   margin: 0 auto;
   text-align: left;
@@ -96,14 +98,14 @@
   padding: 0.5rem; }
 .slide-1 .item-text8 {
   color: white;
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 1.5rem;
+  font-weight: 300;
   position: absolute;
   text-align: center; }
 .slide-1 .item-text9 {
   color: #fff;
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 3rem;
+  font-weight: 300;
   position: absolute;
   text-align: center;
   margin: 0 auto;

@@ -19,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /*表单样式设置*/
-#demo {
+.slide-4 #demo {
     display: block;
     width: 90%;
     background: #fff;
@@ -31,22 +31,22 @@
     border-radius: 0.5rem;
 }
 
-p{
+.slide-4 p{
     height: 1.3rem;
     width: 100%;
 }
-p .tip {
+.slide-4 p .tip {
     display: inline-block;
     margin-right: 0.5rem;
     float: left;
     height: 100%;
     line-height: 1.3rem;
 }
-p .favtip{
+.slide-4 p .favtip{
     width: 100%;
     text-align: left;
 }
-input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
+.slide-4 input[type="text"],.slide-4 input[type="password"],.slide-4 input[type="tel"],.slide-4 input[type="email"]{
     outline: none;
     width: 60%;
     height: 100%;
@@ -58,7 +58,7 @@ input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
     border-bottom: 0.01rem solid #eee;
 
 }
-input[type="radio"]{
+.slide-4 input[type="radio"]{
     margin-top: 0rem;
     display: inline-block;
     outline: none;
@@ -68,14 +68,14 @@ input[type="radio"]{
     margin-right: 0.3rem;
     cursor: pointer;
 }
-.radioSpan{
+.slide-4 .radioSpan{
     float: left;
     display: inline-block;
     margin-right: 1rem;
     line-height: 1.3rem;
 }
 
-button {
+.slide-4 button {
     display: block;
     outline: none;
     margin: 0 auto;
@@ -90,23 +90,23 @@ button {
     cursor: pointer;
 }
 /*设置默认的错误提示的样式*/
-.prompot {
+.slide-4 .prompot {
     max-width: 60%;
     height: 50%;
     clear: both;
 }
-.iconfont{
+.slide-4 .iconfont{
 font-size: 0.3rem;
 }
-.false {
+.slide-4 .false {
     color: red;
 }
-.right {
+.slide-4 .right {
     color: green;
 }
-input.false {
+.slide-4 input.false {
     border-bottom: 0.05rem solid red;
 }
-input.right {
+.slide-4 input.right {
     border-bottom: 0.05rem solid green;
 }

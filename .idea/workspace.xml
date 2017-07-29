@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0467414-4b27-433c-9fa4-a372158a5097" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_base.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_reset.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/images/bg3.jpeg" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/images/bg3.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html" afterPath="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html" />
     </list>
@@ -28,58 +28,67 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="love_to_read.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="102" column="94" lean-forward="false" selection-start-line="102" selection-start-column="94" selection-end-line="102" selection-end-column="94" />
-              <folding>
-                <marker date="1501311438000" expanded="false" signature="1594:2510" ph="..." />
-                <marker date="1501311438000" expanded="false" signature="2668:4716" ph="..." />
-                <marker date="1501311438000" expanded="false" signature="4805:5265" ph="..." />
-                <marker date="1501311438000" expanded="false" signature="5352:6424" ph="..." />
-                <marker date="1501311438000" expanded="false" signature="5625:6409" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formstyle.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baoming.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-193">
-              <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#104#813#0" expanded="false" />
-                <element signature="e#918#2863#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="love_to_read.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="339">
+                  <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#8;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#9;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#10;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#11;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_slide-3.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-3.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="766">
+                  <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="_slide-3.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-3.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>video</find>
       <find>ondrag</find>
       <find>tip</find>
       <find>ul</find>
@@ -123,6 +131,7 @@
       <find>main</find>
       <find>playAnimation</find>
       <find>padding</find>
+      <find>form</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -181,15 +190,15 @@
         <option value="$PROJECT_DIR$/起步/实战/HuaXia_Project/app/src/javascripts/main.js" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/animation-control.js" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-4.css" />
-        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css" />
-        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-3.css" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_reset.css" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/_base.css" />
-        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html" />
-        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css" />
         <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js" />
+        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css" />
+        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html" />
+        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css" />
+        <option value="$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css" />
       </list>
     </option>
   </component>
@@ -200,10 +209,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="64" />
-    <option name="width" value="1533" />
-    <option name="height" value="887" />
+    <option name="x" value="123" />
+    <option name="y" value="29" />
+    <option name="width" value="1801" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -287,6 +296,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HuaXiaGuoXue_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HuaXiaGuoXue_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="CSS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -318,6 +379,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="formstyle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HuaXiaGuoXue_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTML_learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="起步" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="实战" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HuaXiaGuoXue_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,10 +497,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index29_Well.html">
-    <configuration default="false" name="index14_导航元素.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index14_导航元素.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.love_to_read.html">
     <configuration default="false" name="index18_面包屑导航.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index18_面包屑导航.html">
       <method />
     </configuration>
@@ -390,6 +508,9 @@
       <method />
     </configuration>
     <configuration default="false" name="index29_Well.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/HTML自己瞎胡搞/Bootstrap框架/index29_Well.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="love_to_read.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML_learning/起步/实战/HuaXiaGuoXue_Project/love_to_read.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -459,19 +580,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index14_导航元素.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index18_面包屑导航.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index20_标签&amp;徽章.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index22_页面标题.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index29_Well.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index18_面包屑导航.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index20_标签&amp;徽章.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index22_页面标题.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index29_Well.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.love_to_read.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index29_Well.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index22_页面标题.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index20_标签&amp;徽章.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index18_面包屑导航.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index14_导航元素.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.love_to_read.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index29_Well.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index22_页面标题.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index20_标签&amp;徽章.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index18_面包屑导航.html" />
       </list>
     </recent_temporary>
   </component>
@@ -568,12 +689,12 @@
       <workItem from="1501206931129" duration="11370000" />
       <workItem from="1501235905962" duration="101000" />
       <workItem from="1501292441043" duration="2115000" />
-      <workItem from="1501296265364" duration="10037000" />
+      <workItem from="1501296265364" duration="16195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="526737000" />
+    <option name="totallyTimeSpent" value="532895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -585,10 +706,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="64" width="1533" height="887" extended-state="0" />
+    <frame x="123" y="29" width="1801" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28769842" sideWeight="0.49303135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.101123594" sideWeight="0.49303135" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -685,14 +806,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXia_Project/app/src/scss/slides/_slide-3.scss" />
-    <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index29_Well.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="93" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="17" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index13_输入框组.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -750,27 +863,6 @@
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXia_Project/app/src/scss/main.scss" />
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.scss" />
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css.map" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-4.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -780,18 +872,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/swiper-3.4.2.min.css" />
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/animate.min.css" />
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="10" lean-forward="false" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXia_Project/app/src/index.html" />
     <entry file="file://$PROJECT_DIR$/起步/HTML自己瞎胡搞/Bootstrap框架/index15_导航栏.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/formvalidate/validate-1.14.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="160" column="18" lean-forward="true" selection-start-line="160" selection-start-column="18" selection-end-line="160" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#104#813#0" expanded="false" />
+            <element signature="e#918#2863#0" expanded="false" />
+            <element signature="e#5855#6080#0" expanded="false" />
+            <element signature="e#6298#6378#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -812,54 +937,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/formvalidate/validate-1.14.0.min.js">
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/base/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-1339">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/index.css">
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/swiper/animate.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="303">
+          <caret line="5" column="1976" lean-forward="true" selection-start-line="5" selection-start-column="1976" selection-end-line="5" selection-end-column="1976" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/images/bg3.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/love_to_read.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="102" column="94" lean-forward="false" selection-start-line="102" selection-start-column="94" selection-end-line="102" selection-end-column="94" />
+        <state relative-caret-position="339">
+          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
           <folding>
-            <marker date="1501311438000" expanded="false" signature="1594:2510" ph="..." />
-            <marker date="1501311438000" expanded="false" signature="2668:4716" ph="..." />
-            <marker date="1501311438000" expanded="false" signature="4805:5265" ph="..." />
-            <marker date="1501311438000" expanded="false" signature="5352:6424" ph="..." />
-            <marker date="1501311438000" expanded="false" signature="5625:6409" ph="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#5;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#6;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#7;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#8;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#9;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#10;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#11;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/js/baoming.js">
+    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/_slide-3.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#104#813#0" expanded="false" />
-            <element signature="e#918#2863#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/起步/实战/HuaXiaGuoXue_Project/CSS/formstyle/formstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        <state relative-caret-position="810">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
