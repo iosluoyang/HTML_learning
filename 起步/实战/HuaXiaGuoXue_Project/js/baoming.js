@@ -106,11 +106,10 @@ $(document).ready(function () {
         },
         highlight: function(element, errorClass, validClass) {
             $(element).removeClass('right').addClass('false');
-            $(element).parent().next().removeClass('right').addClass('false').find('i').html('亲,');
         },
         success: function(span){
             span.parent().removeClass('false').addClass('right');
-            span.prev('.iconfont').html('验证通过');
+            span.prev('.iconfont').html('通过');
         },
         rules: {
             username: {
@@ -182,23 +181,24 @@ $(document).ready(function () {
 
 
             /*使用Bmob增加一条记录*/
-            var User = Bmob.Object.extend("User");
+            var User = Bmob.Object.extend("_User");
             var myuser = new User();
             // 添加数据，第一个入口参数是Json数据
             myuser.save({
+                username:tel,
                 childname: name,
-                mobilePhoneNumber: "bmob",
+                mobilePhoneNumber: tel,
                 email: email,
                 password:password,
                 showpassword:password,
                 gender:gender
             }, {
                 success: function(myuser) {
-                    alert(myuser.childname + '已经报名成功,活动详情会发送到您的手机');
+                    alert(myuser.attributes.childname + '已经报名成功,请注意查收短信哦');
                     form.submit();
                 },
                 error: function(myuser, error) {
-                    alert("哦哦,发生错误了哦." + error.description);
+                    alert("哦哦,发生错误了哦.请重新提交");
                 }
             });
 
