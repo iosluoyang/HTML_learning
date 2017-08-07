@@ -26,6 +26,21 @@ jQuery.extend(jQuery.validator.messages, {
 
 $(document).ready(function () {
 
+    /*设置音乐和向上按钮的动画*/
+    var bgMusic = $('audio').get(0);
+    var $btnMusic = $('.btn-music');
+    var $upArrow = $('.up-arrow');
+
+    // background music control
+    $btnMusic.click(function () {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            $(this).removeClass('paused');
+        } else {
+            bgMusic.pause();
+            $(this).addClass('paused');
+        }
+    });
   /*初始化swiper*/
     new Swiper('.swiper-container', {
         mousewheelControl: false,
@@ -57,12 +72,6 @@ $(document).ready(function () {
         },
         onSlideChangeEnd: function(swiper){
             swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-        }
-
-
-        /*onInit: function (swiper) {
-            animationControl.initAnimationItems();  // get items ready for animations
-            animationControl.playAnimation(swiper); // play animations of the first slide
         },
         onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
             if (swiper.activeIndex === swiper.slides.length - 1) {
@@ -71,14 +80,11 @@ $(document).ready(function () {
                 $upArrow.show();
             }
         },
-        onTransitionEnd: function (swiper) {       // play animations of the current slide
-            animationControl.playAnimation(swiper);
-        },
         onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
             if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
                 bgMusic.play();
             }
-        }*/
+        }
     });
 
 
@@ -194,8 +200,18 @@ $(document).ready(function () {
                 gender:gender
             }, {
                 success: function(myuser) {
-                    alert(myuser.attributes.childname + '已经报名成功,请注意查收短信哦');
-                    form.submit();
+                    /*报名完成之后显示报名成功*/
+                    /*更改背景颜色*/
+                    $('.slide-4').css("background-color","#9993c1")
+                    /*移除表单form*/
+                    $('#demo').remove();
+                    /*显示背景图片和文字等*/
+                    var imagehtml = "<div class=\"item-image ani\" swiper-animate-effect=\"flipInX\" swiper-animate-duration=\"1s\" swiper-animate-delay=\"1s\"></div>";
+                    var titlehtml = "<p class=\"item-text ani\" swiper-animate-effect=\"bounceInDown\" swiper-animate-duration=\"1s\" swiper-animate-delay=\"2s\">报名成功!</p>"
+                    var contenthtml = "<p class=\"content ani\" swiper-animate-effect=\"bounceInUp\" swiper-animate-duration=\"1s\" swiper-animate-delay=\"3s\">稍后我们会以短信形式通知您活动详情,注意查收哦</p>"
+                    $('.slide-4').append(imagehtml+titlehtml+contenthtml);
+
+                    form.reset();
                 },
                 error: function(myuser, error) {
                     alert("哦哦,发生错误了哦.请重新提交");

@@ -1,9 +1,9 @@
 .up-arrow {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   position: fixed;
-  bottom: 0.2rem;
-  left: 1rem;
+  bottom: 0.5rem;
+  left: 50%;
   transform: translate3d(-50%, 0, 0);
   -webkit-transform: translate3d(-50%, 0, 0);
   z-index: 999;
@@ -12,12 +12,12 @@
   padding: 0;
   animation: upArrowAni 2s infinite linear; }
   .up-arrow i {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 4rem;
     color: #fff;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
 
 @keyframes upArrowAni {
   0% {

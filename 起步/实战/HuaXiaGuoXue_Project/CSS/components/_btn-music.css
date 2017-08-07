@@ -1,6 +1,6 @@
 .btn-music {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-color: transparent;
   position: fixed;
   top: 1.5rem;
@@ -11,12 +11,12 @@
   padding: 0;
   animation: btnMusicAni 3s infinite linear; }
   .btn-music i {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 3rem;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     position: absolute;
     top: -0.125rem;
     left: -0.125rem; }
@@ -30,4 +30,3 @@
   100% {
     transform: rotate(360deg); } }
 
-/*# sourceMappingURL=_btn-music.css.map */

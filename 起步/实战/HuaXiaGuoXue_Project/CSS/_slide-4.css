@@ -1,0 +1,40 @@
+.slide-4 {
+    background-color: orange;
+}
+.slide-4 .item-image {
+    width: 28rem;
+    height: 28rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url("../images/github-3.png"); }
+.slide-4 .item-text {
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.slide-4 .content {
+    width: 90%;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: inherit;
+    position: absolute;
+    bottom: 5rem;
+    left: 5%;
+    text-align: left;
+    border: 1px solid whitesmoke;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}

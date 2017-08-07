@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'my-custom-icon-font';
-  src: url("../../fonts/my-custom-icon-font.eot?90099692");
-  src: url("../../fonts/my-custom-icon-font.eot?90099692#iefix") format("embedded-opentype"), url("../../fonts/my-custom-icon-font.woff?90099692") format("woff"), url("../../fonts/my-custom-icon-font.ttf?90099692") format("truetype"), url("../../fonts/my-custom-icon-font.svg?90099692#my-custom-icon-font") format("svg");
+  src: url("../../images/my-custom-icon-font.eot?90099692");
+  src: url("../../images/my-custom-icon-font.eot?90099692#iefix") format("embedded-opentype"), url("../../images/my-custom-icon-font.woff?90099692") format("woff"), url("../../images/my-custom-icon-font.ttf?90099692") format("truetype"), url("../../images/my-custom-icon-font.svg?90099692#my-custom-icon-font") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
