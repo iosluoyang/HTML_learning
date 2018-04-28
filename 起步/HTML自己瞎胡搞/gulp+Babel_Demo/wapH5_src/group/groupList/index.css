@@ -1,0 +1,17 @@
+#wrapper{background: #f7f7f7;position: absolute;top:4.4rem; }
+#scroller{padding-bottom: 4.4rem;}
+
+/*拼团列表*/
+.groList li{background: #fff;padding: 1rem;margin-bottom: 1rem}
+.groList li .pic{height: 19rem;position:relative;background: no-repeat center center;background-size: cover}
+.groList li .pic:after{content: "";width:5rem;height:5rem;position:absolute;background: url("../../public/images/group/tuanGouIng.png") no-repeat left top;background-size: 100%;}
+.groList li .tuanGouOver:after{background-image: url("../../public/images/group/tuanGouOver.png")}
+
+.groList li .title{line-height: 4rem}
+.groList li .groupNum span{display: inline-block;border: 1px #ff3b30 solid;padding:0 .5rem;line-height: 2.4rem}
+.groList li .groupNum span:first-of-type{color:#ff3b30;border-radius:4px 0 0 4px}
+.groList li .groupNum span:last-of-type{background: #ff3b30;color:#fff;border-radius: 0 4px 4px 0}
+
+.groList li .price{line-height: 2.4rem}
+
+.groList li .price span:first-of-type{margin-right: 5px;text-decoration: line-through }

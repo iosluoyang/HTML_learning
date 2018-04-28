@@ -1,0 +1,178 @@
+
+.container .pullDownIcon {height: 4.4rem;line-height:  4.4rem;text-align: center;  }
+.container { -webkit-overflow-scrolling: touch;}
+
+/*轮播图*/
+.lunBo{background:url("../../../public/images/base/defaultLogo.png") no-repeat center center;background-size: cover}
+.lunBo ul li{width:100%;background:no-repeat center center;background-size: cover}
+.swiper-pagination-bullet-active{background: #ff3b30;}
+
+/*商品信息*/
+.wrap,.num,.contact,.morepromotion{padding: 0 1.5rem;background: #fff}
+.wrap{margin-bottom: 1rem;}
+.wrap .title{padding: .8rem 0}
+.wrap .price{height: 2rem}
+.wrap .price span:last-of-type{margin-left: 5px;text-decoration: line-through}
+.wrap .jianjie{line-height: 2rem;margin-bottom: 1rem}
+.wrap .priceGroup {background: #fff;margin-bottom: .8rem}
+.wrap .priceGroup li{float: left;width: 33.3%}
+.wrap .priceGroup li p:first-of-type{line-height: 2.5rem;font-size: 2rem}
+.wrap .priceGroup li p:last-of-type{line-height: 2.3rem;font-size: 1.2rem}
+
+
+.wrap .guiGe{line-height:3rem;}
+.wrap .guiGe span{color:#666;margin-right: 1rem}
+.wrap .moreGuiGe{padding-right:3.5rem;display: inline-block;background: url("../../../public/images/products/slide.png") no-repeat right center;background-size: 3rem}
+
+.wrap .guiGeArr{background: #f3f3f5;border-radius: .4rem;padding: 1rem 2rem;margin:0 -0.8rem;position: relative}
+.wrap .guiGeArr:before{content: "";position:absolute;left:3rem;top:-0.5rem;border-bottom:.5rem #f3f3f5 solid;border-left: .5rem transparent solid;border-right: .5rem transparent solid}
+.wrap .guiGeArr div{line-height:2rem;}
+.wrap .guiGeArr .noStockQuantity{color:#999;}
+.wrap .guiGeArr span:last-of-type{color:#666;margin-left: 1rem}
+
+.wrap .address{height: 3rem;line-height: 3rem;}
+
+.wrap .service{height: 3rem;line-height: 3rem;}
+.wrap .service span{display:inline-block;margin-right:.5rem;line-height:2rem;border: 1px #ff3b30 solid;border-radius:4px;padding: 0 1rem 0 2.5rem ;
+    background: url("../../../public/images/products/icon2.png") no-repeat .5rem center;background-size: 1.5rem 1.2rem}
+.wrap .service span:first-of-type{background-image: url("../../../public/images/products/icon1.png")}
+
+/*促销海报相关样式*/
+.promotionhaibaodiv{background: no-repeat center;background-size: cover;box-sizing:border-box;-webkit-box-sizing: border-box;padding: 1rem 1rem 1rem 20%;margin: 0 -1.5rem 0.5rem -1.5rem;}
+.promotionhaibaodiv p{width: 100%;height: 100%;position: relative;}
+.promotionhaibaodiv .haibaowenan{color: #ffffff;font-size: 1.3rem;position:absolute; top:50%; left:0;transform: translate(0,-50%);-webkit-transform:translate(0,-50%);}
+
+.wrap .scopeValues{padding-bottom: 1rem}
+
+
+/*选择数量*/
+.num{margin-bottom: 1rem;line-height: 4.4rem;height: 4.4rem}
+.num .numGroup{height:2.4rem;padding-top: .4rem;line-height: 0;}
+.num .numGroup span{display: inline-block;width:2.4rem;height:2.4rem;vertical-align:bottom; background:no-repeat center center;background-size: 100%}
+.num .numGroup .minus{background-image: url("../../../public/images/products/minusGrey.png")}
+.num .numGroup .plus{background-image: url("../../../public/images/products/plus.png")}
+.num .numGroup .plus:active{background-image:url("../../../public/images/products/plusAct.png")}
+.num .numGroup .minus:active{background-image:url("../../../public/images/products/minusGrey.png")}
+.num .numGroup .canMinus{background-image:url("../../../public/images/products/minusBlack.png")}
+.num .numGroup .canMinus:active{background-image:url("../../../public/images/products/minusBlackAct.png")}
+.num .numGroup input{width:3rem;height:2.4rem;border:none;vertical-align: bottom;border-radius: 0;font-size: 1.3rem;
+    background: url("../../../public/images/products/border.png") no-repeat left center;background-size: 100%}
+
+.num .numGroups p{line-height: 1.5rem;clear:both}
+
+/*配送方式*/
+.sendTypeWrap>div{display: none}
+.sendTypeWrap .active{display: block}
+.sendTypeWrap h3{line-height: 4.4rem;height:4.4rem;padding: 0 1.5rem;
+    background:#fff url("../../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem}
+
+.sendTypeWrap h3 span{margin-left: 1.2rem;display: inline-block;line-height: 2.4rem;padding: 0 1rem;
+    border-radius: .8rem;border:.1rem #c0bebe solid;background: #f7f7f7}
+.sendTypeWrap h3 a{padding: 0 1rem}
+
+.sendTypeWrap>div[deliveryType='3']{margin-bottom: 1rem;}
+.sendTypeWrap>div[deliveryType='3'] h3{background: #fff}
+.sendTypeWrap>div[deliveryType='3'] div{line-height: 4.4rem;height:4.4rem;padding-right:1.5rem;}
+.sendTypeWrap .sendPlan{padding: 1.5rem}
+.sendTypeWrap .sendPlan .autoSend ul{background: #fff;border:.1rem #ededed solid;border-bottom: none;overflow: hidden;}
+.sendTypeWrap .sendPlan .autoSend ul li{float:left;width:49.8%;height:44px;line-height:44px;border-right:1px #ededed solid;border-bottom:1px #ededed solid}
+.sendTypeWrap .sendPlan .autoSend ul li:nth-child(2n){border-right: none}
+.sendTypeWrap .sendPlan .autoSend ul li span{margin-left: 1rem}
+.sendTypeWrap .sendPlan .autoSend .slide{padding: .5rem 0;}
+.sendTypeWrap .sendPlan .autoSend .slide img{height:1.5rem;width: 1.1rem}
+.sendTypeWrap .sendPlan .handleSend p{line-height: 3.5rem;padding-left: 3rem;
+    background: url("../../../public/images/products/icon3.png") no-repeat 1rem center;background-size: 1.6rem}
+.sendTypeWrap .sendPlan .handleSend p:last-of-type{background-image: url("../../../public/images/products/icon4.png")}
+.sendTypeWrap .sendPlan .handleSend p span{margin-left: 1rem;color: #666}
+
+
+
+/*联系卖家*/
+.contact,.morepromotion{line-height: 4.4rem;height: 4.4rem;}
+.contact a{float: right;width: 6.4rem;height: 4.4rem;background: url("../../../public/images/products/phone.png") no-repeat center center;background-size:3rem}
+/*.contact .msg{background-image: url("../images/icon4.png")}*/
+.morepromotion{margin-top:1rem;background:#fff url("../../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem;}
+
+/*商品详情*/
+.tabContent{background: #fff;padding:1rem 0;}
+.tabContent .title,.tabContent .contents,.tabContent .detail{padding:0 1rem;margin-bottom:1rem;}
+.tabContent .contents{word-break: break-all;}
+.tabContent .contents p{margin-bottom: 1rem;}
+.tabContent .tab1Content .img>img{width: 100%}
+.tabContent .detail pre{white-space: pre-wrap}
+
+/*选项卡内容*/
+.contentWrap .tabs{height: 4.2rem;background: #f7f7f7}
+.contentWrap .tabs li{width: 50%;line-height: 4rem;height:4rem;border-bottom: 2px solid #f7f7f7;transition: 0.3s}
+.contentWrap .tabs .active{color: #ff3b30;border-bottom: .2rem solid #ff3b30}
+
+/*评价内容*/
+.tab2Content{display: none}
+.tab2Content>div{line-height: 4rem;}
+.tab2Content .commentList li{border-bottom: 1px #ededed solid;padding:1rem;}
+.tab2Content .commentList li .pic{width:5rem;height:5rem;border-radius: 50%;margin-right:1rem;background:no-repeat center center;background-size: cover}
+.tab2Content .commentList li time{color:#bababa}
+.tab2Content .commentList li .name{height:2rem;}
+.tab2Content .commentList li .stars img{width: 1.5rem;margin:.5rem 0 }
+.tab2Content .commentList li .cont{padding-left: 5.5rem;}
+
+
+/*立即购买*/
+.submit{height: 4.4rem;line-height: 4.4rem;width:100%;position:fixed;left:0;bottom:0;background: #ff3b30;color:#fff}
+
+/*商品下架展示*/
+.noPro{padding: 40% 0 0}
+.noPro img{width: 70%;margin-bottom: 7rem}
+.noPro a{display: inline-block;width: 10rem;height: 4.3rem;line-height: 4.3rem;background:#fff;border:.1rem #ff3b30 solid;border-radius: .4rem}
+
+.goTop{bottom:6rem}
+
+
+
+/*编辑配送方式*/
+nav{height: 4.9rem;line-height: 4.9rem;background: #fff;border-bottom:.1rem solid #ededed}
+nav p{width: 50%;float: left;background: url("../../../public/images/products/icon6.png") no-repeat 76% center;background-size: 1.5rem}
+nav .active{background-image: url("../../../public/images/products/icon5.png") }
+
+.main{background: #fff;border-bottom: .1rem #ededed solid}
+.main>div{display: none}
+.main>.active{display: block}
+.main>div h3{padding: 1.8rem 0 1.8rem 5.3rem;background: url("../../../public/images/products/icon3.png") no-repeat 1rem center;background-size: 2rem}
+.main ul{padding: 0 1.5rem 0 5.3rem}
+.main ul li{padding: .6rem 0;margin-bottom: .8rem}
+
+
+.main ul li p{line-height: 2.4rem}
+.main ul li p span:last-of-type{margin-left: 1rem;}
+.main ul li div{height:2.4rem;padding-top: .4rem;line-height: 0;}
+.main ul li div span{display: inline-block;width:2.4rem;height:2.4rem;vertical-align:bottom; background:no-repeat center center;background-size: 100%}
+.main ul li div .minus{background-image: url("../../../public/images/products/minusGrey.png")}
+.main ul li div .plus{background-image: url("../../../public/images/products/plus.png")}
+
+.main ul li div .plus:active{background-image:url("../../../public/images/products/plusAct.png")}
+.main ul li div .minus:active{background-image:url("../../../public/images/products/minusGrey.png")}
+.main ul li div .canMinus{background-image:url("../../../public/images/products/minusBlack.png")}
+.main ul li div .canMinus:active{background-image:url("../../../public/images/products/minusBlackAct.png")}
+.main ul li div input{width:3rem;height:2.4rem;border:none;vertical-align: bottom;border-radius: 0;font-size: 1.3rem;
+    background: url("../../../public/images/products/border.png") no-repeat left center;background-size: 100%}
+
+
+
+
+.main .addMore{height: 3.5rem;line-height: 3.5rem;padding-left: 8rem;margin-bottom: 1rem;
+    background: url("../../../public/images/products/icon7.png") no-repeat 5.3rem center;background-size:2.2rem }
+
+.mid{padding: 2.2rem 2rem 4.4rem  3.2rem}
+.mid h3{line-height: 2.9rem}
+.mid p{line-height: 2rem;margin-bottom: 1rem}
+
+.bot{line-height:4.4rem;height:4.4rem;width:100%;position:fixed;left:0;bottom:0;color:#fff;background: #ff3b30}
+.bot img{width: 1.5rem;vertical-align: middle;margin-right: .5rem}
+.bot span{width: 1.5rem;vertical-align: middle}
+
+.noData {  display: block;  }
+
+
+
+
+

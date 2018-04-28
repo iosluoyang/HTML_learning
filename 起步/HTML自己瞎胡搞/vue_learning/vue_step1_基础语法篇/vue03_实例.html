@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue03_实例</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+
+
+<script>
+
+    //原始数据对象
+    var data = {a:1}
+    //该对象被加入到一个Vue实例中
+    var vm = new Vue({
+        //值得注意的是只有当实例被创建时 data 中存在的属性才是响应式的
+        //其余都不是响应式的 如果刚开始不确定数据的话则通过设置默认值即可
+        data:data
+
+        //这里唯一的例外是使用 Object.freeze()
+        //这会阻止修改现有的属性，也意味着响应系统无法再追踪变化
+    })
+
+    //获得该实例中的属性
+    //返回源数据中对应的字段
+    console.log("vm.a = " + vm.a + "---" + "data.a = " +  data.a)
+
+    //改变属性会影响到原始数据
+    vm.a = 2
+    console.log("vm.a = " + vm.a + "---" + "data.a = " +  data.a)
+
+    //反之亦然
+    data.a = 3
+    console.log("vm.a = " + vm.a + "---" + "data.a = " +  data.a)
+
+
+</script>
+
+
+<div id="example">
+    {{ a }}
+    <input type="text" v-model="a">
+</div>
+
+<script>
+
+    //除了数据属性，Vue 实例还暴露了一些有用的实例属性与方法
+    //它们都有前缀 $，以便与用户定义的属性区分开来
+
+    var data1 = {a:1}
+    var vm = new Vue({
+        el:"#example",
+        data:data1
+    })
+
+    vm.$watch('a',function (newValue,oldValue) {
+
+        console.log('vm实例中的a发生了变动,最新值为:' + newValue + "----" + "旧值为:" + oldValue)
+
+    })
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

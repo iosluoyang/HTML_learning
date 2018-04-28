@@ -1,0 +1,17 @@
+header .search{right: 1rem;line-height: 3rem;}
+/*搜索页面*/
+header input{display:block;width:22rem;margin: .4rem auto;border-radius: .4rem;border: thin solid #ededed ;padding: .8rem 0 .8rem 2.7rem;
+    background: url("../../../public/images/base/searchGray.png") no-repeat .5rem center;background-size: 2rem}
+
+.fetchAddList{background: #fff}
+.fetchAddList li{padding:2rem 8rem 2rem 1.5rem;border-bottom: .1rem #ededed solid;
+    background: url("../../../public/images/personal/radioNormal.png") no-repeat 90% center;background-size: 2.2rem}
+.fetchAddList .active{background-image:url("../../../public/images/personal/radioSelected.png") }
+.fetchAddList li h3{margin-bottom: 1rem}
+.fetchAddList li p{color:#999;margin-bottom: 1rem;padding-left: 2rem;font-size: 1.4rem;
+    background: url("../../../public/images/personal/icon1.png") no-repeat left top;background-size: 1.3rem}
+.fetchAddList li .address{background-position-y:.2rem }
+.fetchAddList li .time{background-image:url("../../../public/images/personal/icon2.png") }
+.fetchAddList li .tel{background-image:url("../../../public/images/personal/icon3.png");margin-bottom: 0 }
+
+

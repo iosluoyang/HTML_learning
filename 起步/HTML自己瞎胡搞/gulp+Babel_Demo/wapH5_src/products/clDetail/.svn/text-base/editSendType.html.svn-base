@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑配送方式</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="css/index12211018.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body ontouchstart="">
+
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <h2 class="f18">编辑配送方式</h2>
+</header>
+
+
+<!--导航-->
+<nav class="t_center grey6 f15">
+    <p deliveryType="1">自动配送</p>
+    <p deliveryType="2">手动配送</p>
+</nav>
+
+<section class="main f14">
+    <div deliveryType="1" class="tabCont1">
+        <h3 class="red"></h3>
+        <ul></ul>
+    </div>
+    <div deliveryType="2" class="tabCont2">
+        <h3 class="red"></h3>
+        <ul>
+            <li class="clearfix">
+                <div class="f_right ">
+                    <span class="minus canMinus"></span><input  class='t_center' type='number' onpaste='return false;' pattern='[0-9]*'  ><span class="plus"></span>
+                </div>
+                <p></p>
+            </li>
+            <li class="clearfix">
+                <div class="f_right">
+                    <span class="minus canMinus"></span><input  class='t_center' type='number' onpaste='return false;' pattern='[0-9]*'><span class="plus"></span>
+                </div>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="mid f13 grey6">
+    <h3 class="f15">备注：</h3>
+    <p>手动配送是指 用户可以指定首次配货日期份数，其他的用户根据自己需要时，让商家给您发货。</p>
+    <p>自动配送是指系统自动生成较均等的批量配送次数。</p>
+</section>
+
+<section class="bot t_center f17"><img src="../../public/images/products/icon8.png"><span>完成</span></section>
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="js/editSendType.js"></script>
+
+</html>

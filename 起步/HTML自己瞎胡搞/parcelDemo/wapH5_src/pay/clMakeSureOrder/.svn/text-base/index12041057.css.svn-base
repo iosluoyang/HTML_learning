@@ -1,0 +1,62 @@
+body{padding-bottom: 4.4rem;}
+section h3{height: 4rem;line-height: 4rem;background: #f7f7f7;padding: 0 1rem;border-bottom: .1rem #ededed solid}
+.sec1,.sec2,.sec3,.sec5,.sec6{background: #fff}
+/*选择地址*/
+.sec1 li{padding:1rem 2rem 1rem 1rem;;border-bottom: .1rem solid #ededed;background: url("../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem;}
+.sec1 .hasAdd span{display:inline-block;margin-right: .5rem;}
+.sec1 .noUseAdd span{display:inline-block;line-height: 6rem;padding-left:3.9rem;background: url("../../public/images/products/icon9.png") no-repeat 1rem center;background-size: 2rem;}
+
+/*支付方式*/
+.sec2 li{height: 4.5rem;line-height: 4.5rem;padding: 0 1rem}
+/*.sec6 li{padding:1.5rem 1rem}*/
+.sec2 li{border-bottom: 1px #ededed solid;background:url("../../public/images/products/radioNormal.png") no-repeat 97% center;background-size: 2.2rem; }
+.sec2 .active{background-image: url("../../public/images/products/radioSelected.png")}
+.sec2 li span{display:inline-block;padding-left: 3rem;background:  no-repeat left center;background-size:2rem;}
+
+
+/*商品清单*/
+.sec3 .mid{background: #fff url("../../public/images/products/border2.png") no-repeat 1rem center;background-size:.5rem;
+    padding: 0 1rem 0 2.4rem ;line-height: 4.4rem;height: 4.4rem;border-bottom: .1rem solid #ededed}
+.sec3 .mid span{padding-left:2rem;background: url("../../public/images/products/icon10.png") no-repeat left center;background-size: 1.4rem}
+.sec3 .proList{margin-bottom: 5rem}
+.sec3 .proList li>div{padding:1rem;border-bottom: 1px #ededed solid}
+.sec3 .proList .pic{width: 6rem;height: 6rem;margin-right:.5rem;background:url("../../public/images/base/defaultShopAvatar.png") no-repeat center center;background-size: cover}
+.sec3 .proList .leftDiv{width:18rem;}
+.sec3 .proList .title,.sec3 .proList .price{line-height: 1.8rem;}
+.sec3 .proList .rightDiv{width:9rem;text-align: right;}
+.sec3 .proList .color,.sec3 .proList .num,.sec3 .proList .sendType{color:#999;}
+.sec3 .proList .color{line-height: 2.8rem}
+.sec3 .proList .num{line-height: 2.6rem}
+.sec3 .proList li .row2{padding: 2.7rem 1rem;line-height: 2.6rem}
+.sec3 .proList li .row2>div{width: 6.5rem}
+.sec3 .proList li .row2 ul{margin-left: 8rem;}
+.sec3 .proList li .row2 ul li{float: left;width: 50%}
+.sec3 .proList li .row2 ul .handle{width:100%}
+.sec3 .proList .row3 span{display: inline-block;line-height:4rem;}
+.sec3 .proList .row3 textarea{width: 80%;padding:1.2rem 0 0 1rem;vertical-align: top;font-size: 1.3rem}
+.sec3 .proList .row3 textarea:-moz-placeholder {font-size: 1.3rem;}
+.sec3 .proList .row3 textarea::-moz-placeholder {font-size: 1.3rem;}
+.sec3 .proList .row3 textarea::-webkit-input-placeholder {font-size: 1.3rem;}
+
+.sec3.bot{line-height: 4rem;height: 4rem}
+
+
+/*按钮部分(总价展示)*/
+.sec5{height: 5rem;position: fixed;bottom:0;width: 100%}
+.sec5 div{height: 5rem;width: 60%;}
+.sec5 div p{margin-left:1rem;align-items:center; display: -webkit-flex;}
+.sec5 div p.promotiontag{color: #999;}
+.sec5 .makeOrder{height: 100%;width: 40%;background: #ff3b30;color:#fff}
+
+/*送货上门或自取*/
+
+.sec6 li{padding:0 1rem;line-height: 4.5rem;border-bottom: 1px #ededed solid;}
+.sec6 .ziTi{background: url("../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem;}
+.sec6 li span{display: inline-block;padding-left: 3rem;background:url("../../public/images/products/radioNormal.png") no-repeat left center;background-size: 2.2rem; }
+.sec6 .active span{background-image: url("../../public/images/products/radioSelected.png")}
+.sec6 li div{width: 60%;margin-right:2rem;}
+
+.sec7{padding:1rem;height: 2rem;line-height: 2rem}
+/*订单时间提示*/
+.sec8{padding:0 1rem;background: rgba(0,0,0,0.3);height:4.4rem;line-height: 4.4rem;width: 100%;
+    position: fixed;left: 0;bottom:5rem;color:#fff}

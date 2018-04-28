@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认下单</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="../clMakeSureOrder/index12041057.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back()" class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">确认订单</h2>
+</header>
+
+
+<!--选择地址-->
+<section class="sec1">
+    <ul>
+        <li class="hasAdd f16 hide">
+            <span>配送方式</span><span class="grey9"></span><br>
+            <span class="grey6"></span>
+        </li>
+        <li class="noUseAdd hide"><span class="red f15">暂无可用地址</span></li>
+    </ul>
+</section>
+
+<!--配送方式-->
+<section class="sec6">
+    <h3 class="grey9 f14">配送方式</h3>
+    <ul class="f16">
+        <li class="hide" sendType="1"><span>送货上门</span></li>
+        <li class="ziTi hide" sendType="2"><span>用户自提</span><div class="f_right oneClamp f12 grey9 t_right"></div></li>
+    </ul>
+</section>
+
+
+<!--支付方式-->
+<section class="sec2">
+    <h3 class="grey9 f14">支付方式</h3>
+    <ul class="f16"></ul>
+</section>
+
+<!--商品清单-->
+<section class="sec3">
+    <h3 class="grey9 f14">商品清单</h3>
+    <div class="mid f15 grey6">定制生活<span class="f_right f12 grey9"></span></div>
+    <ul class="proList"></ul>
+</section>
+
+
+<!--共计-->
+<section class="sec7 t_right oneClamp f14"></section>
+<!--确认下单-->
+<section class="makeSureOrderBtn sec5 clearfix">
+    <div class="f_left f16">
+        <p class="promotiontag f13"></p>
+        <p class="totalprice">总价：<span class="red"></span></p>
+    </div>
+    <button class="f_left t_center makeOrder f18">确认下单</button>
+</section>
+
+
+<!--订单时间提示-->
+<section class="sec8 f14 hide"></section>
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../base/index12091123.js"></script>
+<script src="../clMakeSureOrder/index12161357.js"></script>
+
+</html>

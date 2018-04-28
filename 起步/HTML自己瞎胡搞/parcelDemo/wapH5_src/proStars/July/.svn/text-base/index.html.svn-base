@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title></title>
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+
+
+    <!--加载系统默认样式表-->
+    <link rel="stylesheet" href="../../public/css/reset134.css">
+    <link rel="stylesheet" href="CSS/July.css">
+
+
+</head>
+<body>
+<ul></ul>
+
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script type="text/javascript" src="../../public/js/webViewFun134.js"></script>
+
+<script type="text/javascript" src="../../public/js/jquery.lazyload.js"></script>
+<script src="js/July12171021.js"></script>
+</body>
+</html>

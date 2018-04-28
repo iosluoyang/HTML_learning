@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="../public/images/base/favicon.ico" />
+    <!--系统默认样式表-->
+    <link rel="stylesheet" href="../public/css/reset134.css">
+    <!--下拉刷新上拉加载的控件样式表-->
+    <link rel="stylesheet" href="../public/css/mescroll.min.css">
+    <!--该文件的样式表-->
+    <link rel="stylesheet" href="css/searchresult.css">
+</head>
+<body>
+
+<!--<div id="mescroll" class="mescroll"> body为滚动区域,则无需设置class="mescroll"的div-->
+<!--<div class="mescroll-bounce"> body为滚动区域,不支持mescroll-bounce的设置-->
+
+<!--商品搜索结果-->
+<ul id="dataList" class="data-list"></ul>
+
+<script src="../public/js/environment134.js"></script>
+<script src="../public/js/apiUrl134.js"></script>
+<script src="../public/js/public134.js"></script>
+<script src="../public/js/webViewFun134.js"></script>
+<!--下拉刷新上拉加载的控件-->
+<script src="../public/js/mescroll.min.js"></script>
+<script src="js/searchresult.js"></script>
+</body>
+</html>

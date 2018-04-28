@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+
+<title></title>
+  <link rel="shortcut icon" href="../public/images/base/favicon.ico" />
+
+  <!--加载系统默认样式表-->
+  <link rel="stylesheet" href="../public/css/reset134.css">
+  <link rel="stylesheet" href="css/index10301045.css">
+
+</head>
+
+<body oncontextmenu="event.returnValue=false" onselectstart="event.returnValue=false">
+
+<!--标题-->
+<p class="title">超级社区幸运大转盘</p>
+
+<!--转盘-->
+<section id="turntable" class="gb-turntable hide">
+
+  <!--转盘外轮廓-->
+  <div class="gb-turntable-container">
+    <canvas class="gb-turntable-canvas" width="300" height="300">抱歉！浏览器不支持。</canvas>
+  </div>
+
+  <!--抽奖指针-->
+  <a class="gb-turntable-btn" href="javascript:;">抽奖</a>
+
+
+</section>
+<!--活动须知-->
+<div class="reward_list_box">
+  <!--<img class="zwardImg" src="images/new_03.png" alt="">-->
+  <p class="reward_list">超级社区海上牧场定制基地探秘直播,海上定制基地探访、于建嵘老师直播首秀、海上采捞、海钓比赛、篝火晚会，和当地村民一起嗨起来。</p>
+  <p class="copyright">活动最终解释权归超级社区所有</p>
+</div>
+<!--输入框及其浮层-->
+<div id="dialogBg"></div>
+<div id="dialog" class="animated">
+  <img class="dialogIco" width="50" height="50" src="images/ico.png" alt="" />
+  <div class="dialogTop">
+    <a href="javascript:;" class="claseDialogBtn">关闭</a>
+  </div>
+  <form action="" method="post" id="editForm">
+    <ul class="editInfos">
+      <li><label>姓名：<input type="text" name="username" required placeholder="请输入您的姓名" class="ipt" id="username" /></label></li>
+      <li><label>手机：<input type="tel"  name="mobile" required placeholder="请输入您的手机号" class="ipt" id="mobile" /></label></li>
+      <li><input type="submit" onclick="submitnameandmobile(event)" value="确认提交" class="submitBtn" /></li>
+    </ul>
+  </form>
+</div>
+
+
+
+
+<script src="../public/js/environment134.js"></script>
+<script src="../public/js/apiUrl134.js"></script>
+<script src="../public/js/public134.js"></script>
+<script src="../public/js/webViewFun134.js"></script>
+
+<script>
+
+    //设置输入框相关
+    w = $(window).width();
+    h = $(window).height();
+    $('#dialogBg').width(w).height(h);
+    //关闭弹窗
+    $('.claseDialogBtn').click(function(){
+        $('#dialogBg').fadeOut(300,function(){
+            $('#dialog').addClass('bounceOutUp').fadeOut();
+            //清空输入框
+            $("#username").val("");
+            $("#mobile").val("");
+        });
+    });
+    //提交信息
+    function submitnameandmobile(event) {
+        /*阻止冒泡事件*/
+        event.stopPropagation();
+        /*阻止默认事件*/
+        event.preventDefault();
+        var name = $("#username").val()
+        var mobile = $("#mobile").val()
+
+        //校验手机号和姓名,符合条件则存入本地,不符合条件则弹出提示
+        if (/^1[34578]\d{9}$/.test(mobile)){
+
+            //检验用户输入的姓名
+            if (!name){
+                //姓名未输入,提示用户输入姓名
+                mainTip("亲,请填写您的姓名哦");
+                $("#username").focus();
+                return;
+            }
+
+            //本地存储姓名和手机号
+            sessionStorage.setItem("lotterymobile",mobile);
+            sessionStorage.setItem("lotteryname",name);
+            //使输入框消失并且清空输入框内容
+            $('#dialogBg').fadeOut(300,function(){
+                $('#dialog').addClass('bounceOutUp').fadeOut();
+                //清空输入框
+                $("#username").val("");
+                $("#mobile").val("");
+            });
+        }
+        else{
+            //手机号有错误,提示用户重新输入
+            mainTip("亲,请填写正确的手机号");
+            $("#mobile").val("");
+            $("#mobile").focus();
+
+        }
+
+
+
+
+    }
+
+
+
+
+    //设置转盘相关
+    var screenwidth = $("body").width()
+    //使整个转盘区域的宽度是屏幕宽度的70% 高度和宽度保持一致
+    $(".gb-turntable").width(screenwidth * 0.7)
+    $(".gb-turntable").height($(".gb-turntable").width())
+    function sortBy(attr,rev) {
+        //第二个参数没有传递 默认升序排列
+        if(rev ==  undefined){
+            rev = 1;
+        }else{
+            rev = (rev) ? 1 : -1;
+        }
+
+        return function(a,b){
+            a = a[attr];
+            b = b[attr];
+            if(a < b){
+                return rev * -1;
+            }
+            if(a > b){
+                return rev * 1;
+            }
+            return 0;
+        }
+
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        var aid = GetQueryString("aid");//首先获取抽奖活动的aid
+        var prizeList = [];//奖品池数组
+        gbTurntable.init({
+            id: 'turntable',
+            config: function(callback){
+                // 获取奖品信息
+                $.ajax({
+                    url:lottery_turntable_getprizes,
+                    data:getAuth()+"info={aid:'"+aid+"'}",
+                    async:false,//注意设置为同步而非异步获取数据
+                    success:function (data) {
+                        if(data.errCode == 0){
+                            //抽奖活动基本信息
+                            var lotteryInfo = data.resultdata.lotteryInfo;
+                            //抽奖活动标题
+                            title = lotteryInfo.title;
+                            /*浏览器标题*/
+                            document.title = title || "超级社区活动";
+                            //活动id
+                            id = lotteryInfo.id;
+                            //开始时间
+                            startTime = lotteryInfo.startTime;
+                            //结束时间
+                            endTime = lotteryInfo.endTime;
+
+                            //奖品信息列表
+                            prizeList = data.resultdata.prizeList;
+                            //遍历奖品列表,根据奖品序号进行排序
+
+                            /**数组根据数组对象中的某个属性值进行排序的方法
+                             * 使用例子：newArray.sort(sortBy('number',false)) //表示根据number属性降序排列;若第二个参数不传递，默认表示升序排序*/
+                            prizeList = prizeList.sort(sortBy("sortNum")) //升序排列奖品
+                            callback && callback(prizeList);
+                            $("section.gb-turntable").show()
+
+
+                        }
+                        else {
+                            mainTip(data.msg)
+                        }
+                    }
+                })
+
+            },
+            getPrize: function(callback) {
+
+                //判断本地是否有手机号和姓名,如果有则不弹出输入框，如果没有则弹出输入框
+                var lotterymobile = sessionStorage.getItem("lotterymobile");
+                if (!lotterymobile){
+                    $(".gb-turntable-btn").removeClass("disabled")
+                    //如果抽奖手机号不存在,则需要进行先登录然后再进行抽奖
+                    $('#dialogBg').fadeIn(300);
+                    $('#dialog').removeAttr('class').addClass('animated bounceInDown').fadeIn();
+                    $("input.username").focus()
+                    return
+                }
+                else {
+                    //如果存在手机号说明之前输入过，直接取出来手机号姓名即可
+                    var name = sessionStorage.getItem("lotteryname");
+                    // 获取中奖信息
+                    var mobile = lotterymobile
+                    $.ajax({
+                        url:lottery_turntable_getresults,
+                        data:getAuth()+"info={mobile:'"+mobile+"',aid:'"+aid+"',name:'"+name+"'}", //参数为手机号 活动id 和姓名
+                        async:true,
+                        success:function (data) {
+                            if(data.errCode == 0){
+
+                                var prizedic = data.resultdata.prize;
+
+                                //奖品id
+                                prizeId = prizedic.prizeId;
+//                              //抽奖活动id
+//                              aid = prizedic.aid;
+//                              //奖品名称
+//                              name = prizedic.name;
+//                              //奖品是否有效0无效1有效
+//                              status = prizedic.status;
+//                              //排序值
+//                              sortNum = prizedic.sortNum;
+
+
+                                //根据当前返回的奖品信息从之前的奖品池数组中找到相应的奖品index作为字典中的一个参数传递过去
+                                var resultdic = prizeList.find(function (dic) {
+                                    return dic.prizeId == prizeId;
+                                });
+                                var prizeindex = 0;
+                                //如果能在奖品池中找到,则找到相应的索引,如果不能在奖品池中找到,则在奖品池中找到一款无效的商品索引即可
+                                if (resultdic){
+                                    prizeindex = prizeList.indexOf(resultdic);
+                                }
+                                //如果找不到
+                                else {
+                                    prizeindex = prizeList.indexOf(prizeList.find(function (dic) {
+                                        return dic.status == 0;
+                                    }));
+                                }
+
+                                prizedic["chooseindex"] = prizeindex;//给字典中增加一个字段-该奖品在奖品池中的索引
+
+                                callback && callback(prizedic);
+
+
+                            }
+                            else{
+                                $(".gb-turntable-btn").removeClass("disabled")
+                                //发生错误，直接弹出错误信息
+                                oneBtnTip({title:"亲!",content:data.msg,btnName:"我知道了"})
+
+                            }
+                        }
+                    })
+                }
+
+
+            },
+            gotBack: function(data) {
+                var resultname = sessionStorage.getItem("lotteryname");
+                var resultmobile = sessionStorage.getItem("lotterymobile");
+
+
+                //status 为0说明未中奖,status为1说明中奖
+                if (data.status == "1"){
+                    oneBtnTip({title:"恭喜恭喜!",content:"大吉大利的你抽中了 " + data.name + " ,超级社区工作人员稍后会联系您哦,请耐心等待,请再次核对您的信息 " + "姓名:" + resultname + " 手机号码: " + resultmobile,btnName:"美滋滋地点了确认"})
+                }
+                else{
+                    oneBtnTip({title:"再接再厉!",content:"我有预感下次你必将人品爆发！",btnName:"继续抽奖"})
+                }
+            }
+        });
+    }, false);
+
+
+</script>
+
+<script src="js/index.js"></script>
+
+
+</body>
+
+</html>

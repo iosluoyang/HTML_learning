@@ -1,0 +1,136 @@
+nav{height: 4.4rem;background: #fff;width: 100%;position: fixed;top:4.4rem;left: 0;z-index: 9}
+nav ul li{float: left;width: 25%;}
+nav ul li span{display: inline-block;padding:0 1rem ;line-height: 4.2rem;border-bottom: .2rem solid #fff}
+nav ul .active span{border-bottom: .2rem solid #ff3b30;color: #ff3b30}
+
+#scroller {padding-top: 9.8rem}
+
+
+/*订单列表*/
+.orderList li{background: #fff;margin-bottom: 1rem}
+.orderList li .top{padding: 0 1rem 0 3.2rem;line-height: 3.5rem;height: 3.5rem;
+    background: url("../../public/images/clOrder/icon1.png") no-repeat 1rem center;background-size: 1.4rem}
+.orderList li .top span{float: right;color:#5db0fd}
+.orderList li .mid{padding: 1rem;border-bottom:.1rem #ededed solid}
+.orderList li .mid .pic{width: 6.5rem;height: 6.5rem;border-radius: .4rem;
+    background:url("../../public/images/base/defaultShopAvatar.png") no-repeat center center;background-size: cover;position: relative;}
+.orderList li .mid  .hGroup{margin-left: 7rem}
+.orderList li .mid  .hGroup h3{line-height: 1.6rem}
+.orderList li .mid  .hGroup p{line-height: 2.4rem}
+.orderList li .mid  .hGroup .sumPrice{background: url("../../public/images/clOrder/icon2.png") no-repeat left center;background-size: 1.4rem;padding-left:1.8rem}
+/*.orderList li .bot{padding: .8rem 1rem}*/
+.orderList li .bot button{margin:.8rem 1rem .8rem 0;width: 7.5rem;line-height: 2.6rem;border:.1rem #bababa solid;border-radius: .4rem;background: #fff}
+.orderList li .bot button:active{background: #ededed}
+
+.orderList li .bot .tuiKuan,.orderList li .bot .wuLiu{background: #f1f1f1}
+
+/*子订单列表*/
+.innerList{padding-top: 1rem}
+.innerList li .mid  .hGroup .sumPrice{background:none;padding-left:0}
+
+/*没有订单*/
+.noOrder{padding: 50% 0 0}
+.noOrder img{width: 50%;margin-bottom: 4rem}
+.noOrder a{display: inline-block;width: 10rem;height: 4.3rem;line-height: 4.3rem;background:#fff;border:.1rem #ff3b30 solid;border-radius: .4rem}
+
+
+/*订单详情*/
+.orderDetail{margin-bottom:5rem;}
+.orderDetail section{background: #fff;margin-bottom: 1rem;}
+.orderDetail .sec2,.orderDetail .sec3{padding: 1rem}
+.orderDetail .sec4{padding: 0}
+
+
+/*状态和金额信息*/
+.orderDetail .sec1{padding: .5rem 1rem}
+.orderDetail .sec1 img{width: 7rem;}
+.orderDetail .sec1 p{line-height: 3.3rem;}
+
+/*配送信息*/
+.orderDetail .sec2 p:first-of-type{margin-bottom: 1rem}
+.orderDetail .sec2 p{word-break: break-all;line-height: 2.3rem}
+
+/*配送方式*/
+.orderDetail .sec3 p{line-height: 2.3rem;margin-bottom: 1rem}
+.orderDetail .sec3 .ziTiMsg{background: #f7f7f7;padding: 1rem .8rem;border-radius: .8rem;box-shadow:.2rem .4rem .2rem rgba(232,230,230,0.86) }
+.orderDetail .sec3 .ziTiMsg h3{line-height: 4rem;padding-left: 3rem;background: url("../../public/images/clOrder/icon8.png") no-repeat left center;background-size: 2.4rem}
+.orderDetail .sec3 .ziTiMsg h4{line-height: 3rem;margin-bottom: .5rem}
+.orderDetail .sec3 .ziTiMsg p{font-size: 1.4rem;padding-left: 2.2rem;line-height: 2.4rem;margin-bottom: 1rem;background:no-repeat left center;background-size:1.3rem}
+.orderDetail .sec3 .ziTiMsg .address{background-image: url("../../public/images/personal/icon1.png")}
+.orderDetail .sec3 .ziTiMsg .time{background-image: url("../../public/images/personal/icon2.png")}
+.orderDetail .sec3 .ziTiMsg .tel{background-image: url("../../public/images/personal/icon3.png");margin-bottom: 0}
+.orderDetail .sec3 .ziTiMsg .pickUpCode{line-height: 2.4rem;margin-right: 2rem;}
+
+
+
+/*商品信息*/
+.orderDetail .sec4 span{color:#666}
+.orderDetail .sec4 >div{background: #fff url(" ../../public/images/clOrder/border.png") no-repeat 1rem center;background-size:.5rem;
+    padding: 0 1rem 0 2.4rem ;line-height: 4.5rem;height: 4.5rem;border-bottom: .1rem solid #ededed}
+.orderDetail .sec4 >div span{padding-left:2rem;background: url("../../public/images/clOrder/icon1.png") no-repeat left center;background-size: 1.4rem}
+
+
+.orderDetail .sec4 .top li{border-bottom: 1px #ededed solid;padding: 1rem}
+.orderDetail .sec4 .top li .leftDiv{width:45%;}
+.orderDetail .sec4 .top li .rightDiv{width:25%;text-align: right;}
+.orderDetail .sec4 .top .pic{width: 6rem;height: 6rem;margin-right:.5rem;border-radius: .4rem;
+    background:url("../../public/images/base/defaultShopAvatar.png") no-repeat center center;background-size: cover;position: relative;}
+.orderDetail .sec4 .top  .title,.orderDetail .sec4 .top  .price{line-height: 1.8rem;}
+.sec3 .proList .rightDiv{width:8.5rem;text-align: right;}
+.orderDetail .sec4 .top  .color,.orderDetail .sec4 .top .num,.orderDetail .sec4 .top  .sendType{color:#999;}
+.orderDetail .sec4 .top .color{line-height: 2.8rem}
+.orderDetail .sec4 .top .num{line-height: 2.6rem}
+.orderDetail .sec4 .top  .row2{padding: 1rem 0 0;line-height: 2.6rem}
+.orderDetail .sec4 .top  .row2>div{width: 6.5rem}
+.orderDetail .sec4 .top  .row2 ul{margin-left: 8rem;}
+.orderDetail .sec4 .top .row2 ul li{float: left;width: 50%;border-bottom:none;padding: 0}
+.orderDetail .sec4 .top  .row2 ul .handle{width:100%}
+
+.orderDetail .sec4 .bot{padding: 1rem 1rem 0;}
+.orderDetail .sec4 .bot li{padding-bottom: 1rem}
+.orderDetail .sec4 .bot li span{display: inline-block;}
+.orderDetail .sec4 .bot li span:first-of-type{width: 32%}
+.orderDetail .sec4 .bot li span:last-of-type{width:68%;text-align: right}
+.orderDetail .sec4 .bot li:last-of-type span:last-of-type{color:#ff3b30}
+
+
+
+
+/*联系卖家*/
+.orderDetail .sec5 {line-height: 4.5rem;height: 4.5rem;padding: 0 1rem}
+.orderDetail .sec5  a{float: right;width: 6.4rem;height: 4.5rem;background: url("../../public/images/clOrder/icon3.png") no-repeat center center;background-size: 2rem}
+
+/*时间信息*/
+.orderDetail .sec6{padding: 1rem 1rem .6rem;}
+.orderDetail .sec6 p{margin-bottom: .4rem;}
+
+
+
+/*按钮组*/
+.orderDetail .btnGroup{width:100%;height:5rem;position: fixed;bottom:0;background: #f7f7f7}
+.orderDetail .btnGroup button,.orderDetail .btnGroup .payNow{background:#fff;padding: 0 1rem;float: left;border:1px #ff3b30 solid;line-height: 3.2rem;border-radius: 4px;margin:.8rem 0 0 .5rem;}
+.orderDetail .btnGroup .keFu,.orderDetail .btnGroup .close{border: 1px #bababa solid}
+.orderDetail .btnGroup .keFu{padding-left: 3rem;background: #fff url("../../public/images/clOrder/keFu.png") no-repeat 1rem center;background-size: 1.2rem}
+
+.orderDetail .btnGroup button:active{background-color: #ededed!important;}
+
+/*顶部提示*/
+.topTip{line-height: 4.4rem;height: 4.4rem;padding-left: 4.5rem;position: relative;
+    background:#ffe9e9 url("../../public/images/clOrder/icon5.png") no-repeat 1rem center;background-size: 3rem }
+.topTip img{width:1.5rem;position: absolute;top:.5rem;right: 1rem}
+
+/*给我发货*/
+.confirmMarsk .sendInfo>div{height: 3rem}
+.confirmMarsk .sendInfo .mid span{display: inline-block;width:2.4rem;height: 2.4rem;vertical-align: bottom;
+    background:no-repeat center center;background-size: 100%}
+.confirmMarsk .sendInfo .mid  .minus{background-image: url("../../public/images/products/minusGrey.png")}
+.confirmMarsk .sendInfo .mid  .plus{background-image: url("../../public/images/products/plus.png")}
+.confirmMarsk .sendInfo .mid  .plus:active{background-image:url("../../public/images/products/plusAct.png")}
+.confirmMarsk .sendInfo .mid  .minus:active{background-image:url("../../public/images/products/minusGrey.png")}
+.confirmMarsk .sendInfo .mid  .canMinus{background-image:url("../../public/images/products/minusBlack.png")}
+.confirmMarsk .sendInfo .mid  .canMinus:active{background-image:url("../../public/images/products/minusBlackAct.png")}
+.confirmMarsk .sendInfo .mid  input{width:3rem;height:2.4rem;border:none;vertical-align: bottom;border-radius: 0;font-size: 1.3rem;
+    background: url("../../public/images/products/border.png") no-repeat left center;background-size: 100%}
+
+
+.goTop{bottom:1rem}

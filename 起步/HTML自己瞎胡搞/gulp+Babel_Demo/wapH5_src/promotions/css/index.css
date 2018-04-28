@@ -1,0 +1,175 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    /*min-height: 100vh;*/
+    background: no-repeat center center;
+    background-size: cover;
+    -webkit-background-size:cover;
+}
+
+/*轮播图相关*/
+.swiper-slide{
+    width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+    -webkit-background-size:cover ;
+}
+
+
+
+/*分页器样式*/
+.swiper-pagination-bullet-active{background: #ff3b30!important;}
+
+
+/*动态导航中标题段落的样式*/
+.moveguidetitle{
+    text-align: center;
+    font-size: medium;
+    font-weight:bold;
+    background-color: transparent;
+    padding: 1rem 0;
+}
+/*促销模块中标题段落的样式*/
+.cuxiaotitle{
+    text-align: center;
+    font-size: medium;
+    font-weight:bold;
+    background-color: transparent;
+    padding: 0.5rem 0;
+}
+/*促销模块中倒计时的样式*/
+.daojishi{
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+
+
+.productpic{
+    background: no-repeat center center;
+    background-size: cover;
+    -webkit-background-size:cover ;
+    position: relative; /*把所有商品元素设置为相对定位,为了之后的已售罄图标的增加*/
+}
+/*product中的价格p元素的样式*/
+/*现价样式*/
+.productprice{
+    /*自动换行*/
+    word-wrap:break-word;
+    font-size: 1.6rem;
+}
+/*原价样式*/
+.productorginalprice{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size:1.1rem;
+}
+
+
+
+
+/*促销模块中促销商品的(有背景图片)标签样式*/
+.producttag{
+    padding-right: 1rem;
+    color: #ffffff;
+    font-size:1.4rem;
+    background: url("../../public/images/base/promotiontag.png") no-repeat left center;
+    background-size: 100% 100%;
+}
+
+/*促销模块中促销商品的(无背景图片镂空)标签样式*/
+.productredtag{
+    color: #ff3b30;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    border: 1px solid #ff3b30;
+}
+
+/*默认的购买区域的样式*/
+.buybtn{
+    width: 9.5rem;
+    height: 2.4rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    color: #ffffff;
+    background-color: #f52e57;
+    text-align: center;
+    line-height: 2.4rem;
+    display: inline-block;
+}
+
+
+/*已抢光按钮区域的样式    注意因为购买按钮区域div是集合了两个class,所以一定要按照先后顺序进行添加css样式*/
+.disabledclass{
+    background-color: #dcdcdc;
+}
+
+/*搜索框模块的样式*/
+
+/*搜索区域均为fixed定位*/
+.inputdiv{
+    overflow: hidden;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*默认搜索区域背景颜色为f7,如果有背景图片则覆盖背景颜色*/
+    background-color: #f7f7f7;
+
+}
+
+/*搜索框*/
+.searchbar{
+    background-image: url("../../public/images/base/searchicon.png") ;
+    background-size: 1.25rem 1.25rem;
+    background-repeat: no-repeat;
+    background-position: 1.0rem center;
+    width: 100%;
+    height: 2.8rem;
+    display: block;
+    padding:0 1rem 0 2.5rem;
+    border-radius: 0.3rem;
+}
+/*搜索按钮*/
+.searchbtn{
+    position: absolute;
+    width: 4.2rem;
+    right: 1.5rem;
+    top:0 ;
+    bottom: 0;
+    color: #000000;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    background: transparent;
+}
+
+.searchbtn:active{
+    background-color: transparent;
+}
+
+/*搜索蒙版*/
+.searchmask{
+    display: none;/*首先先隐藏*/
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;/*将蒙版放在最前面但是放在头部和搜索框后面  注意轮播图z-index为1,所以这里设置为2*/
+}
+
+/*--清除谷歌浏览器下的 search 叉号*/
+input::-webkit-search-cancel-button{
+    display: none;
+}
+/*--清除IE下的 search 叉号*/
+input[type=search]::-ms-clear{
+    display: none;
+}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>超级社区</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        html{height:100%}
+        body{height:92%;position: relative;}
+        ul li{width: 50%;background: #f7f7f7;height: 4rem;line-height: 4rem;}
+        ul .active{background: #fff}
+        ul{margin-bottom: 10px;border-bottom: 1px #fff solid}
+
+        .inner div{border-bottom: 1px #ededed solid;padding:1.4rem 0 1.4rem 3rem;;background:#fff no-repeat left center;background-size:3rem;}
+        .inner p{padding-left:2rem;height: 3rem;line-height: 3rem;}
+        .inner .form1 div:first-of-type{background-image: url("../../public/images/register/icon1.png")}
+        .inner .form1 div:nth-of-type(2){background-image: url("../../public/images/register/icon2.png")}
+        .inner .form1 div:nth-of-type(3){background-image: url("../../public/images/register/ic_yqm.png")}
+        .inner .form1 div:nth-of-type(4){background-image: url("../../public/images/register/ic_sq.png");display: none}
+        .inner .form1 p{background: url("../../public/images/register/ic_finger.png") no-repeat 1rem center;background-size: 2rem;padding-left:3rem;}
+        .inner .form2 div:first-of-type{background-image: url("../../public/images/register/icon3.png")}
+        .inner .form2 div:last-of-type{background-image: url("../../public/images/register/icon4.png")}
+        .inner input{width:60%;height:1.8rem;line-height: 1.8rem;border: none;font-size: 1.4rem}
+        .inner .clear{width: 1.5rem;height: 1.5rem;float:right;margin: .2rem 4rem;vertical-align: middle;display: none}
+        .inner .form1{position: relative}
+        .inner .form1 .yanZheng{position:absolute;right:10px;top:10px;padding: 0 10px;background: #ff3b30;color:#fff;line-height: 2.8rem;border-radius:4px;margin-left: 5px;}
+        .inner .form2 a{margin-right: 2rem;}
+        .inner .sub{height: 4rem;line-height: 4rem;width: 89%;margin:2rem ;background: #ff3b30;border-radius: 4px;color:#fff;}
+        .inner .sub:disabled {  color: #ff928e;  }
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">登录</h2>
+</header>
+<!--内容部分-->
+<section>
+    <ul class="clearfix f14">
+        <li class="active f_left t_center">手机验证登录</li>
+        <li class="f_left t_center">已有账号登录</li>
+    </ul>
+
+    <div class="inner">
+        <form class="form1" name="form1">
+            <button class="yanZheng f12" >获取验证码</button>
+            <div><input type="text" class="input1 " placeholder="请输入手机号"><img class="clear" src="../../public/images/register/delete_icon.png"></div>
+            <div><input type="text" class="input2 " placeholder="请输入短信验证码"><img class="clear" src="../../public/images/register/delete_icon.png"></div>
+            <div class="hide"><input type="text" class="input5 " placeholder="邀请码(选填)" maxlength=6 ></div>
+            <div class="input6div hide"><input type="text" class="input6 " disabled></div>
+            <p class="f13 grey9">未注册过的手机号将自动注册为超级社区账户</p>
+            <button class="sub sub1 f18" disabled=true>登录</button>
+        </form>
+        <form class="form2 hide">
+            <div><input type="text" class="input3" placeholder="超级社区账户（手机）"><img class="clear" src="../../public/images/register/delete_icon.png"></div>
+            <div><input type="password" class="input4" placeholder="请输入密码"><img class="clear" src="../../public/images/register/delete_icon.png"></div>
+            <button class="sub sub2 f18"  disabled=true>登录</button>
+            <a class="f_right red f13" href="javascript:location.href=jumpUrl.updatePWD">忘记密码</a>
+        </form>
+    </div>
+</section>
+
+
+<section class="shuoMing f13 grey9 t_center">说明：注册/登录说明您已经同意<a href="javascript:location.href=jumpUrl.xieYi" class="red">《超级社区用户协议》</a></section>
+
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/md5.js"></script>
+<script src="index12041541.js"></script>
+
+</html>
+

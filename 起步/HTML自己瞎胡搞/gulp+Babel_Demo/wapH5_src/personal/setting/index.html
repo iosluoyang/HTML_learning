@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        body{background: #f7f7f7}
+        section{margin-top: 44px;}
+        section button{display:block;background: #ff3b30;height: 40px;line-height: 40px;color: #fff;width: 89%;margin:100% 20px 0;border-radius: 4px;}
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">设置</h2>
+</header>
+
+<section>
+    <button class="btn f18">切换帐号</button>
+</section>
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script>
+    $(function(){
+//        sessionStorage.setItem("completeUrl",jumpUrl.find);       //登录后跳转到首页
+        isLogin(UID,function(){
+            //退出 清除本地缓存
+            $(".btn").click(function(e){
+                e.preventDefault();
+                var vid = sessionStorage.getItem("vid"); //缓存原产优品的vid
+                localStorage.clear();
+                sessionStorage.setItem("vid",vid);  //缓存原产优品的vid
+                location.replace(jumpUrl.person);
+            })
+        })
+    })
+</script>
+</html>

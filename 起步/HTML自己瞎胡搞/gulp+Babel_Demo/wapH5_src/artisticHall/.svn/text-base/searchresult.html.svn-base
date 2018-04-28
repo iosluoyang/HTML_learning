@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="shortcut icon" href="../public/images/base/favicon.ico" />
+
+    <!--下拉刷新上拉加载的控件样式表-->
+    <link rel="stylesheet" href="../public/css/mescroll.min.css">
+    <link rel="stylesheet" href="../public/css/reset134.css">
+    <link rel="stylesheet" href="CSS/searchresult01102031.css">
+    <!--商品列表样式-->
+
+
+</head>
+<body>
+
+<!--导航栏-->
+<header>
+    <a class="back" onclick="clickback()" ><img src="../public/images/base/backArrow_ios.png" align="middle"></a>
+    <h2 class="f18">搜索结果</h2>
+    <a class="order" onclick="clickorder()"><img src="../public/images/base/ic_order.png" align='middle'></a>
+</header>
+
+
+
+<!--原产优品商品-->
+<div class="nativeProducts mescroll" id="nativeProductScrollDiv" >
+    <ul></ul>
+</div>
+
+<img src="images/goTop.png" class="goTop" alt="返回顶部">
+
+
+
+
+
+
+
+<script src="../public/js/environment134.js"></script>
+<script src="../public/js/apiUrl134.js"></script>
+<script src="../public/js/public134.js"></script>
+<!--下拉刷新上拉加载的控件-->
+<script src="../public/js/mescroll.min.js"></script>
+<script src="../public/js/webViewFun134.js"></script>
+<script src="js/searchresult01101953.js"></script>
+</body>
+</html>

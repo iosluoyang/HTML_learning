@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../public/images/base/favicon.ico" />
+    <style>
+        body{margin-top: 44px;background: #f7f7f7}
+        /*section{}*/
+        section ul li:last-of-type{border-bottom:none;margin-bottom: 30px;}
+        section ul li h3{line-height: 40px;padding: 0 10px;}
+        section .stars{padding: 30px 75px;background: #fff}
+        section .stars div{width: 30px;height:30px;display: inline-block;
+            background: url("../../../public/images/personal/starNormal.png") no-repeat center center;background-size: 100%}
+        section .stars .active{background-image: url("../../../public/images/personal/starPress.png")}
+        section textarea{width:94%;height: 80px;padding: 10px;}
+        section .submit{width:89%;margin: 0 auto;color:#fff;background: #ff3b30;border-radius: 4px;height: 40px;line-height: 40px; }
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">评价</h2>
+</header>
+
+<section>
+    <ul>
+        <li ><h3 class="f16">整体评价</h3></li>
+        <li class="stars t_center clearfix">
+            <div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div>
+        </li>
+        <li><h3 class="f16">商品评价</h3></li>
+        <li>
+            <textarea placeholder="写下您的评价内容，对其他的小伙伴们会有帮助喔~" maxlength="200" autofocus></textarea>
+        </li>
+        <li class="t_right grey9"><span>0</span>/200</li>
+    </ul>
+    <div class="submit t_center f18">提交</div>
+</section>
+
+
+<!--提示效果-->
+<div class="tip"></div>
+<div class="wait">加载中</div>
+
+
+
+</body>
+<script src="../../../public/js/environment134.js"></script>
+<script src="../../../public/js/apiUrl134.js"></script>
+<script src="../../../public/js/public134.js"></script>
+<script>
+    $(".wait").hide();  //隐藏加载中状态
+
+    $(function(){
+        isLogin(UID,function(){
+            if(sessionStorage.getItem("pingJiaInfo")){               //本地有从上页带进来的缓存
+                var pingJiaInfo = JSON.parse(sessionStorage.getItem("pingJiaInfo"));
+                //提交评价
+                $(".submit").click(function(){
+                    var content = $("textarea").val(), star =$(".stars .active").length,
+                            info= {"pid": pingJiaInfo.pid, "color": pingJiaInfo.color, "content": content, "uid": UID, "star": star, "orderid": pingJiaInfo.orderId};
+                    //提交评价
+                    $.ajax({
+                        url:addCommendUrl,
+                        data:getAuth()+"info="+JSON.stringify(info),
+                        success:function(data){
+                            if(data.errCode == 0){  //评价成功
+                                location.replace(document.referrer)
+                            }else {tip(data.msg)}
+                        }
+                    })
+
+                })
+            }else {             //本地没有从上页带进来的缓存 进入首页
+                location.replace(jumpUrl.find)
+            }
+
+        });
+
+
+
+        //点击星星效果
+        $(".stars div").click(function(){$(this).addClass("active").prevAll().addClass("active");$(this).nextAll().removeClass("active")});
+        //显示输入字数
+        $("textarea").keyup(function(){$("section ul li:last span").html($(this).val().length)});
+
+
+    })
+</script>
+
+</html>

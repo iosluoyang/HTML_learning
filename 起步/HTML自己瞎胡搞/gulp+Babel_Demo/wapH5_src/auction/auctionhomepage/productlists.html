@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>我是网页标题</title>
+
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+
+    <!--下拉刷新上拉加载的控件样式表-->
+    <link rel="stylesheet" href="../../public/css/mescroll.min.css">
+
+    <!--缓冲条样式-->
+    <link rel="stylesheet" href="../../libs/loader/loaders.min.css">
+
+    <!--reset要放在swiper.css后面,否则有些样式不能被重写-->
+    <link rel="stylesheet" href="../../public/css/reset134.css">
+    <!--自身的css样式-->
+    <link rel="stylesheet" href="CSS/productlists.css">
+
+
+</head>
+<body>
+
+<!--缓冲条区域 注意这里使用纯CSS进行加载,不牵扯到js动画,所以在这里要规定每种动画内部的元素个数-->
+<div class="loader-inner square-spin centerofbody"><div class="bglog"></div></div>
+
+<div id="reactdiv"></div>
+
+
+
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+
+
+<!--下拉刷新上拉加载的控件-->
+<script src="../../public/js/mescroll.min.js"></script>
+<!--与原生交互js-->
+<script src="../../public/js/webViewFun134.js"></script>
+
+<script type="text/babel" src="js/productlists.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+/*body*/
+body{
+    padding-top: 0;
+    padding-bottom:4.4rem;
+}
+/*轮播图相关*/
+.swiper-slide{
+    width: 100%;
+    /*-webkit-background-size:cover ;*/
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+/*分页器样式*/
+.swiper-pagination-bullet-active{background: #ff3b30!important;}
+
+/*section样式*/
+section{
+    background: #fff;
+    padding: 0 2.7%;
+    margin-bottom: 1rem;
+}
+/*活动标题*/
+section>.activityname{
+    font-size: 1.6rem;
+    line-height: 4.1rem;
+    font-weight:bold;
+}
+/*活动时间和地点*/
+section>.activitytime{
+    background: url("../../public/images/activity/icon1.png") no-repeat left center;
+}
+
+section>.activityaddress{
+    background: url("../../public/images/activity/icon2.png") no-repeat left center;
+}
+section>.activitytime , section>.activityaddress{
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    padding-left: 2.8rem;
+    margin-bottom: 1rem;
+    background-size: 1.5rem 1.5rem;
+}
+
+
+/*活动详情介绍*/
+section>.activitydetail{
+    color: #666;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-bottom:1rem;
+}
+
+/*详情下面的分割栏*/
+div.line{
+    height: 1rem;
+    background-color: #f0f4f3;
+}
+
+/*报名人数*/
+.baoming h3{
+    color:black;font-size: 1.4rem;line-height: 4.8rem;
+}
+.baoming .baomingnum{
+    color: #919191;
+    font-size: 1.4rem;
+    line-height: 4.8rem;
+    float: right;
+    padding-right: 1rem;
+}
+
+.baominglist{
+    list-style: none;
+}
+.baominglist li{
+    border-top: 0.1rem solid #ededed;
+    width: 100%;
+    height: 6rem;
+    position: relative;
+}
+.baominglist li img{
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    border-radius: 2rem;
+}
+.baominglist li span.uname{
+    text-align: left;
+    line-height: 6rem;
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    font-size: 1.6rem;
+}
+.baominglist li span.qiandaostate{
+    text-align: right;
+    line-height: 6rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    color: #999;
+}
+
+/*报名按钮*/
+.baomingbtn{
+    height: 4.4rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    line-height: 4.4rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+
+/*.baomingbtn.redstate{*/
+    /*background-color: #ff3b30;*/
+/*}*/
+/*.baomingbtn.lightgraystate{*/
+    /*background-color: lightgray;*/
+/*}*/
+
+
+/*
+想了想，觉得没必要加
+一来我现在只能增加背景颜色这一个参数，文字和事件还是通过js中的方式增加的
+二来，如果只是增加一个背景颜色，也得在不同state下判断类型名称，虽然以后修改CSS方便
+但是代码量上感觉没有优化多少
+个人想法，有优化的地方震我~~~~~
+
+
+*/
+
+/*报名蒙版*/
+.baomingmask{
+    display: none;/*首先先隐藏*/
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;/*将蒙版放在最前面*/
+}
+/*报名填写界面*/
+.baomingcontent{
+    width: 100%;
+    box-sizing: border-box;
+    height: 33rem;
+    position: fixed;
+    bottom: -33rem;
+    left: 0;
+    background-color: #fff;
+    transition: bottom 0.3s;/*增加位移过渡动画*/
+    z-index: 2;/*将报名填写界面放在最上层*/
+    padding: 0 2rem;
+}
+.baomingcontent.active{
+    bottom: 0;
+}
+
+.baomingcontent label{
+    color: black;
+    font-size: 1.6rem;
+    margin: 1rem 0 1rem 0;
+    display: inline-block;
+}
+.baomingcontent .baominginput,textarea{
+    width: 100%;
+    height: 3rem;
+    border: 0.1rem solid #ededed;
+    border-radius: 0.5rem;
+    line-height: 1.5rem;
+    color: #999;
+    font-size: 1.3rem;
+}
+.baomingcontent textarea{
+    padding: 1rem 0;
+
+
+}
+
+.baomingcontent .agreement{
+    background: url(../../public/images/activity/ic_fk_normal.png) no-repeat  5px center ;
+    background-size: 2rem 2rem;
+    padding-left: 3rem;
+    font-size: 1.6rem;
+    color: black;
+    margin: 0.5rem 0 ;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+
+}
+.baomingcontent .agreement.active{
+    background-image: url(../../public/images/activity/ic_fk_pressed.png);
+}
+.baomingcontent .mianzexieyi{
+    font-size: 1.6rem;
+    color: #ff3b30;
+}
+
+.baomingcontent .surebtn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.4rem;
+    text-align: center;
+    color: white;
+    background-color: #ff3b30;
+    border: none;
+}
+

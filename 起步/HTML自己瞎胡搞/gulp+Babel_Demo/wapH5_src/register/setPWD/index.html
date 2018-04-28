@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>超级社区</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        /*body{background: #f7f7f7}*/
+        /*section{margin-top: 44px;}*/
+        form div{border-bottom: 1px #ededed solid;padding:4px 0 4px 3rem;background:#fff no-repeat left center;background-size:3rem;}
+        form div:first-of-type{background-image: url("../../public/images/register/icon4.png")}
+        form div:last-of-type{background-image: url("../../public/images/register/icon4.png")}
+        input{width:60%;height:3.8rem;line-height:3.8rem;border: none;font-size: 1.4rem}
+        .clear{width: 1.5rem;height: 1.5rem;float:right;margin: 1.2rem 4rem;vertical-align: middle;display: none}
+        .sub{height: 4rem;line-height: 4rem;width: 89%;margin:2rem;background: #ff3b30;border-radius: 4px;}
+
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">设置密码</h2>
+</header>
+<!--内容部分-->
+<section>
+    <form>
+        <div><input type="password" class="input1" maxlength="20" placeholder="密码至少为6-20位数字字母组合">
+            <!--<img class="clear" src="../../public/images/register/delete_icon.png">-->
+        </div>
+        <div><input type="password" class="input2" placeholder="再次输入密码">
+            <!--<img class="clear" src="../../public/images/register/delete_icon.png">-->
+        </div>
+        <button class="sub setPWD f18" >完成</button>
+    </form>
+</section>
+
+<section class="shuoMing f13 grey9 t_center">说明：注册/登录说明您已经同意<a href="javascript:location.href=jumpUrl.xieYi" class="red">《超级社区用户协议》</a></section>
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/md5.js"></script>
+<script src="index.js"></script>
+</html>
+

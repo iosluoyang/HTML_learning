@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>社长明星</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			body{background:#ffddde url(../public/images/proStars/April/star/bj.png) no-repeat left top;background-size: cover;}
+		</style>
+	</head>
+	<body>
+		<img src="../public/images/proStars/April/star/banner3.png" align="top"/>
+		
+		<section class="sec3 border">
+			<div class="top">
+				<img src="../public/images/proStars/April/star/icon2.png" align="top" />
+			</div>
+			<p> 我是一个在北京打工的农民，起点低，但是我很努力，没有捷径，天天琢磨，我现在不仅成为了社区的达人，还给我带来了财富和成就感，
+				通过我的努力在他人眼里成为了一个牛社长，短短几个月的时间冲击到了销量排行第二名,非常感谢超级社区，我会继续努力，继续加油。</p>
+		</section>
+		
+		
+		<section class="sec4 border">
+			<div class="top">
+				<img src="../public/images/proStars/April/star/icon4.png" align="top" />
+			</div>
+			
+			<ul>
+				<li class="fire">
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7000&type=1&isShare=1&vid=3051&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../public/images/proStars/April/star/cha.jpg" class="pic">
+						<div>
+							<h3>东书房.大雪山古树普洱生茶</h3>
+							<p>&yen;230.00/个<span>&yen;580.00/个</span></p>
+						</div>
+			  </a>			  </li>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7002&type=1&isShare=1&vid=3051&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../public/images/proStars/April/star/cha2.jpg" border="0" class="pic">
+						<div>
+							<h3>东书房.大雪山古树普洱生茶</h3>
+							<p>&yen;1540.00/套<span>&yen;4060.00/套</span></p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7003&type=1&isShare=1&vid=3051&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../public/images/proStars/April/star/cha3.jpg" border="0" class="pic">
+						<div>
+							<h3>东书房.老同子品性普洱生茶</h3>
+							<p>&yen;260.00/个<span>&yen;480.00/个</span></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</body>
+	<script src="../public/js/environment134.js"></script>
+	<script src="../public/js/apiUrl134.js"></script>
+	<script src="../public/js/public134.js"></script>
+	<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!--导航栏-->
+<header class="clearfix">
+    <a href="javascript:history.back()" class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle" alt="返回"></a>
+    <h2 class="f18">订单详情</h2>
+</header>
+
+<!--配送信息-->
+<section class="sec1 f16" >
+    <p><span class="grey6">联系人：</span></p>
+    <p><span class="grey6">配送信息：</span></p>
+</section>
+
+<!--商品信息-->
+<section class="sec2 clearfix" ></section>
+
+<!--联系买家-->
+<section class="sec3 f16">
+    <span>联系买家：<a class="tel" href="javascript:void(0)"></a>
+</section>
+
+<!--时间信息-->
+<section class="sec4 f14 grey6">
+    <p><span>订单编号：</span></p>
+    <p class="oneClamp sendTime "><span>发货时间：</span></p>
+    <p class="oneClamp hide arrivalTime"><span>到站时间：</span></p>
+</section>
+
+
+<!--底部按钮组-->
+<section class="btnGroup f15">
+    <div class="arrive hide">确认到站</div>
+    <div class="keFu"><a href="javascript:void(0)">客服</a> </div>
+</section>
+
+
+
+
+</body>
+
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../base/base.js"></script>
+<script src="index.js"></script>
+
+</html>

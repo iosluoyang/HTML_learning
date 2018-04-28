@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+<!--标题栏-->
+<header>
+    <a href="javascript:history.back()"  class="back"><img src="../../public/images/base/backArrow_ios.png" align="middle" alt="返回"></a>
+    <input class="f13" type="text" placeholder="搜索"  autofocus="autofocus" maxlength="20">
+    <a href="javascript:void(0)" class="search red f16">搜索</a>
+</header>
+
+<!--地址列表-->
+<ul class="fetchAddList"></ul>
+
+<div class="noData"><img src="../../public/images/base/noData.png"></div>
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="js/list.js"></script>
+<script>
+    $(".search").click(function () {    //搜索数据页面
+        var searchStr = $("header input").val();
+        if(searchStr){
+            getFetchAddSearchList(pidInfo,searchStr)
+        }
+    })
+</script>
+</html>

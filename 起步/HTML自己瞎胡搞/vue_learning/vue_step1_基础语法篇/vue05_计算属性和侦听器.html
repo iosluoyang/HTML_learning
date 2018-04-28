@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue05_计算属性和侦听器</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<!--计算属性eg-->
+<!--
+计算属性缓存 vs 方法
+
+我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。
+然而，不同的是计算属性是基于它们的依赖进行缓存的。
+计算属性只有在它的相关依赖发生改变时才会重新求值。
+这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。
+
+这也同样意味着下面的计算属性将不再更新，因为 Date.now() 不是响应式依赖：
+
+computed: {
+  now: function () {
+    return Date.now()
+  }
+}
+相比之下，每当触发重新渲染时，调用方法将总会再次执行函数。
+
+总结就是  计算属性是在对应的响应式依赖发生了改变之后才进行重新计算  而方法则是在每一次getter的时候调用方法 没有缓存的特性
+
+-->
+<div id="example">
+    <p>原始字符为:'{{ message }}'</p>
+    <p>反转字符为:'{{ reversedMessage }}'</p>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#example",
+        data:{
+            message:"Hello"
+        },
+        computed:{
+            //计算属性的getter
+            reversedMessage:function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+    console.log(vm.reversedMessage)
+    vm.message = 'GoodBye'
+    console.log(vm.reversedMessage)
+</script>
+
+
+
+<!--侦听属性 VS 计算属性-->
+<div id="demo">
+    <span>{{ fullName }}</span>
+    <input type="text" v-model="lastName">
+    <input type="text" v-model="firstName">
+</div>
+<script>
+
+    //如果是侦听属性的话则使用watch进行属性监听
+    // var vm = new Vue({
+    //     el:"#demo",
+    //     data:{
+    //         firstName:"Haiyang",
+    //         lastName:"Liu",
+    //         fullName:"Liu Haiyang"
+    //     },
+    //     //侦听属性
+    //     watch:{
+    //         firstName:function (val) {
+    //             this.fullName = this.lastName + val
+    //         },
+    //         lastName:function (val) {
+    //             this.fullName = val + this.firstName
+    //         }
+    //     }
+    // })
+
+    //如果是计算属性的话则为以下 可以同时设置某一个属性的set方法和get方法
+    var vm1 = new Vue({
+        el:"#demo",
+        data:{
+            firstName:"Haiyang",
+            lastName:"Liu"
+        },
+        computed:{
+            fullName:{
+                //设置getter属性
+                get:function () {
+                    return "全名为:" + this.lastName + " " + this.firstName
+                },
+                set:function (newValue) {
+                    var names = newValue.split(' ')
+                    this.firstName = names[0]
+                    this.lastName = names[names.length - 1]
+                }
+
+            }
+        }
+    })
+
+</script>
+
+
+
+<!--侦听器
+当需要在数据变化时执行异步或者开销较大的操作时,侦听器的方式更为有用
+在这个示例中，使用 watch 选项允许我们执行异步操作 (访问一个 API)，限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的
+-->
+
+<!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
+<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<!--使用watch侦听器可以在侦听到某个数据发生改变时进行一定的操作(例如这里进行ajax请求获取问题的答案等操作 这些都是计算属性无法做到的)-->
+
+<div id="watch-example">
+
+    <p>
+        请提出您的问题:
+        <input type="text" v-model="question">
+    </p>
+
+    <p>{{ answer }}</p>
+
+</div>
+<script>
+    var watchExampleVM = new Vue({
+        el:"#watch-example",
+        data:{
+            question:"",
+            answer:"输入问题后这里会自动显示答案"
+        },
+        watch:{
+            //监听question的变动,如果question发生了变动则会走到这个回调方法中
+            question:function (newQuestion, oldQuestion) {
+                this.answer = "等待您输入完毕……"
+                this.getAnswer()
+            }
+        },
+        methods:{
+
+            // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
+            // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
+            // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
+            // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
+            // 请参考：https://lodash.com/docs#debounce
+
+            getAnswer:_.debounce(
+                function () {
+                    //看是否以?结尾
+                    if(this.question.indexOf("?") === -1){
+                        this.answer = "问题需要以?号结尾"
+                        return
+                    }
+
+                    //不以?结尾,开始请求数据
+                    this.answer = "思考中……"
+                    var vm = this
+                    axios.get('https://yesnowtf/api')
+                        .then(function (response) {
+                            vm.answer = _.capitalize(response.data.answer)
+                        })
+                        .catch(function (error) {
+                            vm.answer = "错误,原因为:" + error
+                        })
+                },
+                //这是我们为判断用户停止输入等待的毫秒数
+                500
+            )
+        }
+    })
+</script>
+
+</body>
+</html>

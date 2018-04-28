@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue09_事件处理</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<!--
+
+    事件修饰符
+
+
+    为了解决这个问题，Vue.js 为 v-on 提供了事件修饰符。之前提过，修饰符是由点开头的指令后缀来表示的。
+
+    .stop
+    .prevent
+    .capture
+    .self
+    .once
+
+            阻止单击事件继续传播
+            <a v-on:click.stop="doThis"></a>
+
+            提交事件不再重载页面
+            <form v-on:submit.prevent="onSubmit"></form>
+
+            修饰符可以串联
+            <a v-on:click.stop.prevent="doThat"></a>
+
+            只有修饰符
+            <form v-on:submit.prevent></form>
+
+            添加事件监听器时使用事件捕获模式  即元素自身触发的事件先在此处处理，然后才交由内部元素进行处理
+            <div v-on:click.capture="doThis">...</div>
+
+            只当在 event.target 是当前元素自身时触发处理函数  即事件不是从内部元素触发的
+            <div v-on:click.self="doThat">...</div>
+
+            使用修饰符时，顺序很重要；相应的代码会以同样的顺序产生。
+            因此，用 v-on:click.prevent.self 会阻止所有的点击，而 v-on:click.self.prevent 只会阻止对元素自身的点击。
+
+
+-->
+
+<!--使用v-on指令监听DOM事件-->
+<div id="example1">
+    <button @click="counter += 1">每次点击都会增加一次</button>
+    <button @click.once="counter += 1">点击事件只能出现一次</button>
+    <button @click="reduce">点击减少一次</button>
+    <button @click="say('hi')">say Hi</button>
+    <button @click="say('你好')">说你好</button>
+    <button @click="warn('当前的DOM元素是:',$event)">点击显示当前DOM元素</button>
+    <p>上面的button被点击了{{ counter }}次</p>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#example1",
+        data:{
+            counter:0,
+        },
+        methods:{
+            reduce:function () {
+                this.counter -= 1
+            },
+            say:function (message) {
+                alert(message)
+            },
+            warn:function(message,event){
+                if(event){
+                    event.preventDefault()
+                }
+                alert(event)
+            }
+        }
+
+    })
+</script>
+
+
+<!--
+
+.passive修饰符  用于提升移动端的性能
+
+滚动事件的默认行为 (即滚动行为) 将会立即触发
+而不会等待 `onScroll` 完成
+这其中包含 `event.preventDefault()` 的情况
+
+
+注意:不要把 .passive 和 .prevent 一起使用，因为 .prevent 将会被忽略，同时浏览器可能会向你展示一个警告。
+    请记住，.passive 会告诉浏览器你_不_想阻止事件的默认行为。
+
+-->
+
+<!--按键修饰符  即v-on可以用来监听键盘事件  在特定keyCode时才调用相应的方法  此例为只有当键盘上keyCode为13的时候才会调用submit方法 13代表enter键-->
+<input id="inputwithenter1" @keyup.13="readytosubmit" placeholder="按下enter键才会触发提交操作">
+<script>
+    var vm = new Vue({
+        el:"#inputwithenter1",
+        methods:{
+            readytosubmit:function () {
+                alert("触发了提交操作")
+            }
+        }
+    })
+</script>
+<!--
+
+    为方便记忆  vue使用别名代替常用的keyCode
+
+    全部的按键别名：
+
+    .enter
+    .tab
+    .delete (捕获“删除”和“退格”键)
+    .esc
+    .space
+    .up
+    .down
+    .left
+    .right
+-->
+<input id="inputwithenter2" @keyup.enter="readytosubmit" placeholder="按下enter键才会触发提交操作">
+<script>
+    var vm = new Vue({
+        el:"#inputwithenter2",
+        methods:{
+            readytosubmit:function () {
+                alert("触发了提交操作")
+            }
+        }
+    })
+</script>
+
+
+<!--
+    系统修饰键  指的是类似于alt ctrl shift meta(Mac为command键  windows为图标键)
+
+    .ctrl
+    .alt
+    .shift
+    .meta
+
+    注意系统修饰键和按键修饰符是不同的东西  按键修饰符主要用于同时按住alt键和其他键所触发的事件
+
+    如果增加了.exact修饰符则说明是精准操作 即有且只能有对应的
+
+-->
+<!--   shift + enter  提交操作-->
+<input id="texttypeinput" @keyup.shift.enter="readytosubmit" placeholder="只有同时按下shift以及enter键才会触发提交操作">
+<script>
+    var vm = new Vue({
+        el:"#texttypeinput",
+        methods:{
+            readytosubmit:function () {
+                alert("触发了提交操作")
+            }
+        }
+    })
+</script>
+
+
+<!--鼠标按钮修饰符 类似于键盘修饰符 有 .left .right 以及 .middle三种-->
+
+
+
+</body>
+</html>

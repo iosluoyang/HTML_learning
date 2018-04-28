@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <style>
+        /*社长登录页面*/
+        form div{height:4.5rem;padding: 0 4rem;border-bottom: 1px #ededed solid;
+            background:#fff url("../../public/images/fetch/icon1.png") no-repeat .5rem center;background-size:3rem;}
+        form div:last-of-type{background-image: url("../../public/images/register/icon4.png");}
+        form input{height:4.5rem;line-height: 4.5rem;border:none;width:100%}
+        form button{background: #ff3b30;color: #fff;height: 4.2rem;line-height: 4.2rem;margin: 2.9rem 2rem 1.7rem;width:89%;border-radius: .4rem}
+        form button:active{background: #b22922}
+        form button:disabled{color:#ff928e}
+        form a{padding-right: 3rem}
+    </style>
+</head>
+<body>
+<!--导航-->
+<header >
+    <h2 class="f18">登录</h2>
+</header>
+
+
+<!--登录-->
+<form class="login">
+    <div><input type="text" placeholder="自提点"  class="fetch" readonly></div>
+    <div><input type="password" placeholder="请输入密码" class="pwd" maxlength="4"></div>
+    <button class="f15" disabled>登录</button>
+</form>
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../base/base.js"></script>
+<script src="index.js"></script>
+</html>

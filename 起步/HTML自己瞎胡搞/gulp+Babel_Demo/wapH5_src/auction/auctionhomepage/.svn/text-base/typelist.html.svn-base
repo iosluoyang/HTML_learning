@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+
+    <title>商品分类</title>
+
+    <link rel="stylesheet" href="../../public/css/reset134.css">
+
+
+</head>
+<body>
+
+<div id="reactdiv"></div>
+
+
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+
+<!--与原生交互js-->
+<script src="../../public/js/webViewFun134.js"></script>
+
+<script type="text/babel" src="js/typelist.js"></script>
+</body>
+</html>

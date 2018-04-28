@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="index12211019.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <title>超级社区</title>
+
+
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <a class="shangCheng"  href="javascript:location.href=jumpUrl.find" ><img  src="../../public/images/base/ic_sc.png" align='middle'></a>
+    <a class="order"  href="javascript:location.href=jumpUrl.orderList" ><img  src="../../public/images/base/ic_order.png" align='middle'></a>
+    <!--<h2 class="f18">商品详情</h2>-->
+</header>
+
+
+
+<div class="scrollWrap">
+
+    <section class="main">
+        <!--轮播图-->
+        <div class="swiper-container">
+            <ul class="lunBo swiper-wrapper"></ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--促销内容展示区域(包含倒计时)-->
+        <div class="promotiondiv" style="overflow: hidden;"></div>
+
+        <!--商品信息-->
+        <div class="wrap">
+            <h3 class="title f16"></h3>
+            <p class="jianjie f14 grey6"></p>
+            <!--首先隐藏原始价格区域,如果没有促销信息的话再展现出来-->
+            <p class="price red hide"><span class="f14">&yen;</span><span class="bold red f16"></span><span class="grey9 f13"></span></p>
+            <!--促销未开始时的价格展示区域,该区域与普通样式的价格区域互斥-->
+            <div class="promotionpricediv"></div>
+            <p class="address oneClamp f14">原产地：</p>
+            <div class="sendType f14">运费：<span class="red f12">支持快递包邮</span></div>
+            <!--促销海报-->
+            <div class="promotionhaibaodiv hide">
+                <!--注意为了要将文本垂直水平居中,需要用span将文本包裹起来-->
+                <p><span class="haibaowenan"></span></p>
+            </div>
+        </div>
+        <div class="wrap tel f16">联系卖家 <a href="javascript:void (0)" class="f_right"><img src="../../public/images/products/phone.png"></a></div>
+        <div class="wrap chooseGuiGe f16">选择规格、数量</div>
+        <div class="wrap more f16"><a href="javascript:void(0)">查看更多品牌商品</a></div>
+        <div class="wrap morepromotion hide f16">查看更多促销商品</div>
+
+
+
+        <!--商品详情-->
+        <div class="contentWrap">
+            <!--选项卡-->
+            <ul class="tabs clearfix t_center f15">
+                <li class="tab1 f_left active">图文详情</li>
+                <li class="tab2 f_left">用户评价(0)</li>
+            </ul>
+            <!--选项卡内容-->
+            <div class="tabContent">
+                <!--图文详情-->
+                <div class="tab1Content">
+                    <h3 class="title f16 bold"></h3>
+                    <div class="contents"></div>
+                    <div class="detail">
+                        <h4 class="f14 bold">产品介绍</h4>
+                    </div>
+                    <section class="img"></section>
+                </div>
+
+                <!--用户评价-->
+                <div class="tab2Content">
+                    <ul class="commentList"></ul>
+                    <div class="tab2ContentTip"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--爆款推荐-->
+    <section class="baoKuan">
+        <div class="top"></div>
+        <ul class="baoKuanList clearfix"></ul>
+        <div class="noData"><img src="../../public/images/base/noData.png" alt=""></div>
+        <div class="bot t_center">已经到底了</div>
+    </section>
+</div>
+
+<!--选择商品规格-->
+<section class="guiGeMask">
+    <div class="guiGeMaskChoose">
+        <span class="close"><img src="../../public/images/products/delete_icon.png"></span>
+        <div class="row1 clearfix">
+            <div class="pic f_left"></div>
+            <div class="title f14 oneClamp"></div>
+            <p class="price red"><span class="f12">&yen;</span><span class="f15"></span></p>
+            <div class="grey9 oneClamp f12 stockQuantity"></div>
+        </div>
+        <div class="row2 f13">
+            <p class="f_left">规格</p>
+            <ul class="clearfix"></ul>
+        </div>
+        <div class="row3 ">
+            <div class="f_right f12">
+                <span class="minus"></span><input class="t_center" type="number" onpaste="return false;" readonly  maxlength="3"   pattern="[0-9]*"  value="1"><span class="plus"></span>
+                <!--限购数量-->
+                <p class="limitationcount"></p>
+            </div>
+            <!--<div class="f_right f12">-->
+                <!---->
+                <!--<div class="minus f_left t_center f20 bold">-</div>-->
+                <!--<input class="num t_center f_left" value= "1" readonly type="number"  maxlength="3"/>-->
+                <!--<div class="plus f_left t_center f20 bold">+</div>-->
+            <!--</div>-->
+            <p class="f13">数量</p>
+        </div>
+        <button class="submit f18">确认</button>
+    </div>
+</section>
+
+
+<!--立即购买-->
+<footer class="clearfix">
+    <div class="shouCang f_left t_center">收藏</div>
+    <div class="buy f_left t_center f18"></div>
+</footer>
+
+
+
+
+<!--提示效果-->
+<img src="../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/swiper.min.js"></script>
+<script src="index12211516.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue12_组件注册</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+<!--全局注册  即使用Vue.component("component-name",{})-->
+<div id="component1">
+    <h1>我是vue实例1,下面是我的子组件</h1>
+    <br>
+    <my-component1></my-component1>
+    <my-component2></my-component2>
+    <my-component3></my-component3>
+</div>
+<script>
+
+    //全局注册
+    Vue.component('my-component1',{
+        template:"<p>我是my-component1组件,我是一个全局注册的组件</p>",
+    })
+
+    //局部注册
+    var MyComponent2 = {
+        template:"<p>我是my-component2组件,我是一个局部注册的组件,我只能在本实例中用,在别的vue实例中用不了</p>",
+    }
+
+    //局部注册的组件 其中包含了my-component2这样另外一个局部注册的组件 通过这种方式就可以在在子组件中使用局部组件了
+    var MyComponent3 = {
+        components:{
+            'my-component2':MyComponent2,
+        },
+        template:"<p>我是组件3,在我内部有一个局部组件2————><my-component2></my-component2></p>"
+
+    }
+
+    var vm = new Vue({
+        el:"#component1",
+        //该实例下可用的局部子组件
+        components:{
+            'my-component2':MyComponent2,
+            'my-component3':MyComponent3,
+
+        }
+    })
+</script>
+
+
+<div id="component2">
+    <h1>我是vue实例2,下面是我的子组件</h1>
+    <br>
+    <!--my-component1是全局注册组件 可以在不同实例中使用-->
+    <my-component1></my-component1>
+    <!--my-component2是局部注册组件 不能跨实例使用-->
+    <my-component2></my-component2>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#component2",
+    })
+</script>
+
+
+</body>
+</html>

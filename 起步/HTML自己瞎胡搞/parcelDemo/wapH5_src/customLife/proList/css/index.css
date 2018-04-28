@@ -1,0 +1,41 @@
+
+body {  padding: 0;}
+.menu{ width: 86%;}
+.innerMenu,.innerMain{width: 100%;overflow-x: hidden;  overflow-y: auto;-webkit-overflow-scrolling: touch;}
+.banner img{width: 100% }
+
+/*一级分类*/
+.typeList{margin-bottom: 1rem}
+.typeList h3{font-size: 1.4rem;background: #f7f7f7;line-height: 4.4rem;padding: 0 2rem}
+/*二级分类*/
+.typeList2{padding: 0 .8rem;font-size: 1.3rem;color:#666;background: #fff;}
+.typeList2 li{width: 30%;text-align: center;padding-bottom: 1rem;float: left}
+.typeList2 li:nth-child(2),.typeList2 li:nth-child(2n+3){margin:0 5%}
+.typeList2 li:nth-child(3){margin:0}
+.typeList2 li img,.typeList2 li div{width:100%;}
+
+
+/*遮罩层*/
+.bodyMask{width:100%;height: 100%;background: rgba(0,0,0,0.5);position: absolute;top:0;left: 0;z-index: 11; }
+.slideLogo{width: 4.2rem;position: absolute; left:0;;top:40%;z-index: 12}
+
+.main{width:100%;position: relative}
+
+/*轮播图*/
+nav{height: 27.5rem;background: url("../../../public/images/base/defaultLogo.png") no-repeat center center;background-size: cover;position: relative}
+nav ul li{width:100%;background: no-repeat center center;background-size: cover;}
+.swiper-container-horizontal > .swiper-pagination-bullets{padding:0 .5rem;width:3.7rem;height: 4.7rem;line-height: 4.7rem;left:76.8%;bottom:3.2rem;background:#80d1fe}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{width:.5rem;height:.5rem;margin: 0 .3rem;background: #fff;opacity:1}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active{background: #fff812;}
+
+
+.proList{background: #f7f7f7;padding-bottom:4.4rem;overflow: auto}
+.proList ul li{height:23rem;margin-bottom: 1rem;background: no-repeat center center;background-size: cover;position: relative}
+.proList ul li a{display: block;width: 100%;height: 100%}
+.proList ul li .hGroup{width:24.5rem;padding-top:1rem;background: rgba(225,225,225,0.8);position: absolute;left: 50%;bottom:0;margin-left: -11.5rem}
+.proList ul li .hGroup h3{height: 2rem;line-height:2rem;font-size: 1.8rem}
+.proList ul li .hGroup p{height: 3rem;line-height: 3rem;font-size: 1.4rem}
+.proList ul li .customType{position: absolute;left: 0;top:0;color: #fff;padding:0 1.5rem 0 .5rem ;line-height: 2rem;
+    background:transparent url("../../../public/images/customLife/customType.png") no-repeat left top;background-size: 100%}
+
+.noData{display: block}

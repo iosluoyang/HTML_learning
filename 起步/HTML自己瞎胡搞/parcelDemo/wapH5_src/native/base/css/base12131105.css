@@ -1,0 +1,14 @@
+
+/*商品列表样式*/
+.productsListArr{background: #fff;}
+.productsListArr li.product {background:#fff ;padding:1rem;border-bottom: 1px #ededed solid;}
+.productsListArr li.product .img{width: 9rem;height: 9rem;background:no-repeat center center;background-size: cover;position: relative;margin-right: 10px;}
+.productsListArr li.product div.title{ margin-top: 1rem;}
+.productsListArr li.product .price{margin-top: 1rem;}
+.productsListArr li.product .price span:first-of-type{font-size: 1.3rem}
+.productsListArr li.product .price span:nth-of-type(2){font-size: 1.5rem}
+.productsListArr li.product .price span:last-of-type{text-decoration: line-through;padding-left: 5px;font-size: 1.2rem}
+
+.productsListArr li.product .shouCang{font-size:1.2rem;line-height:3rem;height: 3rem;padding:.4rem 0 0 2.4rem;width: 4rem;background: url("../../../public/images/base/shouCang.png") no-repeat left center;background-size: 1.9rem}
+.productsListArr li.product .yiShouCang{background-image: url("../../../public/images/base/yiShouCang.png")}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        #wrapper{margin-top: 4.4rem;}
+        .list li{border-bottom: 1px #ededed solid;padding: 1rem;background: #fff}
+        .list li .pic{width: 5rem;height: 5rem;border-radius: 50%;margin-right: 5px;
+            background: no-repeat center center;background-size:cover}
+        .list li h3{line-height: 3rem;}
+        .goTop{bottom:1rem;}
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <a class="shangCheng"  href="javascript:location.href=jumpUrl.find" ><img  src="../../public/images/base/ic_sc.png" align='middle'></a>
+    <h2 class="f18">关注品牌</h2>
+</header>
+
+<div id="wrapper">
+    <div id="scroller">
+        <!--下拉刷新-->
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+        <ul class="list"></ul>
+        <div class="noData"></div>
+        <!--上拉加载-->
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+    </div>
+</div>
+
+<!--提示效果-->
+<img src="../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl133"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/iscroll.min.js"></script>
+<script src="../../public/js/scrollFun.js"></script>
+<script src="index.js"></script>
+
+</html>

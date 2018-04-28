@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>vue01_helloworld</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+
+<!--使用vue展示数据-->
+<div id="app">
+    {{message}}
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            message:"Hello World! Vue"
+        }
+    })
+</script>
+
+<!--使用v-bind绑定数据-->
+<div id="app-2">
+
+    <span v-bind:title="message">
+        鼠标悬停几秒查看提示信息
+    </span>
+
+</div>
+<script>
+    var app2 = new Vue({
+        el:"#app-2",
+        data:{
+            message:"页面加载于" + new Date().toLocaleString()
+        }
+    })
+</script>
+
+<!--使用v-if属性进行显示或者隐藏的操作-->
+<div id="app-3">
+    <p v-if="seen">现在你看到我了</p>
+</div>
+<script>
+    var app3 = new Vue({
+        el:"#app-3",
+        data:{
+            seen:true
+        }
+    })
+</script>
+
+<!--使用v-for属性设置组件内的列表展示-->
+<div id="app-4">
+    <ul>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ul>
+</div>
+<script>
+    var app4 = new Vue({
+        el:"#app-4",
+        data:{
+            todos:[
+
+                {text:"这是我"},
+                {text:"第一个"},
+                {text:"Vue项目"},
+
+            ]
+        }
+    })
+</script>
+
+<!--使用v-on属性绑定点击事件-->
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
+</div>
+<script>
+    var app5 = new Vue({
+        el:"#app-5",
+        data:{
+            message:"Hello Vue.js!"
+        },
+        methods:{
+            reverseMessage:function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+
+<!--使用v-model实现状态和输入的双向绑定-->
+<div id="app-6">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+<script>
+    var app6 = new Vue({
+        el:"#app-6",
+        data:{
+            message:"Hello Vue!"
+        }
+    })
+</script>
+
+</body>
+</html>

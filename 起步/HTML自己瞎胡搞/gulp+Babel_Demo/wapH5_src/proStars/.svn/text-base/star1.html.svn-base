@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>社长明星</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			body{background:#ffddde url(../public/images/proStars/April/star/bj.png) no-repeat left top;background-size: cover;}
+		</style>
+	</head>
+	<body>
+		<img src="../public/images/proStars/April/star/banner1.png" align="top"/>
+		
+		<section class="sec3 border">
+			<div class="top">
+				<img src="../public/images/proStars/April/star/icon1.png" align="top" />
+			</div>
+			<p>社区用户称我为超级社区社长代言人，组团购，组社区活动，在快乐中为邻里提供了很多便捷;  让我接触到更多朋友，还顺便带来了订单，赞一个。</p>
+		</section>
+		
+		
+		<section class="sec4 border">
+			<div class="top">
+				<img src="../public/images/proStars/April/star/icon4.png" align="top" />
+			</div>
+			
+			<ul>
+				<li class="fire">
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7486&type=1&isShare=1&vid=327&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../public/images/proStars/April/star/you.jpg" class="pic fire">
+						<div>
+							<h3>非转基因一级花生油5L</h3>
+							<p>&yen;149.00<span>&yen;159.00</span></p>
+						</div>
+			  </a>			  </li>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7485&type=1&isShare=1&vid=327&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../public/images/proStars/April/star/you2.jpg" class="pic">
+						<div>
+							<h3>纯天然无添加1.8L花生油</h3>
+							<p>&yen;88.00<span>&yen;98.00</span></p>
+						</div>
+			  </a>			  </li>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7597&type=1&isShare=1&vid=327&from=singlemessage&isappinstalled=1#" class="clearfix">
+						<img src="../public/images/proStars/April/star/dan.jpg" class="pic">
+						<div>
+							<h3>友兰科技水沐兰系列冰箱除味蛋</h3>
+							<p>&yen;168.00<span>&yen;258.00</span></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</body>
+	<script src="../public/js/environment134.js"></script>
+	<script src="../public/js/apiUrl134.js"></script>
+	<script src="../public/js/public134.js"></script>
+	<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+<section>
+    <p>支付成功，正在跳转...</p>
+</section>
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script>
+
+    var info = getParam(funcUrlDel("type")),type=GetQueryString("type");
+    //获取url的参数
+    function getParam(url)
+    {
+        var index = url.indexOf('?'); //获取？字符位置
+        url = url.substr(index+1); //截取url参数部分
+        var arr = new Array();
+        arr = url.split('&'); //将各参数分离
+        var str = '{';
+        //将参数数组部分转换为JSON数据
+        for(var i=0;i<arr.length;i++)
+        {
+            var index1 = arr[i].indexOf('=');
+            //判断最后一个参数是否有值
+            if(index1 == -1)
+            {str+=',"'+arr[i]+'":""';continue;}
+            var key = arr[i].substr(0,index1);
+            var val = arr[i].substr(index1+1);
+            var str1= ',';if(i==0) {str1 = '';}
+            str+=str1+'\"'+key+'\":'+'\"'+val+'\"';
+        }
+        return str+'}';
+    }
+
+    $.ajax({
+        url:verifyUrl,
+        data:getAuth()+"info="+info,
+        success:function(data){
+            if(data.errCode == 0){        //验签成功
+                //通过type判断订单类型
+                if(type == typeObj.native){
+                    location.replace(jumpUrl.orderList);     //原产优品跳转到订单列表
+                }else if(type == typeObj.groupBuy){
+                    location.replace(jumpUrl.orderList.split("#")[0]+"#type=3&status=3"); //拼团跳转至拼团待发货状态
+                }else if(type == typeObj.customLife){
+                    location.replace(jumpUrl.clOrderList); //定制生活跳转定制订单列表
+                }
+            }else {                      //验签失败
+                location.replace(jumpUrl.find)
+            }
+        },
+        error:function(msg){console.log(msg.statusText)}
+    })
+
+
+
+
+
+</script>
+</html>

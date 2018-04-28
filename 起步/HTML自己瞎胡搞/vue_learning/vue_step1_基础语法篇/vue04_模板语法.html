@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue04_模板语法</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+
+<!--Mustache(双大括号语法)标识文本插值-->
+<span>Message:{{ msg }}</span>
+
+<!--v-once指令执行一次性插值-->
+<span v-once>这个将不会改变: {{ msg }}</span>
+
+<!--v-html输出真正的HTML文本 对于用户提供的内容切勿使用插值-->
+<p>使用HTML文本: <span v-html="rawHtml"></span></p>
+
+<!--对于HTML特性应该使用v-bind指令-->
+<div v-bind:id="myid"></div>
+<!--布尔值特性下，存在即表示为true-->
+<button v-bind:disabled="isButtonDisabled">我是Button</button>
+
+<!--指令 (Directives) 是带有 v- 前缀的特殊属性-->
+<p v-if="seen">现在你看到我了</p>
+
+<!--参数-->
+<a v-bind:href="url"></a>
+<a v-on:click="doSomething"></a>
+
+<!--
+修饰符
+修饰符 (Modifiers) 是以半角句号,指明的特殊后缀
+用于指出一个指令应该以特殊方式绑定。例如prevent 修饰符告诉 v-on 指令对于触发的事件调用event.preventDefault()方法阻止元素发生默认的行为
+-->
+
+<from v-on:submit.prevent="onSubmit"></from>
+
+<!--缩写v-bind缩写-->
+
+<!--完整语法-->
+<a v-bind:href="url"></a>
+<!--缩写  直接省略掉v-bind留下一个冒号即可-->
+<a :href="url"></a>
+
+<!--v-on缩写-->
+<!--完整语法-->
+<a v-on:click="doSomething"></a>
+<!--缩写 用@符号代替v-on特性-->
+<a @click="doSomething"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

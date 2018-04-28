@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue10_表单输入绑定</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<!--普通文本 双向数据绑定-->
+<div id="input1">
+    <p>普通文本</p>
+    <input v-model="message" placeholder="edit me">
+    <p>Message is : {{ message }}</p>
+
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input1",
+        data:{
+            message:"",
+        }
+    })
+</script>
+
+
+<!--多行文本 双向数据绑定-->
+<div id="input2">
+    <p>多行文本</p>
+    <textarea v-model="message" placeholder="edit me  duo hang"></textarea>
+    <p>Message is : {{ message }}</p>
+
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input2",
+        data:{
+            message:"",
+        }
+    })
+</script>
+
+
+<!--单选按钮-->
+<div id="input5">
+    <input type="radio" id="r1" value="one" v-model="picked">
+    <label for="r1">one</label>
+
+    <br>
+    <input type="radio" id="r2" value="two" v-model="picked">
+    <label for="r2">two</label>
+
+    <br>
+
+    <span>选择的是{{ picked }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input5",
+        data:{
+            picked:"",
+        }
+    })
+</script>
+
+
+<!--复选按钮-->
+<div id="input3">
+    <input type="checkbox" id="checkbox" v-model="checked">
+    <label for="checkbox">{{ checked }}</label>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input3",
+        data:{
+            checked:true,
+        }
+    })
+</script>
+
+<div id='input4'>
+    <input type="checkbox" id="1" value="Jack" v-model="checkedNames">
+    <label for="1">Jack</label>
+    <input type="checkbox" id="2" value="John" v-model="checkedNames">
+    <label for="2">John</label>
+    <input type="checkbox" id="3" value="Mike" v-model="checkedNames">
+    <label for="3">Mike</label>
+    <br>
+    <span>Checked names: {{ checkedNames }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input4",
+        data:{
+            checkedNames:[],
+        }
+    })
+</script>
+
+<!--
+下拉选项按钮
+
+如果 v-model 表达式的初始值未能匹配任何选项，<select> 元素将被渲染为“未选中”状态。
+在 iOS 中，这会使用户无法选择第一个选项。因为这样的情况下，iOS 不会触发 change 事件。因此，更推荐像上面这样提供一个值为空的禁用选项。
+-->
+<div id="input6">
+    <select v-model="selected">
+        <option value="" disabled>请选择你最喜欢的水果</option>
+        <option value="A">西瓜</option>
+        <option value="B">苹果</option>
+        <option value="C">香蕉</option>
+    </select>
+    <br>
+    <span>您选择最喜欢的水果是:{{ selected }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input6",
+        data:{
+            selected:"",
+        }
+    })
+</script>
+
+<div id="input7">
+
+    <select v-model="selected" multiple style="width:100px;">
+
+        <option value="A">科比</option>
+        <option value="B">周杰伦</option>
+        <option value="C">五月天</option>
+
+    </select>
+
+    <br>
+    <span>当前选中的选项为:{{ selected }}</span>
+
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input7",
+        data:{
+            selected:"",
+        }
+    })
+</script>
+
+<div id="input8">
+
+
+    <select v-model="selected">
+        <option v-for="option in options" :value="option.value">
+            {{ option.text }}
+        </option>
+    </select>
+
+    <span>当前选择是:{{ selected }}</span>
+
+
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input8",
+        data:{
+            options:[
+                {value:'A',text:"科比"},
+                {value:'B',text:"周杰伦"},
+                {value:'C',text:"五月天"},
+            ],
+            selected:"A",
+        }
+    })
+</script>
+
+
+<!--如果想要把输入框中的值绑定到vue的某个实例上 则需要使用v-bind来绑定对应的属性值  使用true-value 和 false-value来进行设置选中和未选中时候的值-->
+<div id="input9">
+    <input type="checkbox" v-model="toggle" true-value="同意协议" false-value="未同意协议">
+    <span>{{ toggle }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input9",
+        data:{
+            toggle:"未同意协议",
+        }
+    })
+</script>
+
+<!--单选按钮绑定实例属性值-->
+<div id="input10">
+
+    <input id="11" type="radio" v-model="pick" :value=" '科比' ">
+    <label for="11">科比</label>
+
+    <input id="22" type="radio" v-model="pick" :value=" '周杰伦' ">
+    <label for="22">周杰伦</label>
+
+    <input id="33" type="radio" v-model="pick" :value=" '五月天' ">
+    <label for="33">五月天</label>
+
+    <br>
+
+    <span>当前选择的是:{{ pick }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input10",
+        data:{
+            pick:"",
+        },
+    })
+</script>
+
+<!--下拉选项绑定实例属性-->
+<div id="input11">
+    <select v-model="selected">
+
+        <option :value="{number:123}">123</option>
+        <option :value="{number:456}">456</option>
+        <option :value="{number:789}">789</option>
+
+    </select>
+    <span>当前选择的数字是{{ selected.number }}</span>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#input11",
+        data:{
+            selected:"",
+        },
+    })
+</script>
+
+
+<!--
+使用修饰符
+    .lazy  将每一次input事件触发同步数据更改为只有当change的时候才同步数据
+    .number 将用户输入的值自动转为number类型的
+    .trim  自动过滤用户输入的首尾空白字符
+-->
+
+
+
+
+
+
+
+
+</body>
+</html>

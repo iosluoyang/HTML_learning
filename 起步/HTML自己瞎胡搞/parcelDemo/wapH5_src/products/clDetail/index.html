@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="css/index12211018.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>body{padding-top: 0}</style>
+</head>
+<body ontouchstart="">
+
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <a class="shangCheng"  href="javascript:location.href=jumpUrl.clProList" ><img  src="../../public/images/base/ic_sc.png" align='middle'></a>
+    <a class="order"  href="javascript:location.href=jumpUrl.clOrderList" ><img  src="../../public/images/base/ic_order.png" align='middle'></a>
+    <!--<h2 class="f18">商品详情</h2>-->
+</header>
+
+<section class="container">
+    <div class="pullDownIcon"></div>
+    <!--商品详情-->
+    <section class="proDetail hide">
+        <!--轮播图-->
+        <section  class="lunBo swiper-container">
+            <ul class="swiper-wrapper"></ul>
+            <div class="swiper-pagination"></div>
+        </section>
+
+        <!--促销内容展示区域(包含倒计时)-->
+        <div class="promotiondiv" style="overflow: hidden;"></div>
+
+
+
+        <!--商品信息-->
+        <section class="wrap">
+            <h3 class="title f16 bold"></h3>
+            <p class="jianjie f14 grey6"></p>
+            <!--促销未开始时的价格展示区域-->
+            <div class="promotionpricediv"></div>
+            <p class="price red hide"></p>
+            <ul class="priceGroup clearfix t_center grey6 hide"> </ul>
+            <div class="f14 guiGe oneClamp clearfix"></div>
+            <div class="guiGeArr f12 clearfix hide"></div>
+            <div class="address f14 oneClamp"></div>
+            <div class="service f14">支持服务：<span class="red f12">送货上门</span><span class="red f12">用户自提</span></div>
+            <!--促销海报-->
+            <div class="promotionhaibaodiv hide">
+                <!--注意为了要将文本垂直水平居中,需要用span将文本包裹起来-->
+                <p><span class="haibaowenan"></span></p>
+            </div>
+            <div class="grey9 scopeValues f12"></div>
+        </section>
+
+        <!--选择数量-->
+        <section class="num f16">
+            <div class="f_right numGroups">
+                <div class="numGroup f_right">
+                    <span class="minus canMinus"></span><input class="t_center" type="number" onpaste="return false;"   pattern="[0-9]*"  value="6"><span class="plus"></span>
+                </div>
+                <p class="grey9 f11 t_right"></p>
+            </div>
+            <div>选择数量</div>
+        </section>
+
+        <!--配送方式-->
+        <section class="sendTypeWrap  f14">
+            <div class="active" deliveryType="1" >
+                <h3 class="f16">自动配送<span class="changeSendType grey9 f11">切换手动</span>
+                    <a href="javascript:void (0)" class="f_right edit f13 grey9">编辑</a></h3>
+                <div class="sendPlan">
+                    <div class="autoSend t_center">
+                        <ul class="clearfix"></ul>
+                        <div class="slide up hide"><img src="../../public/images/products/slideUp.png"></div>
+                        <div class="slide down hide"><img src="../../public/images/products/slideDown.png"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div deliveryType="2" >
+                <h3 class="f16">手动配送<span class="changeSendType grey9 f11">切换自动</span>
+                    <a href="javascript:void (0)" class="f_right edit f13 grey9">编辑</a></h3>
+                <div class="sendPlan">
+                    <div class="handleSend">
+                        <p></p>
+                        <p>未制定配货日期<span></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div deliveryType="3"><h3>预估配货日期</h3></div>
+        </section>
+
+        <!--联系卖家-->
+        <section class="contact f16">
+            联系卖家 <a class="tel" href="javascript:void(0)"></a>
+        </section>
+
+        <!--查看更多促销商品-->
+        <section class="morepromotion f16 hide">查看更多促销商品</section>
+
+
+
+        <!--商品详情-->
+        <section class="contentWrap">
+            <!--选项卡-->
+            <ul class="tabs clearfix t_center f15">
+                <li class="tab1 f_left active">图文详情</li>
+                <li class="tab2 f_left">用户评价</li>
+            </ul>
+            <!--选项卡内容-->
+            <div class="tabContent">
+                <!--图文详情-->
+                <div class="tab1Content">
+                    <h3 class="title f16 bold"></h3>
+                    <div class="contents"></div>
+                    <section class="img"></section>
+                </div>
+
+                <!--用户评价-->
+                <div class="tab2Content">
+                    <ul class="commentList"></ul>
+                </div>
+            </div>
+
+        </section>
+
+
+    </section>
+    <!--逛逛定制-->
+    <section class="noPro t_center hide">
+        <img src="../../public/images/products/noPro.png">
+        <a class="red f15" href="javascript:void(0)">逛逛定制</a>
+    </section>
+
+</section>
+
+<!--立即购买-->
+<section class="submit hide f17 t_center"></section>
+<img src="../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+</body>
+
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/swiper.min.js"></script>
+<script src="../../public/js/scrollFun.js"></script>
+<script src="js/index12161357.js"></script>
+
+</html>

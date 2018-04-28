@@ -1,0 +1,71 @@
+/*@font-face
+{
+    font-family: ArtistFont;
+    src: url('../images/YW_calligraphy.ttf');
+}*/
+
+/*去除顶部留白*/
+body{
+    font-family: "PingFang SC"; /*本页面主要的字体*/
+}
+
+
+
+/*标题区域*/
+.zuopinjititle{
+    background: url("../images/img14.png") no-repeat center;
+    background-size:7.1rem 2.85rem ;
+    background-color: #ffffff;
+}
+/*内容区域*/
+.content{
+    background-color: #f7f7f7;
+    padding: 0 10px 10.85rem 10px ;
+    overflow : hidden; /*清浮动*/
+}
+
+/*艺术家*/
+.content .artist{
+    box-sizing: border-box;
+    float: left;
+    margin: 15px 15px 0 0;
+}
+/*第3、6、9等3的倍数的艺术家没有右边距*/
+.content .artist:nth-child(3n){
+    margin-right:0;
+}
+
+/*蒙版*/
+.artist .mengban{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*艺术家名称*/
+.mengban .artistname{
+    width: 100%;
+    font-size: 1.7rem;
+    color: #fff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-70%);
+    -webkit-transform: translate(-50%,-70%);
+    text-align: center;
+}
+
+/*作品字样*/
+.mengban .zuopin{
+    width: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,50%);
+    -webkit-transform: translate(-50%,50%);
+    text-align: center;
+
+}

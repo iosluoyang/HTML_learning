@@ -1,0 +1,1619 @@
+
+/*回到顶部按钮*/
+window.onscroll = function(){
+    if (getScrollTop()  > getClientHeight()){
+        $(".goTop").show()
+    }else {
+        $(".goTop").hide()
+    }
+};
+
+//返回顶部
+$(".goTop").click(function(){
+    window.scrollTo(0,0)
+});
+//页面加载完毕之后开始获取数据
+$(document).ready(function () {
+
+
+    /*首先根据链接获取id字段的值*/
+    var myid =  GetQueryString("id");
+    $.ajax({
+        url:getpromotionmsg,
+        data:getAuth()+"info={id:'"+myid+"'}",
+        success:function (data) {
+            if(data.errCode == 0){
+
+                /*促销活动页面基本信息*/
+                bean = data.resultdata.bean;
+                //促销活动标题（因为数据是同步请求,所以不担心会出现）
+                var title = bean.title || "促销";
+                //动态改变浏览器标题
+                changewebtitle(title);
+
+                //设置页面背景图片
+                bg_img = bean.bg_img;
+                //如果背景存在的话则设置背景图片,如果背景不存在的话设置背景颜色
+                if (bg_img){
+                    $("body").css({
+                        "background-image": "url('"+imgIndexUrl + bg_img+"')",
+                    });
+                }
+
+
+                //设置分享参数:
+                setSharepara(bean);
+
+                /*促销活动包含模块信息列表*/
+                moduleList = data.resultdata.moduleList;
+                //设置页面结构
+                setStruct(moduleList);
+            }
+            else{
+                mainTip(data.msg)
+            }
+        },
+        error:function (err) {
+            mainTip(err.statusText)
+        }
+    });
+
+})
+
+/*设置该页面在手机app中的分享参数*/
+function getshareparpmeter() {
+    return shareparameter;
+}
+
+//设置分享相关内容
+function setSharepara(bean) {
+    //share_img	分享文案图片地址
+    share_img = bean.share_img;
+    //share_title	分享文案标题
+    share_title = bean.share_title;
+    //share_explain	分享文案说明
+    share_explain = bean.share_explain;
+
+    //构造分享参数:
+    //如果是在微信中,则设置微信分享效果
+    if(isWeiXin()) {
+        //注入权限
+        wXConfig({
+            title:share_title,
+            desc:share_explain,
+            imgUrl:imgIndexUrl + share_img,
+        })
+    }
+    //不在微信中，默认为在APP中，通过交互方法向原生发送分享参数
+    else {
+        //当点击分享按钮的时候原生APP会请求H5的分享数据，在这里将分享参数传递给原生
+        //格式固定: sharetitle:分享标题 sharedescr:分享内容描述  shareimg:分享出去的图片  shareurl:分享出去的链接
+
+        shareparameter = {"sharetitle":share_title,"sharedescr":share_explain,"shareimg":imgIndexUrl + share_img,"shareurl":location.href};
+    }
+
+}
+
+
+//设置页面结构
+function setStruct(moduleList) {
+
+    /*
+        id	模块id	int
+        modType	模块类型    1轮播图    2商品展示   3静态导航   4动态导航   5促销展示   6搜索控件
+        spaceFlag	是否有间隔   0无  1有	int
+        title	标题modType 4使用	    String
+        searchTitle	搜索引导    modType 6使用
+        searchBgImg	搜索背景图
+        promotionInfo	促销信息	JsonObject
+        promotionId	拉取的促销id	int
+        style	展示样式modType 为2,5时   1单行排列左图右文   2单行排列左文右图   3单行排列上图下文   4双行排列上图下文
+                展示样式modType 为3时   1单行 2 一大两小  3一大四小
+
+        imgList	    modType 1,3,4时取此信息 图片数组
+        productList	modType 2,5时取此信息 产品数组
+    */
+
+
+    //遍历每一个模块,针对每一种模块进行布局
+    for(var index in moduleList){
+
+        module = moduleList[index];
+        //模块id 可以利用模块id的不同区别同一种样式的模块设置不同的效果(例如不同展示要求的轮播图)
+        id = module.id;
+        //模块类型    1轮播图    2商品展示   3静态导航   4动态导航   5促销展示 6搜索控件
+        modType = module.modType;
+        //是否有间隔   0无  1有
+        spaceFlag = module.spaceFlag;
+        //标题    modType = 4时使用
+        title = module.title;
+        //搜索引导modType 6使用
+        searchTitle = module.searchTitle;
+        //搜索背景图
+        searchBgImg = module.searchBgImg;
+        //promotionFlag	促销显示信息 1显示促销名称  2显示促销时间 3促销名称和促销时间都显示 int null代表都不显示
+        promotionFlag = module.promotionFlag;
+        //促销信息 JsonObject
+        promotionInfo = module.promotionInfo;
+        /*
+        promotionInfo中每一个简直对对应的含义
+        name	促销名称
+        tag	促销标签
+        type	促销类型    1自定义    2限时 3打折 4特价 5专享 6买赠
+        playbillImg	促销海报
+        playbillDesc	海报文案
+        userType	促销用户群   1全部 2新用户    3老用户
+        checkInvitationCode	1不限有无邀请码用户  2仅限有邀请码用户
+        startTime	促销开始时间
+        endTime	促销结束时间(空代表永久)
+        */
+
+        //拉取的促销id
+        promotionId = module.promotionId;
+
+        //展示样式modType 为2,5时   1单行排列左图右文   2单行排列左文右图   3单行排列上图下文   4双行排列上图下文
+        //展示样式modType 为3时   1单行 2 一大两小  3一大四小
+        style = module.style;
+
+        //图片数组 modType 1,3,4时取此信息
+        imgList = module.imgList;
+        /*
+        imgList内每一个字典元素的含义
+
+        img	地址
+        targetType	跳转类型    0无链接    1原产优品商品详情   2定制商品商品详情   3原产优品一级分类   4原产优品二级分类
+                              5定制商品二级分类   6品牌馆    7主题馆    99其他外部链接
+        firstColumn	商品详情ID信息，一级分类信息，馆id信息，其他外部链接信息
+        secondColumn	二级分类信息(定制二级分类id)
+        name	二级分类名称(定制分类)
+        quantityFlag	targetType为1,2时使用 是否售罄  0已售罄 ，非0未全部售罄
+
+        */
+
+        //产品数组 modType 2,5时取此信息
+        productList = module.productList || [];
+        /*
+        productList内每一个字典元素的含义
+        pid  商品id
+        img	图片地址
+        type	商品类型4原产优品5定制商品
+        name	商品名称
+        promotionInfo	促销信息
+        retailPrice	平台售价
+        quantityFlag	targetType为1,2时使用 是否售罄0已售罄      非0未全部售罄
+        */
+
+        //根据不同的样式进行不同的布局
+        switch (modType.toString()){
+            //轮播图
+            case "1":
+            {
+                var listr = "";
+                //轮播图数组数据填充
+                for(var index in imgList){
+
+                    imgdic = imgList[index];
+
+                    if (imgdic.img){
+                        //获取图片真实宽高
+                        var towidth = $("body").width();
+                        var toheight =  returntoheightwithUrlandTowidth(imgdic.img,towidth);
+
+                        listr += "<li class='swiper-slide' data-obj='"+JSON.stringify(imgdic)+"'  style=' width: "+towidth +'px' +"; height: "+toheight +'px' +"; background-image: url("+imgIndexUrl+imgdic.img+");'></li>"
+                    }
+                }
+                //使用id区别不同的轮播图装载区 轮播图区域以及轮播图分页器
+                var htmlwithoutsection = "<div class='swiper-container' id='container"+id+"'><ul class='lunbo swiper-wrapper'>"+listr+"</ul><div class='swiper-pagination'></div></div>";
+
+                //根据每一个模块是否需要间距设置不同class的section的CSS样式
+                var htmlwithsection = "<section id='"+id+"'>"+htmlwithoutsection+"</section>";
+                $("body").append(htmlwithsection);
+
+                /*一切Dom操作都得要等元素被添加进去之后再进行*/
+                //因为轮播图的初始化设置必须是在当轮播元素全部添加到body中之后才能进行设置,此处特别注意应该是先append元素之后再进行轮播图的设置
+                setupstaticSwiper(id);
+
+                //设置点击事件
+                $("#"+id).off().on('click','li',function () {
+                    var element = $(this);
+                    clickitem(element);
+                });
+            }
+                break;
+            //商品展示
+            case "2":
+            {
+                //首先根据productList里面的内容进行网格内容项的布局
+                var divsstr = "";
+                for (index in productList){
+                    /*
+                        productList内每一个字典元素的含义
+                            pid  商品id
+                            img	图片地址
+                            type	商品类型4原产优品5定制商品
+                            name	商品名称
+                            promotionInfo	促销信息 其中包含促销标题
+                            retailPrice	平台售价
+                            marketPrice 市场价 定制商品展示价格时使用
+                            quantityFlag	targetType为1,2时使用 是否售罄0已售罄 ，非0未全部售罄
+                   */
+                    productdic = productList[index];
+                    //首先进行元素的拼装 添加顺序为图片-商品名称-平台价格(或者售价)
+                    if (productdic){
+                        //判断是否已经售罄 quantityFlag 0 已售罄  非0 未全部售罄
+                        //在之后需要再加一层判断，已售罄图标是放在图片中央还是图片区域的右30px 上30px的位置(quantityFlagRight) 如果是大图的那种上图下文形式，则已售罄图标在图片区域的右上角
+                        var quantityFlag = productdic.quantityFlag == "0" ? style == "3" ? "quantityFlagRight" :"quantityFlag" : "";
+                        //如果原产有促销信息,则价格取的是促销信息中促销价,否则取的是平台售价 定制统一为平台售价
+                        var showprice = productdic.type.toString() == "4" ? productdic.promotionProductInfo ? productdic.promotionProductInfo.price : productdic.retailPrice:productdic.retailPrice;
+                        //如果有促销信息,则商品标题为促销信息中的促销商品标题,否则取的是原标题
+                        var showproductname = productdic.promotionProductInfo ? productdic.promotionProductInfo.title : productdic.name;
+
+                        divsstr += "<div class='product' data-obj='"+JSON.stringify(productdic)+"'>" +
+
+                            "<div class='productpic "+quantityFlag+" ' style='background-image: url("+imgIndexUrl+productdic.img+")'></div>" +    //商品图片
+                            "<p class='productname bold twoClamp' style='color: #202020;font-size: 1.5rem;height: 3.2rem;line-height: 1.6rem;'>"+showproductname+"</p>" +                //商品名称
+                            "<p class='productprice red'>"+"<span style='font-size: 1.1rem;'>&yen;</span>"+showprice+"</p>" + //商品价格（原产有促销展示位促销价,没有促销展示为平台售价 定制展示平台售价）
+
+                            "</div>"
+                    }
+                }
+                var htmlwithsection = "<section id='"+id+"'>"+divsstr+"</section>";
+                $("body").append(htmlwithsection);
+
+                //找到对应的section div.product div.pic  p.productname p.productprice等元素
+                var sectionelement = $("#"+id);
+                var divproductelement = sectionelement.find("div.product");
+                var divimageelement = divproductelement.find("div.productpic");
+                var pnameelement = divproductelement.find("p.productname");
+                var ppriceelement = divproductelement.find("p.productprice");
+
+                //设置统一属性的地方:
+
+                    //商品区域左右留有20px的间距
+                sectionelement.css({
+                    "padding":"0 1rem",//每个section左右均有20px的间距
+
+                });
+                    //每个商品默认的背景颜色均为白色 每个商品块儿之间上下有10px的间距
+                divproductelement.css({
+                    "background-color":"white",
+                    "margin-top":"1rem",
+                    "border-radius":"5px",
+                });
+
+
+
+                //添加完商品之后,根据不同的展示样式给ul里面增加不同的class以做样式区分,并且设置不同的样式    style 1单行排列左图右文   2单行排列左文右图   3单行排列上图下文   4双行排列上图下文
+                switch (style.toString()){
+                    //1单行排列左图右文
+                    case "1":{
+                        sectionelement.addClass("productsA");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+
+
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "padding":"1.75rem 1.75rem",
+                            "width":productwidth + "px",
+                        });
+                        //设置divproduct中的image name price 等样式
+                        divimageelement.css({
+                            "float":"left",
+                            "width":"10rem",
+                            "height":"12rem",
+                            "margin-right":"20px",
+                        });
+
+                        //根据不同屏幕尺寸计算商品名称的宽度
+                        var productwidth = divproductelement.width(); //每一个商品的宽度
+                        var namewidth = productwidth - divimageelement.width() - 20;
+
+                        pnameelement.css({
+                            "float":"left",
+                            "width":namewidth,
+                            "margin-top":"1rem",
+                        });
+                        ppriceelement.css({
+                            "float":"left",
+                            "width":namewidth,//设置价格宽度和商品名称宽度一致
+                            "margin-top":"1rem",
+                        });
+
+                        //每个section中的前一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+
+                    }
+                        break;
+                    //2单行排列左文右图
+                    case "2":{
+                        sectionelement.addClass("productsB");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "padding":"1.75rem 1.75rem",
+                            "width":productwidth + "px",
+                        });
+                        //设置divproduct中的image name price 等样式
+                        divimageelement.css({
+                            "float":"right",
+                            "width":"10rem",
+                            "height":"12rem",
+                            "margin-left":"20px",
+                        });
+
+                        //根据不同屏幕尺寸计算商品名称的宽度
+                        var productwidth = divproductelement.width(); //每一个商品的宽度
+                        var namewidth = productwidth - divimageelement.width() - 20;
+
+                        pnameelement.css({
+                            "float":"left",
+                            "width":namewidth,
+                            "margin-top":"1rem",
+                        });
+                        ppriceelement.css({
+                            "float":"left",
+                            "width":namewidth,
+                            "margin-top":"1rem",
+                        });
+
+                        //每个section中的前一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                    //3单行排列上图下文
+                    case "3":{
+                        sectionelement.addClass("productsC");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "width":productwidth + "px",
+                        });
+
+                        divimageelement.css({
+                           "width":"100%",
+                           "height":"20rem",
+                           "margin-bottom":"1.4rem",
+                        });
+                        pnameelement.css({
+                            "margin":"0 1rem 1.4rem 1rem",
+                        });
+                        ppriceelement.css({
+                            "margin":"0 1rem 1.4rem 1rem",
+                        });
+
+                        //每个section中的第一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                    //4双行排列上图下文
+                    case "4":{
+                        sectionelement.addClass("productsD");//增加class
+
+                        //设置商品块的宽度
+                        var productwidth = Math.floor((sectionelement.width() - 10 )/2);
+
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "width":productwidth + "px",
+                        });
+
+                        //双行显示的商品奇数项(odd)右侧5px 偶数项(even)左侧5px 第一个是从0开始的
+                        sectionelement.find(".product:even").css({
+                            "margin-right":"5px",
+                        });
+                        sectionelement.find(".product:odd").css({
+                            "margin-left":"5px",
+                        });
+
+
+                        divimageelement.css({
+                            "width":"100%",
+                            "height":"16.2rem",
+                            "margin-bottom":"1rem",
+                        });
+                        var namewidth = divproductelement.width() - 10 - 10;
+                        pnameelement.css({
+                            "width":namewidth,
+                            "margin":"0 0 1rem 10px",
+                        });
+                        ppriceelement.css({
+                            "width":namewidth,
+                            "margin":"0 0 1rem 10px",
+                        });
+
+
+                        //如果产品数量为奇数的时候,则设置最后一个的商品块儿为上图下文的展示样式
+                        if (productList.length%2 != 0){
+
+                            //设置商品块的宽度
+                            var productwidth = sectionelement.width();
+                            //父级元素
+                            divproductelement.last().css({
+                                "overflow":"hidden",
+                                "width":productwidth + "px",
+                            });
+
+                            divimageelement.last().css({
+                                "width":"100%",
+                                "height":"20rem",
+                                "margin-bottom":"1.4rem",
+                            });
+                            pnameelement.last().css({
+                                "width":"auto",
+                                "margin":"0 1rem 1.4rem 1rem",
+                            });
+                            ppriceelement.last().css({
+                                "width":"auto",
+                                "margin":"0 1rem 1.4rem 1rem",
+                            });
+
+                        }
+
+
+
+                        //每个section中的前两个product没有上外边距
+                        sectionelement.find(".product:lt(2)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                }
+
+                //点击每个商品跳转到不同的商品详情
+                divproductelement.off().click(function () {
+                    var element = $(this);
+                    clickproductdetail(element);
+                });
+
+            }
+                break;
+            //静态导航
+            case "3":{
+                //首先根据imgList里面的内容进行网格内容项的布局
+                contentstr = "";
+                var firstpicHeight ;//记录第一张大图片的高度，为了之后将小图片压缩为大图片高度的一半
+                for(var index in imgList){
+                    /*
+                        imgList内每一个字典元素的含义
+                        img	地址
+                        targetType	跳转类型    0无链接    1原产优品商品详情   2定制商品商品详情   3原产优品一级分类   4原产优品二级分类
+                              5定制商品二级分类   6品牌馆    7主题馆    99其他外部链接
+                        firstColumn	商品详情ID信息，一级分类信息，馆id信息，其他外部链接信息
+                        secondColumn	二级分类信息(定制二级分类id)
+                        name	二级分类名称(定制分类)
+                        quantityFlag	targetType为1,2时使用 是否售罄  0已售罄 ，非0未全部售罄
+                    */
+                    imgdic = imgList[index];
+
+                    if (imgdic.img){
+                        //根据不同样式选择不同的towidth,然后根据图片地址和要变成的宽计算同比缩放之后的高
+                        var towidth ;//元素真实宽度
+                        var toheight;//元素真实高度
+                        switch (style.toString()){
+                            //单行排列，towidth是数组个数平分手机屏幕
+                            case "1":{
+                                towidth = Math.floor($("body").width()/imgList.length) ;//向下取整
+                                toheight = returntoheightwithUrlandTowidth(imgdic.img,towidth);
+
+                            }
+                                break;
+                            //一大两小样式，towidth是手机屏幕的1/2
+                            case "2":{
+                                towidth = Math.floor($("body").width()/2);
+                                //如果是第一张的话则取正常的高度，如果是第二第三张的话则取第一张高度的一半
+                                if (index == 0){
+                                    toheight = returntoheightwithUrlandTowidth(imgdic.img,towidth);
+                                    firstpicHeight = toheight;
+
+                                }
+                                else {
+                                    toheight = firstpicHeight/2;
+                                }
+                            }
+                                break;
+                            //一大四小样式，towidth是手机屏幕的1/3
+                            case "3":{
+                                towidth = Math.floor($("body").width()/3);
+                                //如果是第一张的话则取正常的高度，如果是第二第三张的话则取第一张高度的一半
+                                if (index == 0){
+                                    toheight = returntoheightwithUrlandTowidth(imgdic.img,towidth);
+                                    firstpicHeight = toheight;
+
+                                }
+                                else {
+                                    toheight = firstpicHeight/2;
+                                }
+                            }
+                                break;
+
+
+                        }
+
+                        contentstr += "<div data-obj='"+JSON.stringify(imgdic)+"'  style='float: left;width:"+towidth+'px;'+" height: "+toheight+'px;'+"  background: url("+imgIndexUrl+imgdic.img+") no-repeat left top;background-size: 100% 100%;'></div>"
+
+
+                    }
+                }
+                //设置网格容器,顺便根据是否有间隔进行样式的设置
+                var htmlwithsection = "<section class='clearfix' id='"+id+"'>"+contentstr+"</section>"
+                $("body").append(htmlwithsection)
+
+
+                //设置点击事件
+                $("#"+id).off().on('click','div',function () {
+                    var element = $(this);
+                    clickitem(element);
+                })
+
+            }
+                break;
+            //动态导航
+            case "4":{
+                //首先判断是否有标题
+                titlestr = "";
+
+                //存在标题，增加一个段落呈现标题页
+                if (title){
+                    titlestr = "<p class='moveguidetitle'>"+title+"</p>";
+                }
+                var listr = "";
+                //遍历图片数组，设置轮播图
+                for (index in imgList){
+                    imgdic = imgList[index];
+
+                    if (imgdic.img){
+                        //获取图片要展现的宽高(同比缩放之后的)  这里每个动态导航item的宽度是 (屏幕宽度-20px(左侧边距) - 2*20px(每个slider之间的间距))/2.2 一个屏幕展现2.2个动态导航item
+                        var towidth = ($("body").width() - 20 - 2* 20)/2.2;
+                        var toheight=  returntoheightwithUrlandTowidth(imgdic.img,towidth);
+
+                        listr += "<li class='swiper-slide' data-obj='"+JSON.stringify(imgdic)+"'  style=' width: "+towidth +'px' +"; height: "+toheight +'px' +"; background-image: url("+imgIndexUrl+imgdic.img+");'></li>"
+                    }
+
+                }
+                //使用id区别不同的轮播图装载区 轮播图区域以及轮播图分页器
+                var htmlwithoutsection = titlestr + "<div class='swiper-container' id='container"+id+"'><ul class='lunbo swiper-wrapper'>"+listr+"</ul><div class='swiper-pagination'></div></div>"
+
+                //根据每一个模块是否需要间距设置不同class的section的CSS样式
+                var htmlwithsection = "<section id='"+id+"'>"+htmlwithoutsection+"</section>"
+                $("body").append(htmlwithsection)
+
+                /*一切Dom操作都得要等元素被添加进去之后再进行*/
+                //因为轮播图的初始化设置必须是在当轮播元素全部添加到body中之后才能进行设置,此处特别注意应该是先append元素之后再进行轮播图的设置
+                setupmovedSwiper(id)
+                //设置动态导航的section有左间距20px
+                $("#"+id).css({
+                    "padding-left":"20px",
+                })
+
+                //设置点击事件
+                $("#"+id).off().on('click','li',function () {
+                    var element = $(this);
+                    clickitem(element);
+                })
+            }
+                break;
+            //促销展示
+            case "5":
+            {
+                //首先判断是否有促销名称和开始时间结束时间  promotionFlag	促销显示信息 1只显示促销名称  2只显示促销时间 3促销名称和促销时间都显示  null代表都不显示       int
+
+                titlestr = "";
+                //1只显示促销名称
+                if(promotionFlag == 1 && promotionInfo.name){
+                    titlestr += "<p class='cuxiaotitle'>"+promotionInfo.name+"</p>";
+                }
+                //2只显示促销时间
+                else if(promotionFlag == 2){
+                    titlestr += "<div class='daojishi'></div>";
+                }
+                //3促销名称和促销时间都显示
+                else if(promotionFlag == 3){
+                    titlestr += "<p class='cuxiaotitle'>"+promotionInfo.name+"</p><div class='daojishi'></div>"
+                }
+                //什么都不展示
+                else{
+
+                }
+
+                //将标题展示和倒计时放在另外一个section中与下面的商品列表区域进行拼接,防止进行网格布局化
+                var sectionstr1 = "<section id='titlesection"+id+"' style='padding-bottom: 1rem'>"+titlestr+"</section>";
+                $("body").append(sectionstr1);
+
+                //如果存在开始时间和结束时间的话则展示倒计时
+                var starttime = promotionInfo.startTime;
+                var endtime = promotionInfo.endTime;
+                //可能没有结束时间，结束时间为空时说明促销活动为永久有效
+                if (starttime){
+                    startTimerwithstarttimeandendtime(starttime,endtime,id);
+                }
+
+
+                //然后根据productList里面的内容进行网格内容项的布局
+                var divsstr = "";
+                for (index in productList){
+                    /*
+                        productList内每一个字典元素的含义
+                            pid  商品id
+                            img	图片地址
+                            type	商品类型4原产优品5定制商品
+                            name	商品名称
+                            promotionInfo	促销信息 其中包含促销商品标题和价格
+                            retailPrice	平台售价
+                            marketPrice 市场价 定制商品展示价格时使用
+                            quantityFlag	targetType为1,2时使用 是否售罄0已售罄 ，非0未全部售罄
+                    */
+                    var productdic = productList[index];
+                    var eachpromotionInfo = productList[index].promotionProductInfo;
+                    //首先进行元素的拼装 添加顺序为图片-促销标签-商品名称-促销价-平台价格-抢购按钮
+                    if (productdic){
+                        //判断是否已经售罄 quantityFlag 0 已售罄  非0 未全部售罄
+                        //在之后需要再加一层判断，已售罄图标是放在图片中央还是图片区域的右30px 上30px的位置(quantityFlagRight) 如果是大图的那种上图下文形式，则已售罄图标在图片区域的右上角
+                        var quantityFlag = productdic.quantityFlag == "0" ? style == "3" ? "quantityFlagRight" :"quantityFlag" : "";
+                        //根据是否已经售罄选择不同样式的购买按钮文案及背景图片样式
+                        btnaddclass =  productdic.quantityFlag == "0" ? "disabledclass" :"";
+                        btncontent =  productdic.quantityFlag == "0" ? "已抢光":"立即抢购";
+                        //价格显示   如果是原产优品则第一个价格为促销价，第二个价格为平台售价  如果是定制商品则第一个价格为平台售价，第二个价格为市场价
+                        var firstprice = productdic.type.toString() == "4" ? eachpromotionInfo.price : productdic.retailPrice ;
+                        var secondprice = productdic.type.toString() == "4" ? productdic.retailPrice : productdic.marketPrice ;
+
+                        //如果有促销信息,则商品标题为促销信息中的促销商品标题,否则取的是原标题
+                        var showproductname = eachpromotionInfo ? eachpromotionInfo.title : productdic.title;
+
+                        //因为上图下文和双行排列时的样式中商品名称需要在标签之前，所以在这两种样式中将商品名称放置在标签元素之前
+
+                        //上图下文样式时，名称在前 标签class为producttag（常规标签，有背景图片）
+                        if (style == "3"){
+
+                            divsstr +=
+
+                                "<div class='product' data-obj='"+JSON.stringify(productdic)+"' style='position: relative'>" +
+
+                                "<div class='productpic "+quantityFlag+" ' style='background-image: url("+imgIndexUrl+productdic.img+")'></div>" + //商品图片
+                                "<p class='productname bold twoClamp' style='color: #202020;font-size: 1.5rem;height: 3.2rem;line-height: 1.6rem;'>"+showproductname+"</p>" +    //商品名称
+                                "<span class='producttag' style='margin-left: 1rem;margin-bottom:1rem;display: inline-block;'>"+promotionInfo.tag+"</span>" +                                                 //商品标签
+                                "<p class='productprice red'>"+"<span style='font-size: 1.1rem;'>&yen;</span>"+firstprice+"  <span class='productorginalprice  grey9' >&yen;"+secondprice+"</span></p>" +  //商品价格
+                                "<div class='buybtn "+btnaddclass+"'>"+btncontent+"</div>"+     //商品购买按钮
+
+                                "</div>";
+                        }
+                       //双行排列时，名称在前 标签class为productredtag（红色镂空标签，无背景图片）
+                        else if (style == "4"){
+
+                            //在这里增加一个判断,如果样式为4(双行排列)且数组中的个数为奇数,则手动将最后一个产品的样式改为上图下文样式3
+                            if (productList.length % 2 != 0 && index== productList.length-1){
+
+                                //设置为上图下文的样式
+                                divsstr +=
+
+                                    "<div class='product' data-obj='"+JSON.stringify(productdic)+"' style='position: relative'>" +
+
+                                    "<div class='productpic "+quantityFlag+" ' style='background-image: url("+imgIndexUrl+productdic.img+")'></div>" + //商品图片
+                                    "<p class='productname bold twoClamp' style='color: #202020;font-size: 1.5rem;height: 3.2rem;line-height: 1.6rem;'>"+showproductname+"</p>" +    //商品名称
+                                    "<span class='producttag' style='margin-left: 1rem;margin-bottom:1rem;display: inline-block;'>"+promotionInfo.tag+"</span>" +                                                 //商品标签
+                                    "<p class='productprice red'>"+"<span style='font-size: 1.1rem;'>&yen;</span>"+firstprice+"  <span class='productorginalprice  grey9' >&yen;"+secondprice+"</span></p>" +  //商品价格
+                                    "<div class='buybtn "+btnaddclass+"'>"+btncontent+"</div>"+     //商品购买按钮
+
+                                    "</div>";
+                                continue;
+                            }
+
+                            divsstr +=
+
+                                "<div class='product' data-obj='"+JSON.stringify(productdic)+"' style='position: relative'>" +
+
+                                "<div class='productpic "+quantityFlag+" ' style='background-image: url("+imgIndexUrl+productdic.img+")'></div>" + //商品图片
+                                "<p class='productname bold twoClamp' style='color: #202020;font-size: 1.5rem;height: 3.2rem;line-height: 1.6rem;'>"+showproductname+"</p>" +    //商品名称
+                                "<p class='productredtag'>"+promotionInfo.tag+"</p>" +                                                 //商品标签
+                                "<p class='productprice red'>"+"<span style='font-size: 1.1rem;'>&yen;</span>"+firstprice+"  <span class='productorginalprice  grey9'>&yen;"+secondprice+"</span></p>" +  //商品价格
+                                "<div class='buybtn "+btnaddclass+"'>"+btncontent+"</div>"+     //商品购买按钮
+
+                                "</div>";
+                        }
+                        //其他样式 名称在后
+                        else {
+                            divsstr +=
+
+                                "<div class='product' data-obj='"+JSON.stringify(productdic)+"'>" +
+
+                                "<div class='productpic "+quantityFlag+" ' style='background-image: url("+imgIndexUrl+productdic.img+")'></div>" + //商品图片
+                                "<p class='producttag'>"+promotionInfo.tag+"</p>" +                                                     //商品标签
+                                "<p class='productname bold twoClamp' style='color: #202020;font-size: 1.5rem;height: 3.2rem;line-height: 1.6rem;'>"+showproductname+"</p>" +    //商品名称
+                                "<p class='productprice red'>"+"<span style='font-size: 1.1rem;'>&yen;</span>"+firstprice+"  <span class='productorginalprice  grey9'>&yen;"+secondprice+"</span></p>" +  //商品价格
+                                "<div class='buybtn "+btnaddclass+"'>"+btncontent+"</div>"+     //商品购买按钮
+
+                                "</div>";
+                        }
+
+                    }
+                }
+
+                var htmlwithsection = "<section id='"+id+"'>"+divsstr+"</section>";
+                $("body").append(htmlwithsection);
+
+                //找到对应的 titlesection productssection div.product div.pic div.tag div.redtag  p.productname p.productprice div.buybtn等元素
+                var titlesection = $("#titlesection"+id);
+                var sectionelement = $("#"+id);
+                var divproductelement = sectionelement.find("div.product");
+                var divimageelement = divproductelement.find("div.productpic");
+                var ptagelement = divproductelement.find("p.producttag");
+                var predtagelement = divproductelement.find("p.productredtag");
+                var pnameelement = divproductelement.find("p.productname");
+                var ppriceelement = divproductelement.find("p.productprice");
+                var buybtnelement = divproductelement.find("div.buybtn");
+
+                //设置统一属性的地方:
+                //titlesection的样式
+                titlesection.css({
+                    "padding":"0 1rem",
+                });
+                //商品区域左右留有20px的间距
+                sectionelement.css({
+                    "padding":"0 1rem",//每个section左右均有20px的间距
+
+                });
+                //每个商品默认的背景颜色均为白色 每个商品块儿之间上下有10px的间距
+                divproductelement.css({
+                    "background-color":"white",
+                    "margin-top":"1rem",
+                    "border-radius":"5px",
+                });
+                //点击每个商品跳转到不同的商品详情
+                divproductelement.off().click(function () {
+                    var element = $(this);
+                    clickproductdetail(element);
+                });
+
+
+                //添加完商品之后,根据不同的展示样式给productdiv里面增加不同的class以做样式区分,并且设置不同的样式    style 1单行排列左图右文   2单行排列左文右图   3单行排列上图下文   4双行排列上图下文
+                switch (style.toString()){
+                    //1单行排列左图右文
+                    case "1":{
+                        sectionelement.addClass("productsA");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+
+
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "padding":"1.75rem 1.75rem",
+                            "width":productwidth + "px",
+                        });
+
+
+                        //设置divproduct中的image name price 等样式
+                        divimageelement.css({
+                            "float":"left",
+                            "width":"10rem",
+                            "height":"12rem",
+                            "margin-right":"20px",
+
+                        });
+
+
+                        //设置促销标签的位置
+                        ptagelement.css({
+                            "float":"left",
+                            "margin-top":"1rem",
+                        });
+
+                        //根据不同屏幕尺寸计算商品名称/价格/购买按钮的宽度
+                        var productwidth = divproductelement.width(); //每一个商品的宽度
+                        var namewidth = productwidth - divimageelement.width() - 20;
+                        var pricewidth = productwidth - divimageelement.width() - 20;
+                        //判断此时图片右侧的剩余空间，如果小于抢购按钮的宽度 ,则重新设置抢购按钮的宽度
+                        var buybtnwidth = buybtnelement.width() >  productwidth - divimageelement.width() - 20 ?productwidth - divimageelement.width() - 20 - 10 :buybtnelement.width() ;
+
+                        pnameelement.css({
+                            "float":"left",
+                            "width":namewidth,
+                            "margin-top":"1rem",
+                        });
+                        ppriceelement.css({
+                            "float":"left",
+                            "width":pricewidth,
+                            "margin-top":"1rem",
+
+                        });
+
+                        buybtnelement.css({
+                            "float":"left",
+                            "width":buybtnwidth,
+                            "margin-top":"1rem",
+                        });
+
+                        //每个section中的前一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+
+                    }
+                        break;
+                    //2单行排列左文右图
+                    case "2":{
+                        sectionelement.addClass("productsB");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "padding":"1.75rem 1.75rem",
+                            "width":productwidth + "px",
+                        });
+
+
+                        divimageelement.css({
+                            "float":"right",
+                            "width":"10rem",
+                            "height":"12rem",
+                            "margin-left":"20px",
+                        });
+
+                        //设置促销标签的位置
+                        ptagelement.css({
+                            "float":"left",
+                            "margin-top":"1rem",
+                        });
+
+                        //根据不同屏幕尺寸计算商品名称/价格/购买按钮的宽度
+                        var productwidth = divproductelement.width(); //每一个商品的宽度
+                        var namewidth = productwidth - divimageelement.width() - 20;
+                        var pricewidth = productwidth - divimageelement.width() - 20;
+                        //判断此时图片右侧的剩余空间，如果小于抢购按钮的宽度 ,则重新设置抢购按钮的宽度
+                        var buybtnwidth = buybtnelement.width() >  productwidth - divimageelement.width() - 20 ?productwidth - divimageelement.width() - 20 :buybtnelement.width() ;
+
+
+                        pnameelement.css({
+                            "float":"left",
+                            "width":namewidth,
+                            "margin-top":"1rem",
+                        });
+                        ppriceelement.css({
+                            "float":"left",
+                            "width":pricewidth,
+                            "margin-top":"1rem",
+
+                        });
+
+                        buybtnelement.css({
+                            "float":"left",
+                            "width":buybtnwidth,
+                            "margin-top":"1rem",
+                        });
+
+                        //每个section中的前一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                    //3单行排列上图下文
+                    case "3":{
+                        sectionelement.addClass("productsC");//增加class
+                        //设置商品块的宽度
+                        var productwidth = sectionelement.width();
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "width":productwidth + "px",
+                        });
+
+                        divimageelement.css({
+                            "width":"100%",
+                            "height":"20rem",
+                            "margin-bottom":"1rem",
+                        });
+
+                        pnameelement.css({
+                            "margin":"0 1rem 1rem 1rem",
+                        });
+                        ptagelement.css({
+                            "margin":"0 1rem 1rem 1rem",
+                        });
+                        ppriceelement.css({
+                            "margin":"0 1rem 1rem 1rem",
+                        });
+
+                        //购买按钮用定位实现
+                        buybtnelement.css({
+                            "position":"absolute",
+                            "right":"1rem",
+                            "bottom":"1rem",
+                        });
+
+                        //每个section中的前一个product没有上外边距
+                        sectionelement.find(".product:lt(1)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                    //4双行排列上图下文
+                    case "4":{
+
+                        //设置商品块的宽度
+                        var productwidth = Math.floor((sectionelement.width() - 10 )/2);
+
+                        //父级元素
+                        divproductelement.css({
+                            "overflow":"hidden",
+                            "width":productwidth + "px",
+                        });
+
+                        //双行显示的商品奇数项(odd)右侧5px 偶数项(even)左侧5px 第一个是从0开始的
+                        sectionelement.find(".product:even").css({
+                            "margin-right":"5px",
+                        });
+                        sectionelement.find(".product:odd").css({
+                            "margin-left":"5px",
+                        });
+
+
+                        divimageelement.css({
+                            "width":"100%",
+                            "height":"162px",
+                            "margin-bottom":"10px",
+                        });
+                        pnameelement.css({
+                            "margin":"0 10px 10px 10px",
+                        });
+                        predtagelement.css({
+                            "margin":"0 5px 0px 10px",
+                            "display":"inline-block",
+                        });
+                        //计算价格的展示宽度，否则会撑开内容区域
+                        var pricewidth = divproductelement.width() - 10 - predtagelement.width() - 5 - 5;
+                        ppriceelement.css({
+                            "width":pricewidth,//注意，只有inline-block时宽度才起作用
+                            "display":"inline-block",
+                        });
+                        //计算在该情况下购买按钮的宽度，左右间距为10px
+                        var btnwidth = divproductelement.width() - 10 - 10;
+                        buybtnelement.css({
+                            "width":btnwidth,
+                            "margin":"20px 10px 10px 10px",
+                        });
+
+                        //如果产品数量为奇数的时候,则设置最后一个的商品块儿为上图下文的展示样式
+                        if (productList.length%2 != 0){
+
+                            //设置商品块的宽度
+                            var productwidth = sectionelement.width();
+                            //父级元素
+                            divproductelement.last().css({
+                                "overflow":"hidden",
+                                "width":productwidth + "px",
+                            });
+
+                            divimageelement.last().css({
+                                "width":"100%",
+                                "height":"20rem",
+                                "margin-bottom":"1rem",
+                            });
+
+                            pnameelement.last().css({
+                                "margin":"0 1rem 1rem 1rem",
+                            });
+                            ptagelement.last().css({
+                                "margin":"0 1rem 1rem 1rem",
+                            });
+
+                            //移除价格属性
+                            ppriceelement.last().css({
+                                "margin":"0 1rem 1rem 1rem",
+                                "display":"block",
+                                "width":"auto",
+                            });
+
+                            //购买按钮用定位实现
+                            buybtnelement.last().css({
+                                "position":"absolute",
+                                "right":"1rem",
+                                "bottom":"1rem",
+                                "margin":"auto",
+                            });
+
+                        }
+
+                        //每个section中的前两个product没有上外边距
+                        sectionelement.find(".product:lt(2)").css({
+                            "margin-top":"0",
+                        });
+
+                    }
+                        break;
+                }
+
+
+            }
+                break;
+            //搜索框
+            case "6":{
+                //首先增加搜索控件
+                var htmlwithoutsection = "<input class='searchbar' type='search'  placeholder='"+searchTitle+"' style='box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;'>" +
+                                         "<button  class='searchbtn hide' onclick='clicksearch(this)'>搜索</button>"; //首先将搜索框的搜索按钮隐藏
+                var htmlwithsection = "<section id='"+id+"' class='inputdiv'>"+htmlwithoutsection+"</section>";
+
+                //此处增加一个多个搜索框的兼容,如果body中已经存在有searchmask的div则不用再添加
+                var htmladdmask = '';
+                if ( document.getElementsByClassName("searchmask").length == 0){
+                    htmladdmask = "<div class='searchmask'></div>"
+                }
+                $('body').append(htmlwithsection + htmladdmask);
+                /*一切Dom操作都得要等元素被添加进去之后再进行*/
+                //根据后台返回的搜索背景图片设置其section的背景图片 如果没有背景图片的话则设置为默认颜色的背景
+
+                //找到对应的section input.searchbar button.searchbtn 等元素
+                var sectionelement = $("#"+id);
+                var inputelement = sectionelement.find("input.searchbar");
+                var buttonelement = sectionelement.find("button.searchbtn");
+
+                //有背景图片时
+                if (searchBgImg){
+                    sectionelement.css({
+                        "background-image":"url("+imgIndexUrl + searchBgImg+")",
+                    });
+                }
+                //多个搜索框时top值累加 首先看body中已经存在了几个inputdiv,有几个就增加几个top
+                var inputdivsArr = document.getElementsByClassName("inputdiv");
+                var topvalue = inputdivsArr.length > 1 ? inputdivsArr[0].clientHeight *(inputdivsArr.length -1) : 0;
+                sectionelement.css({
+                    "top": topvalue,
+                });
+
+                //如果存在搜索框,则搜索框的定位是fixed并且body的上边距增加一个搜索区域的高
+                var currentpaddingtop = parseInt($("body").css("padding-top"));
+                currentpaddingtop += document.getElementById(id).clientHeight;
+                $("body").css({
+                    "padding-top":currentpaddingtop,
+                });
+
+
+                //搜索框相关属性的设置和绑定
+                inputelement.on('input propertychange', function() {
+                    //当前输入字数 有输入内容则显示搜索按钮，没有输入内容则不展示
+                    var count = $(this).val().length;
+                    //注意此处要获取到对应的搜索按钮,所以采用兄弟元素的获取方式
+                    var bortherbuttonelement = $(this).siblings(".searchbtn");
+                    if (count == 0){
+                        bortherbuttonelement.hide();
+                    }
+                    else{
+                        bortherbuttonelement.show();
+                    }
+
+                });
+
+                //输入框获取焦点时显示蒙版，失去焦点时隐藏蒙版
+                //获取焦点
+                inputelement.focus(function () {
+                    //显示蒙版
+                    $('.searchmask').show();
+                    //让body不能滚动
+                    $('body').css('overflow','hidden');
+
+                });
+
+                //点击蒙版让蒙版消失，并且输入框失去焦点,恢复body滚动事件
+                $('.searchmask').click(function (event) {
+
+                    /*阻止冒泡事件*/
+                    event.stopPropagation();
+                    /*阻止默认事件*/
+                    event.preventDefault();
+                    $(this).hide();
+                    $('body').css('overflow','auto');/*让body可以滚动*/
+                })
+
+                //失去焦点
+                inputelement.blur(function () {
+                    //隐藏蒙版
+                    $('.searchmask').hide();
+                    $('body').css('overflow','auto');/*让body可以滚动*/
+                });
+
+
+            }
+            break;
+        }
+
+        //如果有间隔,则该section下边距为1rem (除去搜索框)注意必须是在case中已经将section元素加到DOM中之后才能进行设置
+        if (spaceFlag == "1" && modType != 6){
+            $('#'+id).css({
+                "padding-bottom": "1rem",
+            });
+        }
+    }
+
+}
+
+
+/*----------------------------------------------------------------轮播相关-------------------------------------------------*/
+
+/*初始化静态轮播图  参数: id区别每个不同的轮播图以及item*/
+function setupstaticSwiper(id) {
+    //此方法接收一个id ,代表不同区域模块的唯一标识,这里需要根据不同的id进行指定轮播图的样式设置
+    var myswiper = new Swiper('#container'+id,{
+
+        //必须要根据不同的container上的lunbo 中的li 进行判断
+        //是否循环滚动(如果只有一张图片则关闭循环滚动)
+        loop:$("#container"+id+" .lunbo li").length > 1 ? true : false,
+
+        //如果需要分页器
+        pagination:$("#container"+id+" .lunbo li").length > 1 ?'.swiper-pagination':'null',
+
+        //如果只有一张图片，则切换模式变为fade
+        effect:$("#container"+id+" .lunbo li").length > 1 ? 'slide':'fade',
+
+        // 此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换
+        paginationClickable :true,
+
+        //自动滚动
+        autoplay: 3000,
+
+        //设置是否在用户打断之后继续自动轮播
+        autoplayDisableOnInteraction : false,
+
+        //每个slider之间的间距(单位px):
+        // spaceBetween : 0,
+
+
+        //滑动速度
+        //speed:300,
+
+        //设置初始化时候的索引
+        //initialSlide:1,
+
+        //如果需要前进后退按钮
+        //nextButton: '.swiper-button-next',
+        //prevButton: '.swiper-button-prev',
+
+        //如果需要滚动条
+        //scrollbar:'.swiper-scrollbar',
+
+
+        //autoplayStopOnLast  如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）
+        //autoplayStopOnLast : true,
+
+    })
+}
+
+/*初始化动态态轮播图  参数: id区别每个不同的轮播图以及item*/
+function setupmovedSwiper(id) {
+    //此方法接收一个id ,代表不同区域模块的唯一标识,这里需要根据不同的id进行指定轮播图的样式设置
+    var myswiper = new Swiper('#container'+id,{
+
+        //必须要根据不同的container上的lunbo 中的li 进行判断
+        //是否循环滚动(如果只有一张图片则关闭循环滚动)
+        loop:$("#container"+id+" .lunbo li").length > 1 ? true : false,
+
+        //如果需要分页器
+        // pagination:$("#container"+id+" .lunbo li").length > 1 ?'.swiper-pagination':'null',
+        pagination:'null',
+
+        //如果只有一张图片，则切换模式变为fade
+        effect:$("#container"+id+" .lunbo li").length > 1 ? 'slide':'fade',
+
+        //设置slider容器能够同时显示的slides数量(carousel模式)。
+        //可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。
+        slidesPerView : "auto",
+
+        // 此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换
+        //paginationClickable :true,
+
+        //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+        // autoplay: 3000,
+
+        //设置是否在用户打断之后继续自动轮播
+        //autoplayDisableOnInteraction : false,
+
+        //每个slider之间的间距(单位px):
+         spaceBetween : 20,
+
+
+        //滑动速度
+        //speed:300,
+
+        //设置初始化时候的索引
+        //initialSlide:1,
+
+        //如果需要前进后退按钮
+        //nextButton: '.swiper-button-next',
+        //prevButton: '.swiper-button-prev',
+
+        //如果需要滚动条
+        //scrollbar:'.swiper-scrollbar',
+
+
+        //autoplayStopOnLast  如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）
+        //autoplayStopOnLast : true,
+
+    })
+}
+
+/*轮播图或者静态导航的点击事件*/
+function clickitem(element) {
+
+    /*
+       imgList内每一个字典元素的含义
+       img	地址
+       targetType	跳转类型    0无链接    1原产优品商品详情   2定制商品商品详情   3原产优品一级分类   4原产优品二级分类
+                             5定制商品二级分类   6品牌馆    7主题馆    99其他外部链接
+       firstColumn	商品详情ID信息，一级分类信息，馆id信息，其他外部链接信息
+       secondColumn	二级分类信息(定制二级分类id)
+       name	二级分类名称(定制分类)
+       quantityFlag	targetType为1,2时使用 是否售罄  0已售罄 ，非0未全部售罄
+    */
+
+    var datadic = element.data('obj');
+
+    /*
+
+                根据不同情况下的分类跳转到不同的地方
+                targetType  跳转类型   1原产优品商品详情    2定制商品商品详情   3原产优品一级分类   4原产优品二级分类   5定制商品二级分类   6品牌馆    7主题馆    99其他外部链接
+                firstColumn  商品详情ID信息，一级分类信息，馆id信息，其他外部链接信息
+                secondColumn 二级分类信息
+    */
+
+
+    var resonsedata;//在APP能打开的前提下H5传递给原生的数据字典
+    var ownjumpUrl;//在APP打不开的时候wab站跳转的链接
+
+    switch (datadic.targetType){
+        case "0":{
+            //无链接，忽略跳转
+            return;
+        }
+            break;
+        //原产优品商品详情
+        case "1":{
+            //商品id
+            var ownpid = datadic.firstColumn;
+            resonsedata = {jumpkind:"1",data:{pid:ownpid}};
+            ownjumpUrl = jumpUrl.productsDetail+ownpid;
+        }
+            break;
+        //定制商品详情
+        case "2":{
+            //商品id
+            var ownpid = datadic.firstColumn;
+            resonsedata = {jumpkind:"2",data:{pid:ownpid}};
+            ownjumpUrl = jumpUrl.clProDetail + ownpid;
+        }
+            break;
+        //原产优品商品一级分类
+        case "3":{
+            //一级分类id
+            var sortid = datadic.firstColumn;
+            resonsedata = {jumpkind:"3",data:{sortid:sortid,secsortid:""}};
+            ownjumpUrl = jumpUrl.find+"#"+"typeid="+sortid;
+        }
+            break;
+        //原产优品商品二级分类
+        case "4":{
+            //一级分类id
+            var sortid = datadic.firstColumn;
+            //二级分类id
+            var secsortid = datadic.secondColumn;
+            resonsedata = {jumpkind:"4",data:{sortid:sortid,secsortid:secsortid}};
+            ownjumpUrl = jumpUrl.find + "#" + "typeid="+sortid+"&"+"typeids="+secsortid;
+        }
+            break;
+        //定制商品二级分类
+        case "5":{
+            //只有二级分类,故取定制生活二级分类
+            var secsortid = datadic.secondColumn;
+            //二级分类名称
+            var sortname = datadic.name;
+            resonsedata = {jumpkind:"5",data:{secsortid:secsortid,name:sortname}};
+            ownjumpUrl = jumpUrl.clSubProList+secsortid + "&typename="+ sortname;
+        }
+
+            break;
+        //品牌馆
+        case "6":{
+            //馆id
+            var guanid = datadic.firstColumn;
+            resonsedata = {jumpkind:"6",data:{"guanid":guanid}};
+            ownjumpUrl = jumpUrl.brand + guanid;
+        }
+            break;
+        //主题馆
+        case "7":{
+            //馆id
+            var guanid = datadic.secondColumn;
+            resonsedata = {jumpkind:"7",data:{"guanid":guanid}};
+            ownjumpUrl = jumpUrl.theme + guanid;
+        }
+            break;
+        //其他链接
+        case "99":{
+            var ownlinkurl = datadic.firstColumn;
+            if (ownlinkurl){
+                /*判断链接是否存在http，如果存在则直接打开，如果不存在则在前面添加http://这个字符*/
+                var ifexist = ownlinkurl.search('http');
+                /*不存在，进行拼接*/
+                if (ifexist == -1){
+                    ownlinkurl = 'http://' + ownlinkurl;
+                }
+
+                //如果是艺术馆的链接，则根据不同环境选择不同的艺术馆链接地址
+                if (ownlinkurl.indexOf("artisticHall/index.html") == -1){
+                    //非艺术馆，直接跳转
+                    location.href= ownlinkurl;
+                }
+                else{
+                    //艺术馆链接，根据不同环境进行判断
+
+                    var wabartisticurl = jumpUrl.ArtisticHall;//wab站艺术馆链接
+                    var APPartisticurl = APPpublicUrl + "newH5/inUserApp/artisticHall/index.html";//手机端艺术馆链接
+
+                    //如果是微信QQ微博等应用外，则打开为wab站链接,如果是应用内则打开为APP链接,注意此处不能根据iosbrowser和androidbrowser来区分是否是手机APP，需要排除QQ微博微信和PC端之后剩余的才是手机APP
+                    if (currentplatform.wx || currentplatform.QQ||currentplatform.sina || currentplatform.PC){
+                        location.href = wabartisticurl;
+                    }
+                    //手机APP
+                    else{
+                        location.href = APPartisticurl;
+                    }
+
+
+                }
+
+
+            }
+            return;//打开链接之后直接return掉，因为这个不会和APP进行交互
+        }
+            break;
+    }
+
+
+
+    var currentplatform = getcurrentplatform();
+    //如果是微信QQ微博等应用外，则打开为wab站链接,如果是应用内则进行交互,注意此处不能根据iosbrowser和androidbrowser来区分是否是手机APP，需要排除QQ微博微信和PC端之后剩余的才是手机APP
+    if (currentplatform.wx || currentplatform.QQ||currentplatform.sina || currentplatform.PC){
+        location.href = ownjumpUrl;
+    }
+    else{
+        mutualAction(resonsedata);
+    }
+
+}
+
+//点击商品详情的跳转
+function clickproductdetail(element) {
+
+    var productdic = element.data("obj");
+    /*
+       productList内每一个字典元素的含义
+       pid   商品id
+       img	图片地址
+       type	商品类型4原产优品5定制商品
+       name	商品名称
+       price	促销价格
+       retailPrice	平台售价
+       quantityFlag	targetType为1,2时使用 是否售罄0已售罄 ，非0未全部售罄
+  */
+    //首先根据type区分商品类型，然后根据id进行跳转
+
+    var resonsedata;//在APP能打开的前提下H5传递给原生的数据字典
+    var ownjumpUrl;//在APP打不开的时候wab站跳转的链接
+
+    switch (productdic.type.toString()){
+        //原产优品
+        case "4":{
+            //商品id
+            var ownpid = productdic.pid;
+            resonsedata = {jumpkind:"1",data:{pid:ownpid}};
+            ownjumpUrl = jumpUrl.productsDetail+ownpid;
+        }
+        break;
+        //定制商品
+        case "5":{
+            //商品id
+            var ownpid = productdic.pid;
+            resonsedata = {jumpkind:"2",data:{pid:ownpid}};
+            ownjumpUrl = jumpUrl.clProDetail + ownpid;
+        }
+        break;
+    }
+
+    var currentplatform = getcurrentplatform();
+    //如果是微信QQ微博等应用外，则打开为wab站链接,如果是应用内则进行交互,注意此处不能根据iosbrowser和androidbrowser来区分是否是手机APP，需要排除QQ微博微信和PC端之后剩余的才是手机APP
+    if (currentplatform.wx || currentplatform.QQ||currentplatform.sina || currentplatform.PC){
+        location.href = ownjumpUrl;
+    }
+    else{
+        mutualAction(resonsedata);
+    }
+
+}
+
+
+
+
+//根据图片地址以及传过来的元素即将要变成的宽(即真实宽度),自动计算并返回元素的真实高度
+function returntoheightwithUrlandTowidth(imgUrl,towidth) {
+
+
+    //根据图片宽高比计算即将要变成的高度
+    var toheight = returnpicratewithUrl(imgUrl) * towidth;
+
+    return toheight;
+
+}
+
+
+//根据开始时间和结束时间自动计算时间差并且根据实际情况开始倒计时,设置对应id的倒计时区域的文字
+function startTimerwithstarttimeandendtime(startTime,endTime,id) {
+    //有结束时间,说明有失效时间
+    //当前时间(字符串型)
+    var currentDatestr = new Date().format("yyyy-MM-dd hh:mm:ss");
+    var time_end,timerID,currenttype,currentstr,time_distance;
+    var timer = $("#titlesection"+id).find(".daojishi");
+    if(!timer){return;}
+
+    if (endTime){
+        //  1 当前时间小于开始时间
+        if (ifTime1morethanTime2(startTime,currentDatestr)){
+            currenttype = "1";
+            currentstr = "距开始还有";
+            time_distance = counttimewithstr(startTime,currentDatestr);
+
+        }
+        //  2 当前时间大于开始时间小于结束时间
+        else if (ifTime1morethanTime2(currentDatestr,startTime) && ifTime1morethanTime2(endTime,currentDatestr)){
+
+            currenttype = "2";
+            currentstr = "距结束还有";
+            time_distance = counttimewithstr(endTime,currentDatestr);
+        }
+        //  3 当前时间大于结束时间
+        else if(ifTime1morethanTime2(currentDatestr,endTime)){
+
+            currenttype = "3";
+            timer.html("活动已经结束");
+            return;
+
+        }
+
+    }
+    //没有结束时间，说明活动永久有效,只需要判断当前时间和开始时间即可
+    else {
+        //  4 当前时间小于开始时间
+        if (ifTime1morethanTime2(startTime,currentDatestr)){
+
+            currenttype = "4";
+            currentstr = "距开始还有";
+            time_distance = counttimewithstr(startTime,currentDatestr);
+
+        }
+        //  5 当前时间大于开始时间
+        if (ifTime1morethanTime2(currentDatestr,startTime)){
+            //什么都不展示，直接返回
+            currenttype = "5";
+            return;
+        }
+    }
+
+
+    var intervel = setInterval(function () {
+        var int_hour,int_minute,int_second;
+        if(time_distance>0){
+
+            int_hour=Math.floor(time_distance/3600);
+            left1 = Math.floor(time_distance%3600);
+            int_minute=Math.floor(left1/60);
+            left2 = Math.floor(left1%60);
+            int_second=Math.floor(left2);
+            if(int_hour<10)
+                int_hour="0"+int_hour;
+            if(int_minute<10)
+                int_minute="0"+int_minute;
+            if(int_second<10)
+                int_second="0"+int_second;
+            //将计算出来的时分秒展示在相应位置
+            $('#hour').html(int_hour);
+            $('#minute').html(int_minute);
+            $('#second').html(int_second);
+
+            str_time=currentstr+"<span class='red'>"+int_hour+"</span>"+"时"+"<span class='red'>"+int_minute+"</span>"+"分"+"<span class='red'>"+int_second+"</span>"+"秒";
+            timer.html(str_time);
+
+            time_distance -= 1;
+
+        }
+        else{
+            //倒计时结束 根据不同的情况展示不同的文案 去除定时器
+
+            //  1 当前时间小于开始时间    倒计时到开始时间
+            if (currenttype == "1"){
+                timer.html("活动已经开始,请刷新当前页面");
+            }
+            //  2 当前时间大于开始时间小于结束时间 倒计时到结束时间
+            else if (currenttype == "2"){
+                timer.html("活动已经结束");
+            }
+            //  3 当前时间大于结束时间 不会进行倒计时
+            else if (currenttype == "3"){
+
+            }
+            //  4 当前时间小于开始时间无结束时间 倒计时到开始时间
+            else if (currenttype == "4"){
+                timer.html("活动已经开始,请刷新当前页面");
+            }
+            //  5 当前时间大于开始时间无结束时间 不会进行倒计时
+            else if (currenttype == "5"){
+
+            }
+
+            clearInterval(intervel);
+        }
+
+    },1000);
+
+}
+
+
+
+//如方法名,判断Time1是否大于Time2 ,传入形如2017-11-30 11:20:58这样的字符串形式时间
+function ifTime1morethanTime2(time1,time2) {
+    var begin=new Date(time1.replace(/-/g,"/"));
+    var end=new Date(time2.replace(/-/g,"/"));
+    return begin > end;
+}
+
+//搜索响应方法
+function clicksearch(self) {
+    //注意此处要获取到对应的搜索框内容,所以采用兄弟元素的获取方式
+    var bortherinputelement = $(self).siblings(".searchbar");
+    //找到对应搜索区域的搜索文本
+    var searchtxt = bortherinputelement.val()
+    //获取搜索按钮的父类的数据字典,获取到对应的促销模块id
+    var fatherelement = $(self).parent();
+    var id = fatherelement.attr("id");
+    //从链接中获取到uid,如果无法获取到uid则不拼接uid参数,如果有uid参数则拼接到链接后面
+    var uid = GetQueryString('uid');
+    var uidstr = uid && uid != '' ? "&uid=" + uid :"";
+    location.href = jumpUrl.PromotionSearchResult + "name=" + searchtxt + "&id=" +id + uidstr;
+}
+
+//js 将Date日期格式转化为特定格式的字符串,设置Date对象的属性 例如 yyyy-mm-dd hh:MM:ss
+Date.prototype.format = function (format) {
+    var args = {
+        "M+": this.getMonth() + 1,
+        "d+": this.getDate(),
+        "h+": this.getHours(),
+        "m+": this.getMinutes(),
+        "s+": this.getSeconds(),
+        "q+": Math.floor((this.getMonth() + 3) / 3),  //quarter
+        "S": this.getMilliseconds()
+    };
+    if (/(y+)/.test(format))
+        format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var i in args) {
+        var n = args[i];
+        if (new RegExp("(" + i + ")").test(format))
+            format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? n : ("00" + n).substr(("" + n).length));
+    }
+    return format;
+};

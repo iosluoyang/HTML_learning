@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="shortcut icon" href="../public/images/base/favicon.ico" />
+
+    <link rel="stylesheet" href="../public/css/reset134.css">
+    <link href="../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index132_3.css">
+
+</head>
+<body>
+
+<!--导航栏-->
+<header>
+    <a class="back" onclick="clickback()" ><img src="../public/images/base/backArrow_ios.png" align="middle"></a>
+    <a class="order" onclick="clickorder()"><img src="../public/images/base/ic_order.png" align='middle'></a>
+</header>
+
+<!--搜索框-->
+<div class="inputdiv">
+    <input id="searchinput" type="search" class="searchbar" placeholder="搜索艺术家/作品">
+    <button id="searchbtn" class="searchbtn hide" onclick="clicksearch()">搜索</button><!--刚开始隐藏搜索按钮-->
+</div>
+
+<!--蒙版-->
+<div class="searchmask"></div>
+
+
+
+<!--头部 包含搜索框，轮播图，广播等-->
+<div class="header">
+
+    <!--头部内容区域-->
+    <div class="content">
+        <!--轮播图-->
+        <div class="swiper-container">
+            <ul class="lunbo swiper-wrapper"></ul>
+        </div>
+    </div>
+
+    <!--广播-->
+    <p class="radioarea">
+        提示：【在中国游荡·第三季】【东南写生行】正在进行，欢迎朋友们关注支持！购买收藏沿途写生作品可直接点击下面【在中国游荡】banner图，写生活动期间每晚八点更新当天作品（预计在12月底1月初之前）。更多信息咨询可联系电话13811359792（周女士）
+    </p>
+    <!--banner图1-->
+    <div id="banner1" class="banner"></div>
+
+</div>
+<!--艺术家-->
+<div class="artists"></div>
+<!--作品分类-->
+<div class="productions_kind">
+    <div class="productkind" data-obj= '{"sortid":84,"secsortid":85}' style="background-image: url('images/img11.png')"></div>
+    <div class="productkind" data-obj= '{"sortid":84,"secsortid":86}' style="background-image: url('images/img12.png')"></div>
+    <div class="productkind" data-obj= '{"sortid":84,"secsortid":87}' style="background-image: url('images/img13.png')"></div>
+</div>
+
+<!--banner图2-->
+<div id="banner2" class="banner"></div>
+
+<!--精品推荐-->
+<div class="sample_reels">
+    <!--精品商品-->
+    <div id="masonry" class="products"></div>
+    <!--更多按钮-->
+    <img src="images/btn_more.png" class="btnmore" onclick="clickmore()">
+</div>
+<img src="../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+<script src="../public/js/environment134.js"></script>
+<script src="../public/js/apiUrl134.js"></script>
+<script src="../public/js/public134.js"></script>
+<script src="../public/js/swiper.min.js"></script>
+<script type="text/javascript" src="../public/js/webViewFun134.js"></script>
+<script src="js/index12221421.js"></script>
+
+<!--瀑布流相关-->
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+
+</body>
+</html>

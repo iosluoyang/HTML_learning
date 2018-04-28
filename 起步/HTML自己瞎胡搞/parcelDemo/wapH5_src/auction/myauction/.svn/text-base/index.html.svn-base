@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>我的拍卖</title>
+
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+
+    <!--下拉刷新上拉加载的控件样式表-->
+    <link rel="stylesheet" href="../../public/css/mescroll.min.css">
+
+    <!--reset要放在swiper.css后面,否则有些样式不能被重写-->
+    <link rel="stylesheet" href="../../public/css/reset134.css">
+</head>
+<body>
+    <h1>
+        这个是我的拍卖的页面,是不是看不到东西，哈哈哈，看不到就对了,因为我还没开发呢亲!
+    </h1>
+
+
+    <div id="reactdiv"></div>
+
+
+    <script src="../../public/js/environment134.js"></script>
+    <script src="../../public/js/apiUrl134.js"></script>
+    <script src="../../public/js/public134.js"></script>
+
+    <!--下拉刷新上拉加载的控件-->
+    <script src="../../public/js/mescroll.min.js"></script>
+    <!--与原生交互js-->
+    <script src="../../public/js/webViewFun134.js"></script>
+
+    <script type="text/babel" src="js/myauction.js"></script>
+
+
+</body>
+</html>

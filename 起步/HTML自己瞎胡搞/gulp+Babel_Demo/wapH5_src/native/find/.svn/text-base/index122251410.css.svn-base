@@ -1,0 +1,98 @@
+#wrapper{background: #f7f7f7;position: absolute;top:8.8rem; }
+#scroller{padding-bottom: 4.4rem;}
+
+/*****************************************发现样式*****************************************/
+.guan{padding-top: 1rem;}
+.guan>li{width: 100%;margin-bottom: 1rem;}
+.guan>li:last-of-type{margin-bottom: 0}
+.guan>li>.zhuTiImg,.guan>li>.pinPaiImg{width: 100%;background: no-repeat center center;background-size: cover}
+.guan>li>.zhuTiImg{height:18rem}
+.guan>li>.pinPaiImg{height: 15rem}
+
+
+/*主题馆样式*/
+.guan .zhuTi{position: relative}
+.guan .hGroup{width: 32%;position:absolute;right: 1rem;top:60%;text-align: center;}
+.guan .hGroup .title{margin-bottom: 1rem;font-size: 1.7rem;}
+.guan .hGroup .detail{font-size: 1.2rem;}
+
+/*品牌馆样式*/
+.guan .pinPai{background: #fff;position: relative}
+.guan .pinPai .products{padding: 1rem 1.5rem;}
+.guan .pinPai .products li{float:left;width:30%;}
+.guan .pinPai .products li:nth-of-type(2){margin:0 5%;}
+.guan .pinPai .products .pic{width:100%;background:no-repeat center center;background-size: cover;margin-bottom: 1rem;}
+.guan .pinPai .products .title{color:#202020;margin-bottom:1rem;line-height:2rem;font-size: 1.5rem;height: 4rem;}
+.guan .pinPai .products .price{font-size: 1.5rem}
+
+
+/*关注样式*/
+.guan .pinPai .guanZhu{position:absolute;right:0;top:0;height: 2.6rem;line-height:2.6rem;color: #fff;padding: 0 2rem 0 1rem;font-size: 1.1rem;
+    background: #ff3b30 url("../../public/images/native/guanZhu_2.png") no-repeat 95% center;background-size:1.2rem}
+.guan .pinPai .yiGuanZhu{background-image: url("../../public/images/native/yiGuanZhu_2.png");background-size:1.4rem 1.2rem}
+
+
+/*爆款推荐*/
+.baoKuanTuiJian{height:4rem;border-left:3px #ff3b30 solid;background: #f7f7f7 url("../../public/images/native/baoKuan.png") no-repeat 1.2rem center;background-size:30%;display: none }
+.baoKuan{display: none}
+.baoKuan li{background: #fff;padding-right: 1rem;margin-bottom: 1rem;}
+.baoKuan li .pic{width:50%;height:12rem;background:no-repeat center center;background-size: cover;margin-right: 1rem;position: relative}
+.baoKuan li .title{color:#202020;padding-top:2rem;line-height:1.6rem;font-size: 1.5rem; }
+.baoKuan li .guiGe{color: #999;line-height:2.4rem;font-size: 1.2rem}
+.baoKuan li .price{line-height: 2.4rem;font-size: 1.5rem}
+.baoKuan li:last-of-type{margin-bottom: 0}
+
+
+/*****************************************一级菜单页面*****************************************/
+/*导航样式*/
+nav{position: fixed;top:4.4rem;z-index: 10;background: #fff;border-bottom:1px solid #eaeaea;font-size: 1.4rem;height:4.4rem;line-height: 4.2rem}
+nav .line{width: 2px;height: 4rem;background: url("../../public/images/native/border.png") no-repeat right center;background-size:100%;margin-top: 2px;}
+nav .find,nav .typeList>li{margin: 0 .5rem;padding:0 .5rem;border-bottom: 2px solid #fff;transition: 0.3s}
+nav .active,nav .typeList .active{border-bottom: 2px solid #ff3b30;color:#ff3b30}
+
+
+/*二级菜单样式*/
+.content2{display: none}
+.typeList2{background: #fff;margin-bottom: 1rem;font-size: 1.2rem;color:#999}
+.typeList2 li{float:left;width:24.75%;border-right:1px solid #e9e9e9;border-bottom: 1px #e9e9e9 solid;height: 4rem;line-height: 4rem;text-align: center}
+.typeList2 li:nth-of-type(4n){border-right:none}
+.typeList2 .active{color:#ff3b30}
+
+
+/*排序地区选择样式*/
+.select{background: #fff;height: 3rem;border-top:1px solid #e9e9e9;border-bottom: 1px #e9e9e9 solid;font-size: 1.2rem;padding: .5rem 0}
+.select>div{line-height:2rem; background: url("../../public/images/base/downArr.png") no-repeat right center;background-size: 1rem;}
+.select>.sort{display:block;border-right: 1px #e9e9e9 solid;padding:.5rem 3rem;background-position:90% center;position: relative}
+.select>.sort ul{position: absolute;left:0;top:3.6rem;background: #fff;display: none;z-index: 99;}
+.select>.sort ul li{padding: 1rem 3rem}
+.select>.sort ul li:first-of-type{border-bottom: 1px rgba(237,237,237,0.5) solid}
+.select>.area {padding: .5rem 2rem}
+.select>.active{background-image:url("../../public/images/base/upArr.png");}
+
+.content2 .productsListArr{padding-top: 0}
+
+/*选择地区*/
+#selArea{position: fixed;z-index:99;left:0;top:0;background: rgba(0,0,0,0.3);width: 100%;height: 100%;font-size:1.2rem;display: none}
+#selArea .inner{width: 100%;height: 45%;background: #f7f7f7;position: absolute;left: 0;bottom:0;}
+
+#selArea .inner>div{width: 40%;height:95%;position: absolute;left: 0;top:1rem;overflow: auto;}
+#selArea .inner .innerRight{width:50%;margin-left: 45%;}
+
+#selArea .inner ul {font-size: 1.2rem; }
+#selArea .inner ul li{border-bottom: 1px #eee solid;line-height: 3rem;text-indent: .5rem;border-left:2px #f7f7f7 solid}
+#selArea .inner ul .active{border-left:2px #ff3b30 solid}
+
+/*媒体查询*/
+
+@media screen and (max-width: 1920px){
+    .guan .hGroup{top:53%}
+}
+
+@media screen and (max-width: 375px){
+    .guan .hGroup{top:51%}
+}
+
+@media screen and (max-width: 320px){
+    .guan .hGroup{top:50%}
+}
+

@@ -1,0 +1,72 @@
+/*搜索框组件的样式*/
+
+/*搜索区域均为fixed定位*/
+.searchdiv{
+    overflow: hidden;
+    position: fixed;
+    z-index: 3;/*要高于蒙版的z-index2 轮播图z-index为1*/
+    left: 0;
+    right: 0;
+    padding: 0.6rem 1rem;
+    background-color: #f7f7f7;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*搜索框*/
+.searchbar{
+
+    background-image: url("../../../public/images/base/searchicon.png") ;
+    background-size: 1.25rem 1.25rem;
+    background-repeat: no-repeat;
+    background-position: 1.0rem center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 2.8rem;
+    display: block;
+    padding:0 4.2rem 0 2.5rem;
+    border-radius: 1rem;
+
+}
+/*搜索按钮*/
+.searchbtn{
+    position: absolute;
+    width: 4.2rem;
+    right: 1rem;
+    top:0 ;
+    bottom: 0;
+    color: #000000;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    background: transparent;
+}
+
+.searchbtn:active{
+    background-color: transparent;
+}
+
+/*搜索蒙版*/
+.searchmask{
+    display: none;/*首先先隐藏*/
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;/*将蒙版放在最前面但是放在头部和搜索框后面  注意轮播图z-index为1,所以这里设置为2*/
+}
+
+/*--清除谷歌浏览器下的 search 叉号*/
+input::-webkit-search-cancel-button{
+    display: none;
+}
+/*--清除IE下的 search 叉号*/
+input[type=search]::-ms-clear{
+    display: none;
+}
+
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFZOztBQUVaLGlCQUFpQjtBQUNqQjtJQUNJLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIsV0FBVywrQkFBK0I7SUFDMUMsUUFBUTtJQUNSLFNBQVM7SUFDVCxxQkFBcUI7SUFDckIsMEJBQTBCO0lBQzdCLCtCQUFBO1lBQUEsdUJBQUE7Q0FDQTs7QUFFRCxPQUFBO0FBQ0E7O0lBRUkscUVBQWlDO0lBQ2pDLGlDQUE2QjtJQUM3Qiw2QkFBQTtJQUNBLG1DQUF1QjtJQUN2QiwrQkFEdUI7WUFDdkIsdUJBQVk7SUFDWixZQUFBO0lBQ0EsZUFBZTtJQUNmLGVBQUE7SUFDQSwwQkFBb0I7SUFFcEIsb0JBQW9COztDQUN4QjtBQUNBLFFBQUE7QUFFQTtJQUFJLG1CQUFjO0lBQ2QsY0FBQTtJQUNBLFlBQU87SUFDUCxPQUFBO0lBQ0EsVUFBQTtJQUNBLGVBQUE7SUFDQSxrQkFBQTtJQUNBLG9CQUFBO0lBQ0gsd0JBQUE7Q0FFQTs7QUFFRDtJQUFDLDhCQUFBO0NBRUE7O0FBRUQsUUFBUTtBQURSO0lBRUEsY0FBQSxTQUFBO0lBQUksa0NBQUE7SUFDQSxZQUFBO0lBQ0EsYUFBQTtJQUNBLGdCQUFBO0lBQ0EsUUFBQTtJQUNBLE9BQUE7SUFDQSxXQUFBLGlEQUFBO0NBR0g7O0FBRUQseUJBQXlCO0FBRHpCO0lBRUEsY0FBQTtDQUVDO0FBQ0Qsc0JBRkE7QUFDQTtJQUVBLGNBQUE7Q0FFQzs7QUFFRCxjQUFjO0FBQWQ7O0NBSUM7QUFDRDtJQUhJLG9CQUFBO1FBSUgsWUFBQTtZQUNELFFBQUE7Q0FFQzs7O0FBR0Qsa0JBREM7QUFFRDs7OztJQUVBLG9CQUFBO0lBTkksNkJBQWM7O0lBV2QscUJBQXFCO0lBVnJCLDhCQUFBOztJQWFBLHVCQUF1QjtJQUExQiwyQkFBQTtDQUVBOztBQUVELGtCQVBBO0FBUUE7O0lBRUksVUFBVTtJQUNkLHVCQWhCSTtJQWlCSiwrQkFBQTs7SUFoQkMsc0JBQUE7SUFZRyw4QkFBQTs7SUFTQSx3QkFBdUI7SUFBM0Isb0JBQUE7Q0FFQzs7QUFFRCxtQkFGSTtBQUdKOztJQUZJLDBCQUFBOztRQUFBLHVCQUFBOztZQUFBLCtCQUFBO0NBS0giLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyrmkJzntKLmoYbnu4Tku7bnmoTmoLflvI8qL1xuXG4vKuaQnOe0ouWMuuWfn+Wdh+S4umZpeGVk5a6a5L2NKi9cbi5pbnB1dGRpdntcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB6LWluZGV4OiAzOy8q6KaB6auY5LqO6JKZ54mI55qEei1pbmRleDIg6L2u5pKt5Zu+ei1pbmRleOS4ujEqL1xuICAgIGxlZnQ6IDA7XG4gICAgcmlnaHQ6IDA7XG4gICAgcGFkZGluZzogMC42cmVtIDFyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjdmNztcbn1cblxuLyrmkJzntKLmoYYqL1xuLnNlYXJjaGJhcntcblxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uLy4uL3B1YmxpYy9pbWFnZXMvYmFzZS9zZWFyY2hpY29uLnBuZ1wiKSA7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxLjI1cmVtIDEuMjVyZW07XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAxLjByZW0gY2VudGVyO1xuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAyLjhyZW07XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgcGFkZGluZzowIDFyZW0gMCAyLjVyZW07XG4gICAgYm9yZGVyLXJhZGl1czogMXJlbTtcblxufVxuLyrmkJzntKLmjInpkq4qL1xuLnNlYXJjaGJ0bntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgd2lkdGg6IDQuMnJlbTtcbiAgICByaWdodDogMS41cmVtO1xuICAgIHRvcDowIDtcbiAgICBib3R0b206IDA7XG4gICAgY29sb3I6ICMwMDAwMDA7XG4gICAgZm9udC1zaXplOiAxLjZyZW07XG4gICAgbGluZS1oZWlnaHQ6IDIuOHJlbTtcbiAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cblxuLnNlYXJjaGJ0bjphY3RpdmV7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG59XG5cbi8q5pCc57Si6JKZ54mIKi9cbi5zZWFyY2htYXNre1xuICAgIGRpc3BsYXk6IG5vbmU7LyrpppblhYjlhYjpmpDol48qL1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC42KTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIGxlZnQ6IDA7XG4gICAgdG9wOiAwO1xuICAgIHotaW5kZXg6IDI7LyrlsIbokpnniYjmlL7lnKjmnIDliY3pnaLkvYbmmK/mlL7lnKjlpLTpg6jlkozmkJzntKLmoYblkI7pnaIgIOazqOaEj+i9ruaSreWbvnotaW5kZXjkuLoxLOaJgOS7pei/memHjOiuvue9ruS4ujIqL1xufVxuXG4vKi0t5riF6Zmk6LC35q2M5rWP6KeI5Zmo5LiL55qEIHNlYXJjaCDlj4nlj7cqL1xuaW5wdXQ6Oi13ZWJraXQtc2VhcmNoLWNhbmNlbC1idXR0b257XG4gICAgZGlzcGxheTogbm9uZTtcbn1cbi8qLS3muIXpmaRJReS4i+eahCBzZWFyY2gg5Y+J5Y+3Ki9cbmlucHV0W3R5cGU9c2VhcmNoXTo6LW1zLWNsZWFye1xuICAgIGRpc3BsYXk6IG5vbmU7XG59Il19 */

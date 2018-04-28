@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户协议</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        html{height: 100%}
+       body{height: 92%}
+        iframe{width: 100%;height:100%;border: none}
+    </style>
+</head>
+<body>
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">超级社区用户协议</h2>
+</header>
+<iframe src="https://userapi.icjsq.com/customs.html"></iframe>
+<!--<iframe src="javascript:localStorage.getItem('xieYi')"></iframe>-->
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/md5.js"></script>
+
+<script>
+    //--------------------超级社区用户协议--------------------
+    if(!localStorage.getItem("xieYi")){     //本地不存在用户协议
+    $.ajax({
+        url:getItemsUrl,
+        data:getAuth()+"info={itemCode:3}",
+        success:function(data){
+            var list = data.resultdata.list;
+            for(var i=0;i<list.length;i++){
+                if(list[i].itemCode ==4){
+                    localStorage.setItem("xieYi",list[i].itemValue);
+                    break
+                }
+            }
+        }
+    });
+    }
+</script>
+</html>

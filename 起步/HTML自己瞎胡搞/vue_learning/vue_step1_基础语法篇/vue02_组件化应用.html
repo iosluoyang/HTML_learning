@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue02_组件化应用</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<div id="app-7">
+
+    <ol>
+        <!--创建一个todo-item组件的实例-->
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+        </todo-item>
+    </ol>
+
+</div>
+<script>
+
+    //定义名为todo-item的新组件
+    Vue.component('todo-item',{
+        props:['todo'],//参数
+        template:"<li>{{ todo.text }}</li>"
+    })
+
+    var app7 = new Vue({
+        el:"#app-7",
+        data:{
+            groceryList:[
+
+                {id:0,text:"蔬菜"},
+                {id:1,text:"水果"},
+                {id:2,text:"谷物"},
+            ]
+        }
+    })
+
+</script>
+
+</body>
+</html>

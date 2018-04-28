@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社区拼团</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <!--<h2 class="f18">社区拼团</h2>-->
+    <h3 class="f16 oneClamp">社区拼团</h3>
+</header>
+
+
+
+<div id="wrapper">
+    <div id="scroller">
+        <!--下拉刷新-->
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+
+        <ul class="groList"></ul>
+        <!--上拉加载-->
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</div>
+
+
+
+<footer>
+    <ul class="clearfix">
+        <li class="f_left"><a class="active home" href="javascript:void (0)" >拼团</a></li>
+        <li class="f_left"><a class=" me" href="javascript:void(0)" >我</a></li>
+    </ul>
+</footer>
+
+<!--提示效果-->
+
+<img src="../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/iscroll.min.js"></script>
+<script src="../../public/js/scrollFun.js"></script>
+<script src="index12161357.js"></script>
+
+</html>

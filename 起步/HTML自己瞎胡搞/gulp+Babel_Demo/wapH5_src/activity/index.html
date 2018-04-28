@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社区活动</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../public/css/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="CSS/activity132_1.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../public/images/base/favicon.ico" />
+</head>
+<body>
+
+<!--<div class="wrap">-->
+    <!--轮播图-->
+    <div class="swiper-container">
+        <ul class="lunbo swiper-wrapper">
+        </ul>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!--活动详情信息-->
+    <section>
+        <h2 class="activityname"></h2>
+        <p class="activitytime">活动时间:</p>
+        <p class="activityaddress">活动地址:</p>
+        <p class="activitydetail"></p>
+    </section>
+
+    <!--分割线1-->
+    <!--<div class="line"></div>-->
+
+    <!--报名区域-->
+    <section class="baoming">
+        <h3>报名成员<span class="baomingnum"></span></h3>
+        <ul class="baominglist"></ul>
+    </section>
+
+    <!--分割线2-->
+    <!--<div class="line"></div>-->
+<!--</div>-->
+
+
+<!--报名按钮区域-->
+
+
+<!--报名蒙版-->
+<div class="baomingmask"></div>
+<!--报名填写界面-->
+<div class="baomingcontent">
+    <form>
+        <label for="name">姓名</label><br />
+        <input type="text" id="name" class="baominginput" maxlength="10"><br />
+        <label for="phonenum">手机</label><br />
+        <input type="tel" id="phonenum" class="baominginput"><br />
+        <label for="memo">备注</label><br />
+        <textarea name="memo" id="memo" cols="30" rows="3" maxlength="50" wrap="soft"></textarea><br />
+        <span class="agreement">我已同意<a href="javascript:location.href = jumpUrl.actXieYi" class="mianzexieyi">免责协议</a></span><br />
+        <button class="surebtn f18" onclick="surebaoming(event)">确定报名</button>
+    </form>
+</div>
+
+
+
+</body>
+<script src="../public/js/environment134.js"></script>
+<script src="../public/js/apiUrl134.js"></script>
+<script src="../public/js/public134.js"></script><!--已经包含了jQuery-->
+<script src="../public/js/swiper.min.js"></script>
+<script src="js/activity.js"></script>
+<!--jQuery图片异步加载方式-->
+<script type="text/javascript" src="../public/js/jquery.lazyload.js"></script>
+</html>
+

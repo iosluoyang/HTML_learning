@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue08_列表渲染</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+<!--使用v-for对列表项进行渲染-->
+<ul id="example-1">
+
+    <li v-for="item in items">
+
+        {{item.message}}
+
+    </li>
+
+</ul>
+<script>
+    var example1 = new Vue({
+        el:"#example-1",
+        data:{
+            items:[
+                {message:"Foo"},
+                {message:"Bar"}
+            ]
+        }
+    })
+</script>
+
+<!--使用v-for的第二参数可以获得当前选项的索引-->
+<ul id="example-2">
+    <li v-for="(item,index) in items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+    </li>
+</ul>
+<script>
+    var example2 = new Vue({
+        el:"#example-2",
+        data:{
+            parentMessage:"我是父组件的内容",
+            items:[
+                { message:"Foo" },
+                { message:"Bar" }
+            ]
+        }
+    })
+</script>
+
+<!--使用v-for来迭代对象的属性-->
+<ul id="v-for-object" class="demo">
+    <li v-for="value in object">
+        {{ value }}
+    </li>
+</ul>
+<script>
+    var vm = new Vue({
+        el:"#v-for-object",
+        data:{
+            object:{
+                name:"LHY",
+                age:25,
+            }
+        }
+    })
+</script>
+
+<!--使用第二个参数作为键名 使用第三个参数作为索引-->
+<ul id="v-for-object2" class="demo2">
+    <li v-for="(value,key,index) of object">
+        第 {{index}} 个键值对 - {{ key }} : {{ value }}
+    </li>
+</ul>
+<script>
+    var vm = new Vue({
+        el:"#v-for-object2",
+        data:{
+            object:{
+                firstName:"Haiyang",
+                lastName:"Liu",
+                age:"25",
+            }
+        }
+    })
+</script>
+
+
+<!--在使用v-for时需要提供一个唯一的key值来区分不同的子组件 注意使用动态绑定v-bind来绑定key值-->
+<div id="v-for-el" v-for="item in items" :key="item.id"></div>
+<script>
+    var vm = new Vue({
+        el:"#v-for-el",
+
+    })
+</script>
+
+
+<!--使用非变异方法例如filter等会生成一个新的数组，用新数组替换旧数组会通过Vue进行最大范围的重用-->
+
+<!--
+Vue不能检测以下变动的数组:
+1.利用索引直接设置一个项时,例如 vm.items[indexOfItem] = newValue
+2.修改数组长度时,例如 vm.items.length = newLength
+
+
+为了使vue检测到对应数组的变动从而实现响应式的效果可以将直接操作vue实例数据源数组的方法等效替换为以下方法:
+
+1.给vue的items直接设置新值  使用Vue.set(vm.items,indexOfItem,newValue)的方法 同时也可以直接使用别名 vm.$set(vm.items,indexOfItem,newValue)
+例如如果要给某个vue实例中的数据数组增加一个元素的话可以这样写:  vm.$set(vm.dataArrs,vm.dataArrs.length - 1 ,"I am the New Value")
+
+2.给vue的items直接设置长度  使用splice方法 vm.items.splice(vm.items,indexOfItem,newvalue)  如果是删除某个数组的长度达到一个新的长度的数组 则直接使用
+vm.items.splice(newLength)即可
+
+
+
+Vue不能检测对象属性的添加或者删除
+同理 如果想要让Vue检测出来,那么可以使用vm.$set(Object,key,value)的方法进行嵌套对象属性
+
+这里需要注意一点,如果需要为已有对象赋予多个新属性,比如使用Object.assign()或者_.extend()的话 这个时候应该用两个对象属性来创建一个新的对象属性,例如:
+Object.assign({},vm.Profile,{
+    age:27,
+    name:'vueObject'
+})
+
+
+-->
+
+<script>
+    var object1 = {name:"object1",age:24}
+    //在安卓的魅族手机上Object.assign()方法失效 可以使用下面的$.extend()方法
+    var object2 = Object.assign({},{sex:"male",data:{color:"blue"}},object1)  //谁在前面一个参数就先添加谁的属性
+    console.log(object2)
+
+    var object3 =$.extend(true,{},{sex:"male",data:{color:"blue"}},object1)
+    console.log(object3)
+
+</script>
+
+<!--显示过滤/排序的结果-->
+<ul id="arrs">
+    使用计算属性得出的偶数项的元素都有:
+    <li v-for="n in evenNumbers">{{ n }}</li>
+</ul>
+<script>
+    var vm = new Vue({
+        el:"#arrs",
+        data:{
+            numbers:[1,2,3,4,5]
+        },
+        computed:{
+            evenNumbers:function () {
+
+                return this.numbers.filter(function (value) { return value % 2 === 0 }) //设置数据源中的数组偶数项才进行返回
+
+            }
+        }
+    })
+</script>
+
+<ul id="numarrs">
+    使用方法属性得出的偶数项的元素都有:
+    <li v-for="n in even(numbers)">{{ n }}</li>
+</ul>
+<script>
+    var vm = new Vue({
+        el:"#numarrs",
+        data:{
+            numbers:[1,2,3,4,5]
+        },
+        methods:{
+            even:function (numbers) {
+                return this.numbers.filter(function (value) { return value % 2 === 0 })
+            }
+        }
+    })
+</script>
+
+
+<div id="app-9"><span v-for="n in 10">{{ n }}</span></div>
+<script>
+    var vm = new Vue({
+        el:"#app-9",
+
+    })
+</script>
+
+<!--
+v-for和v-if
+v-for的优先级比v-if的优先级要高,所以在同时使用v-for和v-if的时候v-if判断会出现在v-for的每一次循环中
+
+如果是有条件的跳过循环的执行 则
+-->
+<ul id="app10">
+    <li v-for="item in items" v-if="!item.isComplete">
+        <!--上面的代码只传递了未完成的 item。-->
+        {{ item }}
+    </li>
+</ul>
+
+
+
+
+</body>
+</html>

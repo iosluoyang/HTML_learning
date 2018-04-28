@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+<!--导航栏-->
+<header>
+    <a href="javascript:history.back();" class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <h2 class="f18 oneClamp">选择自提地址</h2>
+    <a href="javascript:void(0)" class="search"><img src="../../public/images/base/search.png" align="middle"></a>
+</header>
+
+<!--地址列表-->
+<ul class="fetchAddList">
+
+</ul>
+
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="js/list.js"></script>
+<script>
+    $(function () {
+        getFetchAddList(pidInfo,fetchAddList);
+        $(".search").click(function () {    //跳转搜索页面
+            location.href = jumpUrl.clFetchSearchAdd+pid
+        })
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../public/images/base/favicon.ico" />
+    <style>
+        body{background: #f7f7f7;}
+        /*评价列表*/
+        #wrapper{margin-top: 4.4rem;}
+        .list li{background: #fff;margin-bottom: 1rem;padding: 1rem;}
+        .list .pic{width: 5rem;height: 5rem;margin-right:5px;border-radius: 4px;background: no-repeat center center;background-size: cover}
+        .list .title{height: 3.5rem}
+        .list .price span:last-of-type{;margin-left: 5px;}
+        .list .bot{border-top: 1px #ededed solid;margin-top: 1rem;}
+        .list .bot .pingJia{border: 1px #ff3b30 solid;float: right;padding: 0 1rem;margin-top: 1rem;border-radius: 4px;line-height: 2.6rem;}
+        /*评价详情*/
+        .pingJiaDetail ul li:last-of-type{border-bottom:none;margin-bottom: 3rem;}
+        .pingJiaDetail ul li h3{line-height: 4rem;padding: 0 1rem;}
+        .pingJiaDetail .stars{padding: 3rem 0;background: #fff}
+        .pingJiaDetail .stars div{width: 3rem;height:3rem;display: inline-block;
+            background: url("../../../public/images/personal/starNormal.png") no-repeat center center;background-size: 100%}
+        .pingJiaDetail .stars .active{background-image: url("../../../public/images/personal/starPress.png")}
+        .pingJiaDetail textarea{height: 8rem;padding: 1rem;width: 93.5%}
+        .pingJiaDetail .submit{width:89%;margin: 0 auto;color:#fff;background: #ff3b30;border-radius: 4px;height: 4rem;line-height: 4rem; }
+
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <h2 class="f18">评价</h2>
+</header>
+
+<section class="hide scrollWrap">
+    <div id="wrapper">
+        <div id="scroller">
+            <!--下拉刷新-->
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            <ul class="list"></ul>
+            <!--上拉加载-->
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="pingJiaDetail hide">
+    <ul>
+        <li ><h3 class="f16">整体评价</h3></li>
+        <li class="stars t_center clearfix">
+            <div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div><div class="active"></div>
+        </li>
+        <li><h3 class="f16">商品评价</h3></li>
+        <li>
+            <textarea placeholder="写下您的评价内容，对其他的小伙伴们会有帮助喔~" maxlength="200" autofocus></textarea>
+        </li>
+        <li class="t_right grey9"><span>0</span>/200</li>
+    </ul>
+    <div class="submit t_center f18">提交</div>
+</section>
+
+
+<!--提示效果-->
+<img src="../../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+
+</body>
+<script src="../../../public/js/environment134.js"></script>
+<script src="../../../public/js/apiUrl134.js"></script>
+<script src="../../../public/js/public134.js"></script>
+<script src="../../../public/js/iscroll.min.js"></script>
+<script src="../../../public/js/scrollFun.js"></script>
+
+<script src="index12161357.js"></script>
+</html>

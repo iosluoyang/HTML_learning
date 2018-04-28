@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>vue06_Class和Style绑定</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<div id="app-1" class="static" :class="{ active:isActive,'text-danger':hasError }"></div>
+<script>
+    var vm = new Vue({
+
+        el:"#app-1",
+
+        data:{
+            isActive:true,
+            hasError:false
+        }
+
+    })
+</script>
+
+<!--class的绑定可以通过一个对象来设置多个class-->
+<div id="app-2" class="static" :class="classobject"></div>
+<script>
+    var vm = new Vue({
+        el:"#app-2",
+        data:{
+            classobject:{
+                active:true,
+                'text-danger':false
+            }
+        }
+    })
+</script>
+
+<!--绑定一个返回对象的计算属性  在计算属性中计算类名依赖对象中包含的各个类型选择-->
+<div id="app-3" class="static" :class="classobject"></div>
+<script>
+    var vm = new Vue({
+        el:"#app-3",
+        data:{
+            isActive:true,
+            error:null
+        },
+        computed:{
+            classobject:function () {
+                return {
+                    active:this.isActive && !this.error,
+                    'text-danger':this.error && this.error.type
+                }
+            }
+        }
+    })
+</script>
+
+<!--使用数组绑定class-->
+<div id="app-4" class="static" :class="[activeClass,errorClass]"></div>
+<script>
+    var vm = new Vue({
+        el:"#app-4",
+        data:{
+            activeClass:'active',
+            errorClass:'text-danger'
+        }
+    })
+</script>
+
+<!--使用对象绑定class-->
+<div id="app-5" class="static" :class="{ active:isActive }"></div>
+<script>
+    var vm = new Vue({
+        el:"#app-5",
+        data:{
+            isActive:true,
+        }
+    })
+</script>
+
+<!--在自定义组件上应用class属性时,会在该组件的根元素上添加class而不会覆盖掉原来的class-->
+
+<!--使用驼峰式声明内联样式-->
+<div id="app-6" :style="styleObject">我是内联样式</div>
+<script>
+    var vm = new Vue({
+        el:"#app-6",
+        data:{
+            styleObject:{
+                color:"red",
+                fontSize:"20px",
+            }
+        }
+    })
+</script>
+<!--使用v-bind:style可以将多个样式绑定到同一个元素上,并且vue会自动检测并添加对应浏览器前缀-->
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>社长明星</title>
+		<link rel="stylesheet" type="text/css" href="../css/may.css"/>
+		<style type="text/css">
+			body{background: url(../../public/images/proStars/may/star/bj.png) no-repeat left top;background-size: cover;}
+		</style>
+	</head>
+	<body>
+		<img src="../../public/images/proStars/may/star/banner1.png" align="top"/>
+		
+		<section class="sec3 border">
+			<div class="top">
+				<img src="../../public/images/proStars/may/star/icon1.png" align="top" />
+			</div>
+			<p>把好产品分享身边的亲朋好友，分享快乐分享收获！</p>
+		</section>
+		
+		
+		<section class="sec4 border">
+			<div class="top">
+				<img src="../../public/images/proStars/may/star/icon4.png" align="top" />
+			</div>
+
+            <div class="reason">
+                <h3>推荐理由:</h3>
+                <p>品质有保证！</p>
+            </div>
+			
+			<ul>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7000&type=1&isShare=1&vid=3109&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../../public/images/proStars/may/star/pic1.1.png" class="pic fire">
+						<div>
+							<h3>东书房-大雪山古树普洱生茶</h3>
+							<p>&yen;230.0<span>&yen;580.0</span></p>
+						</div>
+			  		</a>
+				</li>
+				<li>
+					<a href="https://m.icjsq.com/wapH5/products/productsDetail/index.html?appType=1&pid=7452&type=1&isShare=1&vid=3109&from=singlemessage&isappinstalled=1" class="clearfix">
+						<img src="../../public/images/proStars/may/star/pic1.2.png" class="pic">
+						<div>
+							<h3>玉门印象新疆和田灰枣二级</h3>
+							<p>&yen;50.0/KG<span>&yen;56.0/KG</span></p>
+						</div>
+			  		</a>
+				</li>
+				<li>
+					<a href="http://h5.icjsq.com/app/newH5/share/insurance/list/index.html?appType=1&uid=25887&vid=3109&from=singlemessage&isappinstal" class="clearfix">
+						<img src="../../public/images/proStars/may/star/pic1.3.png" class="pic">
+						<div>
+							<h3>超级社区-[保险超市]</h3>
+							<p>一份承诺，万份担当！</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</body>
+	<script src="../../public/js/environment134.js"></script>
+	<script src="../../public/js/apiUrl134.js"></script>
+	<script src="../../public/js/public134.js"></script>
+	<script src="../js/may.js"></script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定制订单</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../clOrder/index12081731.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body>
+
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back() " class="back" ><img src="../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <a class="shangCheng"  href="javascript:location.href=jumpUrl.clProList" ><img  src="../../public/images/base/ic_sc.png" align='middle'></a>
+    <h2 class="f18">定制订单</h2>
+</header>
+
+<!--导航-->
+<nav class="t_center f15">
+    <ul>
+        <li status="-1" class="active"><span>全部</span></li>
+        <li status="0"><span>待付款</span></li>
+        <li status="1"><span>进行中</span></li>
+        <li status="2"><span>已结束</span></li>
+    </ul>
+</nav>
+
+<!--订单列表-->
+<section id="wrapper">
+    <div id="scroller">
+        <!--下拉刷新-->
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+        </div>
+        <!--订单列表-->
+        <ul class="orderList btnGroupClick"></ul>
+
+        <!--上拉加载-->
+        <div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
+
+    </div>
+</section>
+
+<!--没有数据-->
+<section class="noOrder hide t_center">
+    <img src="../../public/images/clOrder/noOrder.png"><br>
+    <a class="red f15" href="javascript:location.href = jumpUrl.clProList">逛逛定制</a>
+</section>
+
+<img src="../../public/images/base/goTop.png" class="goTop" alt="返回顶部">
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../../public/js/iscroll.min.js"></script>
+<script src="../../public/js/scrollFun.js"></script>
+<script src="../base/clBase12201747.js"></script>
+<script src="../clOrder/js/list12161357.js"></script>
+
+</html>

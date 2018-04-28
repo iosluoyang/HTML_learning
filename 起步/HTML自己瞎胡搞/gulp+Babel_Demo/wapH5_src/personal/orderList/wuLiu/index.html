@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../../public/images/base/favicon.ico" />
+    <style>
+        .prodcuts{padding:1rem;margin: 1rem 0 0;background: #fff}
+        .prodcuts .pic{width: 7.5rem;height: 7.5rem;border-radius: 4px;margin-right: 5px;background: no-repeat center center;background-size: cover}
+        .prodcuts .title{margin-bottom: 5px;}
+        .prodcuts p{height: 1.8rem;}
+        .prodcuts .status{color: green;margin-top: 3rem;}
+        .wuLiu{background: #fff;}
+        .wuLiu h3{padding-left: 3.5rem;line-height: 4rem;background: #f7f7f7 url("../../../public/images/personal/wuLiuGenZong.png") no-repeat 1rem 1.3rem;background-size:20px; }
+        .wuLiu img{margin: 1rem 1rem 0;width:3rem;}
+        .wuLiu ul li{padding: 1rem;border-bottom: 1px #ededed solid;color: #333}
+        .wuLiu ul li time{width: 25%;text-align: center}
+        .wuLiu ul li p{width: 75%;word-break: break-all}
+        .noWuLiu{width: 50%;display: none;margin:25%}
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../../public/images/base/backArrow_ios.png" align="middle"></a>
+    <h2 class="f18">查看物流</h2>
+</header>
+<!--商品信息-->
+
+<section class="prodcuts f13">
+    <div class="f_left pic"></div>
+    <span class="status f15 f_right"></span>
+    <h3 class="title  oneClamp"></h3>
+    <p class="Logistical  grey9">承运公司：</p>
+    <p class="number grey9">运单编号：</p>
+    <p class="grey9 ">官方电话：<a class="phone blue" href="javascript:void(0)"></a></p>
+</section>
+
+<!--物流信息-->
+<section class="wuLiu">
+    <h3 class="f14 grey9">物流轨迹</h3>
+    <!--<img src="">-->
+    <ul></ul>
+</section>
+
+<img class="noWuLiu" src="../../../public/images/personal/noWuLiu.png">
+
+
+
+
+
+
+
+</body>
+<script src="../../../public/js/environment134.js"></script>
+<script src="../../../public/js/apiUrl134.js"></script>
+<script src="../../../public/js/public134.js"></script>
+<script src="index.js"></script>
+</html>

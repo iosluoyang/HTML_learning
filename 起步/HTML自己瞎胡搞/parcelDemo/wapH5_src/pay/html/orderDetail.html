@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link href="../base/orderListAndDetail.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+</head>
+<body class="orderDetail">
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">订单详情</h2>
+</header>
+<!--状态和金额信息-->
+<section class="sec1 f16">
+    <p><span class="grey6">订单状态：</span><span class="red"></span></p>
+    <p><span class="grey6">订单金额：</span><span class="red">&yen;</span></p>
+</section>
+<!--配送信息-->
+<section class="sec2 f16" >
+    <p><span class="grey6">配送信息：</span></p>
+    <p><span class="grey6">联系人：</span></p>
+</section>
+
+<section class="sec3 f16">
+    <p><span class="grey6">配送方式：</span></p>
+    <p class="payType"><span class="grey6">支付方式：</span></p>
+    <p class="hide"><span class="grey6">买家留言：</span></p>
+</section>
+<!--商品信息-->
+<section class="sec4 ">
+    <ul class="top"></ul>
+    <ul class="bot f16">
+        <li><span >商品金额</span><span class="oneClamp">&yen;</span></li>
+        <li><span>配送费用</span><span class="oneClamp">&yen;</span></li>
+        <li><span>订单总价</span><span class="oneClamp">&yen;</span></li>
+    </ul>
+</section>
+
+<!--联系方式-->
+<section class="sec5 f16">
+    <a href="javascript:void(0)"></a>
+    <p>联系卖家：</p>
+</section>
+
+<!--时间信息-->
+<section class="sec6 f14 grey6">
+    <p class="oneClamp"><span>订单编号：</span></p>
+    <p class="oneClamp"><span>下单时间：</span></p>
+    <p class="oneClamp hide payTime"><span >支付时间：</span></p>
+    <p class="oneClamp hide sendTime "><span>发货时间：</span></p>
+    <p class="oneClamp hide receiveTime"><span>收货时间：</span></p>
+    <p class="oneClamp hide refoundTime"><span>退款时间：</span></p>
+</section>
+
+<!--按钮组-->
+<div class="btnGroup btnGroupClick f15">
+    <button class="payNow hide red">立即支付</button>
+    <button class="close hide">关闭订单</button>
+    <button class="tuiKuan hide red">取消订单</button>
+    <button class="wuLiu hide red">查看物流</button>
+    <button class="shouHuo hide red">确认收货</button>
+    <button class="pingJia hide red">评价</button>
+    <button class="keFu"><a href="javascript:void (0)">客服</a></button>
+</div>
+
+
+
+
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+<script src="../base/index12091123.js"></script>
+<script src="../orderDetail/index12161357.js"></script>
+
+</html>

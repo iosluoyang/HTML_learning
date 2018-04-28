@@ -1,0 +1,144 @@
+
+/*筛选面板头部div样式*/
+.fliterheader{
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom:1px #ededed solid;
+    box-sizing: border-box;
+    text-align: center;
+    background: url("../../../public/images/auction/ic_zcline.png") 33.33% center no-repeat,
+                url("../../../public/images/auction/ic_zcline.png") 66.66% center no-repeat;
+    background-color: #FFFFFF;
+    background-size: 1px 2.2rem;
+}
+
+/*筛选面板中的每一个筛选项样式*/
+.normalfliterheaderitem{
+    height: 100%;
+    font-family: "PingFang SC";
+    font-size: 1.4rem;
+    color: #666666;
+}
+.normalfliterheaderitem span{
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.4rem;
+    background: url("../../../public/images/auction/ic_triangle_down_gray.png") center no-repeat;
+    background-size: cover;
+}
+
+.selectfliterheaderitem{
+    height: 100%;
+    font-family: "PingFang SC";
+    font-size: 1.4rem;
+    color: #ff3b30;
+}
+.selectfliterheaderitem span{
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.4rem;
+    background: url("../../../public/images/auction/ic_triangle_up_red.png") center no-repeat;
+    background-size: cover;
+}
+
+/*排序和二级分类选项*/
+.fliteritem{
+    background-color: #FFFFFF;
+    border-bottom:1px #ededed solid;
+    width:100%;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    box-sizing: border-box;
+    padding-left: 2.9rem;
+    font-size: 1.4rem;
+    font-family: "PingFang SC";
+    color: #202020;
+}
+.fliteritem:last-child{
+    border-bottom:none;
+}
+/*选中状态下*/
+.selectfliteritem{
+
+    background: #FFFFFF url("../../../public/images/auction/ic_checkmark_red.png") 85% center no-repeat;
+    background-size:1.1rem 0.9rem ;
+    border-bottom:1px #ededed solid;
+    width:100%;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    box-sizing: border-box;
+    padding-left: 2.9rem;
+    font-size: 1.4rem;
+    font-family: "PingFang SC";
+    color: #ff3b30;
+
+}
+.selectfliteritem:last-child{
+    border-bottom:none;
+}
+
+/*三级分类参数区域*/
+.fliterthirdparadiv{
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 1.4rem;
+
+}
+
+.fliterthirdparadiv .normalthirditem{
+
+    /*宽度在js中根据手机屏幕进行计算设置*/
+    height:27px;
+    display: inline-block;
+    line-height: 27px;
+    margin: 9px 25px 9px 0px;
+    text-align: center;
+    color: #666666;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+
+}
+
+.fliterthirdparadiv .selectthirditem{
+
+    /*宽度在js中根据手机屏幕进行计算设置*/
+    height:27px;
+    display: inline-block;
+    line-height: 27px;
+    margin: 9px 25px 9px 0px;
+    text-align: center;
+    color: #ff3b30;
+    background: url("../../../public/images/auction/ic_yc.png") no-repeat right bottom;
+    background-size: 12px 9.5px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+
+}
+/*第一个三级分类item(p)距左10px*/
+.fliterthirdparadiv p:first-child{
+    margin-left: 10px;
+}
+
+
+
+/*设置该页面中的两个价格输入框的placeholder的颜色和字体*/
+input::-webkit-input-placeholder { /* WebKit browsers*/
+    　　color:#999;font-size:1.2rem;font-family: "PingFang SC";
+}
+input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/
+    　　color:#999;font-size:1.2rem;font-family: "PingFang SC";
+}
+input::-moz-placeholder {  /* Mozilla Firefox 19+*/
+    　　color:#999;font-size:1.2rem;font-family: "PingFang SC";
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+*/
+    　　color:#999;font-size:1.2rem;font-family: "PingFang SC";
+}
+
+
+

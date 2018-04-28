@@ -1,0 +1,51 @@
+body{padding-top: 0}
+/*导航*/
+header .search{right: 1rem}
+
+header h2{width: 50%}
+
+/*搜索页面*/
+header input{display:block;width:22rem;margin: .4rem auto;border-radius: .4rem;border: thin solid #ededed ;padding: .8rem 0 .8rem 2.7rem;
+    background: url("../../public/images/base/searchGray.png") no-repeat .5rem center;background-size: 2rem}
+
+/*导航*/
+nav{position: fixed;top:4.4rem;left: 0;width: 100%;z-index:2;background: #f7f7f7}
+nav ul li{border-bottom: .2rem #f7f7f7 solid;float: left;width: 50%;line-height: 4.2rem;}
+nav ul .active{border-bottom: .2rem #ff3b30 solid;color: #ff3b30}
+
+/*内容*/
+#wrapper.index{margin-top: 8.8rem}
+.orderList li{background: #fff;margin-bottom: 1rem}
+.orderList .top{padding: 1rem 1.5rem 0;border-bottom: .1rem #ededed solid}
+.orderList .top .pic{width:6rem;height: 6rem;border-radius:.4rem;background:url("../../public/images/base/defaultShopAvatar.png") no-repeat center center;
+    background-size: cover;margin-right:1rem}
+.orderList .top h3,.orderList .top p{margin-bottom: 1rem}
+.orderList .top p{color:#999}
+
+.orderList .bot{position: relative}
+.orderList .bot p{line-height: 4.4rem;height: 4.4rem;padding-left:4rem;background: url("../../public/images/fetch/icon2.png") no-repeat 1rem center;background-size: 2.8rem}
+.orderList .bot p span{margin-left: 1.5rem}
+.orderList .bot .arrive{border:.1rem solid #ff3b30;width: 7.4rem;line-height: 3rem;text-align: center;
+    border-radius: .4rem;position: absolute;right: 1.5rem;top:50%;margin-top: -1.5rem}
+
+
+.noOrder{position: fixed;left:0;top:0;width: 100%;z-index: 1}
+.noOrder img{width: 100%;}
+
+/*取货按钮*/
+.pickUp{line-height: 4.4rem;color:#fff;background: #ff3b30;border-top: none}
+/*设置登录密码提示框*/
+.confirm .inner input{border-radius: .4rem;border: .1rem #ededed solid;font-size: 1.4rem;padding: .5rem;width:13rem}
+.confirm .inner input::-webkit-input-placeholder{color:#999;font-size: 1.2rem;}
+
+
+/*获取取货信息*/
+/*.confirm .proDetail h4{margin-bottom: 1rem}*/
+.confirm .proDetail .mid{padding: 0 1rem}
+.confirm .proDetail .pic{width: 5rem;height: 5rem;background: no-repeat center center;background-size: cover;margin-right:.5rem }
+.confirm .proDetail h3{line-height: 1.6rem}
+.confirm .proDetail h3,.confirm .proDetail .mid p{text-align: left}
+/*.confirm .proDetail .contact{background: url("../../public/images/fetch/icon3.png") no-repeat 15% center;background-size: 2.8rem;line-height: 4rem;height:4rem}*/
+.confirm .proDetail .contact{line-height: 4rem;height:4rem}
+.confirm .proDetail .contact img{width: 2.8rem;margin-right: 1rem}
+.confirm .proDetail .contact span{margin-left: 1rem}

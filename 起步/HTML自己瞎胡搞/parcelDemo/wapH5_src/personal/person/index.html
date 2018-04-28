@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超级社区</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../public/css/reset134.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/images/base/favicon.ico" />
+    <style>
+        body{padding-bottom: 4.4rem;}
+        .fengMian{height: 15rem;;background: no-repeat center center;background-size: cover}
+        .top,.mid,.bot,.set{background: #fff;}
+        .top{margin-bottom: 2rem;}
+        .mid,.bot,.set{margin-bottom: 1rem;}
+        .top{padding: 1rem}
+        .top .avatar{width: 5rem;height: 5rem;margin-right: 5px;background: no-repeat center center;background-size: cover;border-radius: 50%}
+        .top p{line-height: 4.5rem}
+        .mid li,.bot li,.set li{padding: 0 1rem;line-height:4.5rem;border-bottom: 1px #ededed solid;position: relative;
+            background: url("../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem;}
+        .mid li a,.bot li a,.set li a{display: block}
+        .mid li .new{width:2rem;height: 2rem;line-height:2rem;border-radius: 50%;color:#fff;background: #ff3b30;position: absolute;right:2.5rem;top:50%;margin-top: -1rem}
+    </style>
+</head>
+<body>
+<!--标题栏-->
+<header >
+    <a href="javascript:history.back();" class="back" ><img src="../../public/images/base/backArrow_ios.png"></a>
+    <h2 class="f18">我</h2>
+</header>
+
+<section class="fengMian"></section>
+
+<div class="top clearfix">
+    <div class="avatar f_left"></div>
+    <p class="oneClamp f16"></p>
+</div>
+
+<ul class="mid f16">
+    <li><a href="javascript:location.href =jumpUrl.orderList">我的订单</a> </li>
+    <li><a href="javascript:location.href =jumpUrl.clOrderList">我的定制</a><span class="new t_center f13">新</span></li>
+    <li><a href="javascript:location.href =jumpUrl.address">收货地址</a> </li>
+</ul>
+
+<ul class="bot f16">
+    <li><a href="javascript:location.href =jumpUrl.guanZhuList">关注品牌</a> </li>
+    <li><a href="javascript:location.href =jumpUrl.stroeList">收藏商品</a> </li>
+</ul>
+
+
+<ul class="set">
+    <li class="f16"><a href="javascript:location.href =jumpUrl.setting">设置</a></li>
+</ul>
+
+<footer>
+    <ul class="clearfix">
+        <li class="f_left"><a class="home"  href="javascript:location.href = jumpUrl.find" >商城</a></li>
+        <li class="f_left"><a  class="active  me"  href="javascript:void (0)" >我</a></li>
+    </ul>
+</footer>
+
+
+
+
+</body>
+<script src="../../public/js/environment134.js"></script>
+<script src="../../public/js/apiUrl134.js"></script>
+<script src="../../public/js/public134.js"></script>
+
+<script>
+    var from = GetQueryString("from");
+    if(from == "group"){        //从拼团进来 footer区显示拼团 并且点击返回拼团
+        $("footer ul li:first a").attr("href",sessionStorage.getItem('groupListUrl')).html("拼团");
+    }
+
+    $(function(){
+
+        $(".wait").hide();
+
+        sessionStorage.setItem("completeUrl",location.href);    //保存当前地址 登录完成后跳回
+        isLogin(UID,load);
+    });
+
+    function load(){
+        var userAppInfo = JSON.parse(localStorage.userAppInfo);
+        //设置封面
+        userAppInfo.frontcover?
+            $(".fengMian").css("background-image", "url(" + imgIndexUrl + userAppInfo.frontcover + ")")
+            :$(".fengMian").css("background-image", "url(../../public/images/personal/person.png)");
+        //头像
+        if(userAppInfo.avatar){             //存在设置头像
+            $(".top .avatar").css("background-image","url("+imgIndexUrl+JSON.parse(localStorage.userAppInfo).avatar+")")
+        }else if(localStorage.wXAppInfo){     //不存在设置头像 存在微信头像
+            $(".top .avatar").css("background-image","url("+JSON.parse(localStorage.wXAppInfo).wXavatar+")")
+        }else {                            //设置默认头像
+            $(".top .avatar").css("background-image","url(../../public/images/base/defaultAvatar.png)");
+        }
+
+
+
+        //名称
+        if(isWeiXin()){         //在微信里 为未起名时 设置为微信名称
+            userAppInfo.username=="未起名"?
+                    $(".top p").html(JSON.parse(localStorage.wXAppInfo).wXusername)
+                    :$(".top p").html(userAppInfo.username)
+        }else {
+            $(".top p").html(userAppInfo.username);
+        }
+
+
+    }
+
+</script>
+</html>

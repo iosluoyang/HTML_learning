@@ -1,0 +1,47 @@
+body{padding-bottom: 4.4rem;}
+section h3{height: 4rem;line-height: 4rem;background: #f7f7f7;padding: 0 10px;}
+.sec1,.sec2,.sec3,.sec6{background: #fff}
+/*选择地址*/
+.sec1 li{padding:10px;background: url("../../public/images/base/goArr.png") no-repeat right center;background-size: 3rem;}
+.sec1 .hasAdd span{display:inline-block;margin-right: 5px;}
+.sec1 .noAdd span{display:inline-block;line-height: 6rem;padding-left:3rem;
+    background: url("../../public/images/products/address.png") no-repeat left center;background-size: 2rem;}
+
+/*支付方式*/
+.sec2 li{height: 4.5rem;line-height: 4.5rem;padding: 0 1rem}
+.sec6 li{padding:1.5rem 1rem}
+.sec2 li,.sec6 li{border-bottom: 1px #ededed solid;background:url("../../public/images/products/radioNormal.png") no-repeat 97% center;background-size: 2.2rem; }
+.sec2 .active,.sec6 .active{background-image: url("../../public/images/products/radioSelected.png")}
+.sec2 li span{display:inline-block;padding-left: 3rem;background:  no-repeat left center;background-size:2rem;}
+
+
+/*商品清单*/
+.sec3 .proList li>div{padding:10px;border-bottom: 1px #ededed solid}
+.sec3 .proList .pic,.sec3 .proList .title,.sec3 .proList .color{float: left}
+.sec3 .proList .price,.sec3 .proList .num,.sec3 .proList .row2 span{float: right}
+.sec3 .proList .pic{width: 6.4rem;height: 6.4rem;margin-right: 5px;background: no-repeat center center;background-size: cover}
+.sec3 .proList .title,.sec3 .proList .color{width: 56%}
+.sec3 .proList .title,.sec3 .proList .price{line-height: 3rem;}
+.sec3 .proList .price,.sec3 .proList .num{width: 21%;text-align: right}
+.sec3 .proList .color,.sec3 .proList .num{color:#999;}
+.sec3 .proList .row3 textarea{width: 80%;margin-left: 10px;vertical-align: top;font-size: 1.6rem}
+
+/*团购提醒*/
+.sec4{padding: 1rem 3rem 1rem 1rem;position: relative;line-height: 1.4rem;background: #ffe5e5}
+.sec4 .slideUp{width: 2rem;height: 2rem;position: absolute;right: .5rem;top:.5rem;
+    background: url("../../public/images/base/slideUp.png") no-repeat center center;background-size: 1.5rem}
+
+
+/*按钮部分*/
+.sec5{background: #f7f7f7;height: 4.4rem;position: fixed;bottom:0;border-top: 1px #ededed solid}
+.sec5 div{height: 4.4rem;line-height: 4.4rem;width: 60%}
+.sec5 div p{line-height: 2rem}
+.sec5 div .yiYouHui span{text-decoration: line-through}
+.sec5 div span{margin-right: 1rem;}
+.sec5 .makeOrder{height: 100%;width: 40%;background: #ff3b30;color:#fff}
+
+/*送货上门或自取*/
+.sec6 p{padding-right: 2rem}
+
+
+

@@ -1,0 +1,374 @@
+//wab站中的导航栏组件(注意这里默认全部为wab站的导航栏组件,APP导航栏为原生实现,在各个页面中判断不同平台环境,这里不做判断)
+class Navdiv extends React.Component{
+    static defaultProps = {
+        navtitle:"超级社区",//默认的导航栏标题
+
+        /*
+            默认左侧样式为只有左侧返回箭头
+            none 只有左侧返回箭头
+            backbtnandhome 左侧返回箭头和去往社区商城首页的icon
+            backbtnandauctionhome 左侧返回箭头和去往拍卖首页的icon
+        */
+        lefttype:"none",
+
+        /*
+            默认右侧样式为空,什么也没有
+            none 什么也没有
+            customorder 展示位订单icon,点击去往定制订单页面
+            yipai 展示为已拍,点击去往已拍列表
+        */
+        righttype:"none",//默认右侧样式为什么也没有
+    };
+
+    constructor(props){
+        super(props);
+
+
+        this.state = {
+            navtitle:this.props.navtitle,//将参数中的导航栏标题设置为自身的state字段
+            ifhasopenApp:ifopenApp,//是否含有打开APP的区域
+        };
+
+    }
+
+    //点击了关闭按钮
+    clickclose(){
+
+        console.log('同样的设置方法(这是狗比有问题的方法中的日志)点击之前的padding-top为:' + $('body').css('padding-top'));
+
+        //将body的padding-top设置导航栏的高度 即4.4rem 注意这里不能用动画
+        $('body').css({
+            "padding-top":"4.4rem",//注意这里不能加动画时间,否则在后面计算会出问题
+        });
+
+        console.log('同样的设置方法(这是狗比有问题的方法中的日志)点击完之后的padding-top为:' + $('body').css('padding-top'));
+
+
+        //将全局的ifopenApp设置为false
+        ifopenApp = false;
+
+        //回调给父组件进行状态共享
+        this.props.clickcloseopenApp();
+
+        //更新导航栏组件状态
+        this.setState({
+            ifhasopenApp:ifopenApp,
+        });
+
+
+
+    }
+
+    componentDidMount(){
+
+
+        //加载完之后根据是否有打开APP的div设置相应的top和body的padding-top值
+        if (this.state.ifhasopenApp){
+
+            console.log('同样的设置方法:----设置之前的padding-top为:' + $('body').css('padding-top'));
+
+            //将body的padding-top设置为两个导航栏的高度 即8.8rem
+            $('body').css({
+                "padding-top":"8.8rem",//注意这里不能加动画时间,否则在后面计算会出问题
+            });
+
+            console.log('同样的设置方法:----设置之后的padding-top为:' + $('body').css('padding-top'));
+
+        }
+        else{
+
+            //将body的padding-top设置导航栏的高度 即4.4rem
+            $('body').css({
+                "padding-top":"4.4rem",//注意这里不能加动画时间,否则在后面计算会出问题
+            });
+        }
+
+
+
+
+    }
+
+    render(){
+        var navtitle = this.state.navtitle;
+
+        //根据不同的参数设置不同样式
+        var leftarea = null;
+        var lefttype = this.props.lefttype;
+        //左侧有去往商城首页的icon
+        if (lefttype == "backbtnandhome"){
+            leftarea = <a className="shangCheng"  href="javascript:location.href=jumpUrl.clProList" ><img  src={publicUrl+"public/images/base/ic_sc.png"} align='middle'/></a>
+        }
+        //左侧有去往拍卖首页的icon
+        else if(lefttype == "backbtnandauctionhome"){
+            leftarea = <a className="AuctionHomePage"  href="javascript:location.href=jumpUrl.MyAuctionHomepage" ><img  src={publicUrl+"public/images/auction/ic_auctionhomepage.png"} align='middle'/></a>
+        }
+        else {
+            //容错
+        }
+
+        var rightarea = null;
+        var righttype = this.props.righttype;
+
+        //右侧有去往定制订单的icon
+        if (righttype == "customorder"){
+            rightarea = <a className="order"  href="javascript:location.href=jumpUrl.orderList" ><img  src= {publicUrl+"public/images/base/ic_order.png"} align='middle'/></a>
+        }
+        //左侧有去往拍卖首页的icon
+        else if(righttype == "yipai"){
+            rightarea = <a className="yipai"  href="javascript:location.href=jumpUrl.MyAuctionHomepage" ><img  src= {publicUrl+"public/images/auction/ic_yipai.png"} align='middle'/></a>
+        }
+        else {
+            //容错
+        }
+
+
+        var config = {
+            /*scheme:必须*/
+            scheme: "cjsqapp://mycjsq.app/",
+            download_url: "http://a.app.qq.com/o/simple.jsp?pkgname=com.lcworld.intelligentCommunity"
+        };
+
+
+        var openWrapElement = this.state.ifhasopenApp ?
+
+            <div className="openAppdiv" style={{height:"4.4rem",backgroundColor:"#ffe5e5",position:"fixed",top:"0px",zIndex:"9",}}>
+                <img className='openApplogo f_left' style={{width:"3.6rem",margin:".4rem 1rem 0 2rem"}} src={publicUrl + "public/images/base/logo2.png"}/>
+                <img className="slideUp f_right" style={{width:"1.5rem",margin:".5rem .5rem 0 0",}} src={publicUrl + 'public/images/base/slideUp.png'} onClick={this.clickclose.bind(this)} />
+                <p style={{color:"#ff3b30",lineHeight:"1.6rem",fontSize:"1.4rem",fontWeight:"bold",paddingTop:"0.6rem",}}>超级社区</p><p style={{color:"#ff3b30",lineHeight:"1.6rem",fontSize:"1.4rem",fontWeight:"bold",}}>超级方便</p>
+                <a style={{color:"#fff",backgroundColor:"#ff3b30",fontSize:"1.4rem",width:"7rem",height:"2.6rem",lineHeight:"2.6rem",position:"absolute",right:"3rem",top:"0.9rem",borderRadius:"0.4rem",}} className="t_center" href={config.scheme}>立即打开</a>
+            </div>
+            :
+            null
+            ;
+
+        return (
+
+            <div className="navdiv">
+
+                {/*打开APP的组件  当为wab站环境且链接为isShare=1的时候会出现*/}
+                {openWrapElement}
+
+                {/*header也是fixed定位并且zInde为9*/}
+                <header style={{"top":this.state.ifhasopenApp ? "4.4rem" : "0px",/*根据是否有打开App的区域设置导航栏距上的距离*/}}>
+
+                    {/*左侧返回箭头*/}
+                    <a href="javascript:history.back() " className="back" ><img src={publicUrl+"public/images/base/backArrow_ios.png"} align="middle"/></a>
+                    {leftarea}{/*左侧icon区域*/}
+                    <h2 className="f18">{navtitle}</h2>
+                    {rightarea}{/*左侧跳转区域*/}
+
+                </header>
+
+            </div>
+
+
+
+        );
+    }
+}
+
+
+//轮播图组件 分为单张导航"danzhang" 多张导航为"duozhang"
+class LunBodiv extends React.Component{
+
+    //为属性指定默认值
+    static defaultProps = {
+        dataArr:[],//轮播图数据源
+        sign:"",//轮播图的标识 ,用于区分的多个轮播图组件 字符串 不可重复 一个轮播图有一个唯一的sign
+        type:"danzhang",//轮播图类型  静态轮播还是动态轮播 默认为单张导航"danzhang" 多张导航为"duozhang" 可重复,多个轮播图可共用一种样式
+    };
+
+    constructor(props){
+        super(props);
+    }
+
+    //根据type类型以及sign标识初始化轮播图控件
+    componentDidMount(){
+        //元素加载到Dom中之后设置轮播图相关信息
+
+        //获取到轮播组件的数据源
+        var dataArr = this.props.dataArr;
+        //如果数据源为空的话则返回false,不初始化轮播组件
+        if (!dataArr || dataArr.length == 0){return false;}
+
+        var sign = this.props.sign;
+        var type = this.props.type;
+        var lunbostyle = {};
+
+        //默认的全屏单张轮播图
+        if (type == "danzhang"){
+
+            lunbostyle  = {
+
+                //是否循环滚动(如果只有一张图片则关闭循环滚动)
+                loop:dataArr.length > 1 ? true : false,
+
+                //如果需要分页器
+                pagination:dataArr.length > 1 ?'#swiper-pagination'+sign:'null',
+
+                //如果只有一张图片，则切换模式变为fade
+                effect:dataArr.length > 1 ? 'slide':'fade',
+
+                // 此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换
+                paginationClickable :true,
+
+                //自动滚动
+                autoplay: 3000,
+
+                //设置是否在用户打断之后继续自动轮播
+                autoplayDisableOnInteraction : false,
+
+            };
+
+        }
+        //全屏多张轮播图(动态导航样式)
+        else if(type == "duozhang"){
+
+            lunbostyle = {
+                //是否循环滚动
+                loop: false,
+
+                //如果需要分页器
+                pagination:'null',
+
+                //如果只有一张图片，则切换模式变为fade
+                effect:'slide',
+
+                //设置slider容器能够同时显示的slides数量(carousel模式)。
+                //可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。
+                slidesPerView : "auto",
+
+
+                //每个slider之间的间距(单位px):
+                spaceBetween : 20,
+            }
+
+        }
+        else{
+            //只是做一个容错
+        }
+
+        //初始化轮播组件
+        var myswiper = new Swiper('#swiper'+ sign,lunbostyle);
+    }
+
+    //根据sign标识区别点击不同轮播图的事件
+    clicklunbo(param){
+
+        //获取任意类型的参数param,根据不同标识进行取值
+        var sign = this.props.sign;
+        //拍卖首页单张全屏轮播图
+        if (sign == "auctionhomepagedanzhang"){
+
+            var datadic = param;
+            mainTip("点击的类型为:" + datadic.targetType);
+
+        }
+
+        //拍卖首页多张全屏轮播图
+        else if(sign == "auctionhomepageduozhang" ){
+
+            var pid = param;
+            mainTip('点击的拍品id为:' + pid);
+
+        }
+
+        else{
+            //容错
+        }
+
+
+    }
+
+    render(){
+
+        //获取到轮播组件的数据源
+        var dataArr = this.props.dataArr;
+        //如果数据源为空的话则返回false,不渲染组件
+        if (!dataArr || dataArr.length == 0){return false;}
+
+        // 注意要在componentDidmount方法中进行初始化swiper
+        var sign = this.props.sign;
+        var elementsArr = [];
+        /*---------------------------在此处根据不同id进行组装不同的元素---------------------------------*/
+        for (var index in dataArr){
+
+            //在这里根据不同的sign组装不同的元素
+
+            if (sign == "auctionhomepagedanzhang"){
+                var datadic = dataArr[index];
+                var img = datadic.imgurl;
+                //轮播图数组数据填充
+                if (img){
+                    //获取图片真实宽高
+                    var towidth = $("body").width();
+                    var toheight =  returnpicratewithUrl(img) * towidth;
+                    var lunbostyle = {
+                        width:towidth,
+                        height:toheight,
+                        background:"url("+imgIndexUrl+img+") no-repeat center",
+                        backgroundSize:"cover",
+                    }
+                    var element = <li className="swiper-slide" key={index} data-obj={JSON.stringify(datadic)} style={lunbostyle}
+                                      onClick={this.clicklunbo.bind(this,datadic)}></li>;
+
+                    elementsArr.push(element);
+                }
+            }
+
+            else if (sign == "auctionhomepageduozhang"){
+
+                var auctiondic = dataArr[index];
+                var pid = auctiondic.pid;//商品id
+                var price = auctiondic.price;//价格
+                var img = auctiondic.img;//商品图片地址
+
+                if (img){
+                    //获取图片要展现的宽高(同比缩放之后的)  这里每个动态导航item的宽度是 (屏幕宽度-20px(左侧边距) - 3*20px(每个slider之间的间距))/3.5 一个屏幕展现3.5个动态导航item
+                    var towidth = ($("body").width() - 20 - 3* 20)/3.5;
+                    var toheight= towidth;
+
+                    var imgstyle = {
+                        width:towidth,
+                        height:toheight,
+                        borderRadius:"5px",
+
+                    };
+                    var pstyle = {
+                        width:towidth,
+                        height:toheight/2,
+                        lineHeight:(toheight/2).toString()+"px",
+                        textAlign:"center",
+                        color:"#202020",
+                        fontsize:"1.3rem",
+
+                    };
+
+                    var element =
+                        <li className="swiper-slide" key={pid} data-obj={JSON.stringify(auctiondic)} onClick={this.clicklunbo.bind(this,pid)}>
+                            <img src={imgIndexUrl+img} style={imgstyle}/>
+                            <p style={pstyle}>{handlethepriceshow(price)}</p>
+                        </li>;
+                    elementsArr.push(element);
+                }
+
+            }
+
+            else{
+                //容错
+            }
+
+
+        }
+
+        return (
+            <div className='swiper-container' id= { "swiper" + this.props.sign }>
+                <ul className="swiper-wrapper lunbo">
+                    {elementsArr}
+                </ul>
+                <div className='swiper-pagination' id={'swiper-pagination'+this.props.sign}></div>
+            </div>
+        );
+    }
+
+}
