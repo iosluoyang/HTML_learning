@@ -9,5 +9,97 @@
 </head>
 <body>
 
+<!--事件名-->
+<!--
+    跟组件和 prop 不同，事件名不会被用作一个 JavaScript 变量名或属性名，所以就没有理由使用 camelCase 或 PascalCase 了。并且 v-on 事件监听器在 DOM 模板中会被自动转换为全小写 (因为 HTML 是大小写不敏感的)，所以 v-on:myEvent 将会变成 v-on:myevent——导致 myEvent 不可能被监听到。
+
+    因此，我们推荐你始终使用 kebab-case 的事件名,即短横线分割的小写字母
+-->
+
+
+
+<!--自定义组件的 v-model-->
+<!--
+    一个组件上的 v-model 默认会利用名为 value 的 prop 和名为 input 的事件，
+    但是像单选框、复选框等类型的输入控件可能会将 value 特性用于不同的目的。
+    model 选项可以用来避免这样的冲突
+-->
+<div id="example1">
+    <my-compontent1 v-model = "lovingVue" tipstr="是否喜欢Vue？"></my-compontent1>
+</div>
+<script>
+
+    Vue.component("my-compontent1",{
+        model:{
+            prop:"checked",
+            event:"change",
+        },
+        //这里仍然需要在组件内部声明checked这个prop
+        props:{
+            checked:Boolean,
+            tipstr:{
+                type:String,
+                default:"默认的提示文字",
+            }
+        },
+        template:`<span><input type="checkbox" :checked="checked" @change="$emit('change',$event.target.checked)">{{ tipstr }}</span>`,
+    })
+
+    // 现在在这个组件上使用v-model的时候  这里的 lovingVue 的值将会传入这个名为 checked 的 prop
+    // 同时当 <my-compontent1> 触发一个 change 事件并附带一个新的值的时候，这个 lovingVue 的属性将会被更新
+
+    var vm = new Vue({
+        el:"#example1",
+        data:{
+            lovingVue:true,
+        }
+    })
+
+</script>
+
+
+<!--将原生事件绑定到组件  使用修饰符.native可以将对应的原生事件绑定到组件的事件中  但是对于对应不上的原生事件 可以使用组件的listeners属性-->
+<div id="example2">
+    <my-compontent2 v-model="value" tipstr="是否喜欢Vue?"></my-compontent2>
+</div>
+<script>
+    Vue.component('my-compontent2',{
+        inheritArrts:false,//是否继承来自父组件的特性和属性
+        props:['tipstr','value'],
+        computed:{
+            inputListeners:function () {
+                var vm = this
+                //Object.assign将所有的对象合并为一个新对象
+                return Object.assign(
+                    {},
+                    //从父级添加所有的监听器
+                    this.$listeners,
+                    //然后我们添加自定义监听器
+                    //或覆写一些监听器的行为
+                    {
+                        //这里确保组件配合'v-model'的工作
+                        input:function (event) {
+                            vm.$emit('input',event.target.value)
+                        }
+                    }
+
+                )
+            }
+        },
+        template:`
+            <label>{{ tipstr }}<input v-bind="$attrs" :value="value" @="inputListeners"></label>
+        `,
+    })
+
+    var vm = new Vue({
+        el:"#example2",
+        data:{
+            value:"我是默认值",
+        }
+    })
+</script>
+
+<!--.sync修饰符 .sync修饰符可以让子组件改变一个Prop的时候父组件也同样进行更新同步，实则是一个update方法的方便写法 -->
+
 </body>
 </html>

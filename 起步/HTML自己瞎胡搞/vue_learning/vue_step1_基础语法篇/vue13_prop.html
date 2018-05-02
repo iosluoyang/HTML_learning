@@ -117,9 +117,50 @@
     因为显式定义的 prop 适用于向一个子组件传入信息，然而组件库的作者并不总能预见组件会被用于怎样的场景。
     这也是为什么组件可以接受任意的特性，而这些特性会被添加到这个组件的根元素上。
 
-
     除了类似于type='text'这样的特性父组件会覆盖子组件之外  其他的类似于style以及class都是叠加的原理
-    如果不希望父组件的某些特性传递给子组件的话,只需要在声明父组件的时候声明一下inheritAttrs: false 即可阻止其中的子组件继承父组件的某些特性
+
+-->
+
+
+<!--禁用特性继承-->
+<!--
+    如果你不希望组件的根元素继承特性，你可以设置在组件的选项中设置 inheritAttrs: false。例如：
+
+    Vue.component('my-component', {
+      inheritAttrs: false,
+      // ...
+    })
+
+    这尤其适合配合实例的 $attrs 属性使用，该属性包含了传递给一个组件的特性名和特性值，例如：
+    {
+      class: 'username-input',
+      placeholder: 'Enter your username'
+    }
+
+    有了 inheritAttrs: false 和 $attrs，你就可以手动决定这些特性会被赋予哪个元素。在撰写基础组件的时候是常会用到的：
+
+    Vue.component('base-input', {
+      inheritAttrs: false,
+      props: ['label', 'value'],
+      template: `
+        <label>
+          {{ label }}
+          <input
+            v-bind="$attrs"
+            v-bind:value="value"
+            v-on:input="$emit('input', $event.target.value)"
+          >
+        </label>
+      `
+    })
+
+    这个模式允许你在使用基础组件的时候更像是使用原始的 HTML 元素，而不会担心哪个元素是真正的根元素：
+
+    <base-input
+      v-model="username"
+      class="username-input"
+      placeholder="Enter your username"
+    ></base-input>
 -->
 
 

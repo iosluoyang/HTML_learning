@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue15_插槽</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<!--插槽内容  其实插槽就是在子组件模板中提前给父组件即将传递过来的数据做一个预留位置而已-->
+<!--
+    Vue 实现了一套内容分发的 API，这套 API 基于当前的 Web Components 规范草案，将 <slot> 元素作为承载分发内容的出口。
+
+    它允许你像这样合成组件：
+
+    <navigation-link url="/profile">
+        Your Profile
+    </navigation-link>
+    然后你在 <navigation-link> 的模板中可能会写为：
+
+        <a
+                v-bind:href="url"
+                class="nav-link"
+        >
+            <slot></slot>
+        </a>
+
+        当组件渲染的时候，这个 <slot> 元素将会被替换为“Your Profile”。插槽内可以包含任何模板代码，包括 HTML：
+
+            <navigation-link url="/profile">
+                添加一个 Font Awesome 图标
+                <span class="fa fa-user"></span>
+                Your Profile
+                </navigation-link>
+                甚至其它的组件：
+
+                <navigation-link url="/profile">
+                    添加一个图标的组件
+                    <font-awesome-icon name="user"></font-awesome-icon>
+                    Your Profile
+            </navigation-link>
+-->
+
+<!--具名插槽  使用多个插槽的时候给每一个插槽进行命名区分使用-->
+<!--
+    有些时候我们需要多个插槽。例如，一个假设的 <base-layout> 组件多模板如下：
+
+    <div class="container">
+         <header>
+            我们希望把页头放这里
+         </header>
+        <main>
+            我们希望把主要内容放这里
+        </main>
+        <footer>
+            我们希望把页脚放这里
+        </footer>
+    </div>
+
+对于这样的情况，<slot> 元素有一个特殊的特性：name。这个特性可以用来定义额外的插槽：
+
+    <div class="container">
+        <header>
+            <slot name="header"></slot>
+        </header>
+        <main>
+            <slot></slot>
+        </main>
+        <footer>
+            <slot name="footer"></slot>
+        </footer>
+    </div>
+
+
+在向具名插槽提供内容的时候，我们可以在一个父组件的 <template> 元素上使用 slot 特性：
+
+        <base-layout>
+            <template slot="header">
+                <h1>Here might be a page title</h1>
+            </template>
+
+            <p>A paragraph for the main content.</p>
+            <p>And another one.</p>
+
+            <template slot="footer">
+                <p>Here's some contact info</p>
+            </template>
+        </base-layout>
+
+
+另一种 slot 特性的用法是直接用在一个普通的元素上：
+        <base-layout>
+            <h1 slot="header">Here might be a page title</h1>
+
+            <p>A paragraph for the main content.</p>
+            <p>And another one.</p>
+
+            <p slot="footer">Here's some contact info</p>
+        </base-layout>
+
+        我们还是可以保留一个未命名插槽，这个插槽是默认插槽，也就是说它会作为所有未匹配到插槽的内容的统一出口。上述两个示例渲染出来的 HTML 都将会是：
+
+        <div class="container">
+            <header>
+                <h1>Here might be a page title</h1>
+            </header>
+            <main>
+                <p>A paragraph for the main content.</p>
+                <p>And another one.</p>
+            </main>
+            <footer>
+                <p>Here's some contact info</p>
+            </footer>
+        </div>
+-->
+
+
+<!--插槽作用域-->
+<!--
+
+    当你想在插槽内使用数据时，例如：
+
+    <navigation-link url="/profile">
+      Logged in as {{ user.name }}
+    </navigation-link>
+    该插槽可以访问跟这个模板的其它地方相同的实例属性 (也就是说“作用域”是相同的)。但这个插槽不能访问 <navigation-link> 的作用域。例如尝试访问 url 是不会工作的。
+
+    牢记一条准则：
+    父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译。
+-->
+
+<!--作用域插槽-->
+<div id="example1">
+    <todo-list :todos="todos">
+
+        <!-- 将 `slotProps` 定义为插槽作用域的名字 -->
+        <template slot-scope="slotProps">
+            <!-- 为待办项自定义一个模板，-->
+            <!-- 通过 `slotProps` 定制每个待办项。-->
+            <span v-if="slotProps.todo.isComplete">✓</span>
+            {{ slotProps.todo.text }}
+        </template>
+
+    </todo-list>
+</div>
+<script>
+    Vue.component("todo-list",{
+        props:["todos"],
+        template:`
+            <ul>
+                <li v-for="todo in todos" :key="todo.id">
+                   <slot :todo="todo">
+                    {{ todo.text }}
+                   </slot>
+                </li>
+            </ul>
+        `,
+    })
+
+    var vm = new Vue({
+        el:"#example1",
+        data:{
+            todos:[
+                {id:"1",text:"我是内容1",isComplete:true},
+                {id:"2",text:"我是内容2",isComplete:false},
+                {id:"3",text:"我是内容3",isComplete:false},
+            ]
+        }
+    })
+</script>
+
+<!--解构slot-scope-->
+<!--
+    如果一个 JavaScript 表达式在一个函数定义的参数位置有效，那么这个表达式实际上就可以被 slot-scope 接受。也就是说你可以在支持的环境下 (单文件组件或现代浏览器)，在这些表达式中使用 ES2015 解构语法。例如：
+
+<todo-list v-bind:todos="todos">
+  <template slot-scope="{ todo }">
+    <span v-if="todo.isComplete">✓</span>
+    {{ todo.text }}
+  </template>
+</todo-list>
+这会使作用域插槽变得更干净一些。
+-->
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue17_处理边界情况</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+
+<!--访问根实例  $root-->
+
+<!--访问父级组件实例 $parent-->
+
+<!--访问子组件实例或子元素  $refs-->
+<!--
+    $refs 只会在组件渲染完成之后生效，并且它们不是响应式的。
+    这只意味着一个直接的子组件封装的“逃生舱”——你应该避免在模板或计算属性中访问 $refs
+-->
+
+<!--依赖注入-->
+<!--
+    1.provide  provide 选项允许我们指定我们想要提供给后代组件的数据/方法
+
+    在父组件中设置provide
+    provide: function () {
+        return {
+                getMap: this.getMap
+              }
+    }
+
+
+    在子组件中用inject接收
+    然后在任何后代组件里，我们都可以使用 inject 选项来接收指定的我们想要添加在这个实例上的属性：
+    inject: ['getMap']
+
+    相比 $parent 来说，这个用法可以让我们在任意后代组件中访问 getMap，而不需要暴露整个 <google-map> 实例。这允许我们更好的持续研发该组件，而不需要担心我们可能会改变/移除一些子组件依赖的东西
+-->
+
+
+<!--程序化的事件侦听器-->
+<!--
+    现在，你已经知道了 $emit 的用法，它可以被 v-on 侦听，但是 Vue 实例同时在其事件接口中提供了其它的方法。我们可以：
+
+    通过 $on(eventName, eventHandler) 侦听一个事件
+    通过 $once(eventName, eventHandler) 一次性侦听一个事件
+    通过 $off(eventName, eventHandler) 停止侦听一个事件
+
+
+    注意 Vue 的事件系统不同于浏览器的 EventTarget API。尽管它们工作起来是相似的，
+    但是 $emit、$on, 和 $off 并不是 dispatchEvent、addEventListener 和 removeEventListener 的别名。
+-->
+
+<!--循环引用-->
+<!--
+    组件之间的循环引用
+    假设你需要构建一个文件目录树，像访达或资源管理器那样的。你可能有一个 <tree-folder> 组件，模板是这样的：
+
+    <p>
+      <span>{{ folder.name }}</span>
+      <tree-folder-contents :children="folder.children"/>
+    </p>
+    还有一个 <tree-folder-contents> 组件，模板是这样的：
+
+    <ul>
+      <li v-for="child in children">
+        <tree-folder v-if="child.children" :folder="child"/>
+        <span v-else>{{ child.name }}</span>
+      </li>
+    </ul>
+    当你仔细观察的时候，你会发现这些组件在渲染树中互为对方的后代和祖先——一个悖论！当通过 Vue.component 全局注册组件的时候，这个悖论会被自动解开。如果你是这样做的，那么你可以跳过这里。
+
+    然而，如果你使用一个模块系统依赖/导入组件，例如通过 webpack 或 Browserify，你会遇到一个错误：
+
+    Failed to mount component: template or render function not defined.
+    为了解释这里发生了什么，我们先把两个组件称为 A 和 B。模块系统发现它需要 A，但是首先 A 依赖 B，但是 B 又依赖 A，但是 A 又依赖 B，如此往复。这变成了一个循环，不知道如何不经过其中一个组件而完全解析出另一个组件。为了解决这个问题，我们需要给模块系统一个点，在那里“A 反正是需要 B 的，但是我们不需要先解析 B。”
+
+    在我们的例子中，把 <tree-folder> 组件设为了那个点。我们知道那个产生悖论的子组件是 <tree-folder-contents> 组件，所以我们会等到生命周期钩子 beforeCreate 时去注册它：
+
+    beforeCreate: function () {
+      this.$options.components.TreeFolderContents = require('./tree-folder-contents.vue').default
+    }
+    或者，在本地注册组件的时候，你可以使用 webpack 的异步 import：
+
+    components: {
+      TreeFolderContents: () => import('./tree-folder-contents.vue')
+    }
+    这样问题就解决了！
+-->
+
+<!--内联模板  当 inline-template 这个特殊的特性出现在一个子组件上时，这个组件将会使用其里面的内容作为模板，而不是将其作为被分发的内容-->
+
+
+<!--X-Templates-->
+<!--
+    另一个定义模板的方式是在一个 <script> 元素中，并为其带上 text/x-template 的类型，然后通过一个 id 将模板引用过去。例如：
+
+    <script type="text/x-template" id="hello-world-template">
+      <p>Hello hello hello</p>
+    </script>
+    Vue.component('hello-world', {
+      template: '#hello-world-template'
+    })
+    这些可以用于模板特别大的 demo 或极小型的应用，但是其它情况下请避免使用，因为这会将模板和该组件的其它定义分离开。
+-->
+
+
+<!--强制更新 99.99%只会出现在你用错了vue的情况下 因为vue是依赖式的开发 但是如果你碰到了那0.01% 用$forceUpdate来强制更新吧-->
+
+<!--通过v-once来创建低开销的组件-->
+<!--
+    再说一次，试着不要过度使用这个模式。
+    当你需要渲染大量静态内容时，极少数的情况下它会给你带来便利，除非你非常留意渲染变慢了，不然它完全是没有必要的——再加上它在后期会带来很多困惑。
+    例如，设想另一个开发者并不熟悉 v-once 或漏看了它在模板中，他们可能会花很多个小时去找出模板为什么无法正确更新的原因
+-->
+
+</body>
+</html>
