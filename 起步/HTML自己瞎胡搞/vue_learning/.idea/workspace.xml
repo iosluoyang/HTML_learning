@@ -17,8 +17,8 @@
       <file leaf-file-name="vue18_过渡and动画.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="255">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue15_插槽.html" />
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue16_动态&amp;异步组件.html" />
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_动态&amp;异步组件.html" />
-        <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html" />
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue17_处理边界情况.html" />
+        <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html" />
       </list>
     </option>
   </component>
@@ -64,8 +64,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="263" />
-    <option name="y" value="34" />
+    <option name="x" value="312" />
+    <option name="y" value="29" />
     <option name="width" value="1265" />
     <option name="height" value="994" />
   </component>
@@ -142,15 +142,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525225021016</updated>
-      <workItem from="1525225028322" duration="14654000" />
+      <workItem from="1525225028322" duration="16860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14654000" />
+    <option name="totallyTimeSpent" value="16860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="263" y="34" width="1265" height="994" extended-state="0" />
+    <frame x="312" y="29" width="1265" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2757235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -277,8 +277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>
