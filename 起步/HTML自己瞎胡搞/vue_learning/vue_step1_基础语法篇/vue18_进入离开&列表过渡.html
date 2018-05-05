@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue18_进入离开&列表过渡</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!--引入动画库第三方-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+
+    <style>
+
+        /*enter-active 定义整个过渡过程 设置过渡时间以及其他参数*/
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+        }
+        /**/
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        }
+
+
+
+        .slide-fade-enter-active{
+            transition: all .3s ease;
+        }
+        .slide-fade-leave-active{
+            transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+        }
+        /*定制过渡开始和过渡结束的那一刻的状态以及位置偏移总量*/
+        .slide-fade-enter , .slide-fade-leave-to{
+            transform: translateX(30px);
+        }
+
+
+
+        .bounce-enter-active {
+            animation: bounce-in .5s;
+        }
+        .bounce-leave-active {
+            animation: bounce-in .5s reverse;
+        }
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+        .fixedtime-enter,.fixedtime-leave-to{
+            transform: translateX(300px);
+        }
+        .fixedtime-enter-active{
+            transition: all 2s ease;
+        }
+        .fixedtime-leave-active{
+            transition: all 2s ease;
+        }
+
+
+        .componentfade-enter,.componentfade-leave-to{
+            opacity: 0;
+        }
+        .componentfade-enter-active,.componentfade-leave-active{
+            transition: opacity .3s ease;
+        }
+
+
+        .listitem{
+            display: inline-block;margin-right: 10px;transition: all 1s;
+        }
+        .list-enter,.list-leave-to{
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .list-leave-active{
+            position: absolute;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!--过渡-->
+<!--单元素/组件的过渡  提供transition的封装组件-->
+<!--
+
+
+    当插入或删除包含在 transition 组件中的元素时，Vue 将会做以下处理：
+
+    1.自动嗅探目标元素是否应用了 CSS 过渡或动画，如果是，在恰当的时机添加/删除 CSS 类名。
+
+    2.如果过渡组件提供了 JavaScript 钩子函数，这些钩子函数将在恰当的时机被调用。
+
+    3.如果没有找到 JavaScript 钩子并且也没有检测到 CSS 过渡/动画，DOM 操作 (插入/删除) 在下一帧中立即执行。(注意：此指浏览器逐帧动画机制，和 Vue 的 nextTick 概念不同)
+
+
+
+    在进入/离开的时候 vue会有6个class切换
+
+    1.v-enter  定义进入过渡的开始状态    在元素被插入之前生效 在元素被插入的下一帧被移除
+    2.v-enter-active  定义进入过渡生效时的状态  在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。
+    3.v-enter-to    2.1.8版及以上 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。
+    4.v-leave   定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除
+    5.v-leave-active    定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
+    6.v-leave-to    2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。
+
+
+
+
+    对于这些在过渡中切换的类名来说，如果你使用一个没有名字的 <transition>，则 v- 是这些类名的默认前缀。
+    如果你使用了 <transition name="my-transition">，那么 v-enter 会替换为 my-transition-enter
+
+-->
+
+<!--动画-->
+<!--自定义过渡的类名  在结合使用Animate.css等一些第三方动画库的时候非常有用 可以直接将v-enter-active等状态的类名和Animate.css中对应的类名绑定以便于用第三方的效果实现-->
+<!--
+
+    我们可以通过以下特性来自定义过渡类名：
+    enter-class
+    enter-active-class
+    enter-to-class (2.1.8+)
+    leave-class
+    leave-active-class
+    leave-to-class (2.1.8+)
+
+-->
+
+<!--同时应用过渡和动画的话需要用type特性来设置vue监听的类型-->
+<!--
+    Vue 为了知道过渡的完成，必须设置相应的事件监听器。
+    它可以是 transitionend 或 animationend ，这取决于给元素应用的 CSS 规则。
+    如果你使用其中任何一种，Vue 能自动识别类型并设置监听。
+
+    但是，在一些场景中，你需要给同一个元素同时设置两种过渡动效，比如 animation 很快的被触发并完成了，而 transition 效果还没结束。
+    在这种情况中，你就需要使用 type 特性并设置 animation 或 transition 来明确声明你需要 Vue 监听的类型。
+-->
+
+<!--显性过渡持续时间 使用transition的duration方法-->
+
+<!--在属性中声明JS钩子函数  配合Velocity.js使用-->
+<!--
+    推荐对于仅使用 JavaScript 过渡的元素添加 v-bind:css="false"
+    Vue 会跳过 CSS 的检测。这也可以避免过渡过程中 CSS 的影响。
+-->
+
+<!--使用appear来设置初始渲染的过渡-->
+
+<!--多个元素的过渡-->
+<!--
+    当有相同标签名的元素切换时，需要通过 key 特性设置唯一的值来标记以让 Vue 区分它们，否则 Vue 为了效率只会替换相同标签内部的内容。
+    即使在技术上没有必要，给在 <transition> 组件中的多个元素设置 key 是一个更好的实践
+-->
+
+<!--过渡模式-->
+<!--
+    同时生效的进入和离开的过渡不能满足所有要求，所以 Vue 提供了过渡模式
+
+    in-out：新元素先进行过渡，完成之后当前元素过渡离开
+
+    out-in：当前元素先进行过渡，完成之后新元素过渡进入
+-->
+
+<!--多个组件的过渡 不需要使用key  只需要使用动态组件即可-->
+
+<!--列表过渡  <transition-group>组件 -->
+
+<!--列表的交错过渡 通过 data 属性与 JavaScript 通信 ，就可以实现列表的交错过渡-->
+
+<!--可复用的过渡-->
+<!--
+    过渡可以通过 Vue 的组件系统实现复用。要创建一个可复用过渡组件
+    你需要做的就是将 <transition> 或者 <transition-group> 作为根组件，然后将任何子组件放置在其中就可以了
+-->
+
+
+<!--动态过渡  即便是过渡也是由数据驱动的 通过name特性绑定动态值-->
+
+<div id="demo1">
+
+    <button @click="starttransition">显示/隐藏</button>
+
+
+    <transition name="fade">
+        <p v-if="show">我是使用显示出来的文字</p>
+    </transition>
+
+    <transition name="slide-fade">
+        <p v-if="css_transition">我是使用CSS过渡进行显示的文字</p>
+    </transition>
+
+    <transition name="bounce">
+        <p v-if="animation">我是使用动画进行显示的文字</p>
+    </transition>
+
+    <transition name="custom-classes-transition"
+                enter-active-class = "animated tada"
+                leave-active-class = "animated bounceOutRight"
+    >
+        <p v-if="useAnimationCSS">我是使用了第三方动画库显示出来的内容</p>
+
+    </transition>
+
+    <transition name="fixedtime"  :duration="5000">
+        <p v-if="showwithfixedtime">虽然偏移动画在CSS中设置为2秒,但是整体的这个动画到结束需要用时5秒</p>
+    </transition>
+
+    <transition name="useJSHookFun"
+
+                :css="false"
+                @before-enter="beforeEnter"
+                @enter="enter"
+                @after-enter="afterEnter"
+                @enter-cancelled="enterCancelled"
+
+                @before-leave="beforeLeave"
+                @leave="leave"
+                @after-leave="afterLeave"
+                @leave-cancelled="leaveCancelled"
+
+    >
+        <p v-if="useJSHookFun">我是使用了JS钩子函数来设置其过渡元素的显示文本</p>
+    </transition>
+
+
+    <button @click="changethecomponent">点击我切换👇的组件</button>
+    <transition name="componentfade" mode="out-in">
+        <component :is="showcomponent"></component>
+    </transition>
+
+
+    <p>需要注意的是使用 FLIP 过渡的元素不能设置为 display: inline 。作为替代方案，可以设置为 display: inline-block 或者放置于 flex 中</p>
+    <button @click="Shuffle">重新洗牌元素</button>
+    <button @click="Add">添加一个元素</button>
+    <button @click="Remove">移除一个元素</button>
+    <transition-group name="list" tag="p">
+        <span v-for="item in items" :key="item" class="listitem">{{ item }}</span>
+    </transition-group>
+
+
+    <p>我这是列表的交错过渡demo 你可以在输入框中输入字母进行下方数据的过滤筛选动画</p>
+    <input v-model="typename">
+    <transition-group
+
+            name="listdatafade"
+            tag="ul"
+            :css="false"
+            v-on:before-enter="datalistbeforeenter"
+            v-on:enter="datalistenter"
+            v-on:leave="datalistleave"
+
+    >
+
+        <li v-for="(item,index) in computednameitems" :key="item.name" :data-index="index">{{ item.name }}</li>
+
+    </transition-group>
+
+    <!--使用可复用的过渡组件-->
+    <my-transition-component>
+        <p>我是被复用的过渡组件 过渡效果和设置在父组件中已经设置过了</p>
+    </my-transition-component>
+
+
+    <!--动态过渡-->
+    <p>下面的例子是动态过渡的例子 由name和各项数据进行驱动</p>
+    动态显示时间 <input type="range" v-model="fadeinTime" min="0" :max="maxfadeinTime">
+    动态消失时间 <input type="range" v-model="fadeoutTime" min="0" :max="maxfadeoutTime">
+
+    <transition name="dynamictransiton" :css="false" @before-enter="dynamicbeforeEnter" @enter="dynamicenter" @leave="dynamicleave">
+
+        <p v-if="dynamicshow">Hello Vue Transition</p>
+
+    </transition>
+
+    <button v-if="dynamicstop" @click="dynamicstop = false; dynamicshow=false">开始呼吸灯动画</button>
+    <button v-else @click="dynamicstop = true">停止动画</button>
+
+
+
+</div>
+<script>
+
+    //使用函数组件的定制方式来创建可复用的过渡组件
+
+    Vue.component('my-transition-component',{
+        functional:true,
+        render:function (createElement, context) {
+
+            var data = {
+                props:{
+                    name:'myowntransition',
+                    mode:'out-in',
+                },
+                on:{
+                    beforeEnter:function (el) {
+                        //
+
+                    },
+                    enter:function (el, done) {
+                        //
+
+                    },
+                    leave:function (el,done) {
+                        //
+
+                    },
+                    afterLeave:function (el) {
+                        //
+                    },
+                }
+            }
+
+            return createElement('transition', data, context.children)
+        }
+    })
+
+
+    var vm = new Vue({
+        el:"#demo1",
+        data:{
+
+            show:true,
+            css_transition:false,
+            animation:true,
+            useAnimationCSS:false,
+            showwithfixedtime:true,
+            useJSHookFun:false,
+            showcomponent:'component1',
+            items:[0,1,2,3,4,5,6],
+            nextNum:7,
+            typename:"",
+            nameitems:[{name:"Kobe Bryant"},{name:"Jay Chou"},{name:"May Band"},{name:"JJ"},{name:"Phil Liu"}],
+            dynamicshow : true,//是否显示
+            dynamicstop: true,//是否为停止状态
+            fadeinTime:1000,//初始的动画显示时长
+            fadeoutTime:1000,//初始的动画消失时长
+            maxfadeinTime:1500,//动画显示的最长时间
+            maxfadeoutTime:1500,//动画消失的最长时间
+
+        },
+        computed:{
+            computednameitems:function () {
+                var vm = this
+                var computedlist = vm.nameitems.filter(function (item) {
+
+                    //仅仅返回名字中包含输入名称的列表数据
+                    return item.name.toLowerCase().indexOf(vm.typename.toLowerCase()) != -1
+
+                })
+
+                return computedlist
+            }
+        },
+        components:{
+            "component1":{
+                template:'<p>我是组件1</p>',
+            },
+            "component2":{
+                template:'<p>我是组件2</p>',
+            }
+        },
+        methods:{
+            starttransition:function () {
+
+                this.show = !this.show
+                this.css_transition = !this.css_transition
+                this.animation = !this.animation
+                this.useAnimationCSS = !this.useAnimationCSS
+                this.showwithfixedtime = !this.showwithfixedtime
+                this.useJSHookFun = !this.useJSHookFun
+
+            },
+
+            //如果在上述过渡组件中使用了JS的钩子函数 则可以在methods中进行实现
+
+            // --------
+            // 进入中
+            // --------
+
+            beforeEnter: function (el) {
+                // ...
+
+                el.style.opacity = 0
+                el.style.transformOrigin = 'left'
+
+            },
+            // 此回调函数是可选项的设置
+            // 与 CSS 结合时使用
+            enter: function (el, done) {
+                // ...
+                //当只用 JavaScript 过渡的时候， 在 enter 和 leave 中，回调函数 done 是必须的 。否则，它们会被同步调用，过渡会立即完成。
+
+                Velocity(el, { opacity: 1, fontSize: '1.4em' }, { duration: 300 })
+                Velocity(el, { fontSize: '1em' }, { complete: done })
+
+                //done()
+
+            },
+            afterEnter: function (el) {
+                // ...
+            },
+            enterCancelled: function (el) {
+                // ...
+            },
+
+            // --------
+            // 离开时
+            // --------
+
+            beforeLeave: function (el) {
+                // ...
+            },
+            // 此回调函数是可选项的设置
+            // 与 CSS 结合时使用
+            leave: function (el, done) {
+                // ...
+                //当只用 JavaScript 过渡的时候， 在 enter 和 leave 中，回调函数 done 是必须的 。否则，它们会被同步调用，过渡会立即完成。
+                Velocity(el, { translateX: '15px', rotateZ: '50deg' }, { duration: 600 })
+                Velocity(el, { rotateZ: '100deg' }, { loop: 2 })
+                Velocity(el, {
+                    rotateZ: '45deg',
+                    translateY: '30px',
+                    translateX: '30px',
+                    opacity: 0
+                }, { complete: done })
+
+                //done()
+            },
+            afterLeave: function (el) {
+                // ...
+            },
+            // leaveCancelled 只用于 v-show 中
+            leaveCancelled: function (el) {
+                // ...
+            },
+
+
+            changethecomponent:function () {
+                this.showcomponent = this.showcomponent == 'component1' ? 'component2' : 'component1'
+            },
+
+            randomIndex:function () {
+                return Math.floor(Math.random()*this.items.length)
+            },
+            Add:function () {
+                this.items.splice(this.randomIndex(),0,this.nextNum++)
+            },
+            Remove:function () {
+                this.items.splice(this.randomIndex(),1)
+            },
+            Shuffle:function () {
+                this.items = _.shuffle(this.items)
+            },
+
+
+            datalistbeforeenter:function (el) {
+                el.style.opacity = 0
+                el.style.height = 0
+            },
+
+            datalistenter:function (el, done) {
+
+                //每一个li根据自身的索引计算出来延迟的时长
+                var delaytime = el.dataset.index * 150
+                Velocity(el, { opacity: 1, height: '1.6em' }, { duration: delaytime },{ complete: done })
+
+            },
+
+            datalistleave:function (el, done) {
+
+                //每一个li根据自身的索引计算出来延迟的时长
+                var delaytime = el.dataset.index * 150
+                Velocity(el, { opacity: 0, height: 0 }, { duration: delaytime },{ complete: done })
+            },
+
+            dynamicbeforeEnter:function (el) {
+                el.style.opacity = 0
+            },
+
+            dynamicenter:function (el, done) {
+                var vm = this
+                Velocity(el,{opacity:1},{duration:vm.fadeinTime,complete:function () {
+
+                        done()
+                        //如果数据中的停止为false的话(即在运行状态的时候) 更改显示数据
+                        if(!vm.dynamicstop) vm.dynamicshow = false
+
+                    }})
+
+            },
+            dynamicleave:function (el, done) {
+                var vm = this
+                Velocity(el,{opacity:0},{duration:vm.fadeoutTime,complete:function () {
+                        done()
+                        vm.dynamicshow = true
+                    }})
+            }
+
+
+
+        },
+
+
+    })
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

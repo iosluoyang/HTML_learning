@@ -13,12 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="vue18_过渡and动画.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="vue20_混入.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue20_混入.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -36,6 +36,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>kebab-case</find>
+      <find>velo</find>
+      <find>Velocity</find>
+      <find>listitem</find>
+      <find>Object.assi</find>
+      <find>assign</find>
+      <find>tweenedCSSColor</find>
+      <find>tweeningValue</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -48,6 +55,9 @@
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_动态&amp;异步组件.html" />
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue17_处理边界情况.html" />
         <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html" />
+        <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue18_进入离开&amp;列表过渡.html" />
+        <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue19_状态过渡.html" />
+        <option value="$PROJECT_DIR$/vue_step1_基础语法篇/vue20_混入.html" />
       </list>
     </option>
   </component>
@@ -64,8 +74,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="312" />
-    <option name="y" value="29" />
+    <option name="x" value="249" />
+    <option name="y" value="31" />
     <option name="width" value="1265" />
     <option name="height" value="994" />
   </component>
@@ -91,17 +101,12 @@
               <item name="vue_learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue_learning" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vue_learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vue_learning" type="462c0819:PsiDirectoryNode" />
-              <item name="vue_step1_基础语法篇" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,7 +117,6 @@
     <property name="node.js.selected.package.standard" value="/usr/local/lib/node_modules/eslint" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -143,32 +147,33 @@
       <option name="presentableId" value="Default" />
       <updated>1525225021016</updated>
       <workItem from="1525225028322" duration="16860000" />
+      <workItem from="1525399982590" duration="29092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16860000" />
+    <option name="totallyTimeSpent" value="45952000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="312" y="29" width="1265" height="994" extended-state="0" />
+    <frame x="249" y="31" width="1265" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2757235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -183,6 +188,61 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_进入离开&amp;列表过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2339#3287#0" expanded="false" />
+            <element signature="e#3407#3575#0" expanded="false" />
+            <element signature="e#3616#3900#0" expanded="false" />
+            <element signature="e#3980#4079#0" expanded="false" />
+            <element signature="e#4276#4393#0" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition-group#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7788#8547#0" expanded="false" />
+            <element signature="e#7864#8541#0" expanded="false" />
+            <element signature="e#7890#8459#0" expanded="false" />
+            <element signature="e#7914#8012#0" expanded="false" />
+            <element signature="e#8081#8132#0" expanded="false" />
+            <element signature="e#8180#8231#0" expanded="false" />
+            <element signature="e#8278#8329#0" expanded="false" />
+            <element signature="e#8376#8426#0" expanded="false" />
+            <element signature="e#8572#14153#0" expanded="false" />
+            <element signature="e#8608#9290#0" expanded="false" />
+            <element signature="e#9309#9672#0" expanded="false" />
+            <element signature="e#9693#9869#0" expanded="false" />
+            <element signature="e#9887#14144#0" expanded="false" />
+            <element signature="e#9929#10274#0" expanded="false" />
+            <element signature="e#10342#10353#0" expanded="false" />
+            <element signature="e#10437#10564#0" expanded="false" />
+            <element signature="e#10578#10593#0" expanded="false" />
+            <element signature="e#10660#10974#0" expanded="false" />
+            <element signature="e#11014#11052#0" expanded="false" />
+            <element signature="e#11096#11134#0" expanded="false" />
+            <element signature="e#11149#11160#0" expanded="false" />
+            <element signature="e#11244#11282#0" expanded="false" />
+            <element signature="e#11296#11311#0" expanded="false" />
+            <element signature="e#11378#11911#0" expanded="false" />
+            <element signature="e#11951#11989#0" expanded="false" />
+            <element signature="e#12076#12114#0" expanded="false" />
+            <element signature="e#12161#12278#0" expanded="false" />
+            <element signature="e#12317#12399#0" expanded="false" />
+            <element signature="e#12429#12515#0" expanded="false" />
+            <element signature="e#12548#12619#0" expanded="false" />
+            <element signature="e#12653#12719#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue09_事件处理.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1715">
@@ -208,7 +268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -254,10 +313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#416#1557#0" expanded="false" />
-            <element signature="e#1572#1903#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -275,10 +330,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_过渡and动画.html">
+    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue18_进入离开&amp;列表过渡.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="90">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2339#3287#0" expanded="false" />
+            <element signature="e#3407#3575#0" expanded="false" />
+            <element signature="e#3616#3900#0" expanded="false" />
+            <element signature="e#3980#4079#0" expanded="false" />
+            <element signature="e#4276#4393#0" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#transition-group#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7788#8547#0" expanded="false" />
+            <element signature="e#7864#8541#0" expanded="false" />
+            <element signature="e#7890#8459#0" expanded="false" />
+            <element signature="e#7914#8012#0" expanded="false" />
+            <element signature="e#8081#8132#0" expanded="false" />
+            <element signature="e#8180#8231#0" expanded="false" />
+            <element signature="e#8278#8329#0" expanded="false" />
+            <element signature="e#8376#8426#0" expanded="false" />
+            <element signature="e#8572#14153#0" expanded="false" />
+            <element signature="e#8608#9290#0" expanded="false" />
+            <element signature="e#9309#9672#0" expanded="false" />
+            <element signature="e#9693#9869#0" expanded="false" />
+            <element signature="e#9887#14144#0" expanded="false" />
+            <element signature="e#9929#10274#0" expanded="false" />
+            <element signature="e#10342#10353#0" expanded="false" />
+            <element signature="e#10437#10564#0" expanded="false" />
+            <element signature="e#10578#10593#0" expanded="false" />
+            <element signature="e#10660#10974#0" expanded="false" />
+            <element signature="e#11014#11052#0" expanded="false" />
+            <element signature="e#11096#11134#0" expanded="false" />
+            <element signature="e#11149#11160#0" expanded="false" />
+            <element signature="e#11244#11282#0" expanded="false" />
+            <element signature="e#11296#11311#0" expanded="false" />
+            <element signature="e#11378#11911#0" expanded="false" />
+            <element signature="e#11951#11989#0" expanded="false" />
+            <element signature="e#12076#12114#0" expanded="false" />
+            <element signature="e#12161#12278#0" expanded="false" />
+            <element signature="e#12317#12399#0" expanded="false" />
+            <element signature="e#12429#12515#0" expanded="false" />
+            <element signature="e#12548#12619#0" expanded="false" />
+            <element signature="e#12653#12719#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue08_列表渲染.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue19_状态过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#2112#2248#0" expanded="false" />
+            <element signature="e#2152#2230#0" expanded="false" />
+            <element signature="e#2536#2756#0" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_step1_基础语法篇/vue20_混入.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
