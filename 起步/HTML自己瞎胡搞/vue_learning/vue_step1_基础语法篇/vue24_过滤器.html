@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue24_过滤器</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+<!--可以使用Vue的filter属性来自定义过滤器的条件 然后在双花括号或者是v-bind的表达式的最后 用管道流符号 | 指示 -->
+<div id="demo1">
+    <input v-model="content">
+    <p>{{ content | addquestionmark }}</p>
+</div>
+
+<script>
+
+    //可以在全局注册这个过滤器 也可以放在各个组件中进行本地化过滤器条件的制定
+    Vue.filter("addquestionmark",function (value) {
+        if(!value) return '请输入您的问题'
+        value = value.toString()
+        var result = value.charAt(value.length - 1 ) != " ?" ?  value + "?" : value
+        return result
+    })
+
+    var vm = new Vue({
+        el:"#demo1",
+        data:{
+            content:"",
+        }
+    })
+</script>
+
+<!--    过滤器可以串联：{{ message | filterA | filterB }}   -->
+<!--
+    在这个例子中，filterA 被定义为接收单个参数的过滤器函数，表达式 message 的值将作为参数传入到函数中。
+    然后继续调用同样被定义为接收单个参数的过滤器函数 filterB，将 filterA 的结果传递到 filterB 中
+-->
+
+<!--
+
+    过滤器是 JavaScript 函数，因此可以接收参数：
+    {{ message | filterA('arg1', arg2) }}
+
+-->
+</body>
+</html>
