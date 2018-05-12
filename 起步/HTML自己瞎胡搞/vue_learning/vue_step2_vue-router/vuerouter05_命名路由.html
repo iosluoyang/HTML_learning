@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuerouter05_命名路由</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<!--可以在实例化路由的时候给路由设置一个命名 然后在router-link中的to属性中传入对应的name即可跳转至对应的路由-->
+<div id="app">
+<!--注意如果此处使用参数设置路由跳转路径 则应该是使用:to 而不是简单的to-->
+    <router-link :to="{name:'user',params:{userid:123}}">用户1</router-link>
+    <router-link :to="{name:'user',params:{userid:456}}">用户2</router-link>
+    <router-view></router-view>
+
+</div>
+<script>
+    const User = {template:'<div class="user">{{ 我的用户id为: $route.params.userid }}</div>'}
+    const router = new VueRouter({
+        routes:[
+            {path:'/user/:userid',name:'user',component:User},
+        ]
+    })
+
+    var vm = new Vue({
+        router:router,
+    }).$mount("#app")
+</script>
+
+
+</body>
+</html>

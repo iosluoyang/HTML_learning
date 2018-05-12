@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuerouter07_重定向和别名</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+<!--重定向 『重定向』的意思是，当用户访问 /a时，URL 将会被替换成 /b，然后匹配路由为 /b-->
+<!--
+    重定向也是通过 routes 配置来完成，下面例子是从 /a 重定向到 /b：
+    const router = new VueRouter({
+        routes: [
+            { path: '/a', redirect: '/b' }
+        ]
+    })
+
+    重定向的目标也可以是一个命名的路由:
+    const router = new VueRouter({
+        routes: [
+            { path: '/a', redirect: { name: 'foo' }}
+        ]
+    })
+
+    甚至是一个方法，动态返回重定向目标：
+
+    const router = new VueRouter({
+      routes: [
+        { path: '/a', redirect: to => {
+          // 方法接收 目标路由 作为参数
+          // return 重定向的 字符串路径/路径对象
+        }}
+      ]
+    })
+
+-->
+
+<!--别名  -->
+<!--
+    /a 的别名是 /b，意味着，当用户访问 /b 时，URL 会保持为 /b，但是路由匹配则为 /a，就像用户访问 /a 一样
+
+    const router = new VueRouter({
+        routes: [
+            { path: '/a', component: A, alias: '/b' }
+        ]
+    })
+
+    『别名』的功能让你可以自由地将 UI 结构映射到任意的 URL，而不是受限于配置的嵌套路由结构。
+-->
+
+</body>
+</html>

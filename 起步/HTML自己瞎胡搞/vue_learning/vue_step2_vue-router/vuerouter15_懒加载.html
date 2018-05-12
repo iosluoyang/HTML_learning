@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuerouter15_懒加载</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+</head>
+<body>
+
+<!--路由懒加载  将vue的异步组件和webpack的代码分割功能结合  实现路由组件的懒加载-->
+
+<!--
+    1.首先将异步组件定义为返回一个Promise的工厂函数
+    const Foo = () => Promise.resolve({/*组件定义对象*/})
+
+    2.在webpack2中 使用动态import语法来定义代码分块点
+    import('./Foo.vue') 返回Promise
+
+    结合这两者，这就是如何定义一个能够被 Webpack 自动代码分割的异步组件。
+    const Foo = () => import('./Foo.vue')
+
+    在路由配置中什么都不需要改变，只需要像往常一样使用 Foo
+
+-->
+
+<!--把组件按组分块-->
+<!--
+        有时候我们想把某个路由下的所有组件都打包在同个异步块 (chunk) 中。只需要使用 命名 chunk，一个特殊的注释语法来提供 chunk name (需要 Webpack > 2.4)。
+
+        const Foo = () => import(/* webpackChunkName: "group-foo" */ './Foo.vue')
+        const Bar = () => import(/* webpackChunkName: "group-foo" */ './Bar.vue')
+        const Baz = () => import(/* webpackChunkName: "group-foo" */ './Baz.vue')
+        Webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中。
+-->
+
+
+
+
+</body>
+</html>

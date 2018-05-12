@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuerouter03_嵌套路由</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <router-link to="/user/1">用户1</router-link>
+    <router-link to="/user/2">用户2</router-link>
+
+    <!--这里的 <router-view> 是最顶层的出口，渲染最高级路由匹配到的组件-->
+    <router-view></router-view>
+</div>
+<script>
+    const User = {
+        template:`<div class="user">
+
+                    <h2>我的用户id是: {{ $route.params.id }}</h2>
+                    <router-view></router-view>
+
+                  </div>`
+    }
+
+    const UserProfile = {
+        template:`<div class="userprofile ">我是用户的个人信息展示区域</div>`,
+    }
+    const UserPosts = {
+        template:`<div class="userposts">我是用户的已发送信息展示区域</div>`,
+    }
+    const EmpytComponent = {
+        template:`<div class="emptycomponent">我是默认的空的子路由显示内容</div>`,
+    }
+
+    const router = new VueRouter({
+        routes:[
+            {
+
+                //要在嵌套的出口中渲染组件需要在VueRouter的参数中使用children配置
+                //以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。
+                path:'/user/:id',
+                component:User,
+                //子组件渲染
+                children:[
+                    {
+                        //当/user/:id/profile匹配成功 UserProfile 会被渲染在User的router-view中
+                        path:'profile',
+                        component:UserProfile,
+                    },
+                    {
+                        //当/user/:id/posts匹配成功 UserPosts会被渲染在User的router-view中
+                        path:'posts',
+                        component:UserPosts,
+                    },
+                    //这里可以提供一个空的子路由供router-view渲染 当没有匹配到任何的路由时,默认会显示该空的子路由
+                    {"path":'',component:EmpytComponent}
+                ],
+
+
+            }
+        ]
+    })
+
+    var vm = new Vue({
+        router:router,
+    }).$mount("#app")
+
+</script>
+
+
+</body>
+</html>

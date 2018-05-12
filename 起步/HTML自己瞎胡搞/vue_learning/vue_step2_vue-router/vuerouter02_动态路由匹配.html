@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuerouter02_动态路由匹配</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+
+    <h1>我是动态路由匹配的例子</h1>
+    <router-link to="/user/123">用户1</router-link>
+    <router-link to="/user/456">用户2</router-link>
+    <router-view></router-view>
+
+</div>
+
+<!--
+动态路由匹配解决的问题:
+我们经常需要把某种模式匹配到的所有路由，全都映射到同个组件。例如，我们有一个 User 组件，对于所有 ID 各不相同的用户，都要使用这个组件来渲染。
+那么，我们可以在 vue-router 的路由路径中使用『动态路径参数』（dynamic segment）来达到这个效果
+-->
+
+<script>
+    //定义路由组件
+    const User = {template:'<div>我的用户id为:{{ $route.params.userid }}</div>'}
+    //定义路由配置文件 以及 创建router实例
+    const router = new VueRouter({
+        routes:[
+            //动态路径参数 以冒号开头
+            {path:'/user/:userid',component:User},
+        ]
+    })
+
+    //至此  像 /user/foo 和 /user/bar 都将映射到相同的路由
+
+    //一个『路径参数』使用冒号 : 标记。当匹配到一个路由时，参数值会被设置到 this.$route.params
+    //可以在每个组件内使用。于是，我们可以将上面的 User 组件改写一下，输出当前用户的 ID：
+    // const User = {
+    //     template:'<div>该用户userId是:{{ $route.params.id }}</div>'
+    // }
+
+    //除了 $route.params 外，$route 对象还提供了其它有用的信息，例如，$route.query（如果 URL 中有查询参数）、$route.hash 等等
+
+    var vm = new Vue({
+        router,
+    }).$mount("#app")
+</script>
+
+<!--路由参数的变化-->
+<!--
+复用组件时 如果想对路由参数的变化做出响应的话 可以简单地watch（监测）$route对象
+或者是使用属性beforeRouteUpdate守卫来设置更新
+-->
+
+<!--匹配优先级-->
+<!--
+    有时候，同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高
+-->
+
+</body>
+</html>
